@@ -7,7 +7,7 @@ gem 'rails', '3.2.12'
 
 gem 'pg'
 
-
+gem 'carrierwave'
 
 gem 'jquery-rails'
 
