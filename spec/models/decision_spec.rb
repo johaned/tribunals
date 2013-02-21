@@ -21,6 +21,7 @@ describe Decision do
         @decision.unstub(:process_doc)
         @decision.save
         @decision.html.should include('Test</p>')
+        File.unlink(File.join(Rails.root, 'tmp', 'test.html'))
       end
     end
 
