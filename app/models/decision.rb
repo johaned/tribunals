@@ -3,6 +3,8 @@ class Decision < ActiveRecord::Base
   mount_uploader :doc_file, DocFileUploader
   mount_uploader :pdf_file, PdfFileUploader
 
+  validates_presence_of :doc_file
+
   before_create :process_doc
 
   def process_doc
