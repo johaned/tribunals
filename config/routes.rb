@@ -1,4 +1,7 @@
 Tribunals::Application.routes.draw do
+  namespace :admin do
+    resources :decisions
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
