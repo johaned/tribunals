@@ -1,0 +1,9 @@
+<ul>
+  <% @decisions.each do |decision| %>
+    <li><%= decision.id %></li>
+  <% end %>
+</ul>
+<%= form_for [:admin, Decision.new] do |form| %>
+  <%= form.file_field :doc_file %>
+  <%= form.submit %>
+<% end %>
