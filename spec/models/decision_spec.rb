@@ -17,11 +17,22 @@ describe Decision do
     end
 
     describe "process_doc" do
-      it "should save a tmp html file" do
+      before(:each) do
         @decision.unstub(:process_doc)
         @decision.save
-        @decision.html.should include('Test</p>')
+      end
+
+      after(:each) do
         File.unlink(File.join(Rails.root, 'tmp', 'test.html'))
+        File.unlink(File.join(Rails.root, 'tmp', 'test.pdf'))
+      end
+
+      it "should save a tmp html file" do
+        @decision.html.should include('Test</p>')
+      end
+
+      it "should save the pdf file" do
+        @decision.pdf_file.should be_a(PdfFileUploader)
       end
     end
 
