@@ -34,8 +34,19 @@ describe Decision do
       it "should save the pdf file" do
         @decision.pdf_file.should be_a(PdfFileUploader)
       end
-    end
 
+      it "should save the raw text of the document" do
+        @decision.text.should == "Test"
+      end
+    end
   end
+
+  describe "html_body" do
+    it "should extract all the contents of the html body" do
+      @decision = Decision.new(:html => "<html><head></head><body>Contents <p><span>other</span></p></body>")
+      @decision.html_body.should == "Contents <p><span>other</span></p>"
+    end  
+  end
+
 
 end
