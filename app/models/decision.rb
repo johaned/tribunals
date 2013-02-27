@@ -17,4 +17,8 @@ class Decision < ActiveRecord::Base
     self.html = File.read(html_file)
     self.pdf_file = File.open(pdf_file)
   end
+
+  def html_body
+    Nokogiri::HTML(self.html).at_css('body').to_html
+  end
 end
