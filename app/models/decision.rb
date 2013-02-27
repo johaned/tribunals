@@ -20,7 +20,7 @@ class Decision < ActiveRecord::Base
   end
 
   def html_body
-    Nokogiri::HTML(self.html).at_css('body').to_html
+    Nokogiri::HTML(self.html).css('body *').to_html
   end
 
   def set_text_from_html
