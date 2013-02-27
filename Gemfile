@@ -11,6 +11,8 @@ gem 'carrierwave'
 
 gem 'jquery-rails'
 
+gem 'nokogiri'
+
 group :test, :development do
   gem 'rspec-rails'
   gem 'debugger'

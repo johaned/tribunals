@@ -1,0 +1,5 @@
+<ul>
+  <% @decisions.each do |decision| %>
+    <li><%= link_to decision.promulgated_on, decision_path(decision) %></li>
+  <% end %>
+</ul>
