@@ -13,6 +13,8 @@ gem 'jquery-rails'
 
 gem 'nokogiri'
 
+gem 'texticle', "2.0", :require => 'texticle/rails'
+
 group :test, :development do
   gem 'rspec-rails'
   gem 'debugger'
