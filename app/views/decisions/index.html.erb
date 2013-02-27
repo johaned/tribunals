@@ -1,3 +1,7 @@
+<%= form_tag decisions_path, :method => :get do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search" %>
+<% end %>
 <ul>
   <% @decisions.each do |decision| %>
     <li><%= link_to decision.promulgated_on, decision_path(decision) %></li>

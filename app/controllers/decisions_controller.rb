@@ -1,6 +1,10 @@
 class DecisionsController < ApplicationController
   def index
-    @decisions = Decision.all
+    if params[:search].present?
+      @decisions = Decision.search(:text => params[:search])
+    else
+      @decisions = Decision.all
+    end
   end
 
   def show
