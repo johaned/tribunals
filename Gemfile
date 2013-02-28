@@ -14,9 +14,6 @@ gem 'jquery-rails'
 
 gem 'texticle', "2.0", :require => 'texticle/rails'
 
-gem "slimmer"
-gem "govuk_frontend_toolkit", :git => 'https://github.com/alphagov/govuk_frontend_toolkit_gem.git'
-
 group :test, :development do
   gem 'rspec-rails'
   gem 'debugger'
