@@ -1,3 +1,8 @@
-<%= @decision.promulgated_on %>
+<h1>Decision promulgated on <%= @decision.promulgated_on %></h1>
+
+<%= link_to "PDF version", @decision.pdf_file.url %>
+<%= link_to "Word Document version", @decision.doc_file.url %>
+
+<h2>***Decision starts here***</h2>
 
 <%= @decision.html_body.html_safe %>
