@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'nokogiri'
 
 gem 'rails', '3.2.12'
 
@@ -10,8 +11,6 @@ gem 'pg'
 gem 'carrierwave'
 
 gem 'jquery-rails'
-
-gem 'nokogiri'
 
 gem 'texticle', "2.0", :require => 'texticle/rails'
 
