@@ -2,8 +2,11 @@
   <%= text_field_tag :search, params[:search] %>
   <%= submit_tag "Search" %>
 <% end %>
-<ul>
+<table>
   <% @decisions.each do |decision| %>
-    <li><%= link_to decision.promulgated_on, decision_path(decision) %></li>
+  <tr>
+    <td><%= link_to decision.promulgated_on, decision_path(decision) %></td>
+    <td><%= decision.text.gsub(/[[:space:]]/, ' ').strip.first(100) %></td>
+  </tr>
   <% end %>
-</ul>
+</table>
