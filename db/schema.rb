@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130227124449) do
+ActiveRecord::Schema.define(:version => 20130307104637) do
 
   create_table "decisions", :force => true do |t|
     t.string   "doc_file"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(:version => 20130227124449) do
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
     t.text     "text"
+  end
+
+  create_table "import_errors", :force => true do |t|
+    t.string   "url"
+    t.date     "promulgated_on"
+    t.string   "error"
+    t.text     "backtrace"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
 end

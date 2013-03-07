@@ -3,7 +3,11 @@ namespace :import do
     require 'open-uri'
     require 'csv'
     CSV.foreach(File.join(Rails.root, "data", "ait.csv")) do |document|
-      Decision.create!(:doc_file => open("http://www.ait.gov.uk/Public/"+document[0]), :promulgated_on => document[1].to_date)
+      begin
+        Decision.create!(:doc_file => open("http://www.ait.gov.uk/Public/"+document[0]), :promulgated_on => document[1].to_date)
+      rescue => e
+        ImportError.create!(:url => "http://www.ait.gov.uk/Public/"+document[0], :error => e.message, :backtrace => e.backtrace, :promulgated_on => document[1].to_date)
+      end
     end
   end
 end
