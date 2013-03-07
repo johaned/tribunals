@@ -11,16 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130307104637) do
+ActiveRecord::Schema.define(:version => 20130307105302) do
 
   create_table "decisions", :force => true do |t|
     t.string   "doc_file"
     t.date     "promulgated_on"
     t.text     "html"
     t.string   "pdf_file"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.text     "text"
+    t.string   "original_filename"
   end
 
   create_table "import_errors", :force => true do |t|
