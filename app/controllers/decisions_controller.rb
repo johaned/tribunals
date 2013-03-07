@@ -1,9 +1,9 @@
 class DecisionsController < ApplicationController
   def index
     if params[:search].present?
-      @decisions = Decision.search(:text => params[:search])
+      @decisions = Decision.search(:text => params[:search]).paginate(:page => params[:page], :per_page => 30)
     else
-      @decisions = Decision.all
+      @decisions = Decision.paginate(:page => params[:page], :per_page => 30).all
     end
   end
 

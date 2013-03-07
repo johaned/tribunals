@@ -14,6 +14,8 @@ gem 'jquery-rails'
 
 gem 'texticle', "2.0", :require => 'texticle/rails'
 
+gem 'will_paginate', '~> 3.0'
+
 group :test, :development do
   gem 'rspec-rails'
   gem 'debugger'

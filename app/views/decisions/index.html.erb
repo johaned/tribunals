@@ -2,6 +2,8 @@
   <%= text_field_tag :search, params[:search] %>
   <%= submit_tag "Search" %>
 <% end %>
+<%= page_entries_info @decisions %>
+<%= will_paginate @decisions %>
 <table>
   <% @decisions.each do |decision| %>
   <tr>
