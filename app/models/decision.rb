@@ -5,6 +5,10 @@ class Decision < ActiveRecord::Base
 
   before_validation :process_doc, :on => :create
 
+  def self.searchable_language
+    'english'
+  end
+
   def process_doc
     if doc_file.present?
       tmp_html_dir = File.join(Rails.root, 'tmp')

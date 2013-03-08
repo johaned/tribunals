@@ -12,7 +12,7 @@ gem 'carrierwave'
 
 gem 'jquery-rails'
 
-gem 'texticle', "2.0", :require => 'texticle/rails'
+gem 'textacular', '~> 3.0', require: 'textacular/rails'
 
 gem 'will_paginate', '~> 3.0'
 
