@@ -5,6 +5,10 @@ class Decision < ActiveRecord::Base
 
   before_validation :process_doc, :on => :create
 
+  def self.ordered
+    order("promulgated_on DESC")
+  end
+
   def self.searchable_language
     'english'
   end
