@@ -12,8 +12,6 @@ gem 'carrierwave'
 
 gem 'jquery-rails'
 
-gem 'textacular', '~> 3.0', require: 'textacular/rails'
-
 gem 'will_paginate', '~> 3.0'
 
 group :test, :development do
