@@ -48,5 +48,21 @@ describe Decision do
     end  
   end
 
-
+  describe "extract_appeal_number" do
+    it "should extract the appeal number in format Appeal Numbers: IA/37982/2010" do
+      @decision = Decision.new(:text => "Appeal Numbers: IA/37982/2010")
+      @decision.extract_appeal_number
+      @decision.appeal_number.should == "IA/37982/2010"
+    end
+    it "should extract the appeal number in format Appeal Number: IA/37982/2010" do
+      @decision = Decision.new(:text => "Appeal Number: IA/37982/2010")
+      @decision.extract_appeal_number
+      @decision.appeal_number.should == "IA/37982/2010"
+    end
+    it "should extract the appeal number in format Appeal Number: IA 37982 2010" do
+      @decision = Decision.new(:text => "Appeal Number: IA 37982 2010")
+      @decision.extract_appeal_number
+      @decision.appeal_number.should == "IA/37982/2010"
+    end
+  end
 end

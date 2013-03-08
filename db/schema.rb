@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130307105302) do
+ActiveRecord::Schema.define(:version => 20130308104302) do
 
   create_table "decisions", :force => true do |t|
     t.string   "doc_file"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20130307105302) do
     t.datetime "updated_at",        :null => false
     t.text     "text"
     t.string   "original_filename"
+    t.string   "appeal_number"
   end
 
   create_table "import_errors", :force => true do |t|

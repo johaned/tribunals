@@ -8,7 +8,7 @@
   <% @decisions.each do |decision| %>
   <tr>
     <td><%= link_to decision.promulgated_on, decision_path(decision) %></td>
-    <td><%= decision.text.gsub(/[[:space:]]/, ' ').strip.first(100) %></td>
+    <td><%= decision.appeal_number %></td>
   </tr>
   <% end %>
 </table>

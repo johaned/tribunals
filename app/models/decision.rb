@@ -1,5 +1,5 @@
 class Decision < ActiveRecord::Base
-  attr_accessible :doc_file, :html, :pdf_file, :promulgated_on, :original_filename
+  attr_accessible :doc_file, :html, :pdf_file, :promulgated_on, :original_filename, :text
   mount_uploader :doc_file, DocFileUploader
   mount_uploader :pdf_file, PdfFileUploader
 
@@ -29,5 +29,12 @@ class Decision < ActiveRecord::Base
 
   def set_text_from_html
     self.text = Nokogiri::HTML(self.html).at_css('body').text
+  end
+
+  def extract_appeal_number
+    matches = self.text.match(/Appeal Numbers?: (\w\w[\/ ]\d\d\d\d\d[\/ ]\d\d\d\d)/i)
+    if matches
+      self.appeal_number = $1.gsub(" ", "/")
+    end
   end
 end
