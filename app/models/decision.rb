@@ -9,8 +9,8 @@ class Decision < ActiveRecord::Base
     order("promulgated_on DESC")
   end
 
-  def self.searchable_language
-    'english'
+  def self.search(query)
+    where("(to_tsvector('english', \"decisions\".\"text\"::text) @@ to_tsquery('english', ?::text))", query)
   end
 
   def process_doc
