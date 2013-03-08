@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130308104302) do
+ActiveRecord::Schema.define(:version => 20130308120729) do
 
   create_table "decisions", :force => true do |t|
     t.string   "doc_file"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(:version => 20130308104302) do
     t.string   "original_filename"
     t.string   "appeal_number"
   end
+
+  add_index "decisions", ["promulgated_on"], :name => "index_decisions_on_promulgated_on", :order => {"promulgated_on"=>:desc}
 
   create_table "import_errors", :force => true do |t|
     t.string   "url"
