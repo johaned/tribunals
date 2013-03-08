@@ -10,4 +10,11 @@ namespace :import do
       end
     end
   end
+
+  task :extract_appeal_numbers => :environment do
+    Decision.find_each do |decision|
+      decision.extract_appeal_number
+      decision.save
+    end
+  end
 end
