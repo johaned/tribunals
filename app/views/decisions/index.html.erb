@@ -7,8 +7,8 @@
 <table>
   <% @decisions.each do |decision| %>
   <tr>
-    <td><%= link_to decision.promulgated_on, decision_path(decision) %></td>
-    <td><%= decision.appeal_number %></td>
+    <td><%= link_to decision.appeal_number || "Unknown" , decision_path(decision) %></td>
+    <td><%= decision.promulgated_on %></td>
   </tr>
   <% end %>
 </table>
