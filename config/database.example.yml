@@ -1,0 +1,6 @@
+test:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: tribunals_test
+  pool: 5
