@@ -1,4 +1,4 @@
-test:
+development:
   adapter: postgresql
   encoding: unicode
   host: localhost
