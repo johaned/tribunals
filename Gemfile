@@ -16,7 +16,6 @@ gem 'will_paginate', '~> 3.0'
 
 group :test, :development do
   gem 'rspec-rails'
-  gem 'debugger'
 end
 
 # To use ActiveModel has_secure_password
