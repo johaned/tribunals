@@ -1,5 +1,5 @@
 class Decision < ActiveRecord::Base
-  attr_accessible :doc_file, :html, :pdf_file, :promulgated_on, :original_filename, :text, :url
+  attr_accessible :doc_file, :html, :pdf_file, :promulgated_on, :original_filename, :text, :url, :tribunal_id
   mount_uploader :doc_file, DocFileUploader
   mount_uploader :pdf_file, PdfFileUploader
 
