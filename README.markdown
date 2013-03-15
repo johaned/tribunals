@@ -13,7 +13,7 @@ Installing libreoffice on OSX
 
 Download and install the standard LibreOffice application. You will need to add the binaries to your path though. Simply add this line to the bottom of your ~/.bash_profile and then re-open your terminal.
 
-> export PATH="$PATH:/Applications/LibreOffice.app/Contents/program/"
+> export PATH="$PATH:/Applications/LibreOffice.app/Contents/MacOS/"
 
 Installing libreoffice on Ubuntu
 --------------------------------
