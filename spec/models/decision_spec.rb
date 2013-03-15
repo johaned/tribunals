@@ -39,6 +39,13 @@ describe Decision do
         @decision.text.should == "Test"
       end
     end
+
+    it "should still save if the doc processing fails" do
+      @decision.unstub(:process_doc)
+      @decision = Decision.create!(:doc_file => File.open(__FILE__))
+      @decision.import_errors.count.should == 1
+      @decision.import_errors.first.error.should include("No such file or directory")
+    end
   end
 
   describe "html_body" do
