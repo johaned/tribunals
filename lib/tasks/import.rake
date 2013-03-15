@@ -1,14 +1,10 @@
 namespace :import do
-  task :docs_from_csv => :environment do
-    require 'open-uri'
-    require 'csv'
-    CSV.foreach(File.join(Rails.root, "data", "ait.csv")) do |document|
-      begin
-        Decision.create!(:doc_file => open("http://www.ait.gov.uk/Public/"+document[0]), :promulgated_on => document[1].to_date, :original_filename => document[0])
-      rescue => e
-        ImportError.create!(:url => "http://www.ait.gov.uk/Public/"+document[0], :error => e.message, :backtrace => e.backtrace, :promulgated_on => document[1].to_date)
-      end
-    end
+  task :import_ait_unreported => :environment do
+    p AitUnreportedScraper.new.visit_all_pages
+  end
+
+  task :import_ait_reported => :environment do
+    p AitReportedScraper.new.visit_all_pages
   end
 
   task :extract_appeal_numbers => :environment do

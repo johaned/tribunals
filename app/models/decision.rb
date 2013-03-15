@@ -1,11 +1,11 @@
 class Decision < ActiveRecord::Base
-  attr_accessible :doc_file, :html, :pdf_file, :promulgated_on, :original_filename, :text
+  attr_accessible :doc_file, :html, :pdf_file, :promulgated_on, :original_filename, :text, :url
   mount_uploader :doc_file, DocFileUploader
   mount_uploader :pdf_file, PdfFileUploader
 
   has_many :import_errors
 
-  before_validation :process_doc, :on => :create
+  # before_validation :process_doc, :on => :create
 
   def self.ordered
     order("promulgated_on DESC")
@@ -13,6 +13,11 @@ class Decision < ActiveRecord::Base
 
   def self.search(query)
     where("(to_tsvector('english', \"decisions\".\"text\"::text) @@ to_tsquery('english', ?::text))", query)
+  end
+
+  def fetch_doc_file
+    require 'open-uri'
+    self.doc_file = open(self.url)
   end
 
   def process_doc
@@ -28,7 +33,7 @@ class Decision < ActiveRecord::Base
       self.set_text_from_html
     end
   rescue StandardError => e
-    self.import_errors.build(:error => e.message, :backtrace => e.backtrace)
+    self.import_errors.create!(:error => e.message, :backtrace => e.backtrace)
   end
 
   def html_body
