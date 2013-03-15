@@ -29,7 +29,7 @@ class AitUnreportedScraper
     html_doc.css("table tbody tr").collect do |row|
       document_location = row.css("td a").attr('href').value
       date = row.css("td").last.text.gsub(/\s/, "")
-      p Decision.create!(:url => "http://www.ait.gov.uk/Public/"+document_location, :promulgated_on => date, :tribunal_id => 1)
+      p Decision.create!(:url => "http://www.ait.gov.uk/Public/"+document_location, :promulgated_on => date, :tribunal_id => 1, :reportable => false)
     end
   end
 end
