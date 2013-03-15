@@ -3,6 +3,8 @@ class Decision < ActiveRecord::Base
   mount_uploader :doc_file, DocFileUploader
   mount_uploader :pdf_file, PdfFileUploader
 
+  has_many :import_errors
+
   before_validation :process_doc, :on => :create
 
   def self.ordered
@@ -17,7 +19,7 @@ class Decision < ActiveRecord::Base
     if doc_file.present?
       tmp_html_dir = File.join(Rails.root, 'tmp')
       [:pdf, :html].each do |type|
-        p `soffice --headless --convert-to #{type} --outdir #{tmp_html_dir} #{self.doc_file.file.path}`
+        `soffice --headless --convert-to #{type} --outdir #{tmp_html_dir} #{self.doc_file.file.path}`
       end
       html_file = File.join(tmp_html_dir, doc_file.file.filename.gsub('.doc', '')+'.html')
       pdf_file = File.join(tmp_html_dir, doc_file.file.filename.gsub('.doc', '')+'.pdf')
@@ -25,6 +27,8 @@ class Decision < ActiveRecord::Base
       self.pdf_file = File.open(pdf_file)
       self.set_text_from_html
     end
+  rescue StandardError => e
+    self.import_errors.build(:error => e.message, :backtrace => e.backtrace)
   end
 
   def html_body
