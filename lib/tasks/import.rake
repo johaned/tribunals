@@ -13,4 +13,14 @@ namespace :import do
       decision.save
     end
   end
+
+  task :import_word_docs_from_urls => :environment do
+    Decision.find_each do |decision|
+      if decision.url.present? && decision.doc_file.blank?
+        decision.fetch_doc_file
+        p decision.process_doc
+        decision.save!
+      end
+    end
+  end
 end
