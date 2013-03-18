@@ -2,27 +2,14 @@ require 'spec_helper'
 
 describe Decision do
   describe "with a .doc" do
-    before(:each) do
-      @decision = Decision.new(:doc_file => File.open(File.join(Rails.root, 'spec', 'data', 'test.doc')))
-      @decision.stub!(:process_doc)
-    end
-
-    it "should save" do
-      @decision.save.should be_true
-    end
-
-    it "should call process_doc" do
-      @decision.should_receive(:process_doc)
-      @decision.save
-    end
-
     describe "process_doc" do
-      before(:each) do
-        @decision.unstub(:process_doc)
-        @decision.save
+      before(:all) do
+        @decision = Decision.create!(:doc_file => File.open(File.join(Rails.root, 'spec', 'data', 'test.doc')))
+        @decision.process_doc
       end
 
-      after(:each) do
+      after(:all) do
+        @decision.destroy
         File.unlink(File.join(Rails.root, 'tmp', 'test.html'))
         File.unlink(File.join(Rails.root, 'tmp', 'test.pdf'))
       end
@@ -41,8 +28,8 @@ describe Decision do
     end
 
     it "should still save if the doc processing fails" do
-      @decision.unstub(:process_doc)
       @decision = Decision.create!(:doc_file => File.open(__FILE__))
+      @decision.process_doc
       @decision.import_errors.count.should == 1
       @decision.import_errors.first.error.should include("No such file or directory")
     end
