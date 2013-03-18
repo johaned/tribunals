@@ -11,6 +11,9 @@ gem 'carrierwave'
 gem 'jquery-rails'
 gem 'will_paginate', '~> 3.0'
 
+# For speeding up Postgres array parsing
+gem 'pg_array_parser'
+
 #For importing
 gem 'capybara'
 gem 'capybara-webkit'
