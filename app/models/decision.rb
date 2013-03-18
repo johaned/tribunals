@@ -12,7 +12,7 @@ class Decision < ActiveRecord::Base
   end
 
   def self.search(query)
-    where("(to_tsvector('english', \"decisions\".\"text\"::text) @@ to_tsquery('english', ?::text))", query)
+    where("(to_tsvector('english', \"decisions\".\"text\"::text) @@ plainto_tsquery('english', ?::text))", query)
   end
 
   def fetch_doc_file
