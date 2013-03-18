@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gem 'nokogiri'
 
-gem 'rails', '3.2.12'
+gem 'rails', '4.0.0.beta1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
