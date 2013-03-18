@@ -18,6 +18,8 @@ class Decision < ActiveRecord::Base
   def fetch_doc_file
     require 'open-uri'
     self.doc_file = open(self.url)
+  rescue StandardError => e
+    self.import_errors.create!(:error => e.message, :backtrace => e.backtrace)
   end
 
   def process_doc
