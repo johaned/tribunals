@@ -1,0 +1,30 @@
+<%= form_for [:admin, @decision] do |form| %>
+  <%= form.label :doc_file %>
+  <%= form.file_field :doc_file %>
+  
+  <%= form.label :promulgated_on %>
+  <%= form.date_select :promulgated_on %>
+  <%= form.label :appeal_number %>
+  <%= form.text_field :appeal_number %>
+  <%= form.label :reportable %>
+  <%= form.check_box :reportable %>
+  <%= form.label :starred %>
+  <%= form.check_box :starred %>
+  <%= form.label :panel %>
+  <%= form.check_box :panel %>
+  <%= form.label :country_guideline %>
+  <%= form.check_box :country_guideline %>
+  <%= form.label :judges %>
+  <%= form.text_field :judges %>
+  <%= form.label :categories %>
+  <%= form.text_field :categories %>
+  <%= form.label :country %>
+  <%= form.text_field :country %>
+  <%= form.label :claiments %>
+  <%= form.text_field :claiments %>
+  <%= form.label :keywords %>
+  <%= form.text_field :keywords %>
+  <%= form.label :case_notes %>
+  <%= form.text_field :case_notes %>
+  <%= form.submit %>
+<% end %>
