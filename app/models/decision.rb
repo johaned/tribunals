@@ -1,5 +1,5 @@
 class Decision < ActiveRecord::Base
-  attr_accessible :doc_file, :html, :pdf_file, :promulgated_on, :original_filename, :text, :url, :tribunal_id, :reportable
+  # attr_accessible :doc_file, :html, :pdf_file, :promulgated_on, :original_filename, :text, :url, :tribunal_id, :reportable, :old_details_url
   mount_uploader :doc_file, DocFileUploader
   mount_uploader :pdf_file, PdfFileUploader
 
@@ -35,7 +35,7 @@ class Decision < ActiveRecord::Base
       self.set_text_from_html
     end
   rescue StandardError => e
-    self.import_errors.create!(:error => e.message, :backtrace => e.backtrace)
+    self.import_errors.create!(:error => e.message, :backtrace => e.backtrace.to_s)
   end
 
   def html_body
