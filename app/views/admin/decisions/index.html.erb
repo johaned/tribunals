@@ -1,9 +1,6 @@
+<%= link_to "Add a decision", new_admin_decision_path %>
 <ul>
   <% @decisions.each do |decision| %>
     <li><%= decision.id %></li>
   <% end %>
 </ul>
-<%= form_for [:admin, Decision.new] do |form| %>
-  <%= form.file_field :doc_file %>
-  <%= form.submit %>
-<% end %>
