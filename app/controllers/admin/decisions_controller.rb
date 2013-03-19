@@ -4,9 +4,12 @@ class Admin::DecisionsController < ApplicationController
   end
 
   def create
-    @decision = Decision.new(params[:decision])
+    @decision = Decision.new(params[:decision].permit!)
     if @decision.save
+      @decision.process_doc
       redirect_to :action => :index
+    else
+      render :action => :new
     end
   end
 
