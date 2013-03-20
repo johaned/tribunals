@@ -15,7 +15,7 @@ namespace :import do
   end
 
   task :import_word_docs_from_urls => :environment do
-    Decision.where("url IS NULL").where("doc_file IS NULL").find_each do |decision|
+    Decision.where("url IS NOT NULL").where("doc_file IS NULL").find_each do |decision|
       decision.fetch_doc_file
       p decision.process_doc
       decision.save!
