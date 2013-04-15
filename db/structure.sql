@@ -151,10 +151,38 @@ ALTER TABLE ONLY import_errors
 
 
 --
+-- Name: index_decisions_on_country; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_decisions_on_country ON decisions USING btree (country);
+
+
+--
+-- Name: index_decisions_on_country_guideline; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_decisions_on_country_guideline ON decisions USING btree (country_guideline);
+
+
+--
+-- Name: index_decisions_on_judges; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_decisions_on_judges ON decisions USING btree (judges);
+
+
+--
 -- Name: index_decisions_on_promulgated_on; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX index_decisions_on_promulgated_on ON decisions USING btree (promulgated_on DESC);
+
+
+--
+-- Name: index_decisions_on_reported; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_decisions_on_reported ON decisions USING btree (reported);
 
 
 --
@@ -204,3 +232,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130318140942');
 INSERT INTO schema_migrations (version) VALUES ('20130412104425');
 
 INSERT INTO schema_migrations (version) VALUES ('20130412132257');
+
+INSERT INTO schema_migrations (version) VALUES ('20130415111723');
