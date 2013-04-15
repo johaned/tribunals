@@ -12,7 +12,7 @@ class Decision < ActiveRecord::Base
   end
 
   def self.filtered(filter_hash)
-    search(filter_hash[:query]).by_reported(filter_hash[:reported]).by_country_guideline(filter_hash[:country_guideline]).by_country(filter_hash[:country]).by_judge(filter_hash[:judge])
+    search(filter_hash[:query]).by_reported(filter_hash[:reported]).by_country_guideline(filter_hash[:country_guideline]).by_country(filter_hash[:country]).by_judge(filter_hash[:judge]).by_claiment(filter_hash[:claiment])
   end
 
   def self.search(query)
@@ -37,7 +37,7 @@ class Decision < ActiveRecord::Base
 
   def self.by_reported(reported)
     if reported.present? && reported != "all"
-      where("? = reported", reported)
+      where("reported = ?", reported)
     else
       where("")
     end
@@ -46,6 +46,14 @@ class Decision < ActiveRecord::Base
   def self.by_judge(judge_name)
     if judge_name.present?
       where("? = ANY (judges)", judge_name)
+    else
+      where("")
+    end
+  end
+
+  def self.by_claiment(claiment)
+    if claiment.present?
+      where("claiments ~ ?", "[[:<:]]#{claiment}[[:>:]]")
     else
       where("")
     end
