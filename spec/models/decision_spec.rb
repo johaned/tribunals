@@ -72,7 +72,7 @@ describe Decision do
       @decision3 = Decision.create!(:judges => ["Blake", "Smith"])
     end
     it "should list unique list of all judged" do
-      Decision.judges_list.should == ["gregg", "Blake", "Smith"]
+      Decision.judges_list.should == ["Blake", "gregg", "Smith"]
     end
   end
 
