@@ -23,7 +23,7 @@ class Decision < ActiveRecord::Base
     end
   end
 
-  [:reported, :country_guideline, :country].each do |field|
+  [:country_guideline, :country].each do |field|
     class_eval <<-FILTERS 
       def self.by_#{field}(field)
         if field.present?
@@ -33,6 +33,14 @@ class Decision < ActiveRecord::Base
         end
       end
     FILTERS
+  end
+
+  def self.by_reported(reported)
+    if reported.present? && reported != "all"
+      where("? = reported", reported)
+    else
+      where("")
+    end
   end
 
   def self.by_judge(judge_name)

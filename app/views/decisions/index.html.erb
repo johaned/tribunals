@@ -1,12 +1,25 @@
 <%= form_tag decisions_path, :method => :get do %>
-  Search: <%= text_field :search, :query, :value => params[:search][:query] %>
-  <div class="advanced_search">
-    Reported?: <%= check_box :search, :reported, :value => params[:search][:reported] %>
-    Guidline?: <%= check_box :search, :country_guideline, :value => params[:search][:country_guideline] %>
-    Country: <%= text_field :search, :country, :value => params[:search][:country] %>
-    Judge: <%= text_field :search, :judge, :value => params[:search][:judge] %>
-  </div>
-  <%= submit_tag "Search" %>
+  <%= text_field :search, :query, :value => params[:search][:query], :class => "search-query" %>
+  <fieldset class="advanced_search">
+    <label class="checkbox inline">
+      <%= radio_button :search, :reported, "all" %> All
+    </label>
+    <label class="checkbox inline">
+      <%= radio_button :search, :reported, "true" %> Reported
+    </label>
+    <label class="checkbox inline">
+      <%= radio_button :search, :reported, "false" %> Unreported
+    </label>
+    <label>Country</label>
+    <%= text_field :search, :country, :value => params[:search][:country] %>
+    <label class="checkbox">
+      <%= check_box :search, :country_guideline, :value => params[:search][:country_guideline] %>
+      Country Guidance?
+    </label>
+    <label>Judge</label>
+    <%= text_field :search, :judge, :value => params[:search][:judge] %>
+  </fieldset>
+  <%= submit_tag "Search", :class => "btn" %>
 <% end %>
 <%= page_entries_info @decisions %>
 <%= will_paginate @decisions %>
