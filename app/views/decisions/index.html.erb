@@ -18,6 +18,8 @@
     </label>
     <label>Judge</label>
     <%= text_field :search, :judge, :value => params[:search][:judge] %>
+    <label>Claiment name</label>
+    <%= text_field :search, :claiment, :value => params[:search][:claiment] %>
   </fieldset>
   <%= submit_tag "Search", :class => "btn" %>
 <% end %>
