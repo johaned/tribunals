@@ -80,4 +80,8 @@ class Decision < ActiveRecord::Base
       self.appeal_number = $1.gsub(" ", "/")
     end
   end
+
+  def self.judges_list
+    connection.execute("select distinct unnest(judges) as judge from decisions;").collect {|x| x["judge"]}
+  end
 end
