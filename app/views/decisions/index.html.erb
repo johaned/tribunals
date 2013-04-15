@@ -11,13 +11,13 @@
       <%= radio_button :search, :reported, "false" %> Unreported
     </label>
     <label>Country</label>
-    <%= text_field :search, :country, :value => params[:search][:country] %>
+    <%= select :search, :country, options_for_select([[]] + Decision.country_list) %>
     <label class="checkbox">
       <%= check_box :search, :country_guideline, :value => params[:search][:country_guideline] %>
       Country Guidance?
     </label>
     <label>Judge</label>
-    <%= text_field :search, :judge, :value => params[:search][:judge] %>
+    <%= select :search, :judge, options_for_select([[]] + Decision.judges_list) %>
     <label>Claiment name</label>
     <%= text_field :search, :claiment, :value => params[:search][:claiment] %>
   </fieldset>
