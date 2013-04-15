@@ -8,9 +8,11 @@ namespace :import do
   end
 
   task :extract_appeal_numbers => :environment do
-    Decision.find_each do |decision|
-      decision.extract_appeal_number
-      decision.save
+    Decision.where("appeal_number IS NULL").find_each do |decision|
+      if decision.text
+        decision.extract_appeal_number
+        decision.save
+      end
     end
   end
 

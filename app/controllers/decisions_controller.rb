@@ -1,9 +1,11 @@
 class DecisionsController < ApplicationController
   def index
+    params[:search] ||= {}
+    params[:search][:reported] = nil if params[:search][:reported] == '0'
+    params[:search][:country_guideline] = nil if params[:search][:country_guideline] == '0'
+    @decisions = Decision.paginate(:page => params[:page], :per_page => 30).ordered
     if params[:search].present?
-      @decisions = Decision.ordered.select("id, promulgated_on, appeal_number").search(params[:search]).paginate(:page => params[:page], :per_page => 30)
-    else
-      @decisions = Decision.ordered.paginate(:page => params[:page], :per_page => 30).all
+      @decisions = @decisions.filtered(params[:search])
     end
   end
 
