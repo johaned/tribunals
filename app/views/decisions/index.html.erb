@@ -1,5 +1,11 @@
 <%= form_tag decisions_path, :method => :get do %>
-  <%= text_field_tag :search, params[:search] %>
+  Search: <%= text_field :search, :query, :value => params[:search][:query] %>
+  <div class="advanced_search">
+    Reported?: <%= check_box :search, :reported, :value => params[:search][:reported] %>
+    Guidline?: <%= check_box :search, :country_guideline, :value => params[:search][:country_guideline] %>
+    Country: <%= text_field :search, :country, :value => params[:search][:country] %>
+    Judge: <%= text_field :search, :judge, :value => params[:search][:judge] %>
+  </div>
   <%= submit_tag "Search" %>
 <% end %>
 <%= page_entries_info @decisions %>

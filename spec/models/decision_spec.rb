@@ -1,6 +1,29 @@
 require 'spec_helper'
 
 describe Decision do
+
+  describe "search" do
+    before(:each) do
+      @decision1 = Decision.create!(:text => "Some searchable text is here")
+      @decision2 = Decision.create!(:text => "Some other searchable text is here gerald", :country => 'Afghanitsan')
+      @decision3 = Decision.create!(:text => "gerald", :reported => true, :country_guideline => true, :country => 'Iraq', :judges => ["Blake", "Smith"])
+    end
+    it "should filter on search text" do
+      Decision.filtered(:query => "gerald").should == [@decision2, @decision3]
+    end
+    it "should filter on search text and reported" do
+      Decision.filtered(:query => "gerald", :reported => true).should == [@decision3]
+    end
+    it "should filter on search text and country guidline" do
+      Decision.filtered(:query => "gerald", :country_guideline => true).should == [@decision3]
+    end
+    it "should filter on search text and country" do
+      Decision.filtered(:query => "gerald", :country => 'Iraq').should == [@decision3]
+    end
+    it "should filter on search text and judge" do
+      Decision.filtered(:query => "gerald", :judge => 'Blake').should == [@decision3]
+    end
+  end
   describe "with a .doc" do
     describe "process_doc" do
       before(:all) do
@@ -40,6 +63,17 @@ describe Decision do
       @decision = Decision.new(:html => "<html><head></head><body>Contents <p><span>other</span></p></body>")
       @decision.html_body.should == "Contents <p><span>other</span></p>"
     end  
+  end
+
+  describe "judge_list" do
+    before(:each) do
+      @decision1 = Decision.create!(:judges => ["gregg"])
+      @decision2 = Decision.create!(:judges => ["Blake"])
+      @decision3 = Decision.create!(:judges => ["Blake", "Smith"])
+    end
+    it "should list unique list of all judged" do
+      Decision.judges_list.should == ["gregg", "Blake", "Smith"]
+    end
   end
 
   describe "extract_appeal_number" do
