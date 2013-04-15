@@ -98,10 +98,10 @@ class Decision < ActiveRecord::Base
   end
 
   def self.judges_list
-    connection.execute("select distinct unnest(judges) as judge from decisions;").collect {|x| x["judge"]}
+    @@judges_list ||= connection.execute("select distinct unnest(judges) as judge from decisions;").collect {|x| x["judge"]}
   end
 
   def self.country_list
-    connection.execute("select distinct country as country from decisions;").collect {|x| x["country"]}
+    @@country_list ||= connection.execute("select distinct country as country from decisions;").collect {|x| x["country"]}
   end
 end
