@@ -23,8 +23,8 @@
       </label>
       <label>Judge</label>
       <%= select :search, :judge, options_for_select([[]] + Decision.judges_list) %>
-      <label>Claiment name</label>
-      <%= text_field :search, :claiment, :value => params[:search][:claiment] %>
+      <label>Claimant name</label>
+      <%= text_field :search, :claimant, :value => params[:search][:claimant] %>
       <%= submit_tag "Search", :class => "btn" %>
     </fieldset>
   <% end %>
@@ -36,7 +36,7 @@
     <th>Appeal Number</th>
     <th>Reported?</th>
     <th>Promulgation date</th>
-    <th>Claiment</th>
+    <th>Claimant</th>
     <th>Country</th>
   </tr>
   <% @decisions.each do |decision| %>
@@ -44,7 +44,7 @@
     <td><%= link_to decision.appeal_number || "Unknown" , decision_path(decision) %></td>
     <td><%= decision.reported? %>
     <td><%= decision.promulgated_on %></td>
-    <td><%= decision.claiments %></td>
+    <td><%= decision.claimant %></td>
     <td><%= decision.country %></td>
   </tr>
   <% end %>
