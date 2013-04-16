@@ -1,28 +1,34 @@
-<%= form_tag decisions_path, :method => :get do %>
-  <%= text_field :search, :query, :value => params[:search][:query], :class => "search-query" %>
-  <fieldset class="advanced_search">
-    <label class="checkbox inline">
-      <%= radio_button :search, :reported, "all" %> All
-    </label>
-    <label class="checkbox inline">
-      <%= radio_button :search, :reported, "true" %> Reported
-    </label>
-    <label class="checkbox inline">
-      <%= radio_button :search, :reported, "false" %> Unreported
-    </label>
-    <label>Country</label>
-    <%= select :search, :country, options_for_select([[]] + Decision.country_list) %>
-    <label class="checkbox">
-      <%= check_box :search, :country_guideline, :value => params[:search][:country_guideline] %>
-      Country Guidance?
-    </label>
-    <label>Judge</label>
-    <%= select :search, :judge, options_for_select([[]] + Decision.judges_list) %>
-    <label>Claiment name</label>
-    <%= text_field :search, :claiment, :value => params[:search][:claiment] %>
-  </fieldset>
-  <%= submit_tag "Search", :class => "btn" %>
-<% end %>
+<div class="row">
+  <%= form_tag decisions_path, :method => :get, :class => 'span6 offset2' do %>
+    <div class="input-append">
+      <%= text_field :search, :query, :value => params[:search][:query], :class => "span6" %>
+      <button type="submit" class="btn">Search</button>
+    </div><br />
+    <a href="#advanced_search" class="advanced_search_link">More Search Options</a>
+    <fieldset id="advanced_search">
+      <label class="checkbox inline">
+        <%= radio_button :search, :reported, "all" %> All
+      </label>
+      <label class="checkbox inline">
+        <%= radio_button :search, :reported, "true" %> Reported
+      </label>
+      <label class="checkbox inline">
+        <%= radio_button :search, :reported, "false" %> Unreported
+      </label>
+      <label>Country</label>
+      <%= select :search, :country, options_for_select([[]] + Decision.country_list) %>
+      <label class="checkbox">
+        <%= check_box :search, :country_guideline, :value => params[:search][:country_guideline] %>
+        Country Guidance?
+      </label>
+      <label>Judge</label>
+      <%= select :search, :judge, options_for_select([[]] + Decision.judges_list) %>
+      <label>Claiment name</label>
+      <%= text_field :search, :claiment, :value => params[:search][:claiment] %>
+      <%= submit_tag "Search", :class => "btn" %>
+    </fieldset>
+  <% end %>
+</div>
 <%= page_entries_info @decisions %>
 <%= will_paginate @decisions %>
 <table class="table">
