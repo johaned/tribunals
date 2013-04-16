@@ -27,19 +27,20 @@
 <%= will_paginate @decisions %>
 <table class="table">
   <tr>
-    <th>Reported?</th>
     <th>Appeal Number</th>
+    <th>Reported?</th>
     <th>Promulgation date</th>
     <th>Claiment</th>
     <th>Country</th>
   </tr>
   <% @decisions.each do |decision| %>
   <tr>
-    <td><%= decision.reported? %>
     <td><%= link_to decision.appeal_number || "Unknown" , decision_path(decision) %></td>
+    <td><%= decision.reported? %>
     <td><%= decision.promulgated_on %></td>
     <td><%= decision.claiments %></td>
     <td><%= decision.country %></td>
   </tr>
   <% end %>
 </table>
+<%= will_paginate @decisions %>
