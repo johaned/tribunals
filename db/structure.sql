@@ -53,7 +53,7 @@ CREATE TABLE decisions (
     judges character varying(255)[] DEFAULT '{}'::character varying[],
     categories character varying(255)[] DEFAULT '{}'::character varying[],
     country character varying(255),
-    claiments character varying(255),
+    claimant character varying(255),
     keywords character varying(255)[] DEFAULT '{}'::character varying[],
     case_notes character varying(255)
 );
@@ -234,3 +234,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130412104425');
 INSERT INTO schema_migrations (version) VALUES ('20130412132257');
 
 INSERT INTO schema_migrations (version) VALUES ('20130415111723');
+
+INSERT INTO schema_migrations (version) VALUES ('20130416092328');

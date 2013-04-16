@@ -54,7 +54,7 @@ class AitReportedScraper
       decision.categories = cleaned_values[7]
       decision.appeal_number = cleaned_values[8]
       decision.country = cleaned_values[9]
-      decision.claiments = cleaned_values[10]
+      decision.claimant = cleaned_values[10]
       decision.keywords = cleaned_values[11].split("; ")
       decision.case_notes = cleaned_values[12]
       decision.original_filename = cleaned_values[13]
