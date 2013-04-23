@@ -27,11 +27,14 @@ class AitReportedScraper
   def details_locations_from_html(html)
     html_doc = Nokogiri::HTML(html)
     html_doc.css("table tbody tr").collect do |row|
-      visit_detail_page(row.css("td").last.css("a").attr('href').value)
+      url = row.css("td").last.css("a").attr('href').value
+      case_name = row.css("td")[1].content
+      promulgated_on = row.css("td")[4].content
+      visit_detail_page(url, case_name, promulgated_on)
     end
   end
 
-  def visit_detail_page(url)
+  def visit_detail_page(url, case_name, promulgated_on)
     @details_session ||= Capybara::Session.new(:webkit)
     old_details_path = "/Public/#{url}"
     old_details_url = "http://www.ait.gov.uk" + old_details_path
@@ -43,7 +46,9 @@ class AitReportedScraper
     unless decision = Decision.find_by_old_details_url(old_details_url)
       decision = Decision.new(:old_details_url => old_details_url)
       decision.tribunal_id = 1
-      decision.reportable = true
+      decision.reported = true
+      decision.case_name = case_name
+      decision.promulgated_on = promulgated_on
       decision.created_at = cleaned_values[0]
       decision.updated_at = cleaned_values[1]
       decision.promulgated_on = cleaned_values[2]
