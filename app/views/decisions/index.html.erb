@@ -38,6 +38,9 @@
     <th>Promulgation date</th>
     <th>Claimant</th>
     <th>Country</th>
+    <% if params[:search][:query].present? %>
+      <th>Search result</th>
+    <% end %>
   </tr>
   <% @decisions.each do |decision| %>
   <tr>
@@ -46,6 +49,10 @@
     <td><%= decision.promulgated_on %></td>
     <td><%= decision.claimant %></td>
     <td><%= decision.country %></td>
+    <% if params[:search][:query].present? %>
+      <td><%= hilighted_search_result(params[:search][:query], decision.text) %></td>
+    <% end %>
+
   </tr>
   <% end %>
 </table>
