@@ -5,8 +5,16 @@
 
   <% [:case_name, :promulgated_on, :appeal_number, :reported, :starred, :panel, :country_guideline, :judges, :categories, :country, :claimant, :keywords, :case_notes].each do |field| %>
     <% if @decision.send(field).present? %>
-      <p><%= field.to_s.humanize %>: <%= @decision.send(field).to_s %></p>
-    <% end %>
+      <p><%= field.to_s.humanize %>:
+	      <% if @decision.send(field) == true %>
+	      	Yes
+	      <% elsif @decision.send(field) == false %>
+	      	No
+	      <% else %>
+		    	<%= @decision.send(field).to_s %>
+	      <% end %>
+      </p>
+	  <% end %>
   <% end %>
 
 <% if @decision.html.blank? %>
