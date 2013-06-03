@@ -46,8 +46,9 @@ class AitReportedScraper
     html_doc = Nokogiri::HTML(@details_session.html)
     values = html_doc.css("tr").collect {|tr| tr.css("td").last}
     cleaned_values = values.collect {|x| x.content.strip}
+    url = "http://www.ait.gov.uk/Public/" + values.last.css("a").attr('href').value
 
-    unless decision = Decision.find_by_old_details_url(old_details_url)
+    unless Decision.exists?(url: url) || Decision.exists?(old_details_url: old_details_url)
       decision = Decision.new(:old_details_url => old_details_url)
       decision.tribunal_id = 1
       decision.reported = true
@@ -67,7 +68,7 @@ class AitReportedScraper
       decision.keywords = cleaned_values[11].split("; ")
       decision.case_notes = cleaned_values[12]
       decision.original_filename = cleaned_values[13]
-      decision.url = "http://www.ait.gov.uk/Public/" + values.last.css("a").attr('href').value
+      decision.url = url
       decision.save!
       p decision
     else
