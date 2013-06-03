@@ -17,18 +17,22 @@ class AitReportedScraper
     @index_session.click_link("Most recent determinations")
     details_locations_from_html(@index_session.html)
   
-    80.times do |i|
-      @index_session.find('a#pager1', :text => (i+2).to_s).click
-      p "scanning page #{i+2}"
-      details_locations_from_html(@index_session.html)
+    begin
+      (2..Float::INFINITY).each do |i|
+        @index_session.find('a#pager1', :text => i.to_s).click
+        p "scanning page #{i}"
+        details_locations_from_html(@index_session.html)
+      end
+    rescue Capybara::ElementNotFound
     end
+    p "scanned all pages"
   end
   
   def details_locations_from_html(html)
     html_doc = Nokogiri::HTML(html)
     html_doc.css("table tbody tr").collect do |row|
       url = row.css("td").last.css("a").attr('href').value
-      case_name = row.css("td")[1].content
+      case_name = row.css("td")[1].content.strip
       promulgated_on = row.css("td")[4].content
       visit_detail_page(url, case_name, promulgated_on)
     end
