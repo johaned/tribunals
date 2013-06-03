@@ -38,8 +38,8 @@ CREATE TABLE decisions (
     promulgated_on date,
     html text,
     pdf_file character varying(255),
-    created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
     text text,
     original_filename character varying(255),
     appeal_number character varying(255),
@@ -87,8 +87,8 @@ CREATE TABLE import_errors (
     id integer NOT NULL,
     error character varying(255),
     backtrace text,
-    created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
     decision_id integer
 );
 
@@ -149,6 +149,13 @@ ALTER TABLE ONLY decisions
 
 ALTER TABLE ONLY import_errors
     ADD CONSTRAINT import_errors_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: decisions_to_tsvector_idx; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX decisions_to_tsvector_idx ON decisions USING gin (to_tsvector('english'::regconfig, text));
 
 
 --
