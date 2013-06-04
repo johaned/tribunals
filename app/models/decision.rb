@@ -59,6 +59,12 @@ class Decision < ActiveRecord::Base
     end
   end
 
+  def label
+    if reported
+      [appeal_number, case_name].join(' - ')
+    end
+  end
+
   def fetch_doc_file
     require 'open-uri'
     self.doc_file = open(URI.parse(URI.encode(self.url)))

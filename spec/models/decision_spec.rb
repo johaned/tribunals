@@ -93,4 +93,14 @@ describe Decision do
       @decision.appeal_number.should == "IA/37982/2010"
     end
   end
+
+  describe "label" do
+    it "should display the appropriate label" do
+      decision = Decision.new(:appeal_number => 'XYZ 123', :case_name => 'Smith vs Brown', :reported => true)
+      decision.label.should == 'XYZ 123 - Smith vs Brown'
+      
+      decision = Decision.new
+      decision.label.should be_nil
+    end
+  end
 end
