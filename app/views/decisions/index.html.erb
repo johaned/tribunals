@@ -37,6 +37,7 @@
     <th>Reported?</th>
     <th>Promulgation date</th>
     <th>Claimant</th>
+    <th>Case title</th>
     <th>Country</th>
     <% if params[:search][:query].present? %>
       <th>Search result</th>
@@ -48,6 +49,7 @@
     <td><%= reported_label(decision.reported?) %>
     <td><%= decision.promulgated_on %></td>
     <td><%= decision.claimant %></td>
+    <td><%= decision.case_name %></td>
     <td><%= decision.country %></td>
     <% if params[:search][:query].present? %>
       <td><%= hilighted_search_result(params[:search][:query], decision.text) %></td>
