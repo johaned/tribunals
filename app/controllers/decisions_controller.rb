@@ -12,5 +12,11 @@ class DecisionsController < ApplicationController
   def show
     @decision = Decision.find(params[:id])
     @page_title = @decision.label
+
+    respond_to do |format|
+      format.html
+      format.doc { @decision.doc_file.present? ? send_file(@decision.doc_file.path, disposition: 'attachment') : head(:not_found) }
+      format.pdf { @decision.pdf_file.present? ? send_file(@decision.pdf_file.path, disposition: 'attachment') : head(:not_found) }
+    end
   end
 end

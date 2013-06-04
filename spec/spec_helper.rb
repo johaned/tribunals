@@ -36,3 +36,11 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 end
+
+def sample_pdf_file
+  File.open('spec/fixtures/te3-eng.pdf')
+end
+
+def sample_doc_file
+  File.open('spec/fixtures/te3-eng.doc')
+end
