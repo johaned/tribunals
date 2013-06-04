@@ -1,5 +1,5 @@
 class Decision < ActiveRecord::Base
-  # attr_accessible :doc_file, :html, :pdf_file, :promulgated_on, :original_filename, :text, :url, :tribunal_id, :reportable, :old_details_url
+  # attr_accessible :doc_file, :html, :pdf_file, :promulgated_on, :original_filename, :text, :url, :tribunal_id, :reported, :old_details_url
   mount_uploader :doc_file, DocFileUploader
   mount_uploader :pdf_file, PdfFileUploader
 
@@ -67,11 +67,15 @@ class Decision < ActiveRecord::Base
   end
 
   def process_doc
+    require 'thwait'
     if doc_file.present?
       tmp_html_dir = File.join(Rails.root, 'tmp')
-      [:pdf, :html].each do |type|
-        `soffice --headless --convert-to #{type} --outdir #{tmp_html_dir} #{self.doc_file.file.path}`
+      threads = [:pdf, :html].map do |type|
+        Thread.new do
+          `soffice --headless --convert-to #{type} --outdir #{tmp_html_dir} #{self.doc_file.file.path}`
+        end
       end
+      ThreadsWait.all_waits(*threads)
       html_file = File.join(tmp_html_dir, doc_file.file.filename.gsub('.doc', '')+'.html')
       pdf_file = File.join(tmp_html_dir, doc_file.file.filename.gsub('.doc', '')+'.pdf')
       self.html = File.read(html_file)

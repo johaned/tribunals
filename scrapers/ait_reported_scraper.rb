@@ -17,18 +17,22 @@ class AitReportedScraper
     @index_session.click_link("Most recent determinations")
     details_locations_from_html(@index_session.html)
   
-    80.times do |i|
-      @index_session.find('a#pager1', :text => (i+2).to_s).click
-      p "scanning page #{i+2}"
-      details_locations_from_html(@index_session.html)
+    begin
+      (2..Float::INFINITY).each do |i|
+        @index_session.find('a#pager1', :text => i.to_s).click
+        p "scanning page #{i}"
+        details_locations_from_html(@index_session.html)
+      end
+    rescue Capybara::ElementNotFound
     end
+    p "scanned all pages"
   end
   
   def details_locations_from_html(html)
     html_doc = Nokogiri::HTML(html)
     html_doc.css("table tbody tr").collect do |row|
       url = row.css("td").last.css("a").attr('href').value
-      case_name = row.css("td")[1].content
+      case_name = row.css("td")[1].content.strip
       promulgated_on = row.css("td")[4].content
       visit_detail_page(url, case_name, promulgated_on)
     end
@@ -42,8 +46,9 @@ class AitReportedScraper
     html_doc = Nokogiri::HTML(@details_session.html)
     values = html_doc.css("tr").collect {|tr| tr.css("td").last}
     cleaned_values = values.collect {|x| x.content.strip}
+    url = "http://www.ait.gov.uk/Public/" + values.last.css("a").attr('href').value
 
-    unless decision = Decision.find_by_old_details_url(old_details_url)
+    unless Decision.exists?(url: url) || Decision.exists?(old_details_url: old_details_url)
       decision = Decision.new(:old_details_url => old_details_url)
       decision.tribunal_id = 1
       decision.reported = true
@@ -63,7 +68,7 @@ class AitReportedScraper
       decision.keywords = cleaned_values[11].split("; ")
       decision.case_notes = cleaned_values[12]
       decision.original_filename = cleaned_values[13]
-      decision.url = "http://www.ait.gov.uk/Public/" + values.last.css("a").attr('href').value
+      decision.url = url
       decision.save!
       p decision
     else
