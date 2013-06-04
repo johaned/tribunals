@@ -4,9 +4,9 @@ describe Decision do
 
   describe "search" do
     before(:each) do
-      @decision1 = Decision.create!(:text => "Some searchable text is here")
-      @decision2 = Decision.create!(:text => "Some other searchable text is here gerald", :country => 'Afghanitsan')
-      @decision3 = Decision.create!(:text => "gerald", :reported => true, :country_guideline => true, :country => 'Iraq', :judges => ["Blake", "Smith"])
+      @decision1 = Decision.create!(:text => "Some searchable text is here", :promulgated_on => Date.today)
+      @decision2 = Decision.create!(:text => "Some other searchable text is here gerald", :country => 'Afghanitsan', :promulgated_on => Date.today)
+      @decision3 = Decision.create!(:text => "gerald", :reported => true, :country_guideline => true, :country => 'Iraq', :judges => ["Blake", "Smith"], :promulgated_on => Date.today)
     end
     it "should filter on search text" do
       Decision.filtered(:query => "gerald").should == [@decision2, @decision3]
@@ -27,7 +27,7 @@ describe Decision do
   describe "with a .doc" do
     describe "process_doc" do
       before(:all) do
-        @decision = Decision.create!(:doc_file => File.open(File.join(Rails.root, 'spec', 'data', 'test.doc')))
+        @decision = Decision.create!(:doc_file => File.open(File.join(Rails.root, 'spec', 'data', 'test.doc')), :promulgated_on => Date.today)
         @decision.process_doc
       end
 
@@ -51,7 +51,7 @@ describe Decision do
     end
 
     it "should still save if the doc processing fails" do
-      @decision = Decision.create!(:doc_file => File.open(__FILE__))
+      @decision = Decision.create!(:doc_file => File.open(__FILE__), :promulgated_on => Date.today)
       @decision.process_doc
       @decision.import_errors.count.should == 1
       @decision.import_errors.first.error.should include("No such file or directory")
@@ -67,9 +67,9 @@ describe Decision do
 
   describe "judge_list" do
     before(:each) do
-      @decision1 = Decision.create!(:judges => ["gregg"])
-      @decision2 = Decision.create!(:judges => ["Blake"])
-      @decision3 = Decision.create!(:judges => ["Blake", "Smith"])
+      @decision1 = Decision.create!(:judges => ["gregg"], :promulgated_on => Date.today)
+      @decision2 = Decision.create!(:judges => ["Blake"], :promulgated_on => Date.today)
+      @decision3 = Decision.create!(:judges => ["Blake", "Smith"], :promulgated_on => Date.today)
     end
     it "should list unique list of all judged" do
       Decision.judges_list.should == ["Blake", "gregg", "Smith"]
@@ -101,6 +101,18 @@ describe Decision do
       
       decision = Decision.new
       decision.label.should be_nil
+    end
+  end
+
+  describe "default scope" do
+    before :each do
+      Decision.create(promulgated_on: Date.new(2012, 12, 31))
+      Decision.create(promulgated_on: Date.new(2013, 1, 1))
+    end
+
+    it "should not display pre-1.1.2013 decisions by default" do
+      Decision.count.should == 1
+      Decision.unscoped.count.should == 2
     end
   end
 end
