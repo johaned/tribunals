@@ -3,9 +3,6 @@ gem 'nokogiri'
 
 gem 'rails', '4.0.0.beta1'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'pg'
 gem 'carrierwave'
 gem 'jquery-rails'
@@ -21,19 +18,7 @@ gem 'capybara-webkit'
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'debugger'
 end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+gem 'unicorn'
