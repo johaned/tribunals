@@ -68,8 +68,9 @@ class Decision < ActiveRecord::Base
   end
 
   def fetch_doc_file
-    self.doc_file.download!(URI.parse(self.url).to_s)
+    self.doc_file.download!(URI.parse(URI.encode(self.url)).to_s)
     self.doc_file.store!
+    self.save!
   rescue StandardError => e
     self.import_errors.create!(:error => e.message, :backtrace => e.backtrace.to_s)
   end
