@@ -13,4 +13,5 @@ CarrierWave.configure do |config|
     'Cache-Control' => 'max-age=315576000',
     'Content-Disposition' => 'attachment'
   }
+  config.fog_use_ssl_for_aws = false
 end
