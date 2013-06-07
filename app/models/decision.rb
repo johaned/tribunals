@@ -79,17 +79,23 @@ class Decision < ActiveRecord::Base
     require 'thwait'
     if doc_file.present?
       tmp_html_dir = File.join(Rails.root, 'tmp')
+      doc_filename = File.join(tmp_html_dir, File.basename(self.url))
+      File.open(doc_filename, 'wb') do |f|
+        f.write(doc_file.read)
+      end
       threads = [:pdf, :html].map do |type|
         Thread.new do
-          `soffice --headless --convert-to #{type} --outdir #{tmp_html_dir} #{self.doc_file.file.path}`
+          `soffice --headless --convert-to #{type} --outdir #{tmp_html_dir} '#{doc_filename}'`
         end
       end
       ThreadsWait.all_waits(*threads)
-      html_file = File.join(tmp_html_dir, doc_file.file.filename.gsub('.doc', '')+'.html')
-      pdf_file = File.join(tmp_html_dir, doc_file.file.filename.gsub('.doc', '')+'.pdf')
+      html_file = doc_filename.gsub(/\.doc$/, '.html')
+      pdf_file = doc_filename.gsub(/\.doc$/, '.pdf')
       self.html = File.read(html_file)
       self.pdf_file = File.open(pdf_file)
       self.set_text_from_html
+      self.save!
+      File.delete(doc_filename)
     end
   rescue StandardError => e
     self.import_errors.create!(:error => e.message, :backtrace => e.backtrace.to_s)
