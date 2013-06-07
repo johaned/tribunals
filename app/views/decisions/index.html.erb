@@ -7,7 +7,7 @@
     <a href="#advanced_search" class="advanced_search_link">More Search Options</a>
     <fieldset id="advanced_search">
       <label class="checkbox inline">
-        <%= radio_button :search, :reported, "all" %> All
+        <%= radio_button :search, :reported, "all", checked: true %> All
       </label>
       <label class="checkbox inline">
         <%= radio_button :search, :reported, "true" %> Reported
@@ -15,16 +15,18 @@
       <label class="checkbox inline">
         <%= radio_button :search, :reported, "false" %> Unreported
       </label>
-      <label>Country</label>
-      <%= select :search, :country, options_for_select([[]] + Decision.country_list) %>
-      <label class="checkbox">
-        <%= check_box :search, :country_guideline, :value => params[:search][:country_guideline] %>
-        Country Guidance?
-      </label>
-      <label>Judge</label>
-      <%= select :search, :judge, options_for_select([[]] + Decision.judges_list) %>
-      <label>Claimant name</label>
-      <%= text_field :search, :claimant, :value => params[:search][:claimant] %>
+      <div id="search_reported_only">
+        <label>Country</label>
+        <%= select :search, :country, options_for_select([[]] + Decision.country_list) %>
+        <label class="checkbox">
+          <%= check_box :search, :country_guideline, :value => params[:search][:country_guideline] %>
+          Country Guidance?
+        </label>
+        <label>Judge</label>
+        <%= select :search, :judge, options_for_select([[]] + Decision.judges_list) %>
+        <label>Claimant name</label>
+        <%= text_field :search, :claimant, :value => params[:search][:claimant] %>
+      </div>
       <%= submit_tag "Search", :class => "btn" %>
     </fieldset>
   <% end %>
@@ -59,3 +61,10 @@
   <% end %>
 </table>
 <%= will_paginate @decisions %>
+<script>
+  $(document).ready(function() {
+    $('input:radio').change(function(e) {
+      $('#search_reported_only').toggle(!$('#search_reported_false').is(':checked'));
+    });
+  });
+</script>
