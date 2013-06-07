@@ -79,7 +79,7 @@ class Decision < ActiveRecord::Base
     require 'thwait'
     if doc_file.present?
       tmp_html_dir = File.join(Rails.root, 'tmp')
-      doc_filename = File.join(tmp_html_dir, File.basename(self.url))
+      doc_filename = File.join(tmp_html_dir, File.basename(self.doc_file.file.path))
       File.open(doc_filename, 'wb') do |f|
         f.write(doc_file.read)
       end
@@ -89,13 +89,13 @@ class Decision < ActiveRecord::Base
         end
       end
       ThreadsWait.all_waits(*threads)
-      html_file = doc_filename.gsub(/\.doc$/, '.html')
-      pdf_file = doc_filename.gsub(/\.doc$/, '.pdf')
-      self.html = File.read(html_file)
-      self.pdf_file = File.open(pdf_file)
+      html_filename = doc_filename.gsub(/\.doc$/, '.html')
+      pdf_filename = doc_filename.gsub(/\.doc$/, '.pdf')
+      self.html = File.read(html_filename)
+      self.pdf_file = File.open(pdf_filename)
       self.set_text_from_html
       self.save!
-      File.delete(doc_filename)
+      File.delete(doc_filename, html_filename, pdf_filename)
     end
   rescue StandardError => e
     self.import_errors.create!(:error => e.message, :backtrace => e.backtrace.to_s)

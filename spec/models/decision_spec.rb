@@ -52,17 +52,11 @@ describe Decision do
 
     it "should still save if the doc processing fails" do
       @decision = Decision.create!(:doc_file => File.open(__FILE__), :promulgated_on => Date.today)
-      @decision.process_doc
-      @decision.import_errors.count.should == 1
-      @decision.import_errors.first.error.should include("No such file or directory")
+      File.should_receive(:open).and_raise(StandardError)
+      expect {
+        @decision.process_doc
+      }.to change { @decision.import_errors.count }.by 1
     end
-  end
-
-  describe "html_body" do
-    it "should extract all the contents of the html body" do
-      @decision = Decision.new(:html => "<html><head></head><body>Contents <p><span>other</span></p></body>")
-      @decision.html_body.should == "Contents <p><span>other</span></p>"
-    end  
   end
 
   describe "judge_list" do
