@@ -78,17 +78,3 @@ Tribunals::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 end
-
-CarrierWave.configure do |config|
-  config.fog_credentials = {
-    provider: 'AWS',
-    aws_access_key_id: ENV['AWS_ACCESS_KEY_ID'],
-    aws_secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
-    region: 'eu-west-1'
-  }
-  config.fog_directory = 'tribunals.cjs.gov.uk'
-  config.fog_attributes = {
-    'Cache-Control' => 'max-age=315576000',
-    'Content-Disposition' => 'attachment'
-  }
-end
