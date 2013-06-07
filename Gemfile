@@ -4,7 +4,7 @@ gem 'nokogiri'
 gem 'rails', '4.0.0.beta1'
 
 gem 'pg'
-gem 'carrierwave'
+gem 'carrierwave', :git => 'https://github.com/carrierwaveuploader/carrierwave.git', :branch => 'master'
 gem 'jquery-rails'
 gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate'

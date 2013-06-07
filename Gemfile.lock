@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/carrierwaveuploader/carrierwave.git
+  revision: e0c1f199737042c1e158d42354edfc9b61aa76f0
+  branch: master
+  specs:
+    carrierwave (0.8.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -40,9 +50,6 @@ GEM
     capybara-webkit (0.14.2)
       capybara (~> 2.0, >= 2.0.2)
       json
-    carrierwave (0.8.0)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
     columnize (0.3.6)
@@ -160,7 +167,7 @@ DEPENDENCIES
   bootstrap-will_paginate
   capybara
   capybara-webkit
-  carrierwave
+  carrierwave!
   debugger
   fog
   jquery-rails
