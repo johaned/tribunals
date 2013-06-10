@@ -1,4 +1,7 @@
 class Admin::DecisionsController < ApplicationController
+  layout 'layouts/admin'
+  before_filter :authenticate
+
   def index
     @decisions = Decision.all.paginate(:page => params[:page])
   end
@@ -15,5 +18,14 @@ class Admin::DecisionsController < ApplicationController
 
   def new
     @decision = Decision.new(params[:decision])
+  end
+
+  def edit
+    @decision = Decision.find(params[:id])
+  end
+
+  private
+  def authenticate
+    env['warden'].authenticate!
   end
 end
