@@ -28,6 +28,8 @@ describe Decision do
     describe "process_doc" do
       before(:all) do
         @decision = Decision.create!(:doc_file => File.open(File.join(Rails.root, 'spec', 'data', 'test.doc')), :promulgated_on => Date.today)
+        # Workaround for a bug in carrierwave, when Fog.mock! is used.
+        @decision.doc_file.file.instance_variable_set(:@file, nil)
         @decision.process_doc
       end
 
