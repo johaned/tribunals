@@ -30,6 +30,6 @@ class Admin::DecisionsController < ApplicationController
 
   private
   def authenticate
-    env['warden'].authenticate!
+    request.env['warden'].authenticate!
   end
 end

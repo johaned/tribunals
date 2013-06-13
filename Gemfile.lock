@@ -160,6 +160,7 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.1)
       rack (>= 1.0)
+    warden-rspec-rails (0.1.0)
     websocket (1.0.7)
     will_paginate (3.0.4)
     xpath (1.0.0)
@@ -184,4 +185,5 @@ DEPENDENCIES
   rails_warden
   rspec-rails
   unicorn
+  warden-rspec-rails
   will_paginate (~> 3.0)

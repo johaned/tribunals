@@ -18,6 +18,7 @@ gem 'capybara-webkit'
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'warden-rspec-rails'
   gem 'debugger'
 end
 
