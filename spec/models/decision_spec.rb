@@ -99,16 +99,4 @@ describe Decision do
       decision.label.should be_nil
     end
   end
-
-  describe "default scope" do
-    before :each do
-      Decision.create(promulgated_on: Date.new(2012, 12, 31))
-      Decision.create(promulgated_on: Date.new(2013, 1, 1))
-    end
-
-    it "should not display pre-1.1.2013 decisions by default" do
-      Decision.count.should == 1
-      Decision.unscoped.count.should == 2
-    end
-  end
 end

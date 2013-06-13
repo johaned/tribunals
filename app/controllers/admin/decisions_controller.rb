@@ -3,7 +3,7 @@ class Admin::DecisionsController < ApplicationController
   before_filter :authenticate
 
   def index
-    @decisions = Decision.all.paginate(:page => params[:page])
+    @decisions = self.class.scope.paginate(:page => params[:page])
   end
 
   def create
@@ -21,7 +21,11 @@ class Admin::DecisionsController < ApplicationController
   end
 
   def edit
-    @decision = Decision.find(params[:id])
+    @decision = self.class.scope.find(params[:id])
+  end
+
+  def self.scope
+    Decision.all
   end
 
   private
