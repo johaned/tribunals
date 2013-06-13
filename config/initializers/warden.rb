@@ -6,11 +6,11 @@ Rails.configuration.middleware.use RailsWarden::Manager do |manager|
 end
 
 class Warden::SessionSerializer
-  def serialize(dummy)
-    dummy.to_s
+  def serialize(_)
+    ''
   end
 
-  def deserialize(dummy)
+  def deserialize(_)
     true
   end
 end
