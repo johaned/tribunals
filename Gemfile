@@ -26,3 +26,4 @@ gem 'unicorn'
 gem 'fog'
 gem 'rails_warden'
 gem 'bcrypt-ruby', :require => 'bcrypt'
+gem 'whenever', :require => false

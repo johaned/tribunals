@@ -16,11 +16,15 @@ namespace :import do
     end
   end
 
-  task :import_word_docs_from_urls => :environment do
-    Decision.where("url IS NOT NULL").where("doc_file IS NULL").find_each do |decision|
-      decision.fetch_doc_file
-      p decision.process_doc
-      decision.save!
+  task :fetch_word_documents => :environment do
+    Decision.where("url IS NOT NULL AND doc_file IS NULL").find_each do |d|
+      d.fetch_doc_file
+    end
+  end
+
+  task :process_word_documents => :environment do
+    Decision.where("url IS NOT NULL AND doc_file IS NULL").find_each do |d|
+      p d.process_doc
     end
   end
 end
