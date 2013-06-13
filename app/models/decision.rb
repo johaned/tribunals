@@ -7,7 +7,7 @@ class Decision < ActiveRecord::Base
 
   # before_validation :process_doc, :on => :create
 
-  default_scope { where('promulgated_on >= ?', Date.new(2013, 1, 1)) }
+  scope :after_jan1, ->{ where('promulgated_on >= ?', Date.new(2013, 1, 1)) }
 
   def self.ordered
     order("promulgated_on DESC")
