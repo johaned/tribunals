@@ -6,6 +6,8 @@ A Ruby on Rails application for giving public access to UK Tribunal decisions.
 Installation
 ------------
 
+Run ./bin/passwd to generate a password for the web admin
+
 This application requires 'soffice', a binary that comes with libreoffice.
 
 Installing libreoffice on OSX
