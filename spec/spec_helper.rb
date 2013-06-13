@@ -35,6 +35,12 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  config.include Warden::Test::ControllerHelpers, type: :controller
+
+  def sign_in
+    warden.set_user(true)
+  end
 end
 
 def sample_pdf_file
