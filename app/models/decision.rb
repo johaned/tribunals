@@ -110,7 +110,7 @@ class Decision < ActiveRecord::Base
   end
 
   def extract_appeal_number
-    matches = self.text.match(/Appeal Numbers?: (\w\w[\/ ]\d\d\d\d\d[\/ ]\d\d\d\d)/i)
+    matches = self.text.match(/Appeal\sNumbers?:\s(\w\w[\/ ]\d\d\d\d\d[\/ ]\d\d\d\d)/i)
     if matches
       self.appeal_number = $1.gsub(" ", "/")
     end
