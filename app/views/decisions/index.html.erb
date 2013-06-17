@@ -3,6 +3,7 @@
     <div class="input-append">
       <%= text_field :search, :query, :value => params[:search][:query], :class => "span6" %>
       <button type="submit" class="btn">Search</button>
+      <button type="reset" class="btn">Clear</button>
     </div><br />
     <a href="#advanced_search" class="advanced_search_link">More Search Options</a>
     <fieldset id="advanced_search">
@@ -28,6 +29,7 @@
         <%= text_field :search, :claimant, :value => params[:search][:claimant] %>
       </div>
       <%= submit_tag "Search", :class => "btn" %>
+      <%= button_tag "Clear", :class => "btn", :type => 'reset' %>
     </fieldset>
   <% end %>
 </div>
@@ -49,7 +51,7 @@
   <tr>
     <td><%= link_to decision.appeal_number || "Unknown" , decision_path(decision) %></td>
     <td><%= reported_label(decision.reported?) %>
-    <td><%= decision.promulgated_on %></td>
+    <td><%= decision.promulgated_on.to_formatted_s(:rfc822) %></td>
     <td><%= decision.claimant %></td>
     <td><%= decision.case_name %></td>
     <td><%= decision.country %></td>
