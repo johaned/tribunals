@@ -3,6 +3,7 @@
     <div class="input-append">
       <%= text_field :search, :query, :value => params[:search][:query], :class => "span6" %>
       <button type="submit" class="btn">Search</button>
+      <button type="reset" class="btn">Clear</button>
     </div><br />
     <a href="#advanced_search" class="advanced_search_link">More Search Options</a>
     <fieldset id="advanced_search">
@@ -28,6 +29,7 @@
         <%= text_field :search, :claimant, :value => params[:search][:claimant] %>
       </div>
       <%= submit_tag "Search", :class => "btn" %>
+      <%= button_tag "Clear", :class => "btn", :type => 'reset' %>
     </fieldset>
   <% end %>
 </div>
