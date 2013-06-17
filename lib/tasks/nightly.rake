@@ -1,6 +1,7 @@
 namespace :nightly do
   task :import => ['import:import_ait_unreported',
                    'import:import_ait_reported',
-                   'import:import_word_docs_from_urls'] do
+                   'import:fetch_word_documents',
+                   'import:process_word_documents'] do
   end
 end

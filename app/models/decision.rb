@@ -5,8 +5,6 @@ class Decision < ActiveRecord::Base
 
   has_many :import_errors
 
-  # before_validation :process_doc, :on => :create
-
   scope :after_jan1, ->{ where('promulgated_on >= ?', Date.new(2013, 1, 1)) }
 
   def self.ordered
