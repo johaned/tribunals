@@ -51,7 +51,7 @@
   <tr>
     <td><%= link_to decision.appeal_number || "Unknown" , decision_path(decision) %></td>
     <td><%= reported_label(decision.reported?) %>
-    <td><%= decision.promulgated_on %></td>
+    <td><%= decision.promulgated_on.to_formatted_s(:rfc822) %></td>
     <td><%= decision.claimant %></td>
     <td><%= decision.case_name %></td>
     <td><%= decision.country %></td>
