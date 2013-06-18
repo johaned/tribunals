@@ -23,7 +23,7 @@ namespace :import do
   end
 
   task :process_word_documents => :environment do
-    Decision.where("url IS NOT NULL AND doc_file IS NULL").find_each do |d|
+    Decision.where("doc_file IS NOT NULL AND pdf_file IS NULL").find_each do |d|
       p d.process_doc
     end
   end
