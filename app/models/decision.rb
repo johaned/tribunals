@@ -87,8 +87,8 @@ class Decision < ActiveRecord::Base
           end
         end
         ThreadsWait.all_waits(*threads)
-        html_filename = doc_filename.gsub(/\.doc$/, '.html')
-        pdf_filename = doc_filename.gsub(/\.doc$/, '.pdf')
+        html_filename = doc_filename.gsub(/\.doc$/i, '.html')
+        pdf_filename = doc_filename.gsub(/\.doc$/i, '.pdf')
         self.html = File.read(html_filename)
         self.pdf_file = File.open(pdf_filename)
         self.set_text_from_html
