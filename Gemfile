@@ -27,3 +27,4 @@ gem 'fog'
 gem 'rails_warden'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'whenever', :require => false
+gem 'newrelic_rpm'
