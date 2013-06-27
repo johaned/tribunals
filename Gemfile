@@ -23,9 +23,15 @@ group :test, :development do
   gem 'database_cleaner'
 end
 
+group :assets do
+	gem 'sass-rails'
+end
+
 gem 'unicorn'
 gem 'fog'
 gem 'rails_warden'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'whenever', :require => false
 gem 'newrelic_rpm'
+gem 'haml-rails'
+gem 'html2haml'

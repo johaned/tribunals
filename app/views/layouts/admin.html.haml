@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %title= page_title()
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    / Bootstrap
+    %link{:href => "/bootstrap/css/bootstrap.min.css", :media => "screen", :rel => "stylesheet"}/
+    %link{:href => "/application.css", :media => "screen", :rel => "stylesheet"}/
+    %script{:src => "http://code.jquery.com/jquery.js"}
+    %script{:src => "/bootstrap/js/bootstrap.min.js"}
+  %body
+    .container
+      = link_to 'logout', logout_admin_authentication_path
+      = yield
+    :javascript
+      $(document).ready(function() {
+        $('#advanced_search').hide();
+        $('.advanced_search_link').click(function() {
+          $('#advanced_search').slideToggle();
+          return false;
+        })
+      })
