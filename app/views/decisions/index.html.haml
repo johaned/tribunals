@@ -1,0 +1,87 @@
+%header.page-header.group
+  %h1
+    %span Information
+    Immigration and asylum tribunal decisions
+  %p
+    Use this tool to search for decisions of the Upper Tribunal
+    %br/
+    (Immigration and Asylum Chamber).
+
+= form_tag decisions_path, :method => :get do
+  .input-append
+    %label{:for => "search_query"} Enter a case number, claimant or judge name, country or keyword
+    = text_field :search, :query, :value => params[:search][:query], :placeholder => "eg UKUT 211 or Judge Allen"
+    %button.button.primary{:type => "submit"} Search
+  / %a.advanced_search_link{:href => "#advanced_search"} More Search Options
+
+  .pagination-row
+    .page-entries
+      = page_entries_info @decisions
+    = will_paginate @decisions
+
+  .main
+    .advanced-search
+      %fieldset#advanced_search
+        %h2 Filter the results
+        %h3 Case status
+        .status-filter
+          %label.checkbox.inline
+            = radio_button :search, :reported, "all", checked: true
+            All
+          %label.checkbox.inline
+            = radio_button :search, :reported, "true"
+            Reported
+          %label.checkbox.inline
+            = radio_button :search, :reported, "false"
+            Unreported
+        #search_reported_only
+          %h3
+            %label Country
+          = select :search, :country, options_for_select([[]] + Decision.country_list)
+          %label.checkbox
+            = check_box :search, :country_guideline, :value => params[:search][:country_guideline]
+            Used as country guidance
+          %h3
+            %label Name of judge
+          = select :search, :judge, options_for_select([[]] + Decision.judges_list)
+          %h3
+            %label Claimant name
+          = text_field :search, :claimant, :value => params[:search][:claimant]
+        .buttons
+          = button_tag "Clear filters", :class => "button", :type => "reset"
+          = submit_tag "Search", :class => "button right primary"
+    .decisions
+      %table.decisions-table
+        %tr.headings
+          %th Case Number
+          %th Status
+          / %th Hearing date
+          %th Citation date
+          %th Country
+          - if params[:search][:query].present?
+            %th Search result
+        - @decisions.each do |decision|
+          %tr.first
+            %td= link_to decision.appeal_number || "Unknown" , decision_path(decision)
+            %td
+              - if reported_label(decision.reported?) == "Yes"
+                Reported
+              - else
+                Unreported
+            / %td hearingdate
+            %td= decision.promulgated_on.to_formatted_s(:rfc822)
+            %td= decision.country
+            - if params[:search][:query].present?
+              %td= hilighted_search_result(params[:search][:query], decision.text)
+          %tr
+            %td{:colspan => 9}
+              %strong Claimant name:
+              = decision.claimant
+          %tr.last
+            %td{:colspan => (params[:search][:query].present? ? 5 : 4)}
+              %strong Claimant name:
+              = decision.claimant
+
+  / .pagination-row
+  /   = will_paginate @decisions
+

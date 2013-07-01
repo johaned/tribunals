@@ -1,0 +1,52 @@
+%header.page-header.group
+  %h1= @decision.appeal_number
+  %dl.decision-details
+
+    %dt Case title:
+    %dd= @decision.case_name
+    %dt Claimant name:
+    %dd= @decision.claimant
+    %dt Status of case:
+    %dd
+      - if @decision.reported == true
+        Reported
+      - else
+        Unreported
+    / %dt Hearing date:
+    / %dd
+    %dt Citation date:
+    %dd= @decision.promulgated_on.to_formatted_s(:rfc822)
+    %dt Country:
+    %dd= @decision.country
+    - if @decision.country_guideline.present?
+      %dt Country guidance:
+      %dd
+        - if @decision.country_guideline == true
+          Yes
+        - else
+          No
+    %dt Judges:
+    %dd= @decision.judges
+    - [:panel, :categories, :keywords, :case_notes].each do |field|
+      - if @decision.send(field).present?
+        %dt #{field.to_s.humanize}:
+        %dd
+          - if @decision.send(field) == true
+            Yes
+          - elsif @decision.send(field) == false
+            No
+          - else
+            = @decision.send(field).to_s
+
+.download-links
+  %ul
+    %li= link_to "Download a PDF version of the decision", @decision.pdf_file.url
+    %li= link_to "Download a Word document (.doc) version of the decision", @decision.doc_file.url
+
+- if @decision.html.blank?
+  %h2 An HTML version of this decision is not currently available.
+- else
+  .decision
+    %h2 The decision
+    .decision-inner
+      = @decision.html_body.html_safe
