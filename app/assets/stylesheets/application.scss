@@ -8,6 +8,22 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require toolkit/stylesheets/_colours
+ *= require toolkit/stylesheets/_conditionals
+ *= require toolkit/stylesheets/_css3
+ *= require toolkit/stylesheets/_shims
+ *= require toolkit/stylesheets/_font_stack
+ *= require toolkit/stylesheets/_typography
+ *= require header
+ *= require main
  *= require_self
- *= require_tree .
  */
+
+.container {
+	max-width: 980px;
+	margin: auto;
+}
+
+.result {
+	background-color:rgb(255, 255, 89);
+}
