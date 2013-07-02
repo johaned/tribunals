@@ -59,6 +59,11 @@ header {
 	}
 }
 
+#global-breadcrumb nav {
+	border: none;
+	margin: 0;
+}
+
 .input-append {
 	width: 600px;
 	padding: 25px 20px;
@@ -197,7 +202,9 @@ header {
 	.first td {
 		padding-top: 15px;
 		font-size: 1.8rem;
-		white-space: nowrap;
+		&.result-cell {
+			font-size: 1.4rem;
+		}
 
 		a {
 			font-weight: bold;
