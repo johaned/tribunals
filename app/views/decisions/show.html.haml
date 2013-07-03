@@ -1,10 +1,15 @@
+#global-breadcrumb.header-context
+  %nav{:role => "navigation"}
+    %ol.group
+      %li
+        %a{:href => "/"} Home
 %header.page-header.group
   %h1= @decision.appeal_number
   %dl.decision-details
 
     %dt Case title:
     %dd= @decision.case_name
-    %dt Claimant name:
+    %dt Appellant name:
     %dd= @decision.claimant
     %dt Status of case:
     %dd
@@ -14,7 +19,7 @@
         Unreported
     / %dt Hearing date:
     / %dd
-    %dt Citation date:
+    %dt Promulgation date:
     %dd= @decision.promulgated_on.to_formatted_s(:rfc822)
     %dt Country:
     %dd= @decision.country
@@ -26,7 +31,7 @@
         - else
           No
     %dt Judges:
-    %dd= @decision.judges
+    %dd= @decision.judges.join(", ")
     - [:panel, :categories, :keywords, :case_notes].each do |field|
       - if @decision.send(field).present?
         %dt #{field.to_s.humanize}:
