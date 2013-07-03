@@ -171,9 +171,16 @@ header {
 		margin-top: 20px;
 	}
 
-	input[type="text"] {
+	input[type="text"],
+	input[role="textbox"] {
 		width: 290px;
 		border: 1px solid #999;
+		font-size: 1.6rem;
+		font-weight: 300;
+		line-height: 1.25;
+		margin: 0;
+		min-width: 8em;
+		padding: 0.25em;
 	}
 	select {
 		width: 300px;
@@ -216,6 +223,34 @@ header {
 	}
 }
 
+
+.ui-autocomplete {
+	padding: 0;
+	list-style: none;
+	background-color: #fff;
+	width: 218px;
+	border: 1px solid #B0BECA;
+	max-height: 350px;
+	overflow-y: scroll;
+	.ui-menu-item {
+		a {
+			border-top: 1px solid #B0BECA;
+			display: block;
+			padding: 4px 6px;
+			color: #353D44;
+			cursor: pointer;
+			&.ui-state-hover {
+				background-color: #D5E5F4;
+				color: #161A1C;
+			}	
+		}
+		&:first-child {
+			a {
+				border-top: none;			
+			}
+		}
+	}
+}
 
 
 .decision-details {

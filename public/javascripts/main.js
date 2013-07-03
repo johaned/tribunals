@@ -3,8 +3,11 @@
 
 var tribs = {
 	init: function(){
+
 		if($('.advanced-search').length > 0){
-			$('input:radio').change(function(e) {
+			$fs = $('.advanced-search fieldset').eq(0);
+			$('select', $fs).selectToAutocomplete();
+			$('input:radio', $fs).change(function(e) {
 				$('#search_reported_only').toggle(!$('#search_reported_false').is(':checked'));
 			});
 		}
