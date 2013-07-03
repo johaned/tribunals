@@ -3,7 +3,7 @@
     %span Information
     Immigration and asylum tribunal decisions
   %p
-    Use this tool to search for decisions of the Upper Tribunal
+    Search for judges' decisions on appeals to the Upper Tribunal
     %br/
     (Immigration and Asylum Chamber).
 
@@ -56,9 +56,9 @@
           %th Case Number
           %th Status
           / %th Hearing date
-          %th Citation date
+          %th Promulgation date
           %th Country
-          - if params[:search][:query].present?
+          - if search_present()
             %th Search result
         - @decisions.each do |decision|
           %tr.first
@@ -71,16 +71,16 @@
             / %td hearingdate
             %td= decision.promulgated_on.to_formatted_s(:rfc822)
             %td= decision.country
-            - if params[:search][:query].present?
-              %td= hilighted_search_result(params[:search][:query], decision.text)
+            - if search_present()
+              %td.result-cell= hilighted_search_result(params[:search][:query], decision.text)
           %tr
-            %td{:colspan => 9}
-              %strong Claimant name:
+            %td{:colspan => (search_present() ? 5 : 4)}
+              %strong Appellant name:
               = decision.claimant
           %tr.last
-            %td{:colspan => (params[:search][:query].present? ? 5 : 4)}
-              %strong Claimant name:
-              = decision.claimant
+            %td{:colspan => (search_present() ? 5 : 4)}
+              %strong Case title:
+              = decision.case_name
 
   / .pagination-row
   /   = will_paginate @decisions
