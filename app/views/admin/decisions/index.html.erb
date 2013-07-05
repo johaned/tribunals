@@ -1,6 +1,0 @@
-<%= link_to "Add a decision", new_admin_decision_path %>
-<ul>
-  <% @decisions.each do |decision| %>
-    <li><%= link_to(decision.id, edit_admin_decision_path(decision)) %></li>
-  <% end %>
-</ul>

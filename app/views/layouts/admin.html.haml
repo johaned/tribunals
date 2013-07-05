@@ -1,22 +1,22 @@
 !!!
 %html
   %head
-    %title= page_title()
-    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    / Bootstrap
-    %link{:href => "/bootstrap/css/bootstrap.min.css", :media => "screen", :rel => "stylesheet"}/
-    %link{:href => "/application.css", :media => "screen", :rel => "stylesheet"}/
-    %script{:src => "http://code.jquery.com/jquery.js"}
-    %script{:src => "/bootstrap/js/bootstrap.min.js"}
+    = render "shared/head"
+    = stylesheet_link_tag "admin", :media => "all"
+
   %body
-    .container
-      = link_to 'logout', logout_admin_authentication_path
-      = yield
-    :javascript
-      $(document).ready(function() {
-        $('#advanced_search').hide();
-        $('.advanced_search_link').click(function() {
-          $('#advanced_search').slideToggle();
-          return false;
-        })
-      })
+    
+    = render "shared/header"
+
+    #wrapper.group.admin
+      #global-breadcrumb.header-context
+        %nav{:role => "navigation"}
+          %ol.group
+            %li= link_to 'Log out', logout_admin_authentication_path
+      %section#content.group{:role => "main"}
+        .full-width-group
+          = yield
+
+    = render "shared/footer"
+
+    = render "shared/script"

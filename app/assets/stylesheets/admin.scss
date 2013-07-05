@@ -1,0 +1,62 @@
+.add-new {
+	display: inline-block;
+	margin: 20px 0;
+}
+
+.login {
+	fieldset {
+		margin: 20px 0;
+		width: 300px;
+
+		label {
+			display: block;
+		}
+		input[type="password"] {
+			display: block;
+			border: 1px solid #999999;
+			font-size: 1.6rem;
+			font-weight: 300;
+			line-height: 1.25;
+			margin: 0;
+			min-width: 8em;
+			padding: 0.25em;
+			width: 290px;
+		}
+		.button {
+			clear: both;
+			float: none;
+			margin: 20px 0;
+		}
+	}
+}
+
+.new_decision,
+.edit_decision {
+	.row {
+		clear: both;
+		padding: 5px 0;
+	}
+	label {
+		float: left;
+		clear: both;
+		width: 250px;
+		text-align: right;
+		padding-right: 10px;
+	}
+	input[type="text"] {
+		float: left;
+		display: block;
+		border: 1px solid #999999;
+		font-size: 1.6rem;
+		font-weight: 300;
+		line-height: 1.25;
+		margin: 0;
+		min-width: 8em;
+		padding: 0.25em;
+		width: 290px;
+	}
+	input[type="submit"],
+	a.doclink {
+		margin: 10px 0 0 260px;
+	}
+}

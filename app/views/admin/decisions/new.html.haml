@@ -1,0 +1,43 @@
+%h1 Add decision
+= form_for [:admin, @decision] do |form|
+  .row
+    = form.label :doc_file
+    = form.file_field :doc_file
+  .row
+    = form.label :promulgated_on
+    = form.date_select :promulgated_on
+  .row
+    = form.label :appeal_number
+    = form.text_field :appeal_number
+  .row
+    = form.label :reported
+    = form.check_box :reported
+  .row
+    = form.label :starred
+    = form.check_box :starred
+  .row
+    = form.label :panel
+    = form.check_box :panel
+  .row
+    = form.label :country_guideline
+    = form.check_box :country_guideline
+  .row
+    = form.label :judges
+    = form.text_field :judges
+  .row
+    = form.label :categories
+    = form.text_field :categories
+  .row
+    = form.label :country
+    = form.text_field :country
+  .row
+    = form.label :claimant
+    = form.text_field :claimant
+  .row
+    = form.label :keywords
+    = form.text_field :keywords
+  .row
+    = form.label :case_notes
+    = form.text_field :case_notes
+  .row
+    = form.submit :class => 'button primary'
