@@ -19,6 +19,10 @@ gem 'capybara-webkit'
 group :test, :development do
   gem 'rspec-rails'
   gem 'warden-rspec-rails'
+  
+  # workaround for a particular setup - potentially unnecessary
+  gem 'debugger-ruby_core_source'
+
   gem 'debugger'
   gem 'database_cleaner'
 end

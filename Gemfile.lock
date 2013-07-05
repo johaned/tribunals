@@ -200,6 +200,7 @@ DEPENDENCIES
   carrierwave!
   database_cleaner
   debugger
+  debugger-ruby_core_source
   fog
   haml-rails
   html2haml
