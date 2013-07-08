@@ -69,7 +69,7 @@
               - else
                 Unreported
             / %td hearingdate
-            %td= decision.promulgated_on.to_formatted_s(:rfc822)
+            %td= time_element(decision.promulgated_on)
             %td= decision.country
             - if search_present()
               %td.result-cell= hilighted_search_result(params[:search][:query], decision.text)
