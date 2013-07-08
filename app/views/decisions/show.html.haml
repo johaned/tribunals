@@ -18,8 +18,6 @@
           Reported
         - else
           Unreported
-      / %dt Hearing date:
-      / %dd
       %dt Promulgation date:
       %dd
         %time{:property => "datePublished", :timedate => @decision.promulgated_on.to_formatted_s(:rfc3339)}= @decision.promulgated_on.to_formatted_s(:rfc822)
