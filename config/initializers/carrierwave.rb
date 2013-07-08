@@ -8,7 +8,7 @@ Fog.credentials = {
 
 CarrierWave.configure do |config|
   config.fog_credentials = { provider: 'AWS' }
-  config.fog_directory = 'tribunals.cjs.gov.uk'
+  config.fog_directory = ENV['APP_S3_BUCKET']
   config.fog_attributes = {
     'Cache-Control' => 'max-age=315576000',
     'Content-Disposition' => 'attachment'
