@@ -96,6 +96,7 @@ class Decision < ActiveRecord::Base
       end
     end
   rescue StandardError => e
+    puts e
     self.import_errors.create!(:error => e.message, :backtrace => e.backtrace.to_s)
   end
 

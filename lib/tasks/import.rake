@@ -24,6 +24,7 @@ namespace :import do
 
   task :process_word_documents => :environment do
     Decision.where("doc_file IS NOT NULL AND pdf_file IS NULL").find_each do |d|
+      p d.url
       p d.process_doc
     end
   end
