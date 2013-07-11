@@ -63,12 +63,26 @@ describe Decision do
 
   describe "judge_list" do
     before(:each) do
-      @decision1 = Decision.create!(:judges => ["gregg"], :promulgated_on => Date.today)
-      @decision2 = Decision.create!(:judges => ["Blake"], :promulgated_on => Date.today)
-      @decision3 = Decision.create!(:judges => ["Blake", "Smith"], :promulgated_on => Date.today)
+      Decision.create!(:judges => ["Gregg"], :promulgated_on => Date.today)
+      Decision.create!(:judges => ["Blake"], :promulgated_on => Date.today)
+      Decision.create!(:judges => ["Blake", "Smith"], :promulgated_on => Date.today)
     end
-    it "should list unique list of all judged" do
-      Decision.judges_list.should == ["Blake", "gregg", "Smith"]
+
+    it "lists unique list of all judged in ascending order" do
+      Decision.judges_list.should == ["Blake", "Gregg", "Smith"]
+    end
+  end
+
+  describe "country_list" do
+    before :each do
+      Decision.create!(:country => 'Poland', :promulgated_on => Date.today)
+      Decision.create!(:country => 'Vanuatu', :promulgated_on => Date.today)
+      Decision.create!(:country => 'Kiribati', :promulgated_on => Date.today)
+      Decision.create!(:country => 'Kiribati', :promulgated_on => Date.today)
+    end
+
+    it "lists a unique set of countries in ascending order" do
+      Decision.country_list.should == ['Kiribati', 'Poland', 'Vanuatu']
     end
   end
 
