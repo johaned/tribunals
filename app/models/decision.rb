@@ -5,7 +5,7 @@ class Decision < ActiveRecord::Base
 
   has_many :import_errors
 
-  scope :after_jan1, ->{ where('promulgated_on >= ?', Date.new(2013, 1, 1)) }
+  scope :after_jun1, ->{ where('promulgated_on >= ?', Date.new(2013, 6, 1)) }
 
   def self.ordered
     order("promulgated_on DESC")
