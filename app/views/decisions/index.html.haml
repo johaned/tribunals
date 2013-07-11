@@ -35,13 +35,13 @@
         #search_reported_only
           %h3
             %label Country
-          = select :search, :country, options_for_select([[]] + Decision.country_list)
+          = select :search, :country, options_for_select([[]] + Decision.country_list, params[:search][:country])
           %label.checkbox
             = check_box :search, :country_guideline, :value => params[:search][:country_guideline]
             Used as country guidance
           %h3
             %label Name of judge
-          = select :search, :judge, options_for_select([[]] + Decision.judges_list)
+          = select :search, :judge, options_for_select([[]] + Decision.judges_list, params[:search][:judge])
           %h3
             %label Claimant name
           = text_field :search, :claimant, :value => params[:search][:claimant]
