@@ -30,7 +30,7 @@
           - else
             No
       %dt Judges:
-      %dd= @decision.judges.join(", ")
+      %dd= raw @decision.judges.map { |judge| schema_author_span(judge) }.join(', ')
       - [:panel, :categories, :case_notes].each do |field|
         - if @decision.send(field).present?
           %dt #{field.to_s.humanize}:
