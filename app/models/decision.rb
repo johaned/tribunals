@@ -81,17 +81,17 @@ class Decision < ActiveRecord::Base
         File.open(doc_filename, 'wb') do |f|
           f.write(doc_file.read)
         end
-        threads = [:pdf, :html].map do |type|
+        threads = [:pdf, "txt:text"].map do |type|
           Thread.new do
             `soffice --headless --convert-to #{type} --outdir #{tmp_html_dir} '#{doc_filename}'`
           end
         end
         ThreadsWait.all_waits(*threads)
-        html_filename = doc_filename.gsub(/\.doc$/i, '.html')
+        txt_filename = doc_filename.gsub(/\.doc$/i, '.txt')
         pdf_filename = doc_filename.gsub(/\.doc$/i, '.pdf')
-        self.html = File.read(html_filename)
+        self.text = File.read(txt_filename)
+        self.set_html_from_text
         self.pdf_file = File.open(pdf_filename)
-        self.set_text_from_html
         self.save!
       end
     end
@@ -100,12 +100,8 @@ class Decision < ActiveRecord::Base
     self.import_errors.create!(:error => e.message, :backtrace => e.backtrace.to_s)
   end
 
-  def html_body
-    Nokogiri::HTML(self.html).css('body').children.to_html
-  end
-
-  def set_text_from_html
-    self.text = Nokogiri::HTML(self.html).at_css('body').text
+  def set_html_from_text
+    self.html = self.text.gsub(/\n/, '<br/>')
   end
 
   def extract_appeal_number
