@@ -89,7 +89,7 @@ class Decision < ActiveRecord::Base
         ThreadsWait.all_waits(*threads)
         txt_filename = doc_filename.gsub(/\.doc$/i, '.txt')
         pdf_filename = doc_filename.gsub(/\.doc$/i, '.pdf')
-        self.text = File.read(txt_filename)
+        self.text = File.open(txt_filename, 'r:bom|utf-8').read
         self.set_html_from_text
         self.pdf_file = File.open(pdf_filename)
         self.save!
