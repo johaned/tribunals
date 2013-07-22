@@ -5,5 +5,6 @@ $(function() {
   $('button[type=reset]').click(function(evt) {
     evt.preventDefault();
     $(this).closest('form').find('input[type=text]').val('');
+    $(this).closest('form').find('input.ui-autocomplete-input').val('');
   });
 });
