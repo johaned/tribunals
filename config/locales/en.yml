@@ -1,5 +1,5 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  will_paginate:
+    page_entries_info:
+      multi_page: "Displaying %{model} %{from} - %{to} of %{count} in total (displayed in reverse chronological order)"
+      multi_page_html: "Displaying %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> of <b>%{count}</b> in total (displayed in reverse chronological order)"
