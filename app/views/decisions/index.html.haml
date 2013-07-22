@@ -7,7 +7,7 @@
 
 = form_tag decisions_path, :method => :get do
   .input-append
-    %label{:for => "search_query"} Enter a case number, claimant or judge name, country or keyword
+    %label{:for => "search_query"} Enter a case number, appellant or judge name, country or keyword
     = text_field :search, :query, :value => params[:search][:query], :placeholder => "eg UKUT 211 or Judge Allen"
     %button.button.primary{:type => "submit"} Search
   / %a.advanced_search_link{:href => "#advanced_search"} More Search Options
@@ -43,7 +43,7 @@
             %label Name of judge
           = select :search, :judge, options_for_select([[]] + Decision.judges_list, params[:search][:judge])
           %h3
-            %label Claimant name
+            %label Appellant name
           = text_field :search, :claimant, :value => params[:search][:claimant]
         .buttons
           = button_tag "Clear filters", :class => "button", :type => "reset"
