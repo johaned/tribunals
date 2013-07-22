@@ -3,7 +3,7 @@ class Admin::DecisionsController < ApplicationController
   before_filter :authenticate
 
   def index
-    @decisions = self.class.scope.paginate(:page => params[:page])
+    @decisions = self.class.scope.paginate(:page => params[:page], :per_page => 30).ordered
   end
 
   def create
