@@ -15,6 +15,10 @@ module DecisionsHelper
     ("<time property='datePublished' timedate='#{date.to_formatted_s(:rfc3339)}'>#{date.to_formatted_s(:rfc822)}</time>").html_safe
   end
 
+  def judge_list(judges)
+    judges.map { |judge| schema_author_span(judge) }.join(', ').html_safe
+  end
+
   def schema_author_span(author)
     ("<span property='author'>#{author}</span>").html_safe
   end
