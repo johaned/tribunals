@@ -15,19 +15,17 @@ moj.Modules.admin_decisions = function(){
     $( document ).on( 'click', 'a.delete', function( e ) {
       e.preventDefault();
       delete_element( $(e.target) );
-    });
-    $( document ).on( 'click', 'a.add', function( e ) {
+    }).on( 'click', 'a.add', function( e ) {
       e.preventDefault();
       add_element( $(e.target) );
-    });
-    $( document ).on( 'change', '.split', function() {
+    }).on( 'change', '.split', function() {
       var $row = $( this ).closest( '.row' );
       store_values( $row );
     });
   },
 
   init_arrays = function() {
-    $form.find( '.array input[type="text"]' ).each( function() {
+    $form.find( '.array input[type="text"], .array .s2' ).each( function() {
       split_arrays( $(this) );
     });
   },

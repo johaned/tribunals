@@ -43,7 +43,8 @@
     text-align: right;
     padding-right: 10px;
   }
-  input[type="text"] {
+  input[type="text"],
+  .ui-autocomplete-input {
     float: left;
     display: block;
     border: 1px solid #999999;
