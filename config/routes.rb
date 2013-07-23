@@ -1,4 +1,6 @@
 Tribunals::Application.routes.draw do
+  get '/utiac/decisions', to: 'decisions#index', as: :root
+
   scope '/utiac' do
     resources :decisions
     get '/' => redirect('/utiac/decisions')

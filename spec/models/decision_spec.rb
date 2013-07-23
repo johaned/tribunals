@@ -40,7 +40,7 @@ describe Decision do
       end
 
       it "should save a tmp html file" do
-        @decision.html.should include('Test</p>')
+        @decision.html.should include('Test<br/>')
       end
 
       it "should save the pdf file" do
@@ -48,7 +48,7 @@ describe Decision do
       end
 
       it "should save the raw text of the document" do
-        @decision.text.should == "Test"
+        @decision.text.should == "Test\n"
       end
     end
 
