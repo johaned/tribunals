@@ -25,7 +25,7 @@ moj.Modules.admin_decisions = function(){
   },
 
   init_arrays = function() {
-    $form.find( '.array input[type="text"], .array .s2' ).each( function() {
+    $form.find( '.array input[type="text"]' ).each( function() {
       split_arrays( $(this) );
     });
   },
