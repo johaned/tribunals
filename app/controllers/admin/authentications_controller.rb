@@ -11,6 +11,6 @@ class Admin::AuthenticationsController < ApplicationController
 
   def logout
     env['warden'].logout
-    redirect_to root_path
+    redirect_to root_url
   end
 end
