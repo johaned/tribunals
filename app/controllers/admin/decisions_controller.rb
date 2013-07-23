@@ -24,6 +24,15 @@ class Admin::DecisionsController < ApplicationController
     @decision = self.class.scope.find(params[:id])
   end
 
+  def update
+    @decision = self.class.scope.find(params[:id])
+    if @decision.update_attributes(params[:decision].permit!)
+      redirect_to admin_decisions_path
+    else
+      redirect_to edit_admin_decision_path(@decision)
+    end
+  end
+
   def self.scope
     Decision.all
   end
