@@ -8,7 +8,7 @@
     = form.file_field :doc_file
   .row
     = form.label :promulgated_on
-    = form.date_select :promulgated_on
+    = form.date_select :promulgated_on, start_year: 2003, end_year: Date.today.year + 1
   .row
     = form.label :appeal_number
     = form.text_field :appeal_number

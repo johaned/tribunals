@@ -17,4 +17,18 @@ describe Admin::DecisionsController do
       get :index
     end
   end
+
+  describe "POST 'update'" do
+    let(:decision) do
+      Decision.create!(promulgated_on: Date.today)
+    end
+
+    it "updates a decision" do
+      sign_in
+      expect {
+        post :update, id: decision.id, decision: { appeal_number: 1234 }
+        response.should redirect_to(admin_decisions_path)
+      }.to change { decision.reload.appeal_number }
+    end
+  end
 end
