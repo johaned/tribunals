@@ -111,7 +111,20 @@ class Decision < ActiveRecord::Base
   end
 
   def set_html_from_text
-    self.html = self.text.gsub(/\n/, '<br/>')
+    if self.text
+      # line breaks
+      self.html = self.text.gsub(/\n/, '<br/>')
+  
+      # references to other decisions
+      citation_pattern = /\[[0-9]{4}\]\s*[0-9]*\s+[A-Z]+\s*[A-Za-z\.]*\s*[0-9]*/ # (see http://ox.libguides.com/content.php?pid=141334&sid=1205598)
+  
+      self.html = self.html.gsub(citation_pattern) do |citation|
+        normalised_citation = citation.gsub(/\s+0+([1-9])/, ' \1')
+        decision = Decision.find_by(appeal_number: normalised_citation) || (next citation)
+        decision_url = Tribunals::Application.routes.url_helpers.decision_path(decision)
+        "<a href='"+decision_url+"'>"+citation+"</a>"
+      end
+    end
   end
 
   def extract_appeal_number

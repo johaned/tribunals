@@ -44,13 +44,7 @@
       - if @decision.send(:keywords).present?
         %dt #{:keywords.to_s.humanize}:
         %dd{:property => "keywords"}
-          - if @decision.send(:keywords) == true
-            Yes
-          - elsif @decision.send(:keywords) == false
-            No
-          - else
-            = @decision.send(:keywords).to_s
-
+          = @decision.send(:keywords).join(', ')
   
   .download-links
     %ul

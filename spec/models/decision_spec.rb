@@ -123,6 +123,26 @@ describe Decision do
     end
   end
 
+
+  describe "appeal_references" do
+    before(:each) do
+      @target_decision = Decision.create!(:appeal_number => '[1238] UKUT 12')
+      @target_decision_url = Tribunals::Application.routes.url_helpers.decision_path(@target_decision)
+    end
+
+    it "should find appeal references when converting text to html" do
+      @source_decision = Decision.new(:text => 'blah blah [1238] UKUT 12 blah')
+      @source_decision.set_html_from_text
+      @source_decision.html.should == 'blah blah <a href=\'' + @target_decision_url + '\'>[1238] UKUT 12</a> blah'
+    end
+
+    it "should find ignore heading 0s in references" do
+      @source_decision = Decision.new(:text => 'blah blah [1238] UKUT 0012 blah')
+      @source_decision.set_html_from_text
+      @source_decision.html.should == 'blah blah <a href=\'' + @target_decision_url + '\'>[1238] UKUT 0012</a> blah'
+    end
+  end
+
   describe "label" do
     it "should display the appropriate label" do
       decision = Decision.new(:appeal_number => 'XYZ 123', :case_name => 'Smith vs Brown', :reported => true)
