@@ -3,8 +3,8 @@ module DecisionsHelper
     boolean ? 'Yes' : 'No'
   end
 
-  def search_present()
-  	params[:search][:query].present? ? true : false
+  def search_present
+    params[:search][:query].present?
   end
 
   def time_element(date)
