@@ -153,17 +153,17 @@ ALTER TABLE ONLY import_errors
 
 
 --
+-- Name: decisions_fts_idx; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX decisions_fts_idx ON decisions USING gin (to_tsvector('english'::regconfig, text));
+
+
+--
 -- Name: decisions_fts_idx_after_jun1; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
-CREATE INDEX decisions_fts_idx_after_jun1 ON decisions USING gin (to_tsvector('english'::regconfig, text)) WHERE (promulgated_on >= '2013-06-01'::date);
-
-
---
--- Name: decisions_fts_idx_before_jun1; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX decisions_fts_idx_before_jun1 ON decisions USING gin (to_tsvector('english'::regconfig, text)) WHERE (promulgated_on < '2013-06-01'::date);
+CREATE INDEX decisions_fts_idx_after_jun1 ON decisions USING gin (to_tsvector('english'::regconfig, text)) WHERE ((promulgated_on >= '2013-06-01'::date) OR (reported = true));
 
 
 --
@@ -251,3 +251,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130423122537');
 INSERT INTO schema_migrations (version) VALUES ('20130711143547');
 
 INSERT INTO schema_migrations (version) VALUES ('20130712131321');
+
+INSERT INTO schema_migrations (version) VALUES ('20130724093005');
