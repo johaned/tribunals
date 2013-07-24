@@ -15,7 +15,7 @@ class DecisionsController < ApplicationController
   end
 
   def self.scope
-    Decision.after_jun1
+    Decision.viewable
   end
 end
 

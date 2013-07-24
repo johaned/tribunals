@@ -3,13 +3,9 @@ require 'spec_helper'
 describe DecisionsController do
 
   describe "controller scope" do
-    before(:each) do
-      Decision.create!(promulgated_on: Date.today)
-      Decision.create!(promulgated_on: Date.new(2012, 12, 31))
-    end
-
-    it "uses a cope that makes decisions promulgated on or after Jan 1, 2013 accessible" do
-      subject.class.scope.count == 1
+    it "uses a scope that displays only certain decisions" do
+      Decision.should_receive(:viewable).once
+      subject.class.scope
     end
   end
 
