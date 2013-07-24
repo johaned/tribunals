@@ -1,10 +1,18 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+/*jslint browser: true, evil: false, plusplus: true, white: true, indent: 2 */
+/*global moj, $ */
 
-moj.Modules.admin_decisions = function(){
+moj.Modules.admin_decisions = (function() {
   "use strict";
 
   var $form,
+      init,
+      init_arrays,
+      split_arrays,
+      render_textboxes,
+      add_element, 
+      delete_element,
+      store_values,
+      strip_quotes;
 
   init = function() {
     if( $( 'form.edit_decision' ).length > 0 ) {
@@ -22,20 +30,19 @@ moj.Modules.admin_decisions = function(){
       var $row = $( this ).closest( '.row' );
       store_values( $row );
     });
-  },
+  };
 
   init_arrays = function() {
     $form.find( '.array input[type="text"]' ).each( function() {
       split_arrays( $(this) );
     });
-  },
+  };
 
   split_arrays = function( $el ) {
     var val = $el.val(),
         $row = $el.closest( '.row' ),
         arr,
-        x,
-        htmlStr = '';
+        x;
 
     if( val === '{}' ) {
       val = '';
@@ -50,7 +57,7 @@ moj.Modules.admin_decisions = function(){
     $row.data( 'array', arr ).val( val );
     $el.addClass( 'original' ).hide();
     render_textboxes( $el );
-  },
+  };
 
   render_textboxes = function( $el ){
     var $row = $el.closest( '.row' ),
@@ -72,7 +79,7 @@ moj.Modules.admin_decisions = function(){
     }
     $el.before( htmlStr );
     store_values( $row );
-  },
+  };
 
   add_element = function( $link ) {
     var $row = $link.closest( '.row' ),
@@ -81,7 +88,7 @@ moj.Modules.admin_decisions = function(){
     arr[arr.length] = '';
     $row.data( 'array', arr );
     render_textboxes( $row.find( '.original' ) );
-  },
+  };
 
   delete_element = function( $link ) {
     var $row = $link.closest( '.row' ),
@@ -91,7 +98,7 @@ moj.Modules.admin_decisions = function(){
     arr.splice( i, 1 );
     $row.data( 'array', arr );
     render_textboxes( $row.find( '.original' ) );
-  },
+  };
 
   store_values = function( $row ) {
     var str = '{',
@@ -111,7 +118,7 @@ moj.Modules.admin_decisions = function(){
     str += '}';
 
     $row.data( 'array', arr ).find( '.original' ).val( str );
-  },
+  };
 
   strip_quotes = function ( str ){
     if( str.charAt(0) === '"' ){
@@ -129,4 +136,4 @@ moj.Modules.admin_decisions = function(){
     init: init
   };
 
-}();
+}());
