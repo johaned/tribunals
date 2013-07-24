@@ -1,5 +1,17 @@
 %h1 Decisions Admin
 = link_to "Add a decision", new_admin_decision_path, :class => 'button primary add-new'
-%ul
-  - @decisions.each do |decision|
-    %li= link_to(decision.id, edit_admin_decision_path(decision))
+
+.pagination-row
+  .page-entries
+    = page_entries_info @decisions
+  = will_paginate @decisions
+
+.main
+  %ul
+    - @decisions.each do |decision|
+      %li
+        = link_to(decision.appeal_number || "Unknown", edit_admin_decision_path(decision))
+        \:
+        = decision.case_name || "Unknown"
+        \:
+        = time_element(decision.promulgated_on)
