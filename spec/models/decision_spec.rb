@@ -113,4 +113,21 @@ describe Decision do
       decision.label.should be_nil
     end
   end
+
+  describe "viewable scope" do
+    before(:each) do
+      Decision.create!(promulgated_on: Date.today, reported: false)
+      Decision.create!(promulgated_on: Date.new(2012, 12, 31), reported: false)
+      Decision.create!(promulgated_on: Date.new(2001, 1, 1), reported: true)
+    end
+
+    it "permits access only to a subset of decisions" do
+      Decision.viewable.count.should == 2
+      Decision.viewable.each do |decision|
+        unless decision.reported || decision.promulgated_on >= Date.new(2013, 6, 1)
+          fail
+        end
+      end
+    end
+  end
 end
