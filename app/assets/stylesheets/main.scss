@@ -2,6 +2,11 @@
 @import 'toolkit/stylesheets/_colours';
 @import 'toolkit/stylesheets/_typography';
 
+p.sub {
+	font-size: 1.4rem;
+	margin-bottom: 1.9rem;
+}
+
 .button {
 	background-color: #dcdcdc;
 	color: #2e2e2e;
@@ -216,6 +221,7 @@ header {
 		a {
 			font-weight: bold;
 			text-decoration: none;
+			white-space: nowrap;
 		}
 	}
 	.last td {
