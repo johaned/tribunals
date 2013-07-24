@@ -1,4 +1,9 @@
+/*jslint browser: true, evil: false, plusplus: true, white: true, indent: 2 */
+/*global $ */
+
 (function(){
+  "use strict";
+
   var moj = {
 
     Modules: {},
@@ -11,11 +16,13 @@
       var x;
 
       for( x in moj.Modules ) {
-        moj.Modules[x].init();
+        if(moj.Modules.hasOwnProperty(x)){
+          moj.Modules[x].init();
+        }
       }
     }
 
   };
 
   window.moj = moj;
-})();
+}());
