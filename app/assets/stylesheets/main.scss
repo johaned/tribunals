@@ -3,314 +3,314 @@
 @import 'toolkit/stylesheets/_typography';
 
 p.sub {
-	font-size: 1.4rem;
-	margin-bottom: 1.9rem;
+  font-size: 1.4rem;
+  margin-bottom: 1.9rem;
 }
 
 .button {
-	background-color: #dcdcdc;
-	color: #2e2e2e;
-	box-shadow: 0 3px 0 #959595;
-	&.primary {
-		background-color: #008370;
-		color: #fff;
-		box-shadow: 0 3px 0 #000;
-	}
-	&:hover {
-		background-color: #7fb299;
-		color: #fff;
-	}
+  background-color: #dcdcdc;
+  color: #2e2e2e;
+  box-shadow: 0 3px 0 #959595;
+  &.primary {
+    background-color: #008370;
+    color: #fff;
+    box-shadow: 0 3px 0 #000;
+  }
+  &:hover {
+    background-color: #7fb299;
+    color: #fff;
+  }
 }
 .left {
-	float: left;
+  float: left;
 }
 .right {
-	float: right;
+  float: right;
 }
 
 input[type="text"]{
-	margin: 0;
+  margin: 0;
 }
 
 #footer {
-	margin-top: 150px;
-	.footer-meta {
-		border: 0;
-		margin-top: 0;
-		padding-top: 0;
-	}
+  margin-top: 150px;
+  .footer-meta {
+    border: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
 }
 
 #wrapper {
-	width: 980px;
-	padding: 0 30px;
-	margin: auto;
-	border-top: 10px solid $alphacolour;
-	border-bottom: none;
+  width: 980px;
+  padding: 0 30px;
+  margin: auto;
+  border-top: 10px solid $alphacolour;
+  border-bottom: none;
 }
 
 header {
-	h1 {
-		@include core-48;
-		margin: 48px 360px 16px 0;
-		font-size: 4.2rem;
-		font-weight: bold;
-		line-height: 4.8rem;
-		span {
-			@include core-27;
-			color: $grey-1;
-			display: block;
-		}
-	}
+  h1 {
+    @include core-48;
+    margin: 48px 360px 16px 0;
+    font-size: 4.2rem;
+    font-weight: bold;
+    line-height: 4.8rem;
+    span {
+      @include core-27;
+      color: $grey-1;
+      display: block;
+    }
+  }
 }
 
 #global-breadcrumb nav {
-	border: none;
-	margin: 0;
+  border: none;
+  margin: 0;
 }
 
 .input-append {
-	width: 600px;
-	padding: 25px 20px;
-	background-color: #eaedef;
+  width: 600px;
+  padding: 25px 20px;
+  background-color: #eaedef;
 
-	label {
-		@include core-19;
-		font-size: 1.8rem;
-	}
+  label {
+    @include core-19;
+    font-size: 1.8rem;
+  }
 
-	input {
-		width: 385px;
-	}
-	button {
-		margin: 10px 20px;
-	}
+  input {
+    width: 385px;
+  }
+  button {
+    margin: 10px 20px;
+  }
 }
 
 .pagination-row {
-	clear: both;
-	padding: 2em 0;
+  clear: both;
+  padding: 2em 0;
 }
 
 .page-entries {
-	float: left;
+  float: left;
 }
 
 .pagination {
-	float: right;
-	margin: 0;
-	border: 0;
+  float: right;
+  margin: 0;
+  border: 0;
 
-	ul {
-		float: right;
-	}
-	li {
-		display: inline;
-		float: none;
-		width: auto;
+  ul {
+    float: right;
+  }
+  li {
+    display: inline;
+    float: none;
+    width: auto;
 
-		a {
-			display: inline;
-		}
-		&.next {
-			float: none;
-			a {
-				padding: 0;
-				&:before {
-					background: none;
-					content: none;
-					display: inline;
-					float: none;
-					margin: 0;
-					width: auto;	
-				}
-			}
-		}
+    a {
+      display: inline;
+    }
+    &.next {
+      float: none;
+      a {
+        padding: 0;
+        &:before {
+          background: none;
+          content: none;
+          display: inline;
+          float: none;
+          margin: 0;
+          width: auto;  
+        }
+      }
+    }
 
-		&.disabled a {
-			color: #999;
-		}
-		&.active a {
-			font-weight: bold;
-		}
-	}
+    &.disabled a {
+      color: #999;
+    }
+    &.active a {
+      font-weight: bold;
+    }
+  }
 }
 
 .main {
-	clear: both;
-	border-top: 1px solid #a1a1a1;
-	padding-top: 20px;
+  clear: both;
+  border-top: 1px solid #a1a1a1;
+  padding-top: 20px;
 }
 
 .advanced-search {
-	width: 300px;
-	float: left;
-	margin-right: 64px;
+  width: 300px;
+  float: left;
+  margin-right: 64px;
 
-	label {
-		display: block;
-		clear: both;
-	}
+  label {
+    display: block;
+    clear: both;
+  }
 
-	.status-filter {
-		label {
-			display: inline;
-			margin-right: 15px;
-		}
-	}
+  .status-filter {
+    label {
+      display: inline;
+      margin-right: 15px;
+    }
+  }
 
-	h2 {
-		@include core-24;
-		margin: 0 0 16px 0;
-		font-weight: bold;
-	}
+  h2 {
+    @include core-24;
+    margin: 0 0 16px 0;
+    font-weight: bold;
+  }
 
-	h3 {
-		@include core-19;
-		font-size: 1.8rem;
-		margin-top: 20px;
-		font-weight: bold;
-	}
+  h3 {
+    @include core-19;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    font-weight: bold;
+  }
 
-	.buttons {
-		margin-top: 20px;
-	}
+  .buttons {
+    margin-top: 20px;
+  }
 
-	input[type="text"],
-	input[role="textbox"] {
-		width: 290px;
-		border: 1px solid #999;
-		font-size: 1.6rem;
-		font-weight: 300;
-		line-height: 1.25;
-		margin: 0;
-		min-width: 8em;
-		padding: 0.25em;
-	}
-	select {
-		width: 300px;
-		border: 1px solid #999;
-		padding: 4px;
-	}
+  input[type="text"],
+  input[role="textbox"] {
+    width: 290px;
+    border: 1px solid #999;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.25;
+    margin: 0;
+    min-width: 8em;
+    padding: 0.25em;
+  }
+  select {
+    width: 300px;
+    border: 1px solid #999;
+    padding: 4px;
+  }
 }
 
 .decisions {
-	float: left;
-	width: 614px;
+  float: left;
+  width: 614px;
 }
 
 .decisions-table {
-	th, td {
-		@include core-14;
-		padding: 0 10px 5px;
-		vertical-align: top;
-	}
+  th, td {
+    @include core-14;
+    padding: 0 10px 5px;
+    vertical-align: top;
+  }
 
-	th {
-		font-weight: bold;
-		text-align: left;
-	}
+  th {
+    font-weight: bold;
+    text-align: left;
+  }
 
-	.first td {
-		padding-top: 15px;
-		font-size: 1.8rem;
-		&.result-cell {
-			font-size: 1.4rem;
-		}
+  .first td {
+    padding-top: 15px;
+    font-size: 1.8rem;
+    &.result-cell {
+      font-size: 1.4rem;
+    }
 
-		a {
-			font-weight: bold;
-			text-decoration: none;
-			white-space: nowrap;
-		}
-	}
-	.last td {
-		padding-bottom: 10px;
-	}
+    a {
+      font-weight: bold;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+  }
+  .last td {
+    padding-bottom: 10px;
+  }
 }
 
 
 .ui-autocomplete {
-	padding: 0;
-	list-style: none;
-	background-color: #fff;
-	width: 218px;
-	border: 1px solid #B0BECA;
-	max-height: 350px;
-	overflow-y: scroll;
-	.ui-menu-item {
-		a {
-			border-top: 1px solid #B0BECA;
-			display: block;
-			padding: 4px 6px;
-			color: #353D44;
-			cursor: pointer;
-			&.ui-state-hover {
-				background-color: #D5E5F4;
-				color: #161A1C;
-			}	
-		}
-		&:first-child {
-			a {
-				border-top: none;			
-			}
-		}
-	}
+  padding: 0;
+  list-style: none;
+  background-color: #fff;
+  width: 218px;
+  border: 1px solid #B0BECA;
+  max-height: 350px;
+  overflow-y: scroll;
+  .ui-menu-item {
+    a {
+      border-top: 1px solid #B0BECA;
+      display: block;
+      padding: 4px 6px;
+      color: #353D44;
+      cursor: pointer;
+      &.ui-state-hover {
+        background-color: #D5E5F4;
+        color: #161A1C;
+      } 
+    }
+    &:first-child {
+      a {
+        border-top: none;     
+      }
+    }
+  }
 }
 
 
 .decision-details {
-	margin: 20px 0;
-	@include core-19;
-	font-size: 1.8rem;
+  margin: 20px 0;
+  @include core-19;
+  font-size: 1.8rem;
 
 
-	dt {
-		float: left;
-		clear: both;
-		width: 200px;
-		font-weight: bold;
-		margin-bottom: 16px;
-	}
-	dd {
-		float: left;
-		margin-bottom: 16px;
-	}
+  dt {
+    float: left;
+    clear: both;
+    width: 200px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  dd {
+    float: left;
+    margin-bottom: 16px;
+  }
 }
 
 .download-links {
-	width: 494px;
-	background-color: #d5e8f4;
-	background: #d5e8f4 url(../images/download.png) 513px center no-repeat;
-	padding: 10px 50px 10px 16px;
+  width: 494px;
+  background-color: #d5e8f4;
+  background: #d5e8f4 url(../images/download.png) 513px center no-repeat;
+  padding: 10px 50px 10px 16px;
 
-	margin: 20px 0;
+  margin: 20px 0;
 
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-	li {
-		list-style: none;
-		margin: 5px 0;
-	}
-	a {
-		color: #2c2b93;
-		font-size: 1.8rem;
-	}
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    margin: 5px 0;
+  }
+  a {
+    color: #2c2b93;
+    font-size: 1.8rem;
+  }
 }
 
 .decision {
-	padding-top: 20px;
+  padding-top: 20px;
 
-	h2 {
-		@include heading-36;
-		font-size: 3rem;
-		font-weight: bold;
-	}
+  h2 {
+    @include heading-36;
+    font-size: 3rem;
+    font-weight: bold;
+  }
 
-	.decision-inner {
-		border: 3px solid #d7d7d7;
-		padding: 20px;
-	}
+  .decision-inner {
+    border: 3px solid #d7d7d7;
+    padding: 20px;
+  }
 }
