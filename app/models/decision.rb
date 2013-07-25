@@ -53,7 +53,7 @@ class Decision < ActiveRecord::Base
 
   def self.by_claimant(claimant)
     if claimant.present?
-      where("claimant ~ ?", "[[:<:]]#{claimant}[[:>:]]")
+      where("claimant ~* ?", Regexp.quote(claimant))
     else
       where("")
     end
