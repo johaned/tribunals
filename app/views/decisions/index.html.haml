@@ -37,6 +37,9 @@
             Unreported
         #search_reported_only
           %h3
+            %label Neutral Citation Number
+          = text_field :search, :ncn, :value => params[:search][:ncn]
+          %h3
             %label Country
           = select :search, :country, options_for_select([[]] + Decision.country_list, params[:search][:country])
           %label.checkbox

@@ -12,7 +12,7 @@ class Decision < ActiveRecord::Base
   end
 
   def self.filtered(filter_hash)
-    search(filter_hash[:query]).by_reported(filter_hash[:reported]).by_country_guideline(filter_hash[:country_guideline]).by_country(filter_hash[:country]).by_judge(filter_hash[:judge]).by_claimant(filter_hash[:claimant])
+    search(filter_hash[:query]).by_reported(filter_hash[:reported]).by_country_guideline(filter_hash[:country_guideline]).by_country(filter_hash[:country]).by_judge(filter_hash[:judge]).by_claimant(filter_hash[:claimant]).by_ncn(filter_hash[:ncn])
   end
 
   def self.search(query)
@@ -54,6 +54,14 @@ class Decision < ActiveRecord::Base
   def self.by_claimant(claimant)
     if claimant.present?
       where("claimant ~* ?", Regexp.quote(claimant))
+    else
+      where("")
+    end
+  end
+
+  def self.by_ncn(ncn)
+    if ncn.present?
+      where("appeal_number ~* ?", Regexp.quote(ncn))
     else
       where("")
     end
