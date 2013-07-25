@@ -12,4 +12,16 @@ module ApplicationHelper
       'Upper Tribunal (Immigration and Asylum Chamber) Decision Database'
     end
   end
+
+  # Fast, but inexact reimplementation of excerpt() from Rails.
+  def excerpt(text, search_term, options={})
+    return if search_term.blank? || text.blank?
+    radius = options.fetch(:radius, 10)
+
+    if index = text.index(search_term)
+      lower_bound = [index - radius, 0].max
+      upper_bound = index + search_term.length + radius
+      text[lower_bound..upper_bound]
+    end
+  end
 end
