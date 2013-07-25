@@ -8,6 +8,7 @@ describe Decision do
       @decision2 = Decision.create!(:text => "Some other searchable text is here gerald", :country => 'Afghanitsan', :promulgated_on => Date.today)
       @decision3 = Decision.create!(:text => "gerald", :reported => true, :country_guideline => true, :country => 'Iraq', :judges => ["Blake", "Smith"], :promulgated_on => Date.today)
       @decision4 = Decision.create!(:claimant => 'Green')
+      @decision5 = Decision.create!(:appeal_number => '[2013] UKUT 456')
     end
 
     it "should filter on search text" do
@@ -34,7 +35,14 @@ describe Decision do
       Decision.by_claimant('green').should == [@decision4]
       Decision.by_claimant('Green').should == [@decision4]
     end
+
+    it "should filter a search on NCN (case-insensitive)" do
+      Decision.by_ncn("ukut 456").should == [@decision5]
+      Decision.by_ncn("UKUT 456").should == [@decision5]
+      Decision.by_ncn("456").should == [@decision5]
+    end
   end
+
   describe "with a .doc" do
     describe "process_doc" do
       before(:all) do
