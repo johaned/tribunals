@@ -1,4 +1,6 @@
 class EvenBetterFtsIndices < ActiveRecord::Migration
+  disable_ddl_transaction!
+
   def change
     execute "DROP INDEX decisions_fts_idx_before_jun1"
     execute "DROP INDEX decisions_fts_idx_after_jun1"
