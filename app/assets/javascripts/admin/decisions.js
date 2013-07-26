@@ -6,6 +6,8 @@ moj.Modules.admin_decisions = (function() {
 
   var $form,
       init,
+      cacheEls,
+      bindEvents,
       init_arrays,
       split_arrays,
       render_textboxes,
@@ -16,10 +18,18 @@ moj.Modules.admin_decisions = (function() {
 
   init = function() {
     if( $( 'form.edit_decision' ).length > 0 ) {
-      $form = $( 'form.edit_decision' ).eq( 0 );
+      cacheEls();
+      bindEvents();
+
       init_arrays();
     }
+  };
 
+  cacheEls = function() {
+    $form = $( 'form.edit_decision' ).eq( 0 );
+  };
+
+  bindEvents = function() {
     $( document ).on( 'click', 'a.delete', function( e ) {
       e.preventDefault();
       delete_element( $(e.target) );
