@@ -12,6 +12,7 @@
       #global-breadcrumb.header-context
         %nav{:role => "navigation"}
           %ol.group
+            %li= link_to 'Admin home', admin_decisions_path
             %li= link_to 'Log out', logout_admin_authentication_path
       %section#content.group{:role => "main"}
         .full-width-group

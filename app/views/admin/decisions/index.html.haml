@@ -1,17 +1,91 @@
-%h1 Decisions Admin
-= link_to "Add a decision", new_admin_decision_path, :class => 'button primary add-new'
+%header.page-header.group
+  %h1
+    %span Information
+    Immigration and Asylum Appeal Decisions
+  %p
+    Search for judges' decisions in the Upper Tribunal Immigration and Asylum Chamber
+  %p.sub<
+    Unreported decisions prior to 1 June 2013 cannot be accessed via the database. Please send any inquiries regarding such decisions to the IAC LRU at
+    %a{href: 'mailto:UTIACDecisions@hmcts.gsi.gov.uk'}='UTIACDecisions@hmcts.gsi.gov.uk'
+    who will access them on request.
+= form_tag admin_decisions_path, :method => :get do
+  .input-append
+    %label{:for => "search_query"} Enter a case number, appellant or judge name, country or keyword
+    = text_field :search, :query, :value => params[:search][:query], :placeholder => "eg UKUT 211 or Judge Allen"
+    %button.button.primary{:type => "submit"} Search
+  / %a.advanced_search_link{:href => "#advanced_search"} More Search Options
 
-.pagination-row
-  .page-entries
-    = page_entries_info @decisions
-  = will_paginate @decisions
+  .pagination-row
+    .page-entries
+      = page_entries_info @decisions
+    = will_paginate @decisions
 
-.main
-  %ul
-    - @decisions.each do |decision|
-      %li
-        = link_to(decision.appeal_number || "Unknown", edit_admin_decision_path(decision))
-        \:
-        = decision.case_name || "Unknown"
-        \:
-        = time_element(decision.promulgated_on)
+  .main.cf
+    .advanced-search
+      %fieldset#advanced_search
+        %h2 Filter the results
+        %h3 Case status
+        .status-filter
+          %label.checkbox.inline
+            = radio_button :search, :reported, "all", checked: true
+            All
+          %label.checkbox.inline
+            = radio_button :search, :reported, "true"
+            Reported
+          %label.checkbox.inline
+            = radio_button :search, :reported, "false"
+            Unreported
+        #search_reported_only
+          %h3
+            %label Neutral Citation Number
+          = text_field :search, :ncn, :value => params[:search][:ncn]
+          %h3
+            %label Country
+          = select :search, :country, options_for_select([[]] + Decision.country_list, params[:search][:country])
+          %label.checkbox
+            = check_box :search, :country_guideline, :value => params[:search][:country_guideline]
+            Used as country guidance
+          %h3
+            %label Name of judge
+          = select :search, :judge, options_for_select([[]] + Decision.judges_list, params[:search][:judge])
+          %h3
+            %label Appellant name
+          = text_field :search, :claimant, :value => params[:search][:claimant]
+        .buttons
+          = button_tag "Clear filters", :class => "button", :type => "reset"
+          = submit_tag "Search", :class => "button right primary"
+    .decisions
+      %table.decisions-table
+        %tr.headings
+          %th Reference number
+          %th Status
+          / %th Hearing date
+          %th Promulgation date
+          %th Country
+          - if search_present()
+            %th Search result
+        - @decisions.each do |decision|
+          %tr.first
+            %td= link_to decision.appeal_number || "Unknown" , admin_decision_path(decision)
+            %td
+              - if reported_label(decision.reported?) == "Yes"
+                Reported
+              - else
+                Unreported
+            / %td hearingdate
+            %td= time_element(decision.promulgated_on)
+            %td= decision.country
+            - if search_present()
+              %td.result-cell= hilighted_search_result(params[:search][:query], decision.text)
+          %tr
+            %td{:colspan => (search_present() ? 5 : 4)}
+              %strong Appellant name:
+              = decision.claimant
+          %tr.last
+            %td{:colspan => (search_present() ? 5 : 4)}
+              %strong Case title:
+              = decision.case_name
+
+  / .pagination-row
+  /   = will_paginate @decisions
+
