@@ -1,13 +1,18 @@
 require 'spec_helper'
 
 describe Admin::DecisionsController do
-  before(:each) do
-    Decision.create!(decision_hash)
-    Decision.create!(decision_hash(promulgated_on: Date.new(2012, 12, 31)))
+  describe "authorization" do
+    it "doesn't let people in by default" do
+      get :index
+      response.should render_template("admin/authentications/new")
+    end
   end
 
-  it "uses a scope that makes all decisions accessible" do
-    subject.class.scope.count == 2
+  describe "controller scope" do
+    it "uses a scope that makes all decisions accessible" do
+      Decision.should_receive(:all).once
+      subject.class.scope
+    end
   end
 
   describe "GET 'index'" do
@@ -15,6 +20,41 @@ describe Admin::DecisionsController do
       sign_in
       subject.class.should_receive(:scope).and_call_original
       get :index
+    end
+  end
+
+  describe "GET 'show'" do
+    before(:each) do
+      sign_in
+    end
+
+    context "a decision exists as html, doc and pdf" do
+      let(:decision) do
+        Decision.create!(decision_hash(pdf_file: sample_pdf_file, doc_file: sample_doc_file, promulgated_on: Date.new(2001, 1, 1)))
+      end
+
+      it "should respond with a html representation" do
+        get :show, id: decision.id
+        response.should be_success
+        response.content_type.should == 'text/html'
+      end
+
+      it "uses the controller scope" do
+        subject.class.should_receive(:scope).and_call_original
+        get :show, id: decision.id
+      end
+    end
+
+    context "only decision metadata exists" do
+      let(:decision) do
+        Decision.create!(decision_hash(promulgated_on: Date.new(2001, 1, 1)))
+      end
+
+      it "should respond with a html representation" do
+        get :show, id: decision.id
+        response.should be_success
+        response.content_type.should == 'text/html'
+      end
     end
   end
 

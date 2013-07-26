@@ -1,4 +1,4 @@
-class Admin::DecisionsController < ApplicationController
+class Admin::DecisionsController < ::DecisionsController
   layout 'layouts/admin'
   before_filter :authenticate
   protect_from_forgery

@@ -1,0 +1,62 @@
+%div{:vocab => "http://schema.org", :typeof => "CreativeWork"}
+  %header.page-header.group
+    %h1= @decision.appeal_number
+    = link_to('Edit this decision', edit_admin_decision_path(@decision))
+    %dl.decision-details
+  
+      %dt Case title:
+      %dd{:property => "name"}= @decision.case_name
+      %dt Appellant name:
+      %dd= @decision.claimant
+      %dt Status of case:
+      %dd
+        - if @decision.reported == true
+          Reported
+        - else
+          Unreported
+      %dt Promulgation date:
+      %dd= schema_time_element(@decision.promulgated_on)
+      %dt Country:
+      %dd= @decision.country
+      - if @decision.country_guideline.present?
+        %dt Country guidance:
+        %dd
+          - if @decision.country_guideline == true
+            Yes
+          - else
+            No
+      %dt Judges:
+      %dd= raw @decision.judges.map { |judge| schema_author_span(judge) }.join(', ')
+      - [:panel, :categories, :case_notes].each do |field|
+        - if @decision.send(field).present?
+          %dt #{field.to_s.humanize}:
+          %dd
+            - if @decision.send(field) == true
+              Yes
+            - elsif @decision.send(field) == false
+              No
+            - else
+              = @decision.send(field).to_s
+      - if @decision.send(:keywords).present?
+        %dt #{:keywords.to_s.humanize}:
+        %dd{:property => "keywords"}
+          - if @decision.send(:keywords) == true
+            Yes
+          - elsif @decision.send(:keywords) == false
+            No
+          - else
+            = @decision.send(:keywords).to_s
+
+  
+  .download-links
+    %ul
+      %li= link_to "Download a PDF version of the decision", @decision.pdf_file.url
+      %li= link_to "Download a Word document (.doc) version of the decision", @decision.doc_file.url
+  
+  - if @decision.html.blank?
+    %h2 An HTML version of this decision is not currently available.
+  - else
+    .decision
+      %h2 The decision
+      .decision-inner
+        = @decision.html.html_safe
