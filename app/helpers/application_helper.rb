@@ -21,7 +21,7 @@ module ApplicationHelper
     if index = text.index(search_term)
       lower_bound = [index - radius, 0].max
       upper_bound = index + search_term.length + radius
-      ['...', text[lower_bound..upper_bound], '...'].join
+      [lower_bound == 0 ? '' : '...', text[lower_bound..upper_bound], upper_bound == text.length ? '' : '...'].join
     end
   end
 end
