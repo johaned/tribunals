@@ -18,12 +18,13 @@ class AitUnreportedScraper
     doc_locations_from_html(session.html)
   
     begin
-      (2000..Float::INFINITY).each do |i|
+      (2..Float::INFINITY).each do |i|
         session.find('a#pager1', :text => i.to_s).click
         p "scanning page #{i}"
         doc_locations_from_html(session.html)
       end
     rescue Capybara::ElementNotFound
+      p "couldn't find page"
     end
     p "scanned all pages"
   end
