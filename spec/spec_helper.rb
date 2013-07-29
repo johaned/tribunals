@@ -63,3 +63,11 @@ end
 def sample_doc_file
   File.open('spec/fixtures/te3-eng.doc')
 end
+
+def decision_hash(h={})
+  {
+    appeal_number: [2013, 'UKIT', rand(31337)].join(' '),
+    doc_file: sample_doc_file,
+    promulgated_on: Date.today
+  }.merge(h)
+end

@@ -17,7 +17,7 @@ moj.Modules.admin_decisions = (function() {
       strip_quotes;
 
   init = function() {
-    if( $( 'form.edit_decision' ).length > 0 ) {
+    if( $( 'form.edit_decision, form.new_decision' ).length > 0 ) {
       cacheEls();
       bindEvents();
 
@@ -26,7 +26,7 @@ moj.Modules.admin_decisions = (function() {
   };
 
   cacheEls = function() {
-    $form = $( 'form.edit_decision' ).eq( 0 );
+    $form = $( 'form.edit_decision, form.new_decision' ).eq( 0 );
   };
 
   bindEvents = function() {

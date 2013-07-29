@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe Admin::DecisionsController do
   before(:each) do
-    Decision.create!(promulgated_on: Date.today)
-    Decision.create!(promulgated_on: Date.new(2012, 12, 31))
+    Decision.create!(decision_hash)
+    Decision.create!(decision_hash(promulgated_on: Date.new(2012, 12, 31)))
   end
 
   it "uses a scope that makes all decisions accessible" do
@@ -20,7 +20,7 @@ describe Admin::DecisionsController do
 
   describe "POST 'update'" do
     let(:decision) do
-      Decision.create!(promulgated_on: Date.today)
+      Decision.create!(decision_hash)
     end
 
     it "updates a decision" do

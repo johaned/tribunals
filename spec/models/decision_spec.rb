@@ -4,11 +4,11 @@ describe Decision do
 
   describe "search" do
     before(:each) do
-      @decision1 = Decision.create!(:text => "Some searchable text is here", :promulgated_on => Date.today)
-      @decision2 = Decision.create!(:text => "Some other searchable text is here gerald", :country => 'Afghanitsan', :promulgated_on => Date.today)
-      @decision3 = Decision.create!(:text => "gerald", :reported => true, :country_guideline => true, :country => 'Iraq', :judges => ["Blake", "Smith"], :promulgated_on => Date.today)
-      @decision4 = Decision.create!(:claimant => 'Green')
-      @decision5 = Decision.create!(:appeal_number => '[2013] UKUT 456')
+      @decision1 = Decision.create!(decision_hash(text: "Some searchable text is here"))
+      @decision2 = Decision.create!(decision_hash(text: "Some other searchable text is here gerald", country: 'Afghanitsan'))
+      @decision3 = Decision.create!(decision_hash(text: "gerald", reported: true, country_guideline: true, country: 'Iraq', judges: ["Blake", "Smith"]))
+      @decision4 = Decision.create!(decision_hash(claimant: 'Green'))
+      @decision5 = Decision.create!(decision_hash(appeal_number: '[2013] UKUT 456'))
     end
 
     it "should filter on search text" do
@@ -46,7 +46,7 @@ describe Decision do
   describe "with a .doc" do
     describe "process_doc" do
       before(:all) do
-        @decision = Decision.create!(:doc_file => File.open(File.join(Rails.root, 'spec', 'data', 'test.doc')), :promulgated_on => Date.today)
+        @decision = Decision.create!(decision_hash(doc_file: File.open(File.join(Rails.root, 'spec', 'data', 'test.doc'))))
         # Workaround for a bug in carrierwave, when Fog.mock! is used.
         @decision.doc_file.file.instance_variable_set(:@file, nil)
         @decision.process_doc
@@ -72,7 +72,7 @@ describe Decision do
     end
 
     it "should still save if the doc processing fails" do
-      @decision = Decision.create!(:doc_file => File.open(__FILE__), :promulgated_on => Date.today)
+      @decision = Decision.create!(decision_hash(doc_file: File.open(__FILE__)))
       File.should_receive(:open).and_raise(StandardError)
       expect {
         @decision.process_doc
@@ -82,9 +82,9 @@ describe Decision do
 
   describe "judge_list" do
     before(:each) do
-      Decision.create!(:judges => ["Gregg"], :promulgated_on => Date.today)
-      Decision.create!(:judges => ["Blake"], :promulgated_on => Date.today)
-      Decision.create!(:judges => ["Blake", "Smith"], :promulgated_on => Date.today)
+      Decision.create!(decision_hash(judges: ["Gregg"]))
+      Decision.create!(decision_hash(judges: ["Blake"]))
+      Decision.create!(decision_hash(judges: ["Blake", "Smith"]))
     end
 
     it "lists unique list of all judged in ascending order" do
@@ -94,10 +94,10 @@ describe Decision do
 
   describe "country_list" do
     before :each do
-      Decision.create!(:country => 'Poland', :promulgated_on => Date.today)
-      Decision.create!(:country => 'Vanuatu', :promulgated_on => Date.today)
-      Decision.create!(:country => 'Kiribati', :promulgated_on => Date.today)
-      Decision.create!(:country => 'Kiribati', :promulgated_on => Date.today)
+      Decision.create!(decision_hash(country: 'Poland'))
+      Decision.create!(decision_hash(country: 'Vanuatu'))
+      Decision.create!(decision_hash(country: 'Kiribati'))
+      Decision.create!(decision_hash(country: 'Kiribati'))
     end
 
     it "lists a unique set of countries in ascending order" do
@@ -155,9 +155,9 @@ describe Decision do
 
   describe "viewable scope" do
     before(:each) do
-      Decision.create!(promulgated_on: Date.today, reported: false)
-      Decision.create!(promulgated_on: Date.new(2012, 12, 31), reported: false)
-      Decision.create!(promulgated_on: Date.new(2001, 1, 1), reported: true)
+      Decision.create!(decision_hash(reported: false))
+      Decision.create!(decision_hash(promulgated_on: Date.new(2012, 12, 31), reported: false))
+      Decision.create!(decision_hash(promulgated_on: Date.new(2001, 1, 1), reported: true))
     end
 
     it "permits access only to a subset of decisions" do

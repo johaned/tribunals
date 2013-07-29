@@ -19,7 +19,7 @@ describe DecisionsController do
   describe "GET 'show'" do
     context "a decision exists as html, doc and pdf" do
       let(:decision) do
-        Decision.create!(pdf_file: sample_pdf_file, doc_file: sample_doc_file, promulgated_on: Date.today)
+        Decision.create!(decision_hash(pdf_file: sample_pdf_file, doc_file: sample_doc_file))
       end
 
       it "should respond with a html representation" do
@@ -36,7 +36,7 @@ describe DecisionsController do
 
     context "only decision metadata exists" do
       let(:decision) do
-        Decision.create!(promulgated_on: Date.today)
+        Decision.create!(decision_hash)
       end
 
       it "should respond with a html representation" do

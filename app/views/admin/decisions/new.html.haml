@@ -24,21 +24,24 @@
   .row
     = form.label :country_guideline
     = form.check_box :country_guideline
-  .row
+  .row.array.judges
     = form.label :judges
-    = form.text_field :judges
-  .row
+    .wrapper
+      = form.text_field :judges
+  .row.array.categories
     = form.label :categories
-    = form.text_field :categories
+    .wrapper
+      = form.text_field :categories
   .row
     = form.label :country
     = form.text_field :country
   .row
     = form.label :claimant
     = form.text_field :claimant
-  .row
+  .row.array.keywords
     = form.label :keywords
-    = form.text_field :keywords
+    .wrapper
+      = form.text_field :keywords
   .row
     = form.label :case_notes
     = form.text_field :case_notes
