@@ -1,6 +1,15 @@
 %h1 Add decision
 = form_for [:admin, @decision] do |form|
   .row
+    - if @decision.errors.any?
+      #error_explanation
+        = pluralize(@decision.errors.count, 'error')
+        prohibited this decision from being saved.
+        %ul
+          - @decision.errors.full_messages.each do |msg|
+            %li
+              = msg
+  .row
     = form.label :doc_file
     = form.file_field :doc_file
   .row

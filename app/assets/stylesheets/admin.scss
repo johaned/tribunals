@@ -70,4 +70,21 @@
   a.doclink {
     margin: 10px 0 0 260px;
   }
+
+  .field_with_errors {
+      input[type=text] {
+          border-color: red;
+          border-width: 2px;
+      }
+
+      input[type=file] {
+          color: red;
+      }
+  }
+ 
+  #error_explanation {
+      border: 2px red solid;
+      background-color: pink;
+      padding: 2px;
+  }
 }
