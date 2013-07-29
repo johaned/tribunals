@@ -91,7 +91,9 @@ class Decision < ActiveRecord::Base
         end
         threads = [:pdf, "txt:text"].map do |type|
           Thread.new do
-            `soffice --headless --convert-to #{type} --outdir #{tmp_html_dir} '#{doc_filename}'`
+            command = "soffice --headless --convert-to #{type} --outdir #{tmp_html_dir} '#{doc_filename}'"
+            puts command
+            method(:`).call(command)
           end
         end
         ThreadsWait.all_waits(*threads)
