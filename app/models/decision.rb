@@ -1,9 +1,12 @@
 class Decision < ActiveRecord::Base
-  # attr_accessible :doc_file, :html, :pdf_file, :promulgated_on, :original_filename, :text, :url, :tribunal_id, :reported, :old_details_url
   mount_uploader :doc_file, DocFileUploader
   mount_uploader :pdf_file, PdfFileUploader
 
-  validates_presence_of :doc_file, :promulgated_on, :appeal_number
+  validates_presence_of :doc_file, :appeal_number
+  validates_inclusion_of :reported, in: [true, false]
+  validates_inclusion_of :country_guideline, in: [true, false], if: :reported
+  validates_presence_of :country, :claimant, :promulgated_on, if: :reported
+  validates_length_of :judges, minimum: 1, if: :reported
 
   has_many :import_errors
 

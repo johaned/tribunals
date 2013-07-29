@@ -6,17 +6,13 @@ describe Decision do
     before(:each) do
       @decision1 = Decision.create!(decision_hash(text: "Some searchable text is here"))
       @decision2 = Decision.create!(decision_hash(text: "Some other searchable text is here gerald", country: 'Afghanitsan'))
-      @decision3 = Decision.create!(decision_hash(text: "gerald", reported: true, country_guideline: true, country: 'Iraq', judges: ["Blake", "Smith"]))
+      @decision3 = Decision.create!(decision_hash(text: "gerald", country_guideline: true, country: 'Iraq', judges: ["Blake", "Smith"]))
       @decision4 = Decision.create!(decision_hash(claimant: 'Green'))
       @decision5 = Decision.create!(decision_hash(appeal_number: '[2013] UKUT 456'))
     end
 
     it "should filter on search text" do
       Decision.filtered(:query => "gerald").should == [@decision2, @decision3]
-    end
-
-    it "should filter on search text and reported" do
-      Decision.filtered(:query => "gerald", :reported => true).should == [@decision3]
     end
 
     it "should filter on search text and country guidline" do
@@ -157,7 +153,7 @@ describe Decision do
     before(:each) do
       Decision.create!(decision_hash(reported: false))
       Decision.create!(decision_hash(promulgated_on: Date.new(2012, 12, 31), reported: false))
-      Decision.create!(decision_hash(promulgated_on: Date.new(2001, 1, 1), reported: true))
+      Decision.create!(decision_hash(promulgated_on: Date.new(2001, 1, 1)))
     end
 
     it "permits access only to a subset of decisions" do
@@ -166,6 +162,47 @@ describe Decision do
         unless decision.reported || decision.promulgated_on >= Date.new(2013, 6, 1)
           fail
         end
+      end
+    end
+  end
+
+  describe "validation" do
+    context "reported case" do
+      it "validates" do
+        decision = Decision.new(reported: true)
+
+        decision.appeal_number = 'XYZ 123'
+        decision.should_not be_valid
+
+        decision.country = 'Mali'
+        decision.should_not be_valid
+
+        decision.country_guideline = false
+        decision.should_not be_valid
+
+        decision.claimant = 'John Smith'
+        decision.should_not be_valid
+
+        decision.promulgated_on = Date.today
+        decision.should_not be_valid
+
+        decision.judges = ['His Hon Judge Dredd']
+        decision.should_not be_valid
+
+        decision.doc_file = sample_doc_file
+        decision.should be_valid
+      end
+    end
+
+    context "unreported case" do
+      it "validates" do
+        decision = Decision.new(reported: false)
+
+        decision.appeal_number = 'XYZ 123'
+        decision.should_not be_valid
+
+        decision.doc_file = sample_doc_file
+        decision.should be_valid
       end
     end
   end
