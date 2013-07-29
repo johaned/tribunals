@@ -3,6 +3,8 @@ class Decision < ActiveRecord::Base
   mount_uploader :doc_file, DocFileUploader
   mount_uploader :pdf_file, PdfFileUploader
 
+  validates_presence_of :doc_file, :promulgated_on, :appeal_number
+
   has_many :import_errors
 
   scope :viewable, ->{ where("reported = 't' OR promulgated_on >= ?", Date.new(2013, 6, 1)) }

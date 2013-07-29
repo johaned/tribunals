@@ -1,6 +1,7 @@
 class Admin::DecisionsController < ApplicationController
   layout 'layouts/admin'
   before_filter :authenticate
+  protect_from_forgery
 
   def index
     @decisions = self.class.scope.paginate(:page => params[:page], :per_page => 30).ordered
