@@ -90,24 +90,27 @@ class Decision < ActiveRecord::Base
     require 'thwait'
     if doc_file.present?
       Dir.mktmpdir do |tmp_html_dir|
-        doc_filename = File.join(tmp_html_dir, File.basename(self.doc_file.file.path))
-        File.open(doc_filename, 'wb') do |f|
-          f.write(doc_file.read)
-        end
-        threads = [:pdf, "txt:text"].map do |type|
-          Thread.new do
-            command = "soffice --headless --convert-to #{type} --outdir #{tmp_html_dir} '#{doc_filename}'"
-            puts command
-            method(:`).call(command)
+        Dir.chdir(tmp_html_dir) do
+          doc_rel_filename = File.basename(self.doc_file.file.path)
+          doc_abs_filename = File.join(tmp_html_dir, doc_rel_filename)
+          File.open(doc_abs_filename, 'wb') do |f|
+            f.write(doc_file.read)
           end
+          threads = [:pdf, "txt:text"].map do |type|
+            Thread.new do
+              command = "soffice --headless --convert-to #{type} --outdir . '#{doc_rel_filename}'"
+              puts command
+              method(:`).call(command)
+            end
+          end
+          ThreadsWait.all_waits(*threads)
+          txt_filename = doc_abs_filename.gsub(/\.doc$/i, '.txt')
+          pdf_filename = doc_abs_filename.gsub(/\.doc$/i, '.pdf')
+          self.text = File.open(txt_filename, 'r:bom|utf-8').read
+          self.set_html_from_text
+          self.pdf_file = File.open(pdf_filename)
+          self.save!
         end
-        ThreadsWait.all_waits(*threads)
-        txt_filename = doc_filename.gsub(/\.doc$/i, '.txt')
-        pdf_filename = doc_filename.gsub(/\.doc$/i, '.pdf')
-        self.text = File.open(txt_filename, 'r:bom|utf-8').read
-        self.set_html_from_text
-        self.pdf_file = File.open(pdf_filename)
-        self.save!
       end
     end
   rescue StandardError => e
