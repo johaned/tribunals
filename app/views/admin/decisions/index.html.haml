@@ -89,3 +89,12 @@
   / .pagination-row
   /   = will_paginate @decisions
 
+.main
+  %ul
+    - @decisions.each do |decision|
+      %li
+        = link_to(decision.link_label, edit_admin_decision_path(decision))
+        \:
+        = decision.case_name || "Unknown"
+        \:
+        = time_element(decision.promulgated_on)

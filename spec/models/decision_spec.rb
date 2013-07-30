@@ -149,6 +149,22 @@ describe Decision do
     end
   end
 
+  describe "link label" do
+    context "a reported decision" do
+      it "should display the appropriate label" do
+        decision = Decision.new(reported: true, appeal_number: 'XYZ 123')
+        decision.link_label.should == 'XYZ 123'
+      end
+    end
+
+    context "an unreported decision" do
+      it "should display the appropriate label" do
+        decision = Decision.create!(reported: false, doc_file: sample_doc_file2)
+        decision.link_label.should == 'IA195402012, IA195412012, AA099162012'
+      end
+    end
+  end
+
   describe "viewable scope" do
     before(:each) do
       Decision.create!(decision_hash(reported: false))

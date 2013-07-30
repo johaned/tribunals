@@ -78,6 +78,14 @@ class Decision < ActiveRecord::Base
     end
   end
 
+  def link_label
+    if reported
+      appeal_number
+    else
+      File.basename(self.doc_file.to_s, '.doc').scan(/[A-Z]{2}[0-9]{9}/).join(', ')
+    end
+  end
+
   def fetch_doc_file
     self.doc_file.download!(URI.parse(URI.encode(self.url)).to_s)
     self.doc_file.store!
