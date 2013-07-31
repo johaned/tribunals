@@ -11,11 +11,15 @@
       ga('create', 'UA-37377084-4', 'dsd.io');
       ga('send', 'pageview');
       
-  %body
+  %body.beta
     
     = render "shared/header"
 
     #wrapper.group.information
+      .indicator.cf
+        %p
+          %strong Beta:
+          This is a new service - your feedback will help us to improve it
       %section#content.group{:role => "main"}
         .full-width-group
           = yield
