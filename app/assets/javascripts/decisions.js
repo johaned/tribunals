@@ -10,40 +10,43 @@ moj.Modules.decisions = (function() {
       resetFilters,
       searchToggle,
       $fs,
-      $resetBtn;
+      $form,
+      $adv,
+      resetBtns;
 
   init = function() {
 
     cacheEls();
     bindEvents();
-
-    if( $( '.advanced-search' ).length > 0 ) {
-      $( 'select', $fs ).selectToAutocomplete();
-    }
-
+    
   };
 
   cacheEls = function() {
-    $fs = $( '.advanced-search fieldset' ).eq( 0 );
-    $resetBtn = $( 'button[type=reset]', $fs ).eq( 0 );
+    $form = $( '.search_form' ).eq( 0 );
+    $fs = $( '.advanced-search fieldset', $form ).eq( 0 );
+    resetBtns = $( 'button[type=reset]', $form );
+    $adv = $( '#search_reported_only', $form );
   };
 
   bindEvents = function() {
     $( 'input:radio', $fs ).on( 'change', searchToggle );
 
-    $resetBtn.on('click', function ( e ) {
+    $( 'select', $fs ).selectToAutocomplete();
+
+    $( resetBtns ).on( 'click', function ( e ) {
       e.preventDefault();
       resetFilters();  
     });
   };
 
   resetFilters = function() {
-    $resetBtn.closest( 'form' ).find( 'input[type=text], input.ui-autocomplete-input' ).val( '' );
-    $('#search_reported_all').trigger('click');
+    $form.find( 'input[type=text], input.ui-autocomplete-input' ).val( '' );
+    $( '#search_reported_all' ).trigger( 'click' );
+    $adv.show();
   };
 
   searchToggle = function() {
-    $( '#search_reported_only' ).toggle( !$( '#search_reported_false' ).is( ':checked' ) );
+    $adv.toggle( !$( '#search_reported_false' ).is( ':checked' ) );
   };
 
   // public
