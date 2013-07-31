@@ -122,7 +122,7 @@ describe Decision do
 
   describe "appeal_references" do
     before(:each) do
-      @target_decision = Decision.create!(:appeal_number => '[1238] UKUT 12')
+      @target_decision = Decision.create!(decision_hash(:appeal_number => '[1238] UKUT 12'))
       @target_decision_url = Tribunals::Application.routes.url_helpers.decision_path(@target_decision)
     end
 
