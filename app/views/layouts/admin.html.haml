@@ -9,11 +9,16 @@
     = render "shared/header"
 
     #wrapper.group.admin
-      #global-breadcrumb.header-context
-        %nav{:role => "navigation"}
-          %ol.group
-            %li= link_to 'Admin home', admin_decisions_path
-            %li= link_to 'Log out', logout_admin_authentication_path
+      .indicator.cf
+        .left
+          %p
+            %strong Administrator view:
+            select a case to edit its details
+        .right
+          %p
+            = link_to 'Admin home', admin_decisions_path
+            |
+            =link_to 'Log out', logout_admin_authentication_path
       %section#content.group{:role => "main"}
         .full-width-group
           = yield

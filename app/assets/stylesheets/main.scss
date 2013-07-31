@@ -37,7 +37,7 @@ p.sub {
   margin-bottom: 1.9rem;
 }
 
-.button {
+.button, .button:visited {
   background-color: #dcdcdc;
   color: #2e2e2e;
   box-shadow: 0 3px 0 #959595;
@@ -75,8 +75,39 @@ input[type="text"]{
   width: 980px;
   padding: 0 30px;
   margin: auto;
-  border-top: 10px solid $betacolour;
   border-bottom: none;
+}
+
+.indicator {
+  .alpha & {
+    background-color: $alphacolour;
+    color: #fff;
+  }
+  .beta & {
+    background-color: $betacolour;
+  }
+  .admin & {
+    background-color: $admincolour; 
+    color: #fff;
+    a {
+      color: #fff;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  p {
+    @include core-19;
+    padding: 1rem 2rem;
+    margin: 0;
+    strong {
+      text-transform: uppercase;
+      .admin & {
+        text-transform: none;
+      }
+    }
+  }
 }
 
 header {
