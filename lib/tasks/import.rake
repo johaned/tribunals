@@ -17,8 +17,10 @@ namespace :import do
   end
 
   task :make_html_from_text => :environment do
+    cache = Decision.all.select('id, appeal_number').index_by(&:appeal_number)
     Decision.where("html IS NOT NULL").find_each do |decision|
-      decision.set_html_from_text
+      puts decision.id
+      decision.set_html_from_text(cache)
       decision.save!
     end
   end
