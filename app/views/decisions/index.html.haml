@@ -67,7 +67,7 @@
             %th Search result
         - @decisions.each do |decision|
           %tr.first
-            %td= link_to decision.link_label , decision_path(decision)
+            %td{class: decision.reported ? 'reported' : 'unreported' }= link_to decision.link_label, decision_path(decision)
             %td
               - if reported_label(decision.reported?) == "Yes"
                 Reported
