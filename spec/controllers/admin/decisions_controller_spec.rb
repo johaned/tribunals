@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Admin::DecisionsController do
+  render_views
+
   describe "authorization" do
     it "doesn't let people in by default" do
       get :index
