@@ -57,7 +57,9 @@ CREATE TABLE decisions (
     keywords character varying(255)[] DEFAULT '{}'::character varying[],
     case_notes character varying(255),
     case_name character varying(255),
-    anonymised boolean DEFAULT false
+    anonymised boolean DEFAULT false,
+    hearing_on date,
+    ncn character varying(255)
 );
 
 
@@ -253,3 +255,7 @@ INSERT INTO schema_migrations (version) VALUES ('20130711143547');
 INSERT INTO schema_migrations (version) VALUES ('20130712131321');
 
 INSERT INTO schema_migrations (version) VALUES ('20130724093005');
+
+INSERT INTO schema_migrations (version) VALUES ('20130801162847');
+
+INSERT INTO schema_migrations (version) VALUES ('20130801163401');
