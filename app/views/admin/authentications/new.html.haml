@@ -1,5 +1,6 @@
 %div.login
-  %h1 Log in
+  %header
+    %h1 Log in
   = form_tag(admin_authentication_path, :method => :post) do
     %fieldset
       = label_tag('password', 'Enter password')

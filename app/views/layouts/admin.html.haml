@@ -19,6 +19,8 @@
             %p
               = link_to 'Admin home', admin_decisions_path
               |
+              = link_to 'Upload decision', new_admin_decision_path
+              |
               =link_to 'Log out', logout_admin_authentication_path
       - else
         .indicator.cf
