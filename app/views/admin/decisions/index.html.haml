@@ -52,7 +52,7 @@
             %label Appellant name
           = text_field :search, :claimant, :value => params[:search][:claimant]
         .buttons
-          = button_tag "Clear filters", :class => "button", :type => "reset"
+          = button_tag "Clear", :class => "button", :type => "reset"
           = submit_tag "Search", :class => "button right primary"
     .decisions
       %table.decisions-table
