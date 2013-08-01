@@ -9,16 +9,23 @@
     = render "shared/header"
 
     #wrapper.group.admin
-      .indicator.cf
-        .left
+      - if authenticated?
+        .indicator.cf
+          .left
+            %p
+              %strong Administrator view:
+              select a case to edit its details
+          .right
+            %p
+              = link_to 'Admin home', admin_decisions_path
+              |
+              =link_to 'Log out', logout_admin_authentication_path
+      - else
+        .indicator.cf
           %p
-            %strong Administrator view:
-            select a case to edit its details
-        .right
-          %p
-            = link_to 'Admin home', admin_decisions_path
-            |
-            =link_to 'Log out', logout_admin_authentication_path
+            %strong Beta:
+            This is a new service - your feedback will help us to improve it
+
       %section#content.group{:role => "main"}
         .full-width-group
           = yield
