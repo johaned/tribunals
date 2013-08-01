@@ -284,6 +284,9 @@ header {
     a {
       font-weight: bold;
       text-decoration: none;
+    }
+
+    &.reported a {
       white-space: nowrap;
     }
   }
