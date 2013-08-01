@@ -8,7 +8,7 @@
     
     = render "shared/header"
 
-    #wrapper.group.admin
+    #wrapper.group{:class => authenticated? ? 'admin' : 'beta'}
       - if authenticated?
         .indicator.cf
           .left
