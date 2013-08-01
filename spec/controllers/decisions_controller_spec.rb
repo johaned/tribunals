@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe DecisionsController do
+  render_views
 
   describe "controller scope" do
     it "uses a scope that displays only certain decisions" do
