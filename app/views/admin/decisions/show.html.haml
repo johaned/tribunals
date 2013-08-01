@@ -1,6 +1,6 @@
 %div{:vocab => "http://schema.org", :typeof => "CreativeWork"}
   %header.page-header.group
-    %h1= @decision.appeal_number
+    %h1= @decision.link_label
     = link_to('Edit this decision', edit_admin_decision_path(@decision), :class => 'button')
     %dl.decision-details
   
