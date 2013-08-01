@@ -1,6 +1,6 @@
 class Admin::DecisionsController < ::DecisionsController
   layout 'layouts/admin'
-  before_filter :authenticate
+  before_filter :authenticate!
   protect_from_forgery
 
   def create
@@ -34,10 +34,6 @@ class Admin::DecisionsController < ::DecisionsController
   end
 
   private
-  def authenticate
-    request.env['warden'].authenticate!
-  end
-
   def decision_params
     params.require(:decision).permit(:doc_file, :promulgated_on, :appeal_number, :reported, :starred, :panel,
                                      :anonymised, :country_guideline, :judges, :categories, :country, :claimant,

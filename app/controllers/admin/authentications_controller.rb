@@ -5,12 +5,12 @@ class Admin::AuthenticationsController < ApplicationController
   end
 
   def create
-    env['warden'].authenticate!
+    warden.authenticate!
     redirect_to admin_decisions_path
   end
 
   def logout
-    env['warden'].logout
+    warden.logout
     redirect_to root_url
   end
 end
