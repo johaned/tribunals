@@ -49,7 +49,8 @@
     padding-right: 10px;
   }
   input[type="text"],
-  .ui-autocomplete-input {
+  .ui-autocomplete-input,
+  textarea {
     float: left;
     display: block;
     border: 1px solid #999999;
@@ -85,6 +86,23 @@
       input[type=file] {
           color: $red;
       }
+  }
+
+  #decision_case_notes {
+    width: 550px;
+    height: 120px;
+  }
+
+  #case_title {
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .ncn {
+    label {
+      text-transform: uppercase;
+    }
   }
 }
 
