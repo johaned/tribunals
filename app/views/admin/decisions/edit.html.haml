@@ -11,8 +11,14 @@
     = form.label :promulgated_on
     = form.date_select :promulgated_on, start_year: 2003, end_year: Date.today.year + 1
   .row
+    = form.label :hearing_on
+    = form.date_select :hearing_on, start_year: 2003, end_year: Date.today.year + 1
+  .row
     = form.label :appeal_number
     = form.text_field :appeal_number
+  .row
+    = form.label :ncn
+    = form.text_field :ncn
   .row
     = form.label :reported
     = form.check_box :reported
@@ -48,7 +54,7 @@
       = form.text_field :keywords
   .row
     = form.label :case_notes
-    = form.text_field :case_notes
+    = form.text_area :case_notes
   .row
     = form.submit :class => 'button primary'
     %a.button{:href => admin_decision_path(@decision)} Cancel
