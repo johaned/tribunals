@@ -2,10 +2,11 @@ class Decision < ActiveRecord::Base
   mount_uploader :doc_file, DocFileUploader
   mount_uploader :pdf_file, PdfFileUploader
 
-  validates_presence_of :doc_file, :appeal_number
+  validates_presence_of :doc_file
   validates_inclusion_of :reported, in: [true, false]
   validates_inclusion_of :country_guideline, in: [true, false], if: :reported
   validates_presence_of :country, :claimant, :promulgated_on, if: :reported
+  validates_presence_of :appeal_number, if: :reported
   validates_length_of :judges, minimum: 1, if: :reported
 
   has_many :import_errors
@@ -102,7 +103,7 @@ class Decision < ActiveRecord::Base
           doc_rel_filename = File.basename(self.doc_file.file.path)
           doc_abs_filename = File.join(tmp_html_dir, doc_rel_filename)
           File.open(doc_abs_filename, 'wb') do |f|
-            f.write(doc_file.read)
+            f.write(doc_file.sanitized_file.read)
           end
           threads = [:pdf, "txt:text"].map do |type|
             Thread.new do
