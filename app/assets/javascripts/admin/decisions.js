@@ -5,6 +5,8 @@ moj.Modules.admin_decisions = (function() {
   "use strict";
 
   var $form,
+      rows,
+      $box,
       init,
       cacheEls,
       bindEvents,
@@ -14,7 +16,10 @@ moj.Modules.admin_decisions = (function() {
       add_element, 
       delete_element,
       store_values,
-      strip_quotes;
+      strip_quotes,
+      show_title,
+      pick_number_field,
+      submit_form;
 
   init = function() {
     if( $( 'form.edit_decision, form.new_decision' ).length > 0 ) {
@@ -22,10 +27,14 @@ moj.Modules.admin_decisions = (function() {
       bindEvents();
 
       init_arrays();
+      show_title();
+      pick_number_field();
     }
   };
 
   cacheEls = function() {
+    rows = $('.row.appeal, .row.ncn'),
+    $box = $('#decision_reported'),
     $form = $( 'form.edit_decision, form.new_decision' ).eq( 0 );
   };
 
@@ -39,6 +48,16 @@ moj.Modules.admin_decisions = (function() {
     }).on( 'change', '.split', function() {
       var $row = $( this ).closest( '.row' );
       store_values( $row );
+    });
+
+    $('#decision_reported').on('change', function(){
+      pick_number_field();
+    });
+
+    $form.on('submit', function(e){
+      e.preventDefault();
+      $('.row.hidden input[type="text"]').val('');
+      submit_form();
     });
   };
 
@@ -138,6 +157,41 @@ moj.Modules.admin_decisions = (function() {
       str = str.substr( 0, str.length-2 );
     }
     return str;
+  };
+
+  show_title = function() {
+    var c = $( '#decision_claimant', $form ).val(),
+        k = $( '.row.keywords input[type=text]:not(.original)' ),
+        kArr = [],
+        x,
+        t;
+
+    for( x = 0; x < k.length; x++ ) {
+      kArr[kArr.length] = $(k[x]).val();
+    }
+
+    if( c === '' && kArr[0] === '' ){
+      t = 'Unreported';
+    } else {
+      t = c + ' (' + kArr.join(', ') + ')';
+    }
+
+    $( '#case_title span' ).text( t );
+  };
+
+  pick_number_field = function() {
+    if( $box.is(':checked') ){
+      $(rows[0]).show().removeClass('hidden');
+      $(rows[1]).hide().addClass('hidden');
+    } else {
+      $(rows[0]).hide().addClass('hidden');
+      $(rows[1]).show().removeClass('hidden');
+    }
+  };
+
+  submit_form = function() {
+    $form.unbind('submit');
+    $form.trigger('submit');
   };
 
   // public
