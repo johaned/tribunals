@@ -1,4 +1,5 @@
-%h1 Add decision
+%header
+  %h1 Add decision
 = form_for [:admin, @decision] do |form|
   .row
     - if @decision.errors.any?
