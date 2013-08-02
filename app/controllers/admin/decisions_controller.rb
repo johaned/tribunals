@@ -37,6 +37,6 @@ class Admin::DecisionsController < ::DecisionsController
   def decision_params
     params.require(:decision).permit(:doc_file, :promulgated_on, :appeal_number, :reported, :starred,
                                      :country_guideline, :judges, :categories, :country, :claimant,
-                                     :keywords, :case_notes)
+                                     :keywords, :case_notes, :ncn)
   end
 end
