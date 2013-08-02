@@ -17,6 +17,7 @@ moj.Modules.admin_decisions = (function() {
       delete_element,
       store_values,
       strip_quotes,
+      trim_spaces,
       show_title,
       pick_number_field;
 
@@ -75,11 +76,17 @@ moj.Modules.admin_decisions = (function() {
       val = '';
       arr = [''];
     } else {
-      val = val.substr( 1, val.length - 2 );
+      if(val.charAt(0) === '{'){
+        val = val.substr(1);
+      }
+      if(val.charAt(val.length-1) === '}'){
+        val = val.substr(0, val.length-1);
+      }
       arr = val.split( ',' );
     }
     for ( x = 0; x < arr.length; x++ ) {
       arr[x] = strip_quotes( arr[x] );
+      arr[x] = trim_spaces( arr[x] );
     }
     $row.data( 'array', arr ).val( val );
     $el.addClass( 'original' ).hide();
@@ -152,9 +159,13 @@ moj.Modules.admin_decisions = (function() {
       str = str.substr( 1 );
     }
     if( str.charAt(str.length-1) === '"'){
-      str = str.substr( 0, str.length-2 );
+      str = str.substr( 0, str.length-1 );
     }
     return str;
+  };
+
+  trim_spaces = function (str) {
+    return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
   };
 
   show_title = function() {
