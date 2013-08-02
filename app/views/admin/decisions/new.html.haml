@@ -11,6 +11,9 @@
           - @decision.errors.full_messages.each do |msg|
             %li
               = msg
+  .row#case_title
+    %label Case title
+    %span
   .row
     = form.label :doc_file
     = form.file_field :doc_file
@@ -64,3 +67,4 @@
     = form.text_area :case_notes
   .row
     = form.submit :class => 'button primary'
+    %a.button{:href => admin_decisions_path} Cancel

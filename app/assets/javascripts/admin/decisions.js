@@ -32,8 +32,8 @@ moj.Modules.admin_decisions = (function() {
   };
 
   cacheEls = function() {
-    rows = $('.row.appeal, .row.ncn'),
-    $box = $('#decision_reported'),
+    rows = $('.row.appeal, .row.ncn');
+    $box = $('#decision_reported');
     $form = $( 'form.edit_decision, form.new_decision' ).eq( 0 );
   };
 
@@ -41,6 +41,7 @@ moj.Modules.admin_decisions = (function() {
     $( document ).on( 'click', 'a.delete', function( e ) {
       e.preventDefault();
       delete_element( $(e.target) );
+      show_title();
     }).on( 'click', 'a.add', function( e ) {
       e.preventDefault();
       add_element( $(e.target) );
@@ -49,8 +50,12 @@ moj.Modules.admin_decisions = (function() {
       store_values( $row );
     });
 
-    $('#decision_reported').on('change', function(){
+    $( '#decision_reported', $form ).on('change', function(){
       pick_number_field();
+    });
+
+    $(document).on('keyup', '#decision_claimant, .row.keywords input[type=text]:not(.original)', function(){
+      show_title();
     });
   };
 
