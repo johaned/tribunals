@@ -47,11 +47,11 @@
   .row.array.judges
     = form.label :judges
     .wrapper
-      = form.text_field :judges
+      = form.text_field :judges, value: nil
   .row.array.categories
     = form.label :categories
     .wrapper
-      = form.text_field :categories
+      = form.text_field :categories, value: nil
   .row
     = form.label :country
     = form.text_field :country
@@ -61,7 +61,7 @@
   .row.array.keywords
     = form.label :keywords
     .wrapper
-      = form.text_field :keywords
+      = form.text_field :keywords, value: nil
   .row
     = form.label :case_notes
     = form.text_area :case_notes
