@@ -84,7 +84,7 @@
           %tr.last
             %td{:colspan => (search_present() ? 5 : 4)}
               %strong Case title:
-              %strong= decision.case_name
+              %strong= decision.case_title
 
   / .pagination-row
   /   = will_paginate @decisions
