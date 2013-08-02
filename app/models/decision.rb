@@ -6,7 +6,8 @@ class Decision < ActiveRecord::Base
   validates_inclusion_of :reported, in: [true, false]
   validates_inclusion_of :country_guideline, in: [true, false], if: :reported
   validates_presence_of :country, :claimant, :promulgated_on, if: :reported
-  validates_presence_of :appeal_number, if: :reported
+  validates_presence_of :ncn, if: :reported
+  validates_presence_of :appeal_number, unless: :reported
   validates_length_of :judges, minimum: 1, if: :reported
 
   has_many :import_errors
@@ -81,9 +82,9 @@ class Decision < ActiveRecord::Base
 
   def link_label
     if reported
-      appeal_number
+      ncn
     else
-      File.basename(self.doc_file.to_s, '.doc').scan(/[A-Z]{2}[0-9]{9}/).join(', ')
+      appeal_number || File.basename(self.doc_file.to_s, '.doc').scan(/[A-Z]{2}[0-9]{9}/).join(', ')
     end
   end
 
