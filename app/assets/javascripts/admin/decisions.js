@@ -179,11 +179,11 @@ moj.Modules.admin_decisions = (function() {
 
   pick_number_field = function() {
     if( $box.is(':checked') ){
-      $(rows[0]).show().removeClass('hidden');
-      $(rows[1]).hide().addClass('hidden');
-    } else {
       $(rows[0]).hide().addClass('hidden');
       $(rows[1]).show().removeClass('hidden');
+    } else {
+      $(rows[0]).show().removeClass('hidden');
+      $(rows[1]).hide().addClass('hidden');
     }
   };
 
