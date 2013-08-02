@@ -20,10 +20,10 @@
   .row
     = form.label :hearing_on
     = form.date_select :hearing_on, start_year: 2003, end_year: Date.today.year + 1
-  .row
+  .row.appeal
     = form.label :appeal_number
     = form.text_field :appeal_number
-  .row
+  .row.ncn
     = form.label :ncn
     = form.text_field :ncn
   .row
