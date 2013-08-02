@@ -18,8 +18,7 @@ moj.Modules.admin_decisions = (function() {
       store_values,
       strip_quotes,
       show_title,
-      pick_number_field,
-      submit_form;
+      pick_number_field;
 
   init = function() {
     if( $( 'form.edit_decision, form.new_decision' ).length > 0 ) {
@@ -52,12 +51,6 @@ moj.Modules.admin_decisions = (function() {
 
     $('#decision_reported').on('change', function(){
       pick_number_field();
-    });
-
-    $form.on('submit', function(e){
-      e.preventDefault();
-      $('.row.hidden input[type="text"]').val('');
-      submit_form();
     });
   };
 
@@ -187,11 +180,6 @@ moj.Modules.admin_decisions = (function() {
       $(rows[0]).hide().addClass('hidden');
       $(rows[1]).show().removeClass('hidden');
     }
-  };
-
-  submit_form = function() {
-    $form.unbind('submit');
-    $form.trigger('submit');
   };
 
   // public
