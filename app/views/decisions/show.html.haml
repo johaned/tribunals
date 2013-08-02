@@ -31,7 +31,7 @@
             No
       %dt Judges:
       %dd= judge_list(@decision.judges)
-      - [:panel, :categories, :case_notes].each do |field|
+      - [:categories, :case_notes].each do |field|
         - if @decision.send(field).present?
           %dt #{field.to_s.humanize}:
           %dd

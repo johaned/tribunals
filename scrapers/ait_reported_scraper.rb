@@ -58,7 +58,6 @@ class AitReportedScraper
       decision.updated_at = cleaned_values[1]
       decision.promulgated_on = cleaned_values[2]
       decision.starred = cleaned_values[3] == "Yes"
-      decision.panel = cleaned_values[4] == "Yes"
       decision.country_guideline = cleaned_values[5] == "Yes"
       decision.judges = values[6].css("span").children.collect {|x| x.content}.delete_if {|x| x.blank?}
       decision.categories = cleaned_values[7]
