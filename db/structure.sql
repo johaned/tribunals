@@ -48,7 +48,6 @@ CREATE TABLE decisions (
     reported boolean,
     old_details_url character varying(255),
     starred boolean,
-    panel boolean,
     country_guideline boolean,
     judges character varying(255)[] DEFAULT '{}'::character varying[],
     categories character varying(255)[] DEFAULT '{}'::character varying[],
@@ -260,3 +259,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130801162847');
 INSERT INTO schema_migrations (version) VALUES ('20130801163401');
 
 INSERT INTO schema_migrations (version) VALUES ('20130802112712');
+
+INSERT INTO schema_migrations (version) VALUES ('20130802113158');
