@@ -70,7 +70,7 @@ end
 
 def decision_hash(h={})
   {
-    appeal_number: [2013, 'UKIT', rand(31337)].join(' '),
+    ncn: [2013, 'UKIT', rand(31337)].join(' '),
     doc_file: sample_doc_file,
     promulgated_on: Date.today,
     claimant: 'John Smith',

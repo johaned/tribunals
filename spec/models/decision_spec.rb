@@ -152,23 +152,31 @@ describe Decision do
   describe "link label" do
     context "a reported decision" do
       it "should display the appropriate label" do
-        decision = Decision.new(reported: true, appeal_number: 'XYZ 123')
+        decision = Decision.create!(decision_hash(ncn: 'XYZ 123'))
         decision.link_label.should == 'XYZ 123'
+      end
+    end
+
+    context "an old unreported decision" do
+      it "should display the appropriate label" do
+        decision = Decision.new(decision_hash(reported: false, doc_file: sample_doc_file2))
+        decision.save(validate: false)
+        decision.link_label.should == 'IA195402012, IA195412012, AA099162012'
       end
     end
 
     context "an unreported decision" do
       it "should display the appropriate label" do
-        decision = Decision.create!(decision_hash(reported: false, doc_file: sample_doc_file2))
-        decision.link_label.should == 'IA195402012, IA195412012, AA099162012'
+        decision = Decision.create!(decision_hash(reported: false, doc_file: sample_doc_file2, appeal_number: 'LOL 31337'))
+        decision.link_label.should == 'LOL 31337'
       end
     end
   end
 
   describe "viewable scope" do
     before(:each) do
-      Decision.create!(decision_hash(reported: false))
-      Decision.create!(decision_hash(promulgated_on: Date.new(2012, 12, 31), reported: false))
+      Decision.create!(decision_hash(reported: false, appeal_number: 'LOL 31337'))
+      Decision.create!(decision_hash(promulgated_on: Date.new(2012, 12, 31), reported: false, appeal_number: 'LOL 31338'))
       Decision.create!(decision_hash(promulgated_on: Date.new(2001, 1, 1)))
     end
 
@@ -187,7 +195,7 @@ describe Decision do
       it "validates" do
         decision = Decision.new(reported: true)
 
-        decision.appeal_number = 'XYZ 123'
+        decision.ncn = 'XYZ 123'
         decision.should_not be_valid
 
         decision.country = 'Mali'
