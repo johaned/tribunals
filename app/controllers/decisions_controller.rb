@@ -11,7 +11,7 @@ class DecisionsController < ApplicationController
 
   def show
     @decision = self.class.scope.find(params[:id])
-    @page_title = @decision.case_name || @decision.claimant + ' (' + @decision.keywords.join(', ').html_safe + ')'
+    @page_title = @decision.case_name
   end
 
   def self.scope
