@@ -23,4 +23,8 @@ module DecisionsHelper
     ("<span property='author'>#{author}</span>").html_safe
   end
 
+  def case_title(decision)
+    decision.case_name || '&nbsp;'.html_safe
+  end
+
 end
