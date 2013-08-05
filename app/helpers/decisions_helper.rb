@@ -24,7 +24,7 @@ module DecisionsHelper
   end
 
   def case_title(decision)
-    decision.case_name || '&nbsp;'.html_safe
+    decision.case_title || '&nbsp;'.html_safe
   end
 
 end
