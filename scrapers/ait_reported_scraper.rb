@@ -11,26 +11,31 @@ Capybara.app_host = 'http://www.ait.gov.uk'
 class AitReportedScraper
   include Capybara::DSL
 
-  def visit_all_pages
+  def initialize(stdout=STDOUT)
+    @stdout = stdout
+  end
+
+  def visit_all_pages(range=2..Float::INFINITY)
     @index_session = Capybara::Session.new(:webkit)
     @index_session.visit "/Public/SearchReported.aspx"
     @index_session.click_link("Most recent determinations")
     details_locations_from_html(@index_session.html)
   
     begin
-      (2..Float::INFINITY).each do |i|
+      range.each do |i|
         @index_session.find('a#pager1', :text => i.to_s).click
         p "scanning page #{i}"
         details_locations_from_html(@index_session.html)
       end
     rescue Capybara::ElementNotFound
+      p "page not found"
     end
     p "scanned all pages"
   end
   
   def details_locations_from_html(html)
     html_doc = Nokogiri::HTML(html)
-    html_doc.css("table tbody tr").collect do |row|
+    html_doc.css("table tbody tr").each do |row|
       url = row.css("td").last.css("a").attr('href').value
       case_name = row.css("td")[1].content.strip
       promulgated_on = row.css("td")[4].content
@@ -48,7 +53,7 @@ class AitReportedScraper
     cleaned_values = values.collect {|x| x.content.strip}
     url = "http://www.ait.gov.uk/Public/" + values.last.css("a").attr('href').value
 
-    unless Decision.exists?(url: url) || Decision.exists?(old_details_url: old_details_url)
+    unless decision_exists?(url, old_details_url)
       decision = Decision.new(:old_details_url => old_details_url)
       decision.tribunal_id = 1
       decision.reported = true
@@ -68,10 +73,18 @@ class AitReportedScraper
       decision.case_notes = cleaned_values[12]
       decision.original_filename = cleaned_values[13]
       decision.url = url
-      decision.save!
-      p decision
+      decision.save(validate: false)
+      p decision.inspect
     else
       p "Skipping #{old_details_url}"
     end
+  end
+
+  def decision_exists?(url, old_details_url)
+    Decision.exists?(url: url) || Decision.exists?(old_details_url: old_details_url)
+  end
+  
+  def p(string)
+    @stdout.puts(string)
   end
 end
