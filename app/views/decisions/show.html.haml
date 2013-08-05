@@ -9,7 +9,7 @@
     %dl.decision-details
   
       %dt Case title:
-      %dd{:property => "name"}= @decision.case_name
+      %dd{:property => "name"}= case_title(@decision)
       %dt Appellant name:
       %dd= @decision.claimant
       %dt Status of case:
