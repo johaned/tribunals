@@ -10,15 +10,19 @@ Capybara.app_host = 'http://www.ait.gov.uk'
 class AitUnreportedScraper
   include Capybara::DSL
 
-  def visit_all_pages
+  def initialize(stdout=STDOUT)
+    @stdout = stdout
+  end
+
+  def visit_all_pages(page_range=2..Float::INFINITY)
     session = Capybara::Session.new(:webkit)
     session.visit "/Public/unreportedResults.aspx"
     session.click_link("Search again")
     session.click_button("Search")
     doc_locations_from_html(session.html)
-  
+
     begin
-      (2..Float::INFINITY).each do |i|
+      page_range.each do |i|
         session.find('a#pager1', :text => i.to_s).click
         p "scanning page #{i}"
         doc_locations_from_html(session.html)
@@ -31,13 +35,19 @@ class AitUnreportedScraper
   
   def doc_locations_from_html(html)
     html_doc = Nokogiri::HTML(html)
-    html_doc.css("table tbody tr").collect do |row|
+    html_doc.css("table tbody tr").each do |row|
       document_location = row.css("td a").attr('href').value
       date = row.css("td").last.text.gsub(/\s/, "")
       url = "http://www.ait.gov.uk/Public/"+document_location
       unless Decision.exists?(url: url)
-        p Decision.create!(:url => url, :promulgated_on => date, :tribunal_id => 1, :reported => false)
+        d = Decision.new(:url => url, :promulgated_on => date, :tribunal_id => 1, :reported => false)
+        p d.inspect
+        d.save(validate: false)
       end
     end
+  end
+
+  def p(string)
+    @stdout.puts(string)
   end
 end
