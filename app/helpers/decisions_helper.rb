@@ -24,7 +24,7 @@ module DecisionsHelper
   end
 
   def case_title(decision)
-    decision.case_name || decision.claimant + ' (' + decision.keywords.join(', ').html_safe + ')'
+    decision.case_name || '&nbsp;'.html_safe
   end
 
 end
