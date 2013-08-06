@@ -1,5 +1,6 @@
 @import 'vars';
 @import 'toolkit/stylesheets/_colours';
+@import 'toolkit/stylesheets/_css3';
 @import 'toolkit/stylesheets/_typography';
 
 /* clearfix */
@@ -40,7 +41,8 @@ p.sub {
 .button, .button:visited {
   background-color: #dcdcdc;
   color: #2e2e2e;
-  box-shadow: 0 3px 0 #959595;
+  @include border-radius(3px);
+  @include box-shadow(0 3px 0 #959595);
   &.primary {
     background-color: #008370;
     color: #fff;
@@ -62,14 +64,6 @@ input[type="text"]{
   margin: 0;
 }
 
-#footer {
-  margin-top: 150px;
-  .footer-meta {
-    border: 0;
-    margin-top: 0;
-    padding-top: 0;
-  }
-}
 
 #wrapper {
   width: 980px;
@@ -99,7 +93,7 @@ input[type="text"]{
   }
   p {
     @include core-19;
-    padding: 1rem 2rem;
+    padding: 10px 20px;
     margin: 0;
     strong {
       text-transform: uppercase;
@@ -108,6 +102,11 @@ input[type="text"]{
       }
     }
   }
+}
+
+.beta footer#footer {
+  margin-top: 60px;
+  border-top: 10px solid $betacolour;
 }
 
 header {
