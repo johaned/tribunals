@@ -9,7 +9,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate'
 
 # For speeding up Postgres array parsing
-gem 'pg_array_parser', :git => 'https://github.com/jasiek/pg_array_parser.git', :branch => 'master'
+gem 'pg_array_parser'
 
 #For importing
 gem 'capybara'
