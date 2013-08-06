@@ -1,3 +1,5 @@
+require 'ukit_utils'
+
 class Decision < ActiveRecord::Base
   mount_uploader :doc_file, DocFileUploader
   mount_uploader :pdf_file, PdfFileUploader
@@ -13,13 +15,20 @@ class Decision < ActiveRecord::Base
   has_many :import_errors
 
   scope :viewable, ->{ where("reported = 't' OR promulgated_on >= ?", Date.new(2013, 6, 1)) }
-
+  scope :reported, ->{ where("reported = 't'") }
+  scope :unreported, ->{ where("reported = 'f'") }
   def self.ordered
     order("promulgated_on DESC")
   end
 
   def self.filtered(filter_hash)
-    search(filter_hash[:query]).by_reported(filter_hash[:reported]).by_country_guideline(filter_hash[:country_guideline]).by_country(filter_hash[:country]).by_judge(filter_hash[:judge]).by_claimant(filter_hash[:claimant]).by_ncn(filter_hash[:ncn])
+    if ncn = UkitUtils.contains_ncn?(filter_hash[:query])
+      by_ncn(ncn)
+    elsif appeal_number = UkitUtils.contains_appeal_number?(filter_hash[:query])
+      by_appeal_number(appeal_number)
+    else
+      search(filter_hash[:query]).by_reported(filter_hash[:reported]).by_country_guideline(filter_hash[:country_guideline]).by_country(filter_hash[:country]).by_judge(filter_hash[:judge]).by_claimant(filter_hash[:claimant]).by_ncn(filter_hash[:ncn])
+    end
   end
 
   def self.search(query)
@@ -69,7 +78,15 @@ class Decision < ActiveRecord::Base
 
   def self.by_ncn(ncn)
     if ncn.present?
-      where("ncn ~* ?", Regexp.quote(ncn))
+      reported.where("ncn ~* ?", Regexp.quote(ncn))
+    else
+      where("")
+    end
+  end
+
+  def self.by_appeal_number(appeal_number)
+    if appeal_number.present?
+      unreported.where("appeal_number = ?", appeal_number)
     else
       where("")
     end
@@ -88,19 +105,23 @@ class Decision < ActiveRecord::Base
   end
 
   def link_label
-    if reported
-      ncn
-    else
-      appeal_number || File.basename(self.doc_file.to_s, '.doc').scan(/[A-Z]{2}[0-9]{9}/).join(', ')
-    end
+    reported ? ncn : appeal_number
   end
 
   def fetch_doc_file
-    self.doc_file.download!(URI.parse(URI.encode(self.url)).to_s)
+    self.doc_file.download!(filename = URI.parse(URI.encode(self.url)).to_s)
     self.doc_file.store!
     self.save!
   rescue StandardError => e
     self.import_errors.create!(:error => e.message, :backtrace => e.backtrace.to_s)
+  end
+
+  def try_extracting_appeal_numbers
+    unless reported
+      self.appeal_number = UkitUtils.appeal_numbers_from_filename(self.doc_file.to_s).map do |an|
+        UkitUtils.format_appeal_number(an)
+      end.join(', ')
+    end
   end
 
   def process_doc
