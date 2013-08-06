@@ -9,6 +9,7 @@ describe Decision do
       @decision3 = Decision.create!(decision_hash(text: "gerald", country_guideline: true, country: 'Iraq', judges: ["Blake", "Smith"]))
       @decision4 = Decision.create!(decision_hash(claimant: 'Green'))
       @decision5 = Decision.create!(decision_hash(ncn: '[2013] UKUT 456'))
+      @decision6 = Decision.create!(decision_hash(appeal_number: 'AA/11055/2012', reported: false))
     end
 
     it "should filter on search text" do
@@ -40,6 +41,14 @@ describe Decision do
 
     it "should filter a search and display exact matches first" do
       Decision.filtered(:query => 'some searchable').should == [@decision1, @decision2]
+    end
+
+    it "should treat an NCN-like search term as search by NCN number" do
+      Decision.filtered(query: '[2013] UKUT 456').should == [@decision5]
+    end
+
+    it "should treat an appeal-number-like search term as search by appeal number" do
+      Decision.filtered(query: 'AA/11055/2012').should == [@decision6]
     end
   end
 
@@ -164,8 +173,9 @@ describe Decision do
     context "an old unreported decision" do
       it "should display the appropriate label" do
         decision = Decision.new(decision_hash(reported: false, doc_file: sample_doc_file2))
+        decision.try_extracting_appeal_numbers
         decision.save(validate: false)
-        decision.link_label.should == 'IA195402012, IA195412012, AA099162012'
+        decision.link_label.should == 'IA/19540/2012, IA/19541/2012, AA/09916/2012'
       end
     end
 
