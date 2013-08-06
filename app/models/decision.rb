@@ -24,7 +24,8 @@ class Decision < ActiveRecord::Base
 
   def self.search(query)
     if query.present?
-      where("to_tsvector('english', \"decisions\".\"text\"::text) @@ plainto_tsquery('english', ?::text)", query)
+      quoted_query = self.connection.quote(query)
+      where("to_tsvector('english', \"decisions\".\"text\"::text) @@ plainto_tsquery('english', ?::text)", query).order("text ~* #{quoted_query} DESC")
     else
       where("")
     end

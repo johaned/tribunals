@@ -37,6 +37,10 @@ describe Decision do
       Decision.by_ncn("UKUT 456").should == [@decision5]
       Decision.by_ncn("456").should == [@decision5]
     end
+
+    it "should filter a search and display exact matches first" do
+      Decision.filtered(:query => 'some searchable').should == [@decision1, @decision2]
+    end
   end
 
   describe "with a .doc" do
