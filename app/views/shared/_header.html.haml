@@ -1,5 +1,13 @@
-%header#global-header.group{:role => "banner"}
-  .header-wrapper.group
-    .header-logo
-      Tribunal decisions
-      %small.beta BETA
+%header#global-header.with-proposition{:role => "banner"}
+  .header-wrapper
+    .header-global
+      .header-logo
+        %a.content#logo{:title => "Go to the GOV.UK homepage", :href => "https://www.gov.uk/"}
+          %img{:alt => "GOV.UK", :src => "https://assets.digital.cabinet-office.gov.uk/static/gov.uk_logotype-2x-24145374d271079f08d96c618cc8d4a5.png"}
+
+    .header-proposition
+      .content
+        %nav#proposition-menu
+          %a#proposition-name{:href => "/"}
+            Tribunal decisions
+            %small.beta BETA
