@@ -8,7 +8,7 @@ describe Decision do
       @decision2 = Decision.create!(decision_hash(text: "Some other searchable text is here gerald", country: 'Afghanitsan'))
       @decision3 = Decision.create!(decision_hash(text: "gerald", country_guideline: true, country: 'Iraq', judges: ["Blake", "Smith"]))
       @decision4 = Decision.create!(decision_hash(claimant: 'Green'))
-      @decision5 = Decision.create!(decision_hash(appeal_number: '[2013] UKUT 456'))
+      @decision5 = Decision.create!(decision_hash(ncn: '[2013] UKUT 456'))
     end
 
     it "should filter on search text" do

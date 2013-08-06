@@ -68,7 +68,7 @@ class Decision < ActiveRecord::Base
 
   def self.by_ncn(ncn)
     if ncn.present?
-      where("appeal_number ~* ?", Regexp.quote(ncn))
+      where("ncn ~* ?", Regexp.quote(ncn))
     else
       where("")
     end
