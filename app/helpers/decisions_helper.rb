@@ -27,4 +27,12 @@ module DecisionsHelper
     decision.case_title || '&nbsp;'.html_safe
   end
 
+  def page_title
+    if @decision
+      super(@decision.reported ? [@decision.ncn, @decision.case_title].join(' - ') : @decision.appeal_number)
+    else
+      super
+    end
+  end
+
 end
