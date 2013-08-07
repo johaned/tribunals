@@ -77,10 +77,6 @@
             %td= decision.country
             - if search_present()
               %td.result-cell= hilighted_search_result(params[:search][:query], decision.text)
-          %tr{:class => group}
-            %td{:colspan => (search_present() ? 5 : 4)}
-              %strong Appellant name:
-              = decision.claimant
           %tr.last{:class => group}
             %td{:colspan => (search_present() ? 5 : 4)}
               %strong Case title:
