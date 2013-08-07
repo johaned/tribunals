@@ -64,8 +64,8 @@
           %th Country
           - if search_present()
             %th Search result
-        - @decisions.each do |decision|
-          %tr.first
+        - @decisions.each do |decision, group = cycle('even', 'odd')|
+          %tr.first{:class => group}
             %td{class: decision.reported ? 'reported' : 'unreported' }= link_to decision.link_label, decision_path(decision)
             %td
               - if reported_label(decision.reported?) == "Yes"
@@ -77,11 +77,11 @@
             %td= decision.country
             - if search_present()
               %td.result-cell= hilighted_search_result(params[:search][:query], decision.text)
-          %tr
+          %tr{:class => group}
             %td{:colspan => (search_present() ? 5 : 4)}
               %strong Appellant name:
               = decision.claimant
-          %tr.last
+          %tr.last{:class => group}
             %td{:colspan => (search_present() ? 5 : 4)}
               %strong Case title:
               %strong= decision.case_title
