@@ -272,6 +272,7 @@ header {
 }
 
 .decisions-table {
+  width: 614px;
   th, td {
     @include core-14;
     padding: 0 10px 5px;
