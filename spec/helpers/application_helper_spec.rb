@@ -15,4 +15,14 @@ describe ApplicationHelper do
       helper.hilighted_search_result("blah blah blah", text).should be_nil
     end
   end
+
+  describe "page_title" do
+    it "displays the page title with an optional prefix" do
+      helper.page_title.should == 'Upper Tribunal (Immigration and Asylum Chamber) Decision Database'
+      @decision = Decision.new(decision_hash(ncn: '[2013] UKUT 356', claimant: 'Mr Green', keywords: ['green', 'tomatoes']))
+      helper.page_title.should == '[2013] UKUT 356 - Mr Green (green, tomatoes) | Upper Tribunal (Immigration and Asylum Chamber) Decision Database'
+      @decision = Decision.new(decision_hash(reported: false, appeal_number: 'VA/16664/2012'))
+      helper.page_title.should == 'VA/16664/2012 | Upper Tribunal (Immigration and Asylum Chamber) Decision Database'
+    end
+  end
 end

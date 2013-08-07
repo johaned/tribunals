@@ -5,9 +5,9 @@ module ApplicationHelper
     end
   end
 
-  def page_title
-    if @page_title
-      [@page_title, 'Upper Tribunal (Immigration and Asylum Chamber) Decision Database'].join(' | ')
+  def page_title(prefix=nil)
+    if prefix
+      [prefix, 'Upper Tribunal (Immigration and Asylum Chamber) Decision Database'].join(' | ')
     else
       'Upper Tribunal (Immigration and Asylum Chamber) Decision Database'
     end
