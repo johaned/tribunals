@@ -59,25 +59,25 @@
         %tr.headings
           %th Reference number
           %th Status
-          / %th Hearing date
           %th Publication date
           %th Country
-          - if search_present()
-            %th Search result
         - @decisions.each do |decision, group = cycle('even', 'odd')|
           %tr.first{:class => group}
-            %td{class: decision.reported ? 'reported' : 'unreported' }= link_to decision.link_label , admin_decision_path(decision)
+            %td{class: decision.reported ? 'reported' : 'unreported' }= link_to decision.link_label, admin_decision_path(decision)
             %td
               - if reported_label(decision.reported?) == "Yes"
                 Reported
               - else
                 Unreported
             / %td hearingdate
-            %td= time_element(decision.promulgated_on)
+            %td.date= time_element(decision.promulgated_on)
             %td= decision.country
-            - if search_present()
-              %td.result-cell= hilighted_search_result(params[:search][:query], decision.text)
-          %tr.last{:class => group}
-            %td{:colspan => (search_present() ? 5 : 4)}
+          %tr{:class => group + (search_present() ? '' : ' last')}
+            %td{:colspan => 4}
               %strong Case title:
-              = decision.case_title
+              %strong= decision.case_title
+          - if search_present()
+            %tr.last{:class => group}
+              %td{:colspan => 4}
+                %strong Search result:
+                = hilighted_search_result(params[:search][:query], decision.text)
