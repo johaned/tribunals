@@ -1,7 +1,7 @@
 module ApplicationHelper
   def hilighted_search_result(search_term, text)
     search_regexp = /\b#{Regexp.escape(search_term)}\b/i
-    if excerpt = excerpt(text, search_regexp, radius: 5, separator: ' ')
+    if excerpt = excerpt(text, search_regexp, radius: 10, separator: ' ')
       highlight(excerpt, search_regexp, :highlighter => '<span class=\'result\'>\1</span>')
     end
   end

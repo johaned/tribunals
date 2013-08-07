@@ -271,6 +271,7 @@ header {
   th {
     font-weight: bold;
     text-align: left;
+    white-space: nowrap;
   }
 
   .first td {
@@ -295,6 +296,10 @@ header {
 
   .even td {
     background-color: #eaedef;
+  }
+
+  .date {
+    white-space: nowrap;
   }
 }
 
