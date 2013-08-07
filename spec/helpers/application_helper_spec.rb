@@ -8,7 +8,7 @@ describe ApplicationHelper do
 
     it "excerpts and hilights the result from the text" do
       helper.hilighted_search_result("contains", text).should ==
-      	"This the the article that <span class='result'>contains</span> the search term This the..."
+        "This the the article that <span class='result'>contains</span> the search term This the the article that <span class='result'>contains</span> the..."
     end
 
     it "doesn't blow up when the text to be highlighted doesn't appear in the decision" do
