@@ -72,10 +72,11 @@
             / %td hearingdate
             %td.date= time_element(decision.promulgated_on)
             %td= decision.country
-          %tr{:class => group + (search_present() ? '' : ' last')}
-            %td{:colspan => 4}
-              %strong Case title:
-              %strong= decision.case_title
+          - if decision.case_title
+            %tr{:class => group + (search_present() ? '' : ' last')}
+              %td{:colspan => 4}
+                %strong Case title:
+                %strong= decision.case_title
           - if search_present()
             %tr.last{:class => group}
               %td{:colspan => 4}
