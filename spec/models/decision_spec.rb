@@ -162,18 +162,6 @@ describe Decision do
     end
   end
 
-  describe "case title" do
-    it "displays the claimant name and keywords when reported" do
-      decision = Decision.new(decision_hash(ncn: '[2013] UKUT 356', keywords: ['green', 'tomatoes'], claimant: 'Mr Green'))
-      decision.case_title.should == 'Mr Green (green, tomatoes)'
-    end
-
-    it "displays the appeal number when unreported" do
-      decision = Decision.new(decision_hash(reported: false, appeal_number: 'AA/03446/2012'))
-      decision.case_title.should == 'AA/03446/2012'
-    end
-  end
-
   describe "link label" do
     context "a reported decision" do
       it "should display the appropriate label" do
