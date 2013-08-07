@@ -38,3 +38,4 @@ gem 'whenever', :require => false
 gem 'newrelic_rpm'
 gem 'haml-rails'
 gem 'html2haml'
+gem 'jquery-rails'

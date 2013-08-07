@@ -2,6 +2,7 @@
   %header.page-header.group
     %h1= @decision.link_label
     = link_to('Edit this decision', edit_admin_decision_path(@decision), :class => 'button')
+    = link_to('Delete this decision', admin_decision_path(@decision), method: :delete, confirm: "Are you sure you'd like to remove this decision from the system?", class: 'button-warning')
     %dl.decision-details
   
       %dt Case title:

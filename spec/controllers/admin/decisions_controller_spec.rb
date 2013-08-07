@@ -73,4 +73,15 @@ describe Admin::DecisionsController do
       }.to change { decision.reload.appeal_number }
     end
   end
+
+  describe "DELETE 'destroy'" do
+    it "removes a decision" do
+      decision = Decision.create!(decision_hash)
+      sign_in
+      expect {
+        delete :destroy, id: decision.id
+        response.should redirect_to(admin_decisions_path)
+      }.to change { Decision.count }.by(-1)
+    end
+  end
 end
