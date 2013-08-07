@@ -52,7 +52,17 @@ p.sub {
     background-color: #7fb299;
     color: #fff;
   }
+
+  &.button-warning, &.button-warning:visited {
+    background-color: #B10E1E;
+    color: #fff;
+    box-shadow: 0 2px 0 #6A0812;
+    &:hover {
+      background-color: #990C1A;
+    }
+  }
 }
+
 .left {
   float: left;
 }
