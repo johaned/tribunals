@@ -93,8 +93,10 @@ class Decision < ActiveRecord::Base
   end
 
   def case_title
-    unless claimant.blank?
+    if reported
       [claimant, keywords.any? ? "(#{keywords.join(', ')})" : nil].join(' ')
+    else
+      appeal_number
     end
   end
 
