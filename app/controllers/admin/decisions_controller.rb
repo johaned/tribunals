@@ -29,6 +29,12 @@ class Admin::DecisionsController < ::DecisionsController
     redirect_to edit_admin_decision_path(@decision)
   end
 
+  def destroy
+    @decision = self.class.scope.find(params[:id])
+    @decision.destroy
+    redirect_to admin_decisions_path
+  end
+
   def self.scope
     Decision.all
   end
