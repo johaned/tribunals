@@ -47,7 +47,7 @@ moj.Modules.admin_decisions = (function() {
     }).on( 'click', 'a.add', function( e ) {
       e.preventDefault();
       add_element( $( e.target ) );
-    }).on( 'change', '.split', function() {
+    }).on( 'keyup', '.split', function() {
       var $row = $( this ).closest( '.row' );
       store_values( $row );
     });
@@ -136,7 +136,7 @@ moj.Modules.admin_decisions = (function() {
   };
 
   store_values = function( $row ) {
-    var str = '{',
+    var str = '',
         arr = [],
         x;
 
@@ -145,12 +145,17 @@ moj.Modules.admin_decisions = (function() {
     });
 
     for( x = 0; x < arr.length; x++ ){
-      str += '"' + arr[x] + '"';
-      if( x < arr.length-1 ){
-        str += ', ';
+      if( arr[x] !== '' ){
+        str += '"' + arr[x] + '"';
+        if( x < arr.length-1 ){
+          str += ', ';
+        }
       }
     }
-    str += '}';
+    
+    if( str !== '' ){
+      str = '{' + str + '}';
+    }
 
     $row.data( 'array', arr ).find( '.original' ).val( str );
   };
