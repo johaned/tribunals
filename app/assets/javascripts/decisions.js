@@ -38,8 +38,10 @@ moj.Modules.decisions = (function() {
       resetFilters();  
     });
 
-    $('#top-button').on('click', function(e) {
+    $('.search_form').submit(function(e) {
+      e.preventDefault();
       ga('send', 'event', 'Search', 'Top', $('#search_query').val());
+      this.submit();
     });
   };
 
