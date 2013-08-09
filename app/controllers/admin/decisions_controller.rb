@@ -39,6 +39,10 @@ class Admin::DecisionsController < ::DecisionsController
     Decision.all
   end
 
+  def fresh_when(*args)
+    # Crude way of disabling caching for this controller.
+  end
+
   private
   def decision_params
     params.require(:decision).permit(:doc_file, :promulgated_on, :appeal_number, :reported, :starred,

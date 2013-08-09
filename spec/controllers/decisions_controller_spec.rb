@@ -12,8 +12,20 @@ describe DecisionsController do
 
   describe "GET 'index'" do
     it "uses the controller scope" do
-      subject.class.should_receive(:scope).and_call_original
+      subject.class.should_receive(:scope).twice.and_call_original
       get :index
+    end
+
+    it "should serve a cached version of a page" do
+      Decision.create!(decision_hash)
+      
+      with_caching do
+        get :index
+        response.should be_success
+        request.env['HTTP_IF_MODIFIED_SINCE'] = response['Last-Modified']
+        get :index
+        response.body.should be_empty
+      end
     end
   end
 
@@ -32,6 +44,16 @@ describe DecisionsController do
       it "uses the controller scope" do
         subject.class.should_receive(:scope).and_call_original
         get :show, id: decision.id
+      end
+
+      it "should serve a cached version of a page" do
+        with_caching do
+          get :show, id: decision.id
+          response.should be_success
+          request.env['HTTP_IF_MODIFIED_SINCE'] = response['Last-Modified']
+          get :show, id: decision.id
+          response.body.should be_empty
+        end
       end
     end
 
