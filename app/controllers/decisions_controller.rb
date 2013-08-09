@@ -13,6 +13,7 @@ class DecisionsController < ApplicationController
 
   def show
     @decision = self.class.scope.find(params[:id])
+    fresh_when(@decision)
   end
 
   def self.scope
