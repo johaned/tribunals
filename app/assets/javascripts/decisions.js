@@ -39,9 +39,15 @@ moj.Modules.decisions = (function() {
     });
 
     $('.search_form').submit(function(e) {
-      e.preventDefault();
       ga('send', 'event', 'Search', 'Top', $('#search_query').val());
-      this.submit();
+    });
+
+    $('a.pdf-file').click(function(e) {
+      ga('send', 'event', 'Download', 'PDF', $(this).attr('href'));
+    });
+
+    $('a.doc-file').click(function(e) {
+      ga('send', 'event', 'Download', 'DOC', $(this).attr('href'));
     });
   };
 
