@@ -37,6 +37,10 @@ moj.Modules.decisions = (function() {
       e.preventDefault();
       resetFilters();  
     });
+
+    $('#top-button').on('click', function(e) {
+      ga('send', 'event', 'Search', 'Top', $('#search_query').val());
+    });
   };
 
   resetFilters = function() {
