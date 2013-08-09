@@ -1,5 +1,6 @@
 class DecisionsController < ApplicationController
   def index
+    fresh_when(last_modified: self.class.scope.maximum(:updated_at))
     params[:search] ||= {}
     params[:search][:reported]
     params[:search][:country_guideline] = nil if params[:search][:country_guideline] == '0'
