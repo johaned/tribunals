@@ -40,7 +40,7 @@
             - elsif @decision.send(field) == false
               No
             - else
-              = @decision.send(field).to_s
+              = @decision.send(field).join(', ')
       - if @decision.send(:keywords).present?
         %dt #{:keywords.to_s.humanize}:
         %dd{:property => "keywords"}
