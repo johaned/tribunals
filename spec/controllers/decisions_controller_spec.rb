@@ -45,6 +45,16 @@ describe DecisionsController do
         response.should be_success
         response.content_type.should == 'text/html'
       end
+
+      it "should serve a cached version of a page" do
+        with_caching do
+          get :show, id: decision.id
+          response.should be_success
+          request.env['HTTP_IF_MODIFIED_SINCE'] = response['Last-Modified']
+          get :show, id: decision.id
+          response.body.should be_empty
+        end
+      end
     end
   end
 end

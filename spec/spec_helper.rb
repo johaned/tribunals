@@ -80,3 +80,11 @@ def decision_hash(h={})
     judges: ['Judge Dredd']
   }.merge(h)
 end
+
+def with_caching(on = true)
+  caching = ActionController::Base.perform_caching
+  ActionController::Base.perform_caching = on
+  yield
+ensure
+  ActionController::Base.perform_caching = caching
+end
