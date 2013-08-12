@@ -31,20 +31,18 @@
             No
       %dt Judges:
       %dd= judge_list(@decision.judges)
-      - [:categories, :case_notes].each do |field|
-        - if @decision.send(field).present?
-          %dt #{field.to_s.humanize}:
-          %dd
-            - if @decision.send(field) == true
-              Yes
-            - elsif @decision.send(field) == false
-              No
-            - else
-              = @decision.send(field).join(', ')
-      - if @decision.send(:keywords).present?
-        %dt #{:keywords.to_s.humanize}:
+      - if @decision.categories.present?
+        %dt Categories:
+        %dd
+          = @decision.categories.join(', ')
+      - if @decision.case_notes.present?
+        %dt Case Notes:
+        %dd
+          = @decision.case_notes
+      - if @decision.keywords.present?
+        %dt Keywords
         %dd{:property => "keywords"}
-          = @decision.send(:keywords).join(', ')
+          = @decision.keywords.join(', ')
   
   .download-links
     %ul
