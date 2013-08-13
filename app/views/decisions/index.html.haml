@@ -1,19 +1,20 @@
 %header.page-header.group
   %h1
     %span Information
-    Immigration and Asylum Appeal Decisions
+    Immigration and asylum appeal decisions
   %p
     Search for judges' decisions on appeals to the Upper Tribunal (Immigration and Asylum Chamber).
-  %p.sub<
-    Unreported decisions prior to 1 June 2013 cannot be accessed via the database. Please send any inquiries regarding such decisions to the IAC LRU at
-    %a{href: 'mailto:UTIACDecisions@hmcts.gsi.gov.uk'}='UTIACDecisions@hmcts.gsi.gov.uk'
-    who will access them on request.
 = form_tag decisions_path, :method => :get, :class => 'search_form' do
   .input-append
     %label{:for => "search_query"} Enter a case number, appellant or judge name, country or keyword
     = text_field :search, :query, :value => params[:search][:query], :placeholder => "eg UKUT 211 or Judge Allen"
     = button_tag "Clear", :class => "button", :type => "reset"
     %button.button.primary{:type => "submit"} Search
+
+  %p.sub
+    Email
+    %a{href: 'mailto:utiacdecisions@hmcts.gsi.gov.uk'}='utiacdecisions@hmcts.gsi.gov.uk'
+    if you want a copy of an unreported decision from before 1 June 2013.
 
   .pagination-row
     .page-entries
@@ -37,7 +38,7 @@
             Unreported
         #search_reported_only
           %h3
-            %label Neutral Citation Number
+            %label Neutral citation number
           = text_field :search, :ncn, :value => params[:search][:ncn]
           %h3
             %label Country
@@ -75,7 +76,7 @@
           - if decision.case_title
             %tr{:class => group + (search_present() ? '' : ' last')}
               %td{:colspan => 4}
-                %strong Case title:
+                Case title:
                 %strong= decision.case_title
           - if search_present()
             %tr.last{:class => group}
@@ -83,6 +84,8 @@
                 %strong Search result:
                 = hilighted_search_result(params[:search][:query], decision.text)
 
-  / .pagination-row
-  /   = will_paginate @decisions
+  .pagination-row.bottom
+    .page-entries
+      = page_entries_info @decisions
+    = will_paginate @decisions
 
