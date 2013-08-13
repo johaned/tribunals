@@ -21,7 +21,7 @@ describe DecisionsController do
     end
 
     it "calculates freshness based on the timestamp of the record" do
-      decision = Decision.create!(decision_hash)
+      decision = Decision.create!(decision_hash).reload
 
       with_caching do
         with_version_timestamp(Time.at(0)) do
