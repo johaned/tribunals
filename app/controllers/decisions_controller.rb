@@ -1,6 +1,7 @@
 class DecisionsController < ApplicationController
   def index
-    fresh_when(last_modified: self.class.scope.maximum(:updated_at))
+    omit_if_fresh(last_modified: self.class.scope.maximum(:updated_at))
+
     params[:search] ||= {}
     params[:search][:reported]
     params[:search][:country_guideline] = nil if params[:search][:country_guideline] == '0'
@@ -13,12 +14,18 @@ class DecisionsController < ApplicationController
   end
 
   def show
-    @decision = self.class.scope.find(params[:id])
-    fresh_when(@decision)
+    omit_if_fresh(@decision = self.class.scope.find(params[:id]))
   end
 
   def self.scope
     Decision.viewable
+  end
+
+  private
+  def omit_if_fresh(options)
+    if Rails.configuration.client_caching
+      fresh_when(options)
+    end
   end
 end
 

@@ -35,5 +35,8 @@ module Tribunals
     config.filter_parameters += [:password]
 
     config.assets.enabled = false
+
+    # Disables HTTP content freshness headers.
+    config.client_caching = false
   end
 end

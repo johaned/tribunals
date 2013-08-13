@@ -81,10 +81,10 @@ def decision_hash(h={})
   }.merge(h)
 end
 
-def with_caching(on = true)
-  caching = ActionController::Base.perform_caching
-  ActionController::Base.perform_caching = on
+def with_caching
+  caching = Rails.configuration.client_caching
+  Rails.configuration.client_caching = true
   yield
 ensure
-  ActionController::Base.perform_caching = caching
+  Rails.configuration.client_caching = caching
 end
