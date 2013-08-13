@@ -88,3 +88,11 @@ def with_caching
 ensure
   Rails.configuration.client_caching = caching
 end
+
+def with_version_timestamp(ts)
+  timestamp = Rails.configuration.version_timestamp
+  Rails.configuration.version_timestamp = ts
+  yield
+ensure
+  Rails.configuration.version_timestamp = timestamp
+end

@@ -1,6 +1,6 @@
 class DecisionsController < ApplicationController
   def index
-    omit_if_fresh(last_modified: self.class.scope.maximum(:updated_at))
+    omit_if_fresh(self.class.scope.maximum(:updated_at))
 
     params[:search] ||= {}
     params[:search][:reported]
@@ -14,17 +14,17 @@ class DecisionsController < ApplicationController
   end
 
   def show
-    omit_if_fresh(@decision = self.class.scope.find(params[:id]))
+    @decision = self.class.scope.find(params[:id])
+    omit_if_fresh(@decision.updated_at)
   end
 
   def self.scope
     Decision.viewable
   end
 
-  private
-  def omit_if_fresh(options)
+  def omit_if_fresh(timestamp)
     if Rails.configuration.client_caching
-      fresh_when(options)
+      fresh_when(last_modified: [timestamp, Rails.configuration.version_timestamp].max)
     end
   end
 end
