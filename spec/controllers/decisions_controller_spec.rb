@@ -8,6 +8,28 @@ describe DecisionsController do
       Decision.should_receive(:viewable).once
       subject.class.scope
     end
+
+    it "calculates freshness based on the version of the code" do
+      decision = Decision.create!(decision_hash)
+
+      with_caching do
+        with_version_timestamp(timestamp = Time.now + 1.day) do
+          subject.should_receive(:fresh_when).with(last_modified: timestamp)
+          get :index
+        end
+      end
+    end
+
+    it "calculates freshness based on the timestamp of the record" do
+      decision = Decision.create!(decision_hash)
+
+      with_caching do
+        with_version_timestamp(Time.at(0)) do
+          subject.should_receive(:fresh_when).with(last_modified: decision.updated_at)
+          get :index
+        end
+      end
+    end
   end
 
   describe "GET 'index'" do
