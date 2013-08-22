@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gem 'nokogiri'
 
-gem 'rails', '4.0.0'
+gem 'rails'
 
 gem 'pg'
 gem 'carrierwave', :git => 'https://github.com/carrierwaveuploader/carrierwave.git', :branch => 'master'
@@ -19,15 +19,12 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'warden-rspec-rails'
   
-  # workaround for a particular setup - potentially unnecessary
-  gem 'debugger-ruby_core_source'
-
-  gem 'debugger'
+  gem 'byebug'
   gem 'database_cleaner'
 end
 
 group :assets do
-	gem 'sass-rails'
+  gem 'sass-rails'
 end
 
 gem 'unicorn'
