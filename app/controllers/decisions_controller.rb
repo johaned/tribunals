@@ -5,12 +5,8 @@ class DecisionsController < ApplicationController
     params[:search] ||= {}
     params[:search][:reported]
     params[:search][:country_guideline] = nil if params[:search][:country_guideline] == '0'
-    @decisions = self.class.scope.paginate(:page => params[:page], :per_page => 30)
-    if params[:search].present?
-      @decisions = @decisions.filtered(params[:search])
-    else
-      @decisions = @decisions.ordered
-    end
+    @decisions = self.class.scope.ordered.paginate(:page => params[:page], :per_page => 30)
+    @decisions = @decisions.filtered(params[:search]) if params[:search].present?
   end
 
   def show
