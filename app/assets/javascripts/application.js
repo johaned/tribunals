@@ -16,3 +16,4 @@
 //= require admin/decisions
 //= require main
 //= require jquery_ujs
+//= require feedbacks
