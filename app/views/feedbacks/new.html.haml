@@ -1,0 +1,18 @@
+- if ENV['APP_PLATFORM'] == 'production'
+  - content_for :javascript do
+    :javascript
+      sendFeedbackToGA();
+
+#global-breadcrumb.header-context
+  %nav{:role => "navigation"}
+    %ol.group
+      %li
+        %a{:href => "/"} Home
+%header.page-header.group
+  %hgroup.full-width
+    %h1
+      Send feedback
+.browse-container.full-width.group
+  %article.group{:role => "article"}
+    .send-feedback
+      = render "feedbacks/form"
