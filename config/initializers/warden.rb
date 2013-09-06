@@ -1,4 +1,4 @@
-PASSWORD_FILE = Rails.env.production? ? File.join(Rails.root, '../../shared/password.hash') : File.join(Rails.root, 'db/password.hash')
+PASSWORD_FILE = File.join(Rails.root, 'db/password.hash')
 
 Rails.configuration.middleware.use RailsWarden::Manager do |manager|
   manager.default_strategies :password
