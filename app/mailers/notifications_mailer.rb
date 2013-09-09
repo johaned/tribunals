@@ -4,6 +4,6 @@ class NotificationsMailer < ActionMailer::Base
 
   def new_message(message)
     @message = message
-    mail(:subject => "New feedback for Tribunals")
+    mail(:subject => "New feedback for UTIAC Tribunals Decisions")
   end
 end
