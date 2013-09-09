@@ -13,6 +13,7 @@ class FeedbacksController < ApplicationController
     if @feedback.valid?
       params["service"] = request.host
       params["browser"] = request.env['HTTP_USER_AGENT']
+      params["ip"] = request.env["HTTP_X_FORWARDED_FOR"]
       NotificationsMailer.new_message(params).deliver
       redirect_to feedback_path
     else
