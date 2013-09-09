@@ -13,4 +13,6 @@ Tribunals::Application.routes.draw do
     end
   end
   get '/' => redirect('/utiac/decisions')
+
+  resource :feedback
 end
