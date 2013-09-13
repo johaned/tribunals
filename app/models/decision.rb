@@ -14,6 +14,13 @@ class Decision < ActiveRecord::Base
 
   has_many :import_errors
 
+  extend FriendlyId
+  friendly_id :slug_candidates, use: [:slugged, :finders]
+
+  def slug_candidates
+    ncn.present? ? ncn : appeal_number
+  end
+
   scope :viewable, ->{ where("reported = 't' OR promulgated_on >= ?", Date.new(2013, 6, 1)) }
   scope :reported, ->{ where("reported = 't'") }
   scope :unreported, ->{ where("reported = 'f'") }

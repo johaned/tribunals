@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/FriendlyId/friendly_id.git
+  revision: 5c2a202a07a71faa484022b6302cbba93da6a80f
+  branch: master
+  specs:
+    friendly_id (5.0.0.rc2)
+      activerecord (~> 4.0.0)
+
+GIT
   remote: https://github.com/carrierwaveuploader/carrierwave.git
   revision: e0c1f199737042c1e158d42354edfc9b61aa76f0
   branch: master
@@ -199,6 +207,7 @@ DEPENDENCIES
   carrierwave!
   database_cleaner
   fog
+  friendly_id!
   haml-rails
   html2haml
   jquery-rails

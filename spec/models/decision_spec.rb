@@ -204,6 +204,18 @@ describe Decision do
     end
   end
 
+  describe "finders" do
+    it "finds a decision by slug" do
+      @ncn_decision = Decision.create!(decision_hash(ncn: 'lol123'))
+      @appeal_number_decision = Decision.new(decision_hash(appeal_number: '123lol', ncn: ''))
+      @appeal_number_decision.valid?
+      @appeal_number_decision.save!(validate: false)
+
+      Decision.find('lol123').should == @ncn_decision
+      Decision.find('123lol').should == @appeal_number_decision
+    end
+  end
+
   describe "validation" do
     context "reported case" do
       it "validates" do

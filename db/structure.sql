@@ -57,7 +57,8 @@ CREATE TABLE decisions (
     case_notes character varying(255),
     case_name character varying(255),
     hearing_on date,
-    ncn character varying(255)
+    ncn character varying(255),
+    slug character varying(255)
 );
 
 
@@ -202,6 +203,13 @@ CREATE INDEX index_decisions_on_reported ON decisions USING btree (reported);
 
 
 --
+-- Name: index_decisions_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_decisions_on_slug ON decisions USING btree (slug);
+
+
+--
 -- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -261,3 +269,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130801163401');
 INSERT INTO schema_migrations (version) VALUES ('20130802112712');
 
 INSERT INTO schema_migrations (version) VALUES ('20130802113158');
+
+INSERT INTO schema_migrations (version) VALUES ('20130912145119');
