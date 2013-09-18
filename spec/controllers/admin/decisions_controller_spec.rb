@@ -20,7 +20,7 @@ describe Admin::DecisionsController do
   describe "GET 'index'" do
     it "uses the controller scope" do
       sign_in
-      subject.class.should_receive(:scope).twice.and_call_original
+      subject.class.should_receive(:scope).once.and_call_original
       get :index
     end
   end
