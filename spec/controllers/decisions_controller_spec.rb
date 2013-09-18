@@ -11,8 +11,18 @@ describe DecisionsController do
   end
 
   describe "GET 'index'" do
+    before :all do
+      @decision = Decision.create!(decision_hash)
+    end
+
     it "uses the controller scope" do
       subject.class.should_receive(:scope).once.and_call_original
+      get :index
+    end
+
+    it "caches the page conditionally" do
+      controller.should_receive(:enable_varnish).once
+      controller.should_receive(:set_cache_control).with(@decision.updated_at)
       get :index
     end
   end
@@ -31,6 +41,12 @@ describe DecisionsController do
 
       it "uses the controller scope" do
         subject.class.should_receive(:scope).and_call_original
+        get :show, id: decision.id
+      end
+
+      it "caches the page conditionally" do
+        controller.should_receive(:enable_varnish).once
+        controller.should_receive(:set_cache_control).with(decision.updated_at)
         get :show, id: decision.id
       end
     end
