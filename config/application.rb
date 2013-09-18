@@ -35,11 +35,5 @@ module Tribunals
     config.filter_parameters += [:password]
 
     config.assets.enabled = false
-
-    # Disables HTTP content freshness headers.
-    config.client_caching = false
-
-    # Used for dumb caching.
-    config.version_timestamp = Time.parse(`git log -1 --format=%cd`)
   end
 end
