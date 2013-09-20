@@ -12,7 +12,7 @@ describe DecisionsController do
 
   describe "GET 'index'" do
     before :all do
-      @decision = Decision.create!(decision_hash)
+      @decision = Decision.create!(decision_hash).reload
     end
 
     it "uses the controller scope" do
@@ -30,7 +30,7 @@ describe DecisionsController do
   describe "GET 'show'" do
     context "a decision exists as html, doc and pdf" do
       let(:decision) do
-        Decision.create!(decision_hash(pdf_file: sample_pdf_file, doc_file: sample_doc_file))
+        Decision.create!(decision_hash(pdf_file: sample_pdf_file, doc_file: sample_doc_file)).reload
       end
 
       it "should respond with a html representation" do
