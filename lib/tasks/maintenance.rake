@@ -9,4 +9,10 @@ namespace :maintenance do
       d.save
     end
   end
+
+  task :remove_judges_whitespace => :environment do
+    Decision.where("judges IS NOT NULL").except(:text, :html).find_each do |d| 
+      d.update_attributes(:judges => d.judges.map(&:strip)) unless d.judges.empty?
+    end
+  end
 end
