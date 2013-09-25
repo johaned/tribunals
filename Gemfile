@@ -18,9 +18,14 @@ gem 'capybara-webkit'
 group :test, :development do
   gem 'rspec-rails'
   gem 'warden-rspec-rails'
-  
   gem 'byebug'
   gem 'database_cleaner'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'awesome_print'
+  gem 'hirb'
+  gem 'wirble'
+  gem 'wirb'
 end
 
 group :assets do
