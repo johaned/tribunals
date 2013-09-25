@@ -58,7 +58,8 @@ CREATE TABLE decisions (
     case_name character varying(255),
     hearing_on date,
     ncn character varying(255),
-    slug character varying(255)
+    slug character varying(255),
+    published_on date
 );
 
 
@@ -271,3 +272,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130802112712');
 INSERT INTO schema_migrations (version) VALUES ('20130802113158');
 
 INSERT INTO schema_migrations (version) VALUES ('20130912145119');
+
+INSERT INTO schema_migrations (version) VALUES ('20130927153456');
