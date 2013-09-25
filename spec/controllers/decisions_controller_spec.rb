@@ -11,7 +11,7 @@ describe DecisionsController do
   end
 
   describe "GET 'index'" do
-    before :all do
+    before :each do
       @decision = Decision.create!(decision_hash).reload
     end
 
