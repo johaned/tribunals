@@ -12,6 +12,11 @@ Run ./bin/passwd to generate a password for the web admin
 
 This application requires 'soffice', a binary that comes with libreoffice.
 
+Configuration
+-------------
+
+In order to upload decisions in the development environment, please configure the CarrierWave uploaders to use the local file system by including the line 'storage :file' instead of 'storage :fog' in the files: app/uploaders/doc_file_uploader.rb and app/uploaders/pdf_file_uploader.rb.
+
 Installing libreoffice on OSX
 -----------------------------
 
