@@ -15,8 +15,14 @@
           Reported
         - else
           Unreported
-      %dt Publication date:
+      %dt Hearing date:
+      %dd= schema_time_element(@decision.hearing_on)
+      %dt Promulgation date:
       %dd= schema_time_element(@decision.promulgated_on)
+      %dt Publication date:
+      %dd= schema_time_element(@decision.published_on)
+      %dt Last updated on:
+      %dd= schema_time_element(@decision.updated_at)
       %dt Country:
       %dd= @decision.country
       - if @decision.country_guideline.present?
