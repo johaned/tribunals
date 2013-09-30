@@ -50,6 +50,10 @@ describe Decision do
     it "should treat an appeal-number-like search term as search by appeal number" do
       Decision.filtered(query: 'AA/11055/2012').should == [@decision6]
     end
+
+    it "assigns a publication date based on the creation date of the case, for new cases" do
+      @decision1.published_on.should == @decision1.created_at.to_date
+    end
   end
 
   describe "with a .doc" do

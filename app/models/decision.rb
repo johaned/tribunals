@@ -17,6 +17,10 @@ class Decision < ActiveRecord::Base
   extend FriendlyId
   friendly_id :slug_candidates, use: [:slugged, :finders]
 
+  def timestamp_attributes_for_create
+    super + [:published_on]
+  end
+
   def slug_candidates
     ncn.present? ? ncn : appeal_number
   end
