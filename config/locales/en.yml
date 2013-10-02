@@ -1,5 +1,5 @@
 en:
   will_paginate:
     page_entries_info:
-      multi_page: "Displaying %{model} %{from} - %{to} of %{count} in total (displayed in reverse chronological order)"
-      multi_page_html: "Displaying decisions <b>%{from}&nbsp;-&nbsp;%{to}</b> of <b>%{count}</b> in total (displayed in reverse chronological order)"
+      multi_page: "Displaying %{model} %{from} - %{to} of %{count} in total (most recent first)"
+      multi_page_html: "Displaying decisions <b>%{from}&nbsp;-&nbsp;%{to}</b> of <b>%{count}</b> in total (most recent first)"
