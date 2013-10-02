@@ -25,9 +25,9 @@ class Decision < ActiveRecord::Base
     ncn.present? ? ncn : appeal_number
   end
 
-  scope :viewable, ->{ where("reported = 't' OR promulgated_on >= ?", Date.new(2013, 6, 1)) }
-  scope :reported, ->{ where("reported = 't'") }
-  scope :unreported, ->{ where("reported = 'f'") }
+  scope :viewable, ->{ t = self.arel_table; where(t[:reported].eq(true).or(t[:promulgated_on].gteq(Date.new(2013, 6, 1)))) }
+  scope :reported, ->{ where(reported: true) }
+  scope :unreported, ->{ where(reported: false) }
   def self.ordered
     order("promulgated_on DESC")
   end
