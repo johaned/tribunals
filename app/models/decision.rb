@@ -45,7 +45,10 @@ class Decision < ActiveRecord::Base
   def self.search(query)
     if query.present?
       quoted_query = self.connection.quote(query)
-      where("to_tsvector('english', \"decisions\".\"text\"::text) @@ plainto_tsquery('english', ?::text)", query).order("text ~* #{quoted_query} DESC")
+      combined_metadata_fields = "ncn::text || ' ' || char_array_to_text(judges) || ' ' || char_array_to_text(categories) || ' ' || char_array_to_text(keywords) || ' ' || appeal_number::text || ' ' || case_notes::text || ' ' || claimant::text || ' ' || country::text || ' ' || case_name::text"
+      rank = "ts_rank(array[0.1,0.1,0.2,0.1], setweight(to_tsvector(#{combined_metadata_fields}), 'B') || setweight(to_tsvector(text),'A'), plainto_tsquery(#{quoted_query}))"
+      where("to_tsvector('english', #{combined_metadata_fields}) @@ plainto_tsquery('english', :q::text) or to_tsvector('english', text::text) @@ plainto_tsquery('english', :q::text)", q:query)
+      .order("#{rank} desc")
     else
       where("")
     end
