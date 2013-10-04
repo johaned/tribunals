@@ -65,3 +65,4 @@ auto-save-list
 tramp
 .\#*
 db/password.hash
+db/structure.sql
