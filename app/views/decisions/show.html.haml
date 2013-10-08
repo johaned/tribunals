@@ -6,49 +6,58 @@
 %div{:vocab => "http://schema.org", :typeof => "CreativeWork"}
   %header.page-header.group
     %h1= @decision.link_label
-    %dl.decision-details
-  
-      %dt Case title:
-      %dd{:property => "name"}= case_title(@decision)
-      %dt Appellant name:
-      %dd= @decision.claimant
-      %dt Status of case:
-      %dd
-        - if @decision.reported == true
-          Reported
-        - else
-          Unreported
-      %dt Hearing date:
-      %dd= schema_time_element(@decision.hearing_on)
-      %dt Promulgation date:
-      %dd= schema_time_element(@decision.promulgated_on)
-      %dt Publication date:
-      %dd= schema_time_element(@decision.published_on)
-      %dt Last updated on:
-      %dd= schema_time_element(@decision.updated_at.to_date)
-      %dt Country:
-      %dd= @decision.country
-      - if @decision.country_guideline.present?
-        %dt Country guidance:
-        %dd
-          - if @decision.country_guideline == true
-            Yes
+    %ul.decision-details
+      %li
+        %span.label Case title:
+        %span{:property => "name"}= case_title(@decision)
+      %li
+        %span.label Appellant name:
+        %span= @decision.claimant
+      %li
+        %span.label Status of case:
+        %span
+          - if @decision.reported
+            Reported
           - else
-            No
-      %dt Judges:
-      %dd= judge_list(@decision.judges)
+            Unreported
+      %li
+        %span.label Hearing date:
+        %span= schema_time_element(@decision.hearing_on)
+      %li
+        %span.label Promulgation date:
+        %span= schema_time_element(@decision.promulgated_on)
+      %li
+        %span.label Publication date:
+        %span= schema_time_element(@decision.published_on)
+      %li
+        %span.label Last updated on:
+        %span= schema_time_element(@decision.updated_at.to_date)
+      %li
+        %span.label Country:
+        %span= @decision.country
+      - if @decision.country_guideline.present?
+        %li
+          %span.label Country guidance:
+          %span
+            - if @decision.country_guideline
+              Yes
+            - else
+              No
+      %li
+        %span.label Judges:
+        %span= judge_list(@decision.judges)
       - if @decision.categories.present?
-        %dt Categories:
-        %dd
-          = @decision.categories.join(', ')
+        %li
+          %span.label Categories:
+          %span= @decision.categories.join(', ')
       - if @decision.case_notes.present?
-        %dt Case Notes:
-        %dd
-          = @decision.case_notes
+        %li
+          %span.label Case Notes:
+          %span= @decision.case_notes
       - if @decision.keywords.present?
-        %dt Keywords
-        %dd{:property => "keywords"}
-          = @decision.keywords.join(', ')
+        %li
+          %span.label Keywords
+          %span{:property => "keywords"}= @decision.keywords.join(', ')
   
   .download-links
     %ul
