@@ -350,23 +350,26 @@ header {
   }
 }
 
-
-.decision-details {
+ul.decision-details {
   margin: 20px 0;
+  padding: 0;
   @include core-19;
   font-size: 1.8rem;
-
-
-  dt {
-    float: left;
-    clear: left;
-    width: 200px;
-    font-weight: bold;
-    margin-bottom: 16px;
-  }
-  dd {
-    margin-bottom: 16px;
-    float: left;
+  li {
+    list-style: none;
+    padding: 0;
+    margin-left: 0; 
+    clear:both;
+    span.value {
+      margin-bottom: 16px;
+      float:left; 
+    }
+    span.label {
+      margin-bottom: 16px;
+      float:left; 
+      width: 240px;
+      font-weight: bold; 
+    }
   }
 }
 

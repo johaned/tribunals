@@ -3,56 +3,58 @@
     %h1= @decision.link_label
     = link_to('Edit this decision', edit_admin_decision_path(@decision), :class => 'button')
     = link_to('Delete this decision', admin_decision_path(@decision), method: :delete, confirm: "Are you sure you'd like to remove this decision from the system?", class: 'button button-warning')
-    %dl.decision-details
-  
-      %dt Case title:
-      %dd{:property => "name"}= case_title(@decision)
-      %dt Appellant name:
-      %dd= @decision.claimant
-      %dt Status of case:
-      %dd
-        - if @decision.reported == true
-          Reported
-        - else
-          Unreported
-      %dt Hearing date:
-      %dd= schema_time_element(@decision.hearing_on)
-      %dt Promulgation date:
-      %dd= schema_time_element(@decision.promulgated_on)
-      %dt Publication date:
-      %dd= schema_time_element(@decision.published_on)
-      %dt Last updated on:
-      %dd= schema_time_element(@decision.updated_at)
-      %dt Country:
-      %dd= @decision.country
+    %ul.decision-details
+      %li
+        %span.label Case title:
+        %span.value{:property => "name"}= case_title(@decision)
+      %li
+        %span.label Appellant name:
+        %span.value= @decision.claimant
+      %li
+        %span.label Status of case:
+        %span.value
+          - if @decision.reported
+            Reported
+          - else
+            Unreported
+      %li
+        %span.label Hearing date:
+        %span.value= schema_time_element(@decision.hearing_on)
+      %li
+        %span.label Promulgation date:
+        %span.value= schema_time_element(@decision.promulgated_on)
+      %li
+        %span.label Publication date:
+        %span.value= schema_time_element(@decision.published_on)
+      %li
+        %span.label Last updated on:
+        %span.value= schema_time_element(@decision.updated_at)
+      %li
+        %span.label Country:
+        %span.value= @decision.country
       - if @decision.country_guideline.present?
-        %dt Country guidance:
-        %dd
-          - if @decision.country_guideline == true
-            Yes
-          - else
-            No
-      %dt Judges:
-      %dd= raw @decision.judges.map { |judge| schema_author_span(judge) }.join(', ')
-      - [:categories, :case_notes].each do |field|
-        - if @decision.send(field).present?
-          %dt #{field.to_s.humanize}:
-          %dd
-            - if @decision.send(field) == true
+        %li
+          %span.label Country guidance:
+          %span.value
+            - if @decision.country_guideline
               Yes
-            - elsif @decision.send(field) == false
-              No
             - else
-              = @decision.send(field).to_s
-      - if @decision.send(:keywords).present?
-        %dt #{:keywords.to_s.humanize}:
-        %dd{:property => "keywords"}
-          - if @decision.send(:keywords) == true
-            Yes
-          - elsif @decision.send(:keywords) == false
-            No
-          - else
-            = @decision.send(:keywords).to_s
+              No
+      %li
+        %span.label Judges:
+        %span.value= judge_list(@decision.judges)
+      - if @decision.categories.present?
+        %li
+          %span.label Categories:
+          %span.value= @decision.categories.join(', ')
+      - if @decision.case_notes.present?
+        %li
+          %span.label Case Notes:
+          %span.value= @decision.case_notes
+      - if @decision.keywords.present?
+        %li
+          %span.label Keywords
+          %span.value{:property => "keywords"}= @decision.keywords.join(', ')
 
   
   .download-links
