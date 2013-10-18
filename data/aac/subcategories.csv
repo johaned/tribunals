@@ -1,0 +1,397 @@
+subcategory_id,category_id,num,subcategory_name
+1,2,1,child benefit
+2,2,2,child care credit
+4,2,4,guardians allowance
+5,2,5,benefit increases for children
+6,2,6,other
+7,3,1,bereavement payments
+8,3,2,bereaved parents allowance
+9,3,3,social fund funeral payments
+10,3,4,widowed mothers allowance
+11,3,5,widowers allowance
+12,3,6,widowers pension
+13,3,7,widows allowance
+14,3,8,widows payments
+15,3,9,widows pension
+16,3,10,other
+17,4,1,Children's capital
+18,4,2,Disregards: business assets
+19,4,3,Disregards: home and other premises
+20,4,4,"Disregards: pensions, policies and similar"
+21,4,5,Disregards: personal injury/other compensation
+22,4,6,Disregards: other
+23,4,7,Income as capital
+24,4,8,Joint holdings
+25,4,9,Notional Capital: deprivation
+26,4,10,Notional Capital: diminishment
+27,4,11,Notional Capital: other
+28,4,12,Ownership/Possession
+29,4,13,Valuation
+30,4,14,Other
+31,5,1,applications
+32,5,2,calculation of income
+33,5,3,cancellation
+34,5,4,child
+35,5,5,variation/departure directions: diversion of income
+36,5,6,variation/departure directions: just and equitable
+37,5,7,variation/departure directions: lifestyle inconsistent
+38,5,8,variation/departure directions: other
+39,5,9,effective date
+40,5,10,housing costs
+41,5,11,interim maintenance assessments/decisions
+42,5,12,jurisdiction
+43,5,13,maintenance assessments/calculations
+44,5,14,periods of assessment/calculation
+45,5,15,property and capital transfers
+46,5,16,receipt of benefit
+47,5,17,travel to work costs
+48,5,18,tribunal practice
+49,5,19,other
+50,6,1,appointment to act
+51,6,2,benefits claimed
+52,6,3,good cause
+53,6,4,jurisdiction
+54,6,5,period of claim
+55,6,6,required information
+56,6,7,late claim: housing and council tax benefits
+57,6,8,late claim: other benefits
+58,6,9,late payment
+59,6,10,other
+60,7,1,Commissioners' jurisdiction
+61,7,2,Commissioners' practice
+62,7,3,Commissioners' procedure
+63,7,4,evidence
+64,7,5,fair hearing
+65,7,6,lapsing of appeals
+66,7,7,leave to appeal to Commissioners
+67,7,8,leave to appeal to higher courts
+68,7,9,notice requirements
+69,7,10,precedence of decisions
+70,7,11,representatives
+71,7,12,other
+72,8,1,cause of payment of benefits
+73,8,2,scope of appeal
+74,8,3,other
+75,9,1,contributions
+76,9,2,contribution conditions
+77,9,3,credits and credited earnings
+78,9,4,other
+79,10,1,accommodation costs
+80,10,2,age conditions
+81,10,3,qualifying periods
+82,10,4,severe behavioural problems
+83,10,5,severe mental disablement
+84,10,6,severe physical disablement
+85,10,7,terminal illness
+86,10,8,other
+87,11,1,children under 16
+88,11,2,exertion endangering life
+89,11,3,inability to walk
+90,11,4,guidance or supervision
+91,11,5,virtual inability to walk
+92,11,6,other
+93,12,1,attention: daytime
+94,12,2,attention: night
+95,12,3,attention: children under 16
+96,12,4,bodily functions
+97,12,5,cooking test
+98,12,6,supervision: continual daytime
+99,12,7,supervision: watching over at night
+100,12,8,supervision: children
+101,12,9,other
+102,13,1,Benefits
+103,13,2,Children's Income
+104,13,3,Councillors
+105,13,4,Calculation: self employed
+106,13,5,Calculation: employed
+107,13,6,Capital treated as income
+108,13,7,Disregards
+109,13,8,Notional Earnings
+110,13,9,Notional Income
+111,13,10,Other income and payments
+112,13,11,Termination and compensation payments
+113,13,12,other
+114,14,1,Agreement on European Economic Area
+115,14,2,Association and Cooperation Agreements
+116,14,3,Council directive 76/207/EEC
+117,14,4,Council directive 79/7/EEC
+118,14,5,Council directive 86/378
+119,14,6,Council regulations 1408/71/EEC and (EC) 883/2004 
+120,14,7,Council regulation 574/72/EEC
+121,14,8,discrimination by gender
+122,14,9,discrimination by nationality
+123,14,10,free movement
+124,14,11,references to European Court
+125,14,12,workers
+126,14,13,other
+127,16,1,backdating
+128,16,2,council tax benefit
+129,16,3,"liability, commerciality and contrivance"
+130,16,4,non-dependants
+131,16,5,"occupation of the home, two homes and temporary absence"
+132,16,6,payments that are eligible for HB
+133,16,7,recovery of overpayments
+134,16,8,rent restrictions
+135,16,9,other
+136,17,1,application of Human Rights Act
+137,17,2,article 3 (torture)
+138,17,3,article 6 (fair hearing)
+139,17,4,article 8 (private and family life)
+140,17,5,article 9 (freedom of thought)
+141,17,6,article 10 (freedom of expression)
+142,17,7,article 12 (right to marry)
+143,17,8,article 13 (redress)
+144,17,9,article 14 (non-discrimination)
+145,17,10,other Convention articles
+146,17,11,Protocol 1 (protection of property)
+147,17,12,other
+148,18,1,awt/pca: general
+149,18,2,activity 1: walking
+150,18,3,activity 2: stairs
+151,18,4,activity 3: sitting
+152,18,5,activity 4: standing
+153,18,6,activity 5: rising
+154,18,7,activity 6: bending or kneeling
+155,18,8,activity 7: hands
+156,18,9,activity 8: lifting and carrying
+157,18,10,activity 9: reaching
+158,18,11,activity 10: speech
+159,18,12,activity 11: hearing
+160,18,13,activity 12: vision
+161,18,14,activity 13: continence
+162,18,15,activity 14: consciousness
+163,18,16,mental health descriptors
+164,18,17,attending medical examination
+165,18,18,exemptions from test
+166,18,19,incapable of work
+167,18,20,increase for adult dependant
+168,18,21,medical evidence
+169,18,22,periods of incapacity
+171,18,24,other
+172,19,1,applicable amounts
+173,19,2,deductions
+174,19,3,housing costs
+175,19,4,urgent cases
+176,19,5,other: income support
+177,20,1,arising out of employment
+178,20,2,declaration of accident
+179,20,3,industrial accident
+180,20,4,in the course of employment
+181,20,5,treated as in employment
+182,20,6,other
+183,21,1,date of onset
+184,21,2,A4 (task-specific focal dystonia)
+185,21,3,A6 (beat knee)
+186,21,4,A8 (tenosynovitis)
+187,21,5,A10 (deafness)
+188,21,6,A11 (vibration white finger)
+189,21,7,A12 (carpel tunnel syndrome)
+190,21,8,other A diseases (physical agents)
+191,21,9,B diseases (biological agents)
+192,21,10,C diseases (chemical agents)
+193,21,11,D1 (pneumoconiosis)
+194,21,12,"D1, D3 (asbestosis, silicosis)"
+195,21,13,D4 (allergic rhinitis)
+196,21,14,D6 (nasal cancer)
+197,21,15,D7 (asthma)
+198,21,16,D8-11 (lung cancer)
+199,21,17,D12 (bronchitis and emphysema)
+200,21,18,other D diseases (miscellaneous)
+201,21,19,other
+202,22,1,aggregation of assessments
+203,22,2,assessment of disablement
+204,22,3,industrial death benefit
+205,22,4,reduced earnings allowance
+206,22,5,special hardship allowance
+207,22,6,workmen's compensation supplement
+208,22,7,other
+209,23,1,applicable amounts
+210,23,2,availability for employment
+211,23,3,deductions
+212,23,4,housing costs
+213,23,5,joint claims
+214,23,6,urgent cases
+215,23,7,voluntary unemployment
+216,23,8,other
+217,24,1,Joint claims
+218,24,2,Living together as husband and wife or civil partners
+219,24,3,Validity of marriage
+220,25,1,state maternity allowance
+222,25,3,social fund maternity payment
+223,25,4,other
+224,26,1,Children
+225,26,2,Temporarily living away
+226,26,3,Treated as not being members
+227,27,1,amount recoverable
+228,27,2,excess council tax benefit
+229,27,3,failure to disclose
+230,27,4,liability of third parties
+231,27,5,misrepresentation
+232,27,6,offset of benefits
+234,27,7,other
+235,28,1,Calculation of hours of work
+236,28,2,Engaged in work
+237,28,3,Expectation of payment
+238,28,4,Treated as not in remunerative work
+239,28,5,other
+240,29,1,habitual residence
+241,29,2,ordinary residence
+242,29,3,persons from abroad
+243,29,4,persons subject to immigration control
+244,29,5,presence
+245,29,6,residence
+246,29,8,temporary absence from Great Britain
+247,29,9,other
+248,30,1,change of circumstances
+249,30,2,date of effect of decision
+250,30,3,ignorance of material fact
+251,30,4,late applications
+252,30,5,mistake as to material fact
+253,30,6,reviews under the 1992 Act
+254,30,7,revision: general
+255,30,8,official error
+256,30,9,supersession: general
+257,30,10,supersession: incapacity
+258,30,11,other
+259,31,1,additional pensions and SERPS
+260,31,2,deferred retirement
+261,31,3,increases for spouse or dependant
+262,31,4,other
+263,32,1,full-time course
+264,32,2,housing benefit exemption
+265,32,3,loans and grant income
+266,32,4,other
+267,33,1,couples and joint claims
+268,33,2,disabled workers
+269,33,3,deductions and income assessments
+270,33,4,housing costs
+271,33,5,responsible for child and child care credits
+272,33,6,"recovery, penalties and interest"
+273,33,7,other
+274,34,1,evidence
+275,34,2,fair hearing
+276,34,3,lapsing of appeals
+277,34,4,leave/permission to appeal
+278,34,5,notice requirements
+279,34,6,representatives
+280,34,7,record of proceedings
+281,34,8,set aside applications
+282,34,9,statements of reasons
+283,34,10,tribunal jurisdiction
+284,34,11,tribunal membership and procedure
+285,34,12,tribunal practice
+286,34,14,other
+287,50,1,carer's allowance/invalid care allowance
+288,50,2,severe disablement allowance
+289,51,1,family income supplement
+290,51,2,industrial death benefit
+291,51,3,industrial injury benefit
+292,51,4,invalidity benefit
+293,51,5,sickness benefit
+294,51,6,supplementary benefit
+295,51,7,unemployment benefit
+296,51,8,other
+297,24,4,other
+298,15,1,all
+299,26,4,Other
+300,32,20,test
+301,19,6,other: state pension credit
+302,29,7,right to reside
+303,56,1,Armed Forces Compensation Scheme
+304,60,1,All
+305,61,1,Registration of social care (including nursing agencies)
+306,61,2,Registration of health care
+307,61,3,"Registration of children's homes, residential family centres or fostering or adoption agencies"
+308,61,4,Registration of childcare providers
+309,61,5,Registration of indiependent schools
+310,61,6,Registration of social workers and other social care workers
+311,61,7,Other 
+312,63,1,Children's barred list
+313,63,2,Adults' barred list
+314,63,3,Other lists
+316,65,1,claims
+317,65,2,reduction and withholding of awards
+318,65,3,other
+321,56,2,Procedure
+322,56,3,War pensions - assessment
+323,56,4,War pensions - entitlement
+325,56,5,War pensions - specified decisions
+328,56,6,Other
+332,62,1,Failure to make a statement
+333,67,1,Pre 28.3.11. WCA activity 1: walking
+334,34,13,judicial review
+335,68,1,Licensing
+336,68,2,Money laundering
+337,70,1,Driving standards
+338,70,2,Traffic Commissioner cases
+339,70,3,Other
+340,67,2,Pre 28.3.11. WCA activity 2: standing and sitting
+341,67,3,Pre 28.3.11. WCA activity 3: bending or kneeling
+342,67,4,Pre 28.3.11. WCA activity 4: reaching
+343,67,5,Pre 28.3.11. WCA activity 5: picking up and moving
+344,67,6,Pre 28.3.11. WCA activity 6: manual dexterity
+345,67,7,Pre 28.3.11. WCA activity 7: speech
+346,67,8,Pre 28.3.11. WCA activity 8: hearing 
+347,67,9,Pre 28.3.11. WCA activity 9: vision
+348,67,10,Pre 28.3.11. WCA activity 10: continence
+349,67,11,Pre 28.3.11. WCA activity 11: remaining conscious
+350,67,12,Pre 28.3.11. WCA activity 12: learning or comprehension
+351,67,13,Pre 28.3.11. WCA activity 13: hazard awareness
+352,67,14,Pre 28.3.11. WCA activity 14: memory and concentration
+353,67,15,Pre 28.3.11. WCA activity 15: execution of tasks
+354,67,16,Pre 28.3.11. WCA activity 16: initiating and sustaining personal action
+355,67,17,Pre 28.3.11. WCA activity 17: coping with change
+356,67,18,Pre 28.3.11. WCA activity 18: getting about
+357,67,19,Pre 28.3.11. WCA activity 19: coping with social situations
+358,67,20,Pre 28.3.11. WCA activity 20: propriety of behaviour
+359,67,21,Pre 28.3.11. WCA activity 21: dealing with other people
+360,67,22,WCA: general
+361,67,23,Work-Related Activity Assessment (WRAA): general
+362,67,24,WRAA Schedule 3 prescribed activities
+363,67,25,Work-Focused Health Related Assessment (WFHRA): general
+364,67,26,attending medical examination
+365,67,27,exemptions from test
+366,67,28,medical evidence
+367,67,29,effect of work
+368,67,30,the assessment phase
+369,67,31,contributory ESA
+370,67,32,income-related ESA
+371,67,33,other
+372,62,2,Description of special educational needs
+373,62,3,Special educational provision - naming school
+374,62,4,Special educational provision - other
+375,62,5,Discontinuing a statement 
+376,62,6,Other
+377,68,3,Other
+378,71,1,All
+379,72,1,All
+380,73,1,Freedom of information - right of access
+381,73,2,Freedom of information - public authority response
+382,73,3,Freedom of Information - exceptions
+383,73,4,Freedom of information - absolute exemptions
+384,73,5,Freedom of information - qualified exemptions
+385,73,6,Freedom of information - public interest test
+386,73,7,Environmental information - general
+387,73,8,Environmental information - exceptions
+388,73,9,Data protection
+389,73,10,Information rights: practice and procedure
+390,73,11,Other
+391,74,1,All
+392,75,1,All
+393,67,34,Post 28.3.11. WCA activity 1: mobilising unaided
+394,67,35,Post 28.3.11. WCA activity 2: standing and sitting
+395,67,36,Post 28.3.11. WCA activity 3: reaching
+396,67,37,Post 28.3.11. WCA activity 4: picking up and moving/transferring
+397,67,38,Post 28.3.11. WCA activity 5: manual dexterity
+398,67,39,Post 28.3.11. WCA activity 6: making self understood
+399,67,40,Post 28.3.11. WCA activity 7: understanding communication
+400,67,41,Post 28.3.11. WCA activity 8: navigation and maintaining safety
+401,67,42,Post 28.3.11. WCA activity 9: absence or loss of bowel/bladder control
+402,67,43,Post 28.3.11. WCA activity 10: consciousness during waking moments
+403,67,44,Post 28.3.11. WCA activity 11: learning tasks
+404,67,45,Post 28.3.11. WCA activity 12: awareness of everyday hazards
+405,67,46,Post 28.3.11. WCA activity 13: initiating and completing personal action
+406,67,47,Post 28.3.11. WCA activity 14: coping with change
+407,67,48,Post 28.3.11. WCA activity 15: getting about
+408,67,49,Post 28.3.11. WCA activity 16: coping with social engagement
+409,67,50,Post 28.3.11.WCA activity 17:  appropriateness of behaviour with other people
