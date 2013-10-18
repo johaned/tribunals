@@ -1,0 +1,61 @@
+%header.page-header.group
+  %h1
+    %span Information
+    Administrative appeals decisions
+  %p
+    Search for judges' decisions on appeals to the Administrative Appeals Chamber.
+= form_tag decisions_path, :method => :get, :class => 'search_form' do
+  .input-append
+    %label{:for => "search_query"} Enter a reference number, party name, judge name or keyword
+    = text_field :search, :query, :value => params[:search][:query], :placeholder => "eg 2013 UKUT 445 AAC or Judge Wright"
+    = button_tag "Clear", :class => "button", :type => "reset"
+    %button.button.primary{:type => "submit"} Search
+
+  .pagination-row
+    .page-entries
+      = page_entries_info @decisions
+    = will_paginate @decisions
+
+  .main.cf
+    .advanced-search
+      %fieldset#advanced_search
+        %h2 Filter the results
+        %h3
+          %label Judge
+        = select :search, :judge, options_for_select([[]] + Decision.judges_list, params[:search][:judge])
+        %h3
+          %label Category
+        = text_field :search, :claimant
+        %h3
+          %label Sub-category
+        = text_field :search, :claimant
+        .buttons
+          = button_tag "Clear", :class => "button left", :type => "reset"
+          = submit_tag "Search", :class => "button right primary"
+    .decisions
+      .sort-filter
+        Sort by <select><option>Date added</option><option>Date of decision</option></select>
+      %table.decisions-table
+        %tr.headings
+          %th Reference number
+          %th Date added
+        - @decisions.each do |decision, group = cycle('even', 'odd')|
+          %tr.first{:class => group}
+            %td{class: decision.reported ? 'reported' : 'unreported' }
+              = link_to decision.link_label, decision_path(decision)
+              %p 
+                Category:
+              %p 
+                Parties:
+            %td.date= time_element(decision.promulgated_on)
+          - if search_present()
+            %tr.last{:class => group}
+              %td{:colspan => 4}
+                %strong Search result:
+                = hilighted_search_result(params[:search][:query], decision.text)
+
+  .pagination-row.bottom
+    .page-entries
+      = page_entries_info @decisions
+    = will_paginate @decisions
+
