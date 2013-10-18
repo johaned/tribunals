@@ -1,0 +1,73 @@
+#global-breadcrumb.header-context
+  %nav{:role => "navigation"}
+    %ol.group
+      %li
+        %a{:href => "/"} Home
+%div{:vocab => "http://schema.org", :typeof => "CreativeWork"}
+  %header.page-header.group
+    %h1= @decision.link_label
+    %ul.decision-details
+      %li
+        %span.label Case title:
+        %span{:property => "name"}= case_title(@decision)
+      %li
+        %span.label Appellant name:
+        %span= @decision.claimant
+      %li
+        %span.label Status of case:
+        %span
+          - if @decision.reported
+            Reported
+          - else
+            Unreported
+      %li
+        %span.label Hearing date:
+        %span= schema_time_element(@decision.hearing_on)
+      %li
+        %span.label Promulgation date:
+        %span= schema_time_element(@decision.promulgated_on)
+      %li
+        %span.label Publication date:
+        %span= schema_time_element(@decision.published_on)
+      %li
+        %span.label Last updated on:
+        %span= schema_time_element(@decision.updated_at.to_date)
+      %li
+        %span.label Country:
+        %span= @decision.country
+      - if @decision.country_guideline.present?
+        %li
+          %span.label Country guidance:
+          %span
+            - if @decision.country_guideline
+              Yes
+            - else
+              No
+      %li
+        %span.label Judges:
+        %span= judge_list(@decision.judges)
+      - if @decision.categories.present?
+        %li
+          %span.label Categories:
+          %span= @decision.categories.join(', ')
+      - if @decision.case_notes.present?
+        %li
+          %span.label Case Notes:
+          %span= @decision.case_notes
+      - if @decision.keywords.present?
+        %li
+          %span.label Keywords
+          %span{:property => "keywords"}= @decision.keywords.join(', ')
+  
+  .download-links
+    %ul
+      %li= link_to "Download a PDF version of the decision", @decision.pdf_file.url, class: 'pdf-file'
+      %li= link_to "Download a Word document (.doc) version of the decision", @decision.doc_file.url, class: 'doc-file'
+  
+  - if @decision.html.blank?
+    %h2 An HTML version of this decision is not currently available.
+  - else
+    .decision
+      %h2 The decision
+      .decision-inner
+        = @decision.html.html_safe

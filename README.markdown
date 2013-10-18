@@ -36,6 +36,16 @@ Importing from legacy system
 
 In the import rake namespace are the scripts to scrape the exisiting sites. They will not process the word documents though, and that needs to be done with `rake import:import_word_docs_from_urls`.
 
+### Importing AAC decisions data
+
+Run the following sequence of rake tasks:
+
+> rake import:aac:decisions
+> rake import:aac:decision_categories
+> rake import:aac:decision_subcategories
+> rake import:aac:judges
+> rake import:aac:decisions_judges_mapping
+
 Tips
 ----
 
