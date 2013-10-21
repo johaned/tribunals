@@ -41,13 +41,16 @@
           %th Date added
         - @decisions.each do |decision, group = cycle('even', 'odd')|
           %tr.first{:class => group}
-            %td{class: decision.reported ? 'reported' : 'unreported' }
-              = link_to decision.link_label, decision_path(decision)
+            %td
+              = link_to decision.ncn, aac_decision_path(decision)
               %p 
-                Category:
+                Category: 
+                = decision.aac_decision_subcategory.name if decision.aac_decision_subcategory
               %p 
                 Parties:
-            %td.date= time_element(decision.promulgated_on)
+                = decision.claimant 
+                = decision.respondent
+            %td.date= time_element(decision.created_at)
           - if search_present()
             %tr.last{:class => group}
               %td{:colspan => 4}
