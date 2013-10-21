@@ -1,0 +1,286 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}{\f27\fswiss\fcharset0\fprq2{\*\panose 020b0604030504040204}Tahoma;}{\f45\fswiss\fcharset0\fprq2{\*\panose 00000000000000000000}Univers (W1){\*\falt Arial};}
+{\f173\froman\fcharset238\fprq2 Times New Roman CE;}{\f174\froman\fcharset204\fprq2 Times New Roman Cyr;}{\f176\froman\fcharset161\fprq2 Times New Roman Greek;}{\f177\froman\fcharset162\fprq2 Times New Roman Tur;}
+{\f178\froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\f179\froman\fcharset178\fprq2 Times New Roman (Arabic);}{\f180\froman\fcharset186\fprq2 Times New Roman Baltic;}{\f181\fswiss\fcharset238\fprq2 Arial CE;}
+{\f182\fswiss\fcharset204\fprq2 Arial Cyr;}{\f184\fswiss\fcharset161\fprq2 Arial Greek;}{\f185\fswiss\fcharset162\fprq2 Arial Tur;}{\f186\fswiss\fcharset177\fprq2 Arial (Hebrew);}{\f187\fswiss\fcharset178\fprq2 Arial (Arabic);}
+{\f188\fswiss\fcharset186\fprq2 Arial Baltic;}{\f389\fswiss\fcharset238\fprq2 Tahoma CE;}{\f390\fswiss\fcharset204\fprq2 Tahoma Cyr;}{\f392\fswiss\fcharset161\fprq2 Tahoma Greek;}{\f393\fswiss\fcharset162\fprq2 Tahoma Tur;}
+{\f394\fswiss\fcharset177\fprq2 Tahoma (Hebrew);}{\f395\fswiss\fcharset178\fprq2 Tahoma (Arabic);}{\f396\fswiss\fcharset186\fprq2 Tahoma Baltic;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;
+\red192\green192\blue192;}{\stylesheet{\ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \snext0 Normal;}{\s1\qj \fi-720\li720\ri0\sb240\sa240\sl480\slmult1\widctlpar
+\jclisttab\tx720\hyphpar0\aspalpha\aspnum\faauto\ls19\outlinelevel0\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext1 heading 1;}{\s2\qj \fi-709\li1418\ri0\sb240\sa240\sl480\slmult1\widctlpar
+\jclisttab\tx1418\aspalpha\aspnum\faauto\ls19\ilvl1\outlinelevel1\adjustright\rin0\lin1418\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext2 heading 2;}{\s3\qj \fi-709\li2127\ri0\sb240\sa240\sl480\slmult1\widctlpar
+\jclisttab\tx2127\aspalpha\aspnum\faauto\ls19\ilvl2\outlinelevel2\adjustright\rin0\lin2127\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext3 heading 3;}{\s4\qj \fi-709\li2836\ri0\sb240\sa240\sl480\slmult1\widctlpar
+\jclisttab\tx3207\aspalpha\aspnum\faauto\ls19\ilvl3\outlinelevel3\adjustright\rin0\lin2836\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext4 heading 4;}{\s5\qj \fi-709\li3545\ri0\sb240\sa240\sl480\slmult1\widctlpar
+\jclisttab\tx3545\aspalpha\aspnum\faauto\ls19\ilvl4\outlinelevel4\adjustright\rin0\lin3545\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext5 heading 5;}{\s6\qj \fi-709\li4254\ri0\sb240\sa240\sl480\slmult1\widctlpar
+\jclisttab\tx4625\aspalpha\aspnum\faauto\ls19\ilvl5\outlinelevel5\adjustright\rin0\lin4254\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext6 heading 6;}{\s7\qj \fi-709\li4963\ri0\sb240\sa240\sl480\slmult1\widctlpar
+\jclisttab\tx4963\aspalpha\aspnum\faauto\ls19\ilvl6\outlinelevel6\adjustright\rin0\lin4963\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext7 heading 7;}{\s8\qj \fi-709\li5672\ri0\sb240\sa240\sl480\slmult1\widctlpar
+\jclisttab\tx6043\aspalpha\aspnum\faauto\ls19\ilvl7\outlinelevel7\adjustright\rin0\lin5672\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext8 heading 8;}{\s9\qj \fi-709\li6381\ri0\sb240\sa240\sl480\slmult1\widctlpar
+\jclisttab\tx6381\aspalpha\aspnum\faauto\ls19\ilvl8\outlinelevel8\adjustright\rin0\lin6381\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext9 heading 9;}{\*\cs10 \additive Default Paragraph Font;}{\s15\ql \li0\ri0\widctlpar
+\tqc\tx4153\tqr\tx8306\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \f45\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext15 header;}{\s16\ql \li0\ri0\widctlpar
+\tqc\tx4153\tqr\tx8306\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \f45\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext16 footer;}{\*\cs17 \additive \fs20 \sbasedon10 page number;}{\*\cs18 \additive \fs20 \sbasedon10 
+line number;}{\s19\ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \cbpat9 \f27\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext19 Document Map;}{
+\s20\qc \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \b\fs36\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext20 CoverDesc;}{\s21\ql \li0\ri0\widctlpar
+\tx0\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\hyphpar0\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \b\fs24\ul\expndtw-3\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext21 CoverMain;}{
+\s22\qr \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\ul\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext22 CoverText;}{\s23\ql \li0\ri0\sb240\sa240\sl480\slmult1
+\keepn\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext1 Heading;}{\s24\qj \li1440\ri1440\sa240\widctlpar\aspalpha\aspnum\faauto\adjustright\rin1440\lin1440\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext1 Quote;}{\s25\qj \li0\ri0\sb240\sa240\sl480\slmult1\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 
+\sbasedon0 \snext1 ParaNoNumber;}{\s26\qc \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \b\fs28\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext26 Title;}{
+\s27\qj \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs20\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext27 Body Text;}{\s28\ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 
+\b\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext28 Subtitle;}}{\*\listtable{\list\listtemplateid-1668535040\listsimple{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace0\levelindent0
+{\leveltext\'01*;}{\levelnumbers;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 }{\listname ;}\listid-2}{\list\listtemplateid554607100{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat21\levelspace0\levelindent0
+{\leveltext\'01\'00;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-6840\li6840\jclisttab\tx6840 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat10\levelspace0\levelindent0{\leveltext
+\'03\'00.\'01;}{\levelnumbers\'01\'03;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-6840\li6840\jclisttab\tx6840 }{\listlevel\levelnfc22\levelnfcn22\leveljc0\leveljcn0\levelfollow0\levelstartat3\levelspace0\levelindent0{\leveltext
+\'05\'00.\'01.\'02;}{\levelnumbers\'01\'03\'05;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-6840\li6840\jclisttab\tx6840 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\'07\'00.\'01.\'02.\'03;}{\levelnumbers\'01\'03\'05\'07;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-6840\li6840\jclisttab\tx6840 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\'09\'00.\'01.\'02.\'03.\'04;}{\levelnumbers\'01\'03\'05\'07\'09;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-6840\li6840\jclisttab\tx6840 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\'0b\'00.\'01.\'02.\'03.\'04.\'05;}{\levelnumbers\'01\'03\'05\'07\'09\'0b;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-6840\li6840\jclisttab\tx6840 }{\listlevel\levelnfc0\levelnfcn0
+\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0d\'00.\'01.\'02.\'03.\'04.\'05.\'06;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-6840\li6840
+\jclisttab\tx6840 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0f\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f;}\chbrdr\brdrnone\brdrcf1 
+\chshdng0\chcfpat1\chcbpat1\fbias0 \fi-6840\li6840\jclisttab\tx6840 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'11\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.\'08;}{\levelnumbers
+\'01\'03\'05\'07\'09\'0b\'0d\'0f\'11;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-6840\li6840\jclisttab\tx6840 }{\listname ;}\listid176434809}{\list\listtemplateid-508903106\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0
+\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\'02\'00.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-360\li-1065\jclisttab\tx-1065 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0
+\levelstartat1\levelspace360\levelindent0{\leveltext\'02\'01.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-360\li-345\jclisttab\tx-345 }{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1
+\levelspace360\levelindent0{\leveltext\'02\'02.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-180\li375\jclisttab\tx375 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360
+\levelindent0{\leveltext\'02\'03.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-360\li1095\jclisttab\tx1095 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0
+{\leveltext\'02\'04.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-360\li1815\jclisttab\tx1815 }{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext
+\'02\'05.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-180\li2535\jclisttab\tx2535 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext
+\'02\'06.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-360\li3255\jclisttab\tx3255 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext
+\'02\'07.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-360\li3975\jclisttab\tx3975 }{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext
+\'02\'08.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-180\li4695\jclisttab\tx4695 }{\listname ;}\listid407776655}{\list\listtemplateid200449398{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1
+\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s1\fi-720\li720\jclisttab\tx720 }{\listlevel\levelnfc2\levelnfcn2\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\'02\'01);}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s2\fi-709\li1418\jclisttab\tx1418 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\'02\'02);}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s3\fi-709\li2127\jclisttab\tx2127 }{\listlevel\levelnfc2\levelnfcn2\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'02\'03);}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s4\fi-709\li2836\jclisttab\tx3207 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'03(\'04);}{\levelnumbers\'02;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s5\fi-709\li3545\jclisttab\tx3545 }{\listlevel\levelnfc2\levelnfcn2\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'03(\'05);}{\levelnumbers\'02;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s6\fi-709\li4254\jclisttab\tx4625 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'03(\'06);}{\levelnumbers\'02;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s7\fi-709\li4963\jclisttab\tx4963 }{\listlevel\levelnfc2\levelnfcn2\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'03(\'07);}{\levelnumbers\'02;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s8\fi-709\li5672\jclisttab\tx6043 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'03(\'08);}{\levelnumbers\'02;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s9\fi-709\li6381\jclisttab\tx6381 }{\listname ;}\listid1341081942}}{\*\listoverridetable{\listoverride\listid1341081942\listoverridecount0\ls1}
+{\listoverride\listid1341081942\listoverridecount0\ls2}{\listoverride\listid1341081942\listoverridecount0\ls3}{\listoverride\listid1341081942\listoverridecount0\ls4}{\listoverride\listid1341081942\listoverridecount0\ls5}{\listoverride\listid1341081942
+\listoverridecount0\ls6}{\listoverride\listid1341081942\listoverridecount0\ls7}{\listoverride\listid1341081942\listoverridecount0\ls8}{\listoverride\listid1341081942\listoverridecount0\ls9}{\listoverride\listid1341081942\listoverridecount0\ls10}
+{\listoverride\listid1341081942\listoverridecount0\ls11}{\listoverride\listid1341081942\listoverridecount0\ls12}{\listoverride\listid1341081942\listoverridecount0\ls13}{\listoverride\listid1341081942\listoverridecount0\ls14}{\listoverride\listid1341081942
+\listoverridecount0\ls15}{\listoverride\listid1341081942\listoverridecount0\ls16}{\listoverride\listid1341081942\listoverridecount0\ls17}{\listoverride\listid1341081942\listoverridecount0\ls18}{\listoverride\listid1341081942\listoverridecount0\ls19}
+{\listoverride\listid1341081942\listoverridecount0\ls20}{\listoverride\listid1341081942\listoverridecount0\ls21}{\listoverride\listid1341081942\listoverridecount0\ls22}{\listoverride\listid1341081942\listoverridecount0\ls23}{\listoverride\listid1341081942
+\listoverridecount0\ls24}{\listoverride\listid1341081942\listoverridecount0\ls25}{\listoverride\listid1341081942\listoverridecount0\ls26}{\listoverride\listid1341081942\listoverridecount0\ls27}{\listoverride\listid-2\listoverridecount1{\lfolevel
+\listoverrideformat{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelold\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 }}\ls28}
+{\listoverride\listid407776655\listoverridecount0\ls29}{\listoverride\listid176434809\listoverridecount0\ls30}}{\info{\title Court of Appeal Judgment Template}{\subject Word 97 version}{\author KalsiR}{\operator Unisys}
+{\creatim\yr2004\mo10\dy25\hr15\min36}{\revtim\yr2004\mo10\dy25\hr15\min37}{\printim\yr2004\mo10\dy25\hr15\min37}{\version3}{\edmins2}{\nofpages8}{\nofwords3485}{\nofchars19865}{\*\company Court Service}{\nofcharsws0}{\vern8283}}
+\paperw11909\paperh16834\margl1418\margr1134\gutter1134 \facingp\widowctrl\ftnbj\aenddoc\margmirror\aftnnar\noxlattoyen\expshrtn\noultrlspc\dntblnsbdb\nospaceforul\lytprtmet\hyphcaps0\formshade\horzdoc\dgmargin\dghspace120\dgvspace163\dghorigin2552
+\dgvorigin1440\dghshow0\dgvshow0\jexpand\viewkind1\viewscale120\pgbrdrhead\pgbrdrfoot\bdrrlswsix\nolnhtadjtbl \fet0\sectd \psz9\linex0\sectlinegrid326\sectdefaultcl {\headerl \pard\plain \s15\ql \li0\ri0\widctlpar
+\tqc\tx4153\tqr\tx8306\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \f45\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\b\f0\fs20 R(P) 2/03
+\par }{\b\i\f0\fs20 (S of S v. Nelligan)}{\f0 
+\par }}{\headerr \pard\plain \s15\qr \li0\ri0\widctlpar\tqc\tx4153\tqr\tx8306\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \f45\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\b\f0\fs20 R(P) 2/03
+\par }{\b\i\f0\fs20 (S of S v. Nelligan}{\i\f0\fs20 )}{\i\f0 
+\par }}{\footerl \pard\plain \s16\ql \li0\ri0\widctlpar\tqc\tx4153\tqr\tx8306\pvpara\phmrg\posxc\posy0\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \f45\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\field{\*\fldinst {\cs17\f1\fs22 PAGE  }
+}{\fldrslt {\cs17\f1\fs22\lang1024\langfe1024\noproof 8}}}{\cs17\f1\fs20 
+\par }\pard \s16\ql \li0\ri0\widctlpar\tqc\tx4153\tqr\tx8306\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {
+\par }}{\footerr \pard\plain \s16\ql \li0\ri0\widctlpar\tqc\tx4153\tqr\tx8306\pvpara\phmrg\posxc\posy0\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \f45\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\field{\*\fldinst {\cs17\f0\fs22 PAGE  }
+}{\fldrslt {\cs17\f0\fs22\lang1024\langfe1024\noproof 1}}}{\cs17\f0\fs20 
+\par }\pard \s16\ql \li0\ri0\widctlpar\tqc\tx4153\tqr\tx8306\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {
+\par }}{\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}
+{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8
+\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \s26\qc \li0\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 
+\b\fs28\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\fs36 R(P) 2/03
+\par }{\fs24 (Secretary of State for Work and Pensions v. Nelligan [2003] EWCA Civ 555)
+\par }\pard\plain \s28\ql \li0\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \b\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {CA Kennedy, Scott Baker LJJ, Blackburne J\tab       \tab                  CP/3632/2001}{\b0 
+\par }\pard\plain \ql \li0\ri0\sa120\widctlpar\brdrb\brdrs\brdrw15\brsp20 \aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\b 15.4.03
+\par }\pard\plain \s1\qj \li0\ri0\sa120\widctlpar\hyphpar0\aspalpha\aspnum\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\b Category B retirement pension \endash  backdating \endash 
+ whether a claim is necessary where Category A pension already in payment
+\par }\pard\plain \s27\qj \li0\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs20\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {
+The claimant had been in receipt of a category A retirement pension for six years based on her own national insurance contributions when her husband reached the age of 65 in 1992.  He then claimed and received a category A pension. At
+ that time the claimant could have claimed a category B pension based on his contributions, which would have been larger than her category A pension and payable in its place. She was not invited to make a claim then and in fact did not do so until March 2
+0
+00, when the pension was awarded, but only with effect from 2 December 1999. She appealed to an appeal tribunal, arguing that her claim should have been treated as a request for a correction to her existing pension, and that a claim was not necessary. The
+ tribunal decided that it had no power to backdate the award beyond the three months provided for by regulation\~19 of the Social Security (Claims and Payments) Regulations 1987 (\'93the 1987 Regulations\'94
+) for the making of claims. The Commissioner allowed her appeal against this decision on the basis of the wording of section 43(5) of the Social Security Contributions and Benefits Act 1992 (\'93the Benefits Act\'94
+), which, in his view, created an express statutory exception to the requirement in section 1 of the Social Security Administration Act 1992 (\'93the Administration Act\'94
+) that entitlement to social security benefits was dependent upon a claim having been made.
+\par The Secretary of State appealed to the Court of Appeal.
+\par }\pard\plain \qj \li0\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\i\fs20 Held}{\fs20 , allowing the appeal, that:\tab \line the Commissi
+oner was wrong in his conclusion that section 43(5) of the Benefits Act was an express statutory exception to the general rule that entitlement to benefit  is dependent on a claim being made (paragraph 10);\tab  
+\par {\listtext\pard\plain\fs20\lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 1.\tab}}\pard \qj \li0\ri0\sa120\widctlpar\jclisttab\tx-1065\aspalpha\aspnum\faauto\ls29\adjustright\rin0\lin0\itap0 {\fs20 section 43(5) had nothing to do with establi
+shing entitlement to a retirement pension, but simply provided a mechanism for choosing between different pensions to which there was entitlement.  In particular it was intended to apply where a claim for one category of pension could be treated as a clai
+m for the other under regulation 9 of and Schedule 1 to the 1987 Regulations (paragraphs 22 and 24);\tab 
+\par {\listtext\pard\plain\fs20\lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 2.\tab}the legislative history illustrated that section 1 of the Administration Act and its predecessor  were enacted to make clear that entitlemen
+t to benefit  is ordinarily dependent on a claim being made for it (paragraph 25);\tab 
+\par {\listtext\pard\plain\fs20\lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 3.\tab}}\pard \ql \li0\ri0\sa120\widctlpar\brdrb\brdrs\brdrw15\brsp20 \jclisttab\tx-1065\aspalpha\aspnum\faauto\ls29\adjustright\rin0\lin0\itap0 {\fs20 the claimant
+\rquote s circumstances did not fall within  any of the exceptions to section 1 of the Administration Act set out in regulation 3 of the 1987 Regulations and she wa
+s not entitled to a Category B retirement pension in respect of any period before 2 December 1999 (paragraphs 18 and 26).\line 
+\par }\pard \qc \li357\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin357\itap0 {\fs20 \line \tab }{\b DECISION OF THE COURT OF APPEAL
+\par }\pard \ql \li0\ri0\sa120\widctlpar\hyphpar0\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\expnd0\expndtw-3 Mr David Forsdick (instructed by Solicitor, Department for Work and Pensions) for the appellant.
+\par }\pard\plain \s25\qj \li0\ri0\sa120\widctlpar\hyphpar0\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\expnd0\expndtw-3 The respondent did not appear and was not represented.
+\par }\pard\plain \s1\qc \li0\ri0\sb240\sa120\sl480\slmult1\widctlpar\hyphpar0\aspalpha\aspnum\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\b Judgment (reserved)}{\b\expnd0\expndtw-3 
+\par }\pard\plain \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\b {\*\bkmkstart Approved}{\*\bkmkend Approved}LORD JUSTICE SCOTT BAKER: {\*\bkmkstart Orderstart}
+{\*\bkmkend Orderstart}
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 1.\tab}}\pard\plain \s1\qj \li0\ri0\sa120\widctlpar\jclisttab\tx720\hyphpar0\aspalpha\aspnum\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {The State pays two different kinds of retirement pension. These are called Category A and Category B. Basically the a
+mount of a Category A pension is determined by the contributions the recipient has made over the whole of his or her working life. In the case of a Category B pension entitlement is based on marriage and the contributions of the other party to the marriag
+e; the spouse must have reached retirement age and be entitled to a Category A pension. Sections 43 to 55 of the Social Security Contributions and Benefits Act 1992 (\'93the 1992 Benefits Act\'94) provide for payment of these pensions.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 2.\tab}The present appeal is by
+ the Secretary of State against the decision of Mr David Williams, a Social Security Commissioner, on 22 April 2002, allowing an appeal from the Bexleyheath appeal tribunal on 5 January 2001. It is made with the permission of Mr Williams, whose decision c
+onflicts with an earlier decision of }{\i Wood}{ (CP/3/2001) by Mrs Deputy Commissioner Ramsay and, we were told, the current practice. Its outcome is of general importance to the Department as well as specific importance to the respondent.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 3.\tab}The respondent was 6
+0 on 14 August 1986. She claimed and received a Category A pension on the basis of her own national insurance contributions. Because of the level of those contributions it was 34% of the maximum amount. Her husband, Mr Nelligan, was 65 on 20 October 1992.
+ 
+He claimed and received a Category A pension from that time. The fact that Mr Nelligan reached the age of 65 triggered the right for the respondent to claim what could be described as a parasitic pension under Category B. The respondent could have made su
+c
+h a claim in 1992 and the standard procedure is, and was in 1992, to send someone such as Mr Nelligan a standard pack about 4 months before he reaches state pension age. The pack should have contained a second claim form for his wife to make a Category B 
+claim should she choose to do so. It was accepted that for some reason no such pack was sent in this case. However, the Secretary of State\rquote 
+s position is that he was under no legal obligation to send a pack and that it would be administratively impossible to
+ notify everyone entitled to a retirement pension, hence the provision to which I shall come in a moment that anyone entitled to a benefit must claim it. The respondent did not make her claim until 1 March 2000 and it was treated as securing entitlement t
+o benefit from 2 December 1999 (3 months before). This, according to regulation 19 of the Social Security (Claims and Payments) Regulations 1987 S1 1987/1968 \'93the 1987 Regulations\'94) is the maximum period for which payment can be backdated. 
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 4.\tab}A person who qualifies for both a Category A and a Category B pension is entitled to receive the larger one but not both. The respondent\rquote 
+s Category B pension was larger than her Category A pension. Her claim is that her Category B pension should have been backdated to 
+1992 (when her husband was 65) rather than to December 1999. The Bexleyheath appeal tribunal dismissed her appeal on the ground that it had no jurisdiction to do as she wished because she did not claim the pension until March 2000. However, she appealed t
+o the Social Security Commissioner who allowed her appeal.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 5.\tab}
+The relevant statutory scheme is to be found in section 43 and following of the 1992 Benefits Act. Section 44 sets out the basic requirements for entitlement to a Category A pension. Section 48A 
+sets out the basic requirements for entitlement to a Category B pension. However, these sections have also to be read in the context of section 1 of the Social Security Administration Act 1992 (\'93the 1992 Administration Act\'94) which provides:
+\par }\pard\plain \s24\qj \li720\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'931.}{{\field{\*\fldinst SYMBOL 45 \\f "Symbol" \\s 12}{\fldrslt\f3\fs24}}}{
+(1) Except in such cases as may be prescribed, and subject to the following provisions of this section and to section 3 below, no person shall be entitled to any benefit unless, in addition to any other conditions relating to that benefit being satisfied}
+{{\field{\*\fldinst SYMBOL 45 \\f "Symbol" \\s 12}{\fldrslt\f3\fs24}}}{
+\par }\pard \s24\qj \li1440\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin1440\itap0 {(a) he makes a claim for it in the manner, and within the time, prescribed in relation to that benefit by regulations under this Part of this Act; or
+\par (b)  he is treated by virtue of such regulations as making a claim for it.\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 6.\tab}}\pard\plain \s1\qj \li0\ri0\sa120\widctlpar\jclisttab\tx720\hyphpar0\aspalpha\aspnum\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {Section 43 of the 1992 Benefits Act deals with persons entitled to more than one retirement pension. It provides, so far as material, as follows:
+\par }\pard\plain \s24\qj \li624\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin624\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93(1) A person shall not be enti
+tled for the same period to more than one retirement pension under this Part of this Act ... .
+\par }\pard \s24\qj \li720\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {(2) ... 
+\par (3) A person who, apart from subsection (1) above, would be entitled\endash 
+\par }\pard \s24\qj \li1440\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin1440\itap0 {(a)  to both a Category A and a Category B retirement pension under this Part for the same period ...
+\par (b) ... 
+\par }\pard \s24\qj \li720\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {
+may from time to time give notice in writing to the Secretary of State specifying which of the pensions referred to in paragraph (a) ... above he wishes to receive.
+\par (4)  If a person gives such a notice, the pension so specified shall be the one to which he is entitled in respect of any week commencing after the date of the notice.
+\par (5)  If no such notice is given, the person shall be entitled to whichever of the pensions is from time to time the most favourable to him (whether it is the pension which he claimed or not).\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 7.\tab}}\pard\plain \s1\qj \li0\ri0\sa120\widctlpar\jclisttab\tx720\hyphpar0\aspalpha\aspnum\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {This appeal turns on the effect of the words in brackets in section 43(5) \'93whether it is the pension which he claimed or not\'94
+ and in particular whether they override or displace the general provision in section 1(1)(a) of the 1992 Administration Act that no one is entitled to any benefit unless he makes a claim for it within the prescribed time.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 8.\tab}The Secretary of State\rquote s submission is that because the respondent did not claim a Category B pension until 1 March
+ 2000, section 1(1)(a) of the 1992 Administration Act prevents her entitlement being backdated to 1992. The respondent says that the Category B pension was more favourable to her and the words in brackets in section 43(5) of the 1992 Benefits Act enable h
+er to have the claim backdated to 1992 when her husband was 65 and her entitlement first arose. The Social Security Commissioner found in her favour. He said:
+\par }\pard\plain \s24\qj \li720\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'9327.\tab 
+ The proper context for the interpretation of section 43(5) is that of the section of which i
+t forms part, noting the provisions that existed prior to the consolidation of those previous measures into the current section. As it is a section expressly designed to deal with conflicts between other sections, I do not find it of assistance to note th
+o
+se conflicts. Subsection (5) is a default provision that operates in cases where an individual has not given notice in writing of the kind which she is entitled to give from time to time under section 43(3). The effect of a notice is to choose which of th
+e two pensions to which she is entitled the claimant wishes to receive. If notice is given, then subsection (4) provides that it is to have effect. If it is not, then subsection (5) operates.
+\par 28.\tab  Subsection (3) is itself an exception to the rule in subsect
+ion (2) if the claimant chooses to use it. A claimant does not have to give a notice under subsection (3). Subsection (2) allows an individual to receive both a Category A pension and a Category B pension at the same time, but makes provision (by referenc
+e
+ to section 73 of the Social Security Administration Act 1992) to remove any overlap caused by the double entitlement. Section 73 is brought into effect by the Social Security (Overlapping Benefits) Regulations 1979. The effect of subsection (2), read wit
+h
+ this regulation, is to stop an individual receiving more than the specified maximum amount of pension despite the double entitlement. Subsection (3) does not allow this capping to be sidestepped. It merely provides that the claimant could decide, say, to
+ receive her Category B pension entitlement without reference to her Category A entitlement.
+\par 29. \tab Subsection (5) is not drafted in limited terms. Nor was its predecessor in section 27(2). In my view, subsection (5) means what it says. [The respondent] was entitled from the date of her husband\rquote 
+s claim to both a Category A pension and a Category B pension. Subsection (2) stopped her being entitled to more than the higher of them. Subsection (3) allowed her to choose whether she received the Category A pension 
+topped up by  Category B entitlement or simply the Category B entitlement. As she did not make any option under subsection (3) the Secretary of State, under subsection (5), awarded her the Category B entitlement. Before that date, she also had given no no
+tice and she had not made a claim. But she was entitled to the Category B pension if this was from time to time the most favourable to her whether she had claimed it or not.\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 9.\tab}}\pard\plain \s1\qj \li0\ri0\sa120\widctlpar\jclisttab\tx720\hyphpar0\aspalpha\aspnum\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {He went on to conclude that any other interpretation of section 43(5) failed to take into account the \'93unambiguous final words of that subsection\'94 and its legislative history. He said, \'93
+I read those final words as requiring, as a precondition of the operation of the rule in subsection (5), that the individual concerned must have clai
+med one of the two relevant pensions but not both. It follows that subsection (5) recognises an entitlement to a pension for which no claim has been made in the limited circumstances in which the subsection applies. It is an express statutory exception to
+ the general rule in section 1 of the (1992 Administration Act).\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 10.\tab}
+In my judgment the Commissioner misunderstood the effect of section 43(5) and was wrong in his conclusion that it was an express statutory exception to the general rule in section 1 of th
+e 1992 Administration Act. He failed to appreciate the distinction between establishing entitlement and choosing between benefits. Far from the legislative history supporting the Commissioner\rquote 
+s conclusion in my view it strongly supports the opposite conclusion.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 11.\tab}
+The predecessors of sections 44 and 48A of the 1992 Benefits Act were sections 28 (Category A) and 29 (Category B) of the Social Security Act 1975. The tests for eligibility were not precisely the same as under the 1992 Benefits Act but the gener
+al structure was essentially the same. Just like section 43(1) of the 1992 Benefits Act, so section 27(6) of the Social Security Act 1975 said there was no entitlement for the same period to more than one retirement pension. 
+\par }\pard \s1\qj \li0\ri0\sa120\widctlpar\hyphpar0\aspalpha\aspnum\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 {Section 27(6) of the Social Security Act 1975 (the predecessor of section 43(5) of the 1992 Benefits Act) provided:
+\par }\pard\plain \s24\qj \li720\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93No person shall be entitled for the same period to more than one retirement pension; }{\b 
+but where under the following sections in this Part (whether Chapter I or Chapter II
+) a person would otherwise be entitled to more than one such pension, he shall be entitled (whichever pension he may apply for) to whichever one is from time to time the most favourable to him.\'94 (}{my emphasis)
+\par }\pard\plain \s1\qj \li0\ri0\sa120\widctlpar\hyphpar0\aspalpha\aspnum\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {The words [emphasised] were repealed by the Soc
+ial Security Pensions Act 1975 (see section 65(3) and schedule 5), and replaced by section 25 of that Act in materially the same terms as section 43 of the 1992 Benefits Act which was passed as a consolidating statute. 
+\par Section 25(1) of the Social Security Pensions Act 1975 provided:
+\par }\pard\plain \s24\qj \li720\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93(1) Where under Part II of the [Social Security Act 1975] \'85
+ a person would, but for section 27(6) of that Act, be entitled to more than one retirement pension, he may give notice in writing to the Secretary of State from time 
+to time stating which of the pensions he wishes to receive; and that pension shall then be the one to which he is entitled in respect of any week commencing after the date of the notice.
+\par (2) If no such notice is given, the person shall be entitled (whichever pension he may have claimed) to whichever one is from time to time the most favourable to him.\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 12.\tab}}\pard\plain \s1\qj \li0\ri0\sa120\widctlpar\jclisttab\tx720\hyphpar0\aspalpha\aspnum\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 { Subsection (1) subsequently became subsections (3) and (4) of section 43 of the 1992
+ Benefits Act and subsection (2) subsequently became subsection 43(5) of that Act. Significantly, when the 1975 Act became law there was no equivalent to section 1 of the 1992 Administration Act (the section that makes entitlement to a benefit dependent o
+n a claim being made).
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 13.\tab}The next step in the story is provided by the decision of the House of Lords in }{\i Insurance Officer v. McCaffrey}{
+ [1984] 1 WLR 1353. That was a case under the Northern Ireland legislation which was, however, in substantially the same
+ terms as the legislation that governed social security elsewhere in the United Kingdom. Margaret McCaffrey made a claim, after she had reached pensionable age for a non contributory invalidity pension. The relevant provision said that \'93
+a person who has attained pensionable age shall not be entitled to a pension under this section unless he was so entitled \'85 immediately before attaining that age.\'94
+ She met the necessary criteria but the insurance officer rejected her application because she had not made a claim before she reached pensionable age. The House of Lords rejected the insurance officer\rquote 
+s appeal. The provision said nothing about making a claim being a condition precedent to entitlement. The insurance officer, however, relied on a later section in the same Act which said:
+\par }\pard\plain \s24\qj \li720\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93
+Subject to the following provisions of this Chapter, and, in the case of retirement pensions, to section 27(6), it shall be a condition of a person\rquote s right to any benefit that he makes a claim for it in the prescribed manner and with
+in the prescribed time.\'94
+\par }\pard\plain \s1\qj \li0\ri0\sa120\widctlpar\hyphpar0\aspalpha\aspnum\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {Lord Scarman rejected the insurance officer\rquote 
+s argument that this modified the provision so that there was no entitlement until a claim was made, saying the section should not be construed so as to place any restriction on entitleme
+nt but rather as dealing with the administration of benefit and the right to be paid.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 14.\tab}}\pard \s1\qj \li0\ri0\sa120\widctlpar\jclisttab\tx720\hyphpar0\aspalpha\aspnum\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 {
+ In order to reverse the effect of this decision Parliament enacted section 17 of the Social Security Act 1985, which added section 165A into the Social Security Act 
+1975. That section was, so far as material, in the same terms as are now to be found in section 1 of the 1992 Administration Act. Thus, by enacting what is now section 1 of the 1992 Administration Act after the statutory predecessor to section 43(5) of th
+e 1992 Benefits Act Parliament was showing that making a claim for a benefit was necessary in addition to meeting any conditions of entitlement.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 15.\tab}Consolidating legislation was passed in 1992 in the form of the 1992 Benefits Act and the 1992 Administratio
+n Act. The position is now governed by section 1 of the 1992 Administration Act and sections 43, 44 and 48A of the 1992 Benefits Act, and section 1 of the 1992 Administration Act must be satisfied before any entitlement to benefit arises.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 16.\tab}There is no doubt that \'93benefit\'94
+ in section 1 of the 1992 Administration Act includes Category A and Category B retirement pensions. Section 191 defines benefit as meaning benefit under the 1992 Benefits Act, and section 122 of the Benefits Act defines benefit as inclu
+ding benefit under Part II of that Act which is where retirement pensions are to be found.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 17.\tab}Section 1(1) of the 1992 Administration Act states the general position that entitlement to any benefit is dependent on a claim being made for it. Everything flo
+ws from a claim and this is so whether there is an actual claim under section 1(1)(a) or an applicant is treated by regulations as making a claim under section 1(1)(b).
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 18.\tab}The only relevant regulations relating to the 1992 Administration Act are the 1987 Regulations. Regulation 3, so far as is material, provides as follows:
+\par }\pard\plain \s24\qj \li720\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93
+It shall not be a condition of entitlement to benefit that a claim be made for it in the following cases}{{\field{\*\fldinst SYMBOL 45 \\f "Symbol" \\s 12}{\fldrslt\f3\fs24}}}{
+\par \'85
+\par (d) in the case of a Category A or B retirement pension}{{\field{\*\fldinst SYMBOL 45 \\f "Symbol" \\s 12}{\fldrslt\f3\fs24}}}{
+\par (i) where the beneficiary is a woman over the age of 65 and entitled to a widowed mother\rquote s allowance or widowed parent\rquote s allowance, on her ceasing to be so entitled; or
+\par (ii) where the beneficiary is a woman under the age of 65 and in receipt of widow\rquote s pension or bereavement allowance, on her attaining that age\'94
+\par }\pard \s24\qj \li0\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {The respondent in the present case falls into neither category.
+\par }\pard\plain \s1\qj \li0\ri0\sa120\widctlpar\hyphpar0\aspalpha\aspnum\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {
+Regulation 9 of the 1987 Regulation deals with interchange with claims for other benefits. Regulation 9(1) provides:
+\par }\pard\plain \s24\qj \li720\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93
+Where it appears that a person who has made a claim for benefit specified in column (1) of Part 1 of Schedule 1 may be entitled to the benefit specified opposite to it in column (2) of that Part, any such claim may be treated by the 
+Secretary of  State or the Board as a claim alternatively, or in addition, to the benefit specified opposite to it in that column.\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 19.\tab}}\pard\plain \s1\qj \li0\ri0\sa120\widctlpar\jclisttab\tx720\hyphpar0\aspalpha\aspnum\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {The way that regulation 9 and Schedule 1 operate is that where a person may be entitled to both benefits, the claim can 
+be treated as a claim for either or both. However, these provisions do not apply in the present case because the person has to satisfy the conditions of entitlement to both benefits at the date of the claim. The words \'93may be entitled\'94
+ in regulation 9 plai
+nly refer to the date on which the claim is made. Where, as in this case, the respondent made a claim to a Category A pension at a time when she was not entitled to a Category B pension because her husband had not reached retirement age, she cannot later 
+rely on that Category A pension claim as a Category B pension claim when her husband does later reach retirement age. As Mr Forsdick for the appellant pointed out, if it was not necessary to make a claim for benefit these provisions would be unnecessary.
+
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 20.\tab}Mr Forsdick also referred us to section 8 of the Social Security Act 1998 which, so far as material, provides:
+\par }\pard\plain \s24\qj \li624\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin624\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93(1) Subject to the provisions of this Chapter, it shall be for the Secretary of State\endash 
+
+\par }\pard \s24\qj \li720\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {(a)  to decide any claim for a relevant benefit.
+\par \'85
+\par (2) Where at any time a claim for a relevant benefit is decided by the Secretary of State \endash 
+\par (a)  the claim shall not be regarded as subsisting after that  time; and
+\par (b)  accordingly, the claimant shall not (without making a further claim) be entitled to the benefit on the basis of circumstances not obtaining at that time.\'94
+\par }\pard\plain \s1\qj \li0\ri0\sa120\widctlpar\hyphpar0\aspalpha\aspnum\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {
+This simply translated into statutory form the law as it was previously understood to be.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 21.\tab}}\pard \s1\qj \li0\ri0\sa120\widctlpar\jclisttab\tx720\hyphpar0\aspalpha\aspnum\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 {
+So, there cannot be two subsisting decisions in respect of the same claim. Also, there must be entitlement to each of two pensions, including a claim for each, before section 43 can bite on the situation.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 22.\tab}With what is section 43(5) of the 1992 Benefits Act concerned? The words in brackets are, in my judgment, to cover a specific situation. Tha
+t is where regulations provide that a claim for one benefit can be treated as a claim for a different benefit. The beneficiary is entitled to the most favourable benefit irrespective of a claim to that particular benefit. A practical example is where a wo
+m
+an does not claim a Category A pension at retirement age, but subsequently claims a Category B pension when her husband retires. Because Regulation 9 and Schedule 1 of the 1987 Regulations apply, her claim for a Category B pension can be treated as a clai
+m
+ for a Category A pension if this is more favourable to her. Under section 43(5) the Secretary of State, in the absence of notification from her, can pay the Category A pension even though that is not the pension that she has claimed. What is critical, ho
+wever, is that the section 43(5) interchange can only operate after the conditions of entitlement, including the pre-condition under section 1 of the 1992 Administration Act of a claim or a deemed claim, have been met}{\i .}{
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 23.\tab}Section 43(5) is providing for a d
+ifferent application of the test in section 43(3). The contrary construction (i.e. that adopted by the Commissioner) would mean that the words in brackets in section 43(5) overruled or supplanted the general rule of law spelt out in section 1 of the 1992 
+Administration Act. Section 1 of the 1992 Administration Act spells out the general position in very clear terms and it seems to me inconceivable that Parliament should have intended to achieve such a result by, as it were, a side wind.
+\par }\pard \s1\qj \li0\ri0\sa120\widctlpar\hyphpar0\aspalpha\aspnum\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 {\i Conclusion
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 24.\tab}}\pard \s1\qj \li0\ri0\sa120\widctlpar\jclisttab\tx720\hyphpar0\aspalpha\aspnum\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 {Secti
+on 43 of the 1992 Benefits Act has nothing to do with establishing entitlement to a retirement pension. It simply provides a mechanism for choosing between different pensions to which there is entitlement. One only reaches the section 43(5) analysis after
+ one has determined to what pensions a person is entitled under other sections. The subsection is of limited and not general application.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 25.\tab}The legislative history illustrates clearly why section 1 of the 1992 Administration Act, and more particularly its
+ predecessor section 17 of the Social Security Act 1985, was enacted, namely to reverse the effect of the decision in }{\i McCaffrey}{
+ and make clear the fundamental position that entitlement to a benefit is ordinarily dependent on a claim being made for it.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 26.\tab}
+I would therefore allow the appeal and direct that the respondent is not entitled to a Category B retirement pension in respect of any period before 2 December 1999.
+\par }\pard \s1\qj \li0\ri0\sa120\widctlpar\hyphpar0\aspalpha\aspnum\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 {\b BLACKBURNE J:
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 27.\tab}}\pard \s1\qj \li0\ri0\sa120\widctlpar\jclisttab\tx720\hyphpar0\aspalpha\aspnum\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 { I agree.\tab \line \line }{
+\b LORD JUSTICE KENNEDY:
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 28.\tab}}{I also agree.
+\par }\pard \s1\ql \li0\ri0\sa120\widctlpar\hyphpar0\aspalpha\aspnum\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 {\b Order:}{ Appeal allowed, respondent be not entitled to category B retirement pension until 2 December 1997; no order for costs.
+\par }\pard \s1\qc \li0\ri0\sa120\widctlpar\hyphpar0\aspalpha\aspnum\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 {(Order does not form part of the approved judgment)
+\par }}

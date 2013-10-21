@@ -1,0 +1,543 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f27\fswiss\fcharset0\fprq2{\*\panose 020b0604030504040204}Tahoma;}
+{\f45\fswiss\fcharset0\fprq2{\*\panose 00000000000000000000}Univers (W1){\*\falt Arial};}{\f170\froman\fcharset238\fprq2 Times New Roman CE;}{\f171\froman\fcharset204\fprq2 Times New Roman Cyr;}{\f173\froman\fcharset161\fprq2 Times New Roman Greek;}
+{\f174\froman\fcharset162\fprq2 Times New Roman Tur;}{\f175\froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\f176\froman\fcharset178\fprq2 Times New Roman (Arabic);}{\f177\froman\fcharset186\fprq2 Times New Roman Baltic;}
+{\f386\fswiss\fcharset238\fprq2 Tahoma CE;}{\f387\fswiss\fcharset204\fprq2 Tahoma Cyr;}{\f389\fswiss\fcharset161\fprq2 Tahoma Greek;}{\f390\fswiss\fcharset162\fprq2 Tahoma Tur;}{\f391\fswiss\fcharset177\fprq2 Tahoma (Hebrew);}
+{\f392\fswiss\fcharset178\fprq2 Tahoma (Arabic);}{\f393\fswiss\fcharset186\fprq2 Tahoma Baltic;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;
+\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{
+\ql \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \snext0 Normal;}{\s1\qj \fi-720\li720\ri0\sb240\sa240\sl480\slmult1\widctlpar
+\jclisttab\tx720\hyphpar0\faauto\ls19\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext1 heading 1;}{\s2\qj \fi-709\li1418\ri0\sb240\sa240\sl480\slmult1\widctlpar
+\jclisttab\tx1418\faauto\ls19\ilvl1\adjustright\rin0\lin1418\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext2 heading 2;}{\s3\qj \fi-709\li2127\ri0\sb240\sa240\sl480\slmult1\widctlpar
+\jclisttab\tx2127\faauto\ls19\ilvl2\adjustright\rin0\lin2127\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext3 heading 3;}{\s4\qj \fi-709\li2836\ri0\sb240\sa240\sl480\slmult1\widctlpar
+\jclisttab\tx3207\faauto\ls19\ilvl3\adjustright\rin0\lin2836\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext4 heading 4;}{\s5\qj \fi-709\li3545\ri0\sb240\sa240\sl480\slmult1\widctlpar
+\jclisttab\tx3545\faauto\ls19\ilvl4\adjustright\rin0\lin3545\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext5 heading 5;}{\s6\qj \fi-709\li4254\ri0\sb240\sa240\sl480\slmult1\widctlpar
+\jclisttab\tx4625\faauto\ls19\ilvl5\adjustright\rin0\lin4254\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext6 heading 6;}{\s7\qj \fi-709\li4963\ri0\sb240\sa240\sl480\slmult1\widctlpar
+\jclisttab\tx4963\faauto\ls19\ilvl6\adjustright\rin0\lin4963\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext7 heading 7;}{\s8\qj \fi-709\li5672\ri0\sb240\sa240\sl480\slmult1\widctlpar
+\jclisttab\tx6043\faauto\ls19\ilvl7\adjustright\rin0\lin5672\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext8 heading 8;}{\s9\qj \fi-709\li6381\ri0\sb240\sa240\sl480\slmult1\widctlpar
+\jclisttab\tx6381\faauto\ls19\ilvl8\adjustright\rin0\lin6381\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext9 heading 9;}{\*\cs10 \additive Default Paragraph Font;}{\s15\ql \li0\ri0\widctlpar
+\tqc\tx4153\tqr\tx8306\faauto\adjustright\rin0\lin0\itap0 \f45\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext15 header;}{\s16\ql \li0\ri0\widctlpar\tqc\tx4153\tqr\tx8306\faauto\adjustright\rin0\lin0\itap0 
+\f45\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext16 footer;}{\*\cs17 \additive \fs20 \sbasedon10 page number;}{\*\cs18 \additive \fs20 \sbasedon10 line number;}{\s19\ql \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 
+\cbpat9 \f27\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext19 Document Map;}{\s20\qc \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 \b\fs36\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext20 CoverDesc;}{
+\s21\ql \li0\ri0\widctlpar\tx0\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\hyphpar0\faauto\adjustright\rin0\lin0\itap0 \b\fs24\ul\expndtw-3\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext21 
+CoverMain;}{\s22\qr \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 \fs24\ul\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext22 CoverText;}{\s23\ql \li0\ri0\sb240\sa240\sl480\slmult1
+\keepn\widctlpar\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext1 Heading;}{\s24\qj \li1440\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin1440\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext1 Quote;}{\s25\qj \li0\ri0\sb240\sa240\sl480\slmult1\widctlpar\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext1 
+ParaNoNumber;}{\s26\qc \li0\ri0\widctlpar\brdrt\brdrs\brdrw20\brsp20 \brdrl\brdrs\brdrw20\brsp20 \brdrb\brdrs\brdrw20\brsp20 \brdrr\brdrs\brdrw20\brsp20 \faauto\adjustright\rin0\lin0\itap0 \b\fs36\ul\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 
+\sbasedon0 \snext26 Title;}{\s27\ql \li0\ri0\sa240\widctlpar\brdrt\brdrs\brdrw15\brsp20 \aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \b\fs24\lang2057\langfe1033\kerning28\cgrid\langnp2057\langfenp1033 \sbasedon26 \snext0 Text heading;}{
+\s28\qc \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \b\caps\fs36\lang2057\langfe1033\kerning28\cgrid\langnp2057\langfenp1033 \sbasedon26 \snext29 Decision Head;}{
+\s29\qj \li0\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\kerning28\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext29 Decision Text;}{
+\s30\qj \li0\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs20\lang2057\langfe1033\kerning28\cgrid\langnp2057\langfenp1033 \sbasedon0 \snext30 Headnote text;}}{\*\listtable{\list\listtemplateid134807567\listsimple{\listlevel
+\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid243808380}
+{\list\listtemplateid200449398{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s1\fi-720\li720
+\jclisttab\tx720 }{\listlevel\levelnfc2\levelnfcn2\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'01);}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s2\fi-709\li1418\jclisttab\tx1418 }
+{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'02);}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s3\fi-709\li2127\jclisttab\tx2127 }{\listlevel\levelnfc2
+\levelnfcn2\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'03);}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s4\fi-709\li2836\jclisttab\tx3207 }{\listlevel\levelnfc4\levelnfcn4\leveljc0
+\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'03(\'04);}{\levelnumbers\'02;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s5\fi-709\li3545\jclisttab\tx3545 }{\listlevel\levelnfc2\levelnfcn2\leveljc0\leveljcn0
+\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'03(\'05);}{\levelnumbers\'02;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s6\fi-709\li4254\jclisttab\tx4625 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\'03(\'06);}{\levelnumbers\'02;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s7\fi-709\li4963\jclisttab\tx4963 }{\listlevel\levelnfc2\levelnfcn2\leveljc0\leveljcn0\levelfollow0\levelstartat1
+\levelspace0\levelindent0{\leveltext\'03(\'07);}{\levelnumbers\'02;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s8\fi-709\li5672\jclisttab\tx6043 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\'03(\'08);}{\levelnumbers\'02;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s9\fi-709\li6381\jclisttab\tx6381 }{\listname ;}\listid1341081942}}{\*\listoverridetable{\listoverride\listid1341081942\listoverridecount0\ls1}
+{\listoverride\listid1341081942\listoverridecount0\ls2}{\listoverride\listid1341081942\listoverridecount0\ls3}{\listoverride\listid1341081942\listoverridecount0\ls4}{\listoverride\listid1341081942\listoverridecount0\ls5}{\listoverride\listid1341081942
+\listoverridecount0\ls6}{\listoverride\listid1341081942\listoverridecount0\ls7}{\listoverride\listid1341081942\listoverridecount0\ls8}{\listoverride\listid1341081942\listoverridecount0\ls9}{\listoverride\listid1341081942\listoverridecount0\ls10}
+{\listoverride\listid1341081942\listoverridecount0\ls11}{\listoverride\listid1341081942\listoverridecount0\ls12}{\listoverride\listid1341081942\listoverridecount0\ls13}{\listoverride\listid1341081942\listoverridecount0\ls14}{\listoverride\listid1341081942
+\listoverridecount0\ls15}{\listoverride\listid1341081942\listoverridecount0\ls16}{\listoverride\listid1341081942\listoverridecount0\ls17}{\listoverride\listid1341081942\listoverridecount0\ls18}{\listoverride\listid1341081942\listoverridecount0\ls19}
+{\listoverride\listid1341081942\listoverridecount0\ls20}{\listoverride\listid1341081942\listoverridecount0\ls21}{\listoverride\listid1341081942\listoverridecount0\ls22}{\listoverride\listid1341081942\listoverridecount0\ls23}{\listoverride\listid1341081942
+\listoverridecount0\ls24}{\listoverride\listid1341081942\listoverridecount0\ls25}{\listoverride\listid1341081942\listoverridecount0\ls26}{\listoverride\listid1341081942\listoverridecount0\ls27}{\listoverride\listid243808380\listoverridecount0\ls28}}{\info
+{\title Court of Appeal Judgment Template}{\subject Word 97 version}{\author Ferris}{\operator Unisys}{\creatim\yr2004\mo10\dy20\hr12\min30}{\revtim\yr2004\mo10\dy26\hr12\min39}{\printim\yr2004\mo10\dy26\hr12\min39}{\version5}{\edmins15}{\nofpages21}
+{\nofwords8696}{\nofchars49571}{\*\company Court Service}{\nofcharsws60876}{\vern8283}}\paperw11909\paperh16834\margl1418\margr1134\gutter1134 
+\facingp\widowctrl\ftnbj\aenddoc\margmirror\aftnnar\noxlattoyen\expshrtn\noultrlspc\dntblnsbdb\nospaceforul\lytprtmet\hyphcaps0\formshade\horzdoc\dghspace120\dgvspace120\dghorigin1701\dgvorigin1984\dghshow0\dgvshow3
+\jcompress\viewkind1\viewscale120\pgbrdrhead\pgbrdrfoot\nolnhtadjtbl \fet0\sectd \psz9\linex0\headery680\footery680\colsx709\sectdefaultcl {\headerl \pard\plain \s15\ql \li0\ri0\widctlpar\tqc\tx4153\tqr\tx8306\faauto\adjustright\rin0\lin0\itap0 
+\f45\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\b\f0\fs20 R(IB) 3/03
+\par }{\b\i\f0\fs20 (Howker v. S of S}{\b  }{\b\i\f0\fs20 and}{\b  }{\b\i\f0\fs20 another}{\i\f0\fs20 )}{\b\i\f0\fs20 
+\par }}{\headerr \pard\plain \s15\qr \li0\ri0\widctlpar\tqc\tx4153\tqr\tx8306\faauto\adjustright\rin0\lin0\itap0 \f45\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\b\f0\fs20 R(IB) 3/03
+\par }{\b\i\f0\fs20 (Howker v. S of S}{\b  }{\b\i\f0\fs20 and}{\b  }{\b\i\f0\fs20 another}{\i\f0\fs20 )}{\b\i\f0\fs20 
+\par }}{\footerl \pard\plain \s16\qc \li0\ri0\widctlpar\tqc\tx4153\tqr\tx8306\faauto\adjustright\rin0\lin0\itap0 \f45\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\field{\*\fldinst {\cs17\f0\fs22  PAGE }}{\fldrslt {
+\cs17\f0\fs22\lang1024\langfe1024\noproof 2}}}{\f0\fs22 
+\par }}{\footerr \pard\plain \s16\qc \li0\ri0\widctlpar\tqc\tx4153\tqr\tx8306\faauto\adjustright\rin0\lin0\itap0 \f45\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\field{\*\fldinst {\cs17\f0\fs22  PAGE }}{\fldrslt {
+\cs17\f0\fs22\lang1024\langfe1024\noproof 3}}}{\f0\fs22 
+\par }}{\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}
+{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8
+\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \s28\qc \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 
+\b\caps\fs36\lang2057\langfe1033\kerning28\cgrid\langnp2057\langfenp1033 {R(ib) 3/03
+\par }\pard\plain \s29\qc \li0\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\kerning28\cgrid\langnp2057\langfenp1033 {\b (Howker v. Secretary of State for Work and Pensions and another [2002] EWCA Civ 1623)
+
+\par }\pard \s29\qj \li0\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\expnd0\expndtw-3 
+\par }\pard \s29\qj \li0\ri0\widctlpar\tqr\tx8190\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b CA (Peter Gibson, Mance and Hale LJJ)}{\tab }{\b CIB/4563/1998\line 8.11.02
+\par }\pard\plain \s27\qj \li0\ri0\sa240\widctlpar\brdrt\brdrs\brdrw15\brsp20 \aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \b\fs24\lang2057\langfe1033\kerning28\cgrid\langnp2057\langfenp1033 {Exceptional circumstances \endash 
+ misleading reference of amending regulation to Social Security Advisory Committee \endash  invalidity of amendment
+\par }\pard\plain \s30\qj \li0\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs20\lang2057\langfe1033\kerning28\cgrid\langnp2057\langfenp1033 {The claimant did not satisfy the \'93all work\'94
+ test, but was entitled to incapacity benefit as suffering \'93from some specific disease \'85 and by reason of such disease \'85 there would be a substantial risk to [his] mental or physical health\'85if he was found capable of work\'94
+ within the exception provided by regulation 27(b) of the Social Security (Incapacity for Work) (General) Regulations 1995 (\'93the 1995 Regulations\'94). In 1996 the conditions in regulation 27 were recast and para
+graph (b) was removed by the Social Security (Incapacity for Work and Miscellaneous) Regulations 1996 (\'93the 1996 Regulations\'94). The claimant did not fall within the exceptions as amended and his entitlement to incapacity benefit was terminated. 
+
+\par Section 172 of the Social Security Administration Act 1992 required the Secretary of State for Work and Pensions to refer proposals for certain regulations to the Social Security Advisory Committee unless \'85 (section 173(1)(b)) \'93
+the [Committee] have agreed that they shall not be referred\'94
+. Proposed amendments to regulations were referred informally to the Committee for them to decide whether they required a formal reference under section 172 or whether they agreed, under section 173, that the proposals should not be r
+eferred. The Committee members were accustomed and expected to rely on the information and assistance of officials of the Department for Work and Pensions as to the detail and intended effects of any proposal put to them. The practice was for each propose
+d amendment to be described by the departmental officials as \'93technical\'94, \'93neutral\'94, \'93adverse\'94 or \'93beneficial\'94. In 1996 when the proposal amendment of regulation 27 of the 1995 Regulations was submitted it was described as \'93
+neutral\'94. At a subsequent meeting of the Committee to consider the proposals an official explained, in answer to questions about whether all the amendments were in fact \'93neutral\'94
+, that all claimants who fell within regulation 27(b) of the 1995 Regulations would be covered by other provisions within the \'93all work test\'94
+. Those statements were untrue. In reliance on them, the Committee did not require a formal reference of the proposed recasting of regulation 27 and the 1996 Regulations were made.
+\par The claimant challenged the validity of regul
+ation 27 as amended by the 1996 Regulations contending that he should continue to be given the benefit of regulation 27(b) of the 1995 Regulations as originally enacted. An appeal tribunal rejected his appeal against the termination of his benefit. He app
+e
+aled to the Commissioner who criticised the conduct of the departmental officials responsible for the misstatements but, in view of the concession that the agreement of the Committee was not procured by deception, concluded that the objective fact of that
+ agreement was sufficient to comply with section 173(1)(b). The 1996 amendment of regulation 27 was therefore not invalid. On further appeal by the claimant to the Court of Appeal,
+\par 
+\par }{\i Held,}{ allowing the appeal, that:
+\par {\pntext\pard\plain\s30 \fs20\lang2057\langfe1033\kerning28\langnp2057 \hich\af0\dbch\af0\loch\f0 1.\tab}}\pard \s30\qj \li0\ri0\sa120\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls28\pnrnot0\pndec\pnstart1\pnindent360\pnsp120\pnhang{\pntxta .}}
+\aspalpha\aspnum\faauto\ls28\adjustright\rin0\lin0\itap0 {the Commissioner had jurisdiction to deter
+mine the question of whether the amended regulation 27 was validly made in accordance with the procedure required by the enabling Act, and it was not necessary to leave that to judicial review proceedings/ (paragraphs 33 and 34, paragraph 52)}{\i ;}{
+
+\par }\pard \s30\qj \li0\ri0\sa120\widctlpar{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\i  Chief Adjudication Officer v. Foster}{ [1993] AC 754, R(IS) 22/93 applied. 
+\par {\pntext\pard\plain\s30 \fs20\lang2057\langfe1033\kerning28\langnp2057 \hich\af0\dbch\af0\loch\f0 2.\tab}}\pard \s30\qj \li0\ri0\sa120\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls28\pnrnot0\pndec\pnstart1\pnindent360\pnsp120\pnhang{\pntxta .}}
+\aspalpha\aspnum\faauto\ls28\adjustright\rin0\lin0\itap0 {where the Secretary of State through his officials has misled the Committee and thereby procured the Committee\rquote 
+s agreement to no formal reference, and where the provision of correct information would have led to a reference (as the Commissioner found) the statutory procedure  for the making of regulations had not been observed (paragraph 37);
+\par {\pntext\pard\plain\s30 \fs20\lang2057\langfe1033\kerning28\langnp2057 \hich\af0\dbch\af0\loch\f0 3.\tab}}\pard \s30\qj \li1418\ri0\sa120\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls28\pnrnot0\pndec\pnstart1\pnindent360\pnsp120\pnhang{\pntxta .}}
+\aspalpha\aspnum\faauto\ls28\adjustright\rin0\lin1418\itap0 {the 1996 amendment of regulation 27 was accordingly invalid and regulation 27(b) of the 1995 Regulations as modified by the judgment in }{\i 
+R v. Secretary of Sate for Social Security, ex parte Moule}{ (12 September 1996, unreported) continued in operation.
+\par }\pard \s30\qj \li0\ri0\sa120\widctlpar\brdrt\brdrs\brdrw10\brsp20 \aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {
+\par }\pard\plain \qc \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\b DECISION OF THE COURT OF APPEAL}{
+\par 
+\par 
+\par }\pard \ql \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 {Mr Richard Drabble QC (instructed by Child Poverty Action Group) appeared for the Appellant.
+\par 
+\par Mr Philip Sales and Mr Jason Coppel (instructed by the Office of the Solicitor to the Department for Work and Pensions) appeared for the First Respondent.
+\par 
+\par Mr John Howell QC and Miss Gemma White (instructed by the Treasury Solicitor) appeared for the Second Respondent.
+\par 
+\par }\pard \qc \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 {\b Judgment (reserved)
+\par 
+\par 
+\par }\pard \ql \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 {\b LORD JUSTICE PETER GIBSON: {\*\bkmkstart Orderstart}{\*\bkmkend Orderstart}
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 1.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx720\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {Eric Howker appeals from the decision given on 4 May 2001 by a Social Security Commissioner, Mr Patrick Howell QC. Thereby the Commissioner dismissed Mr Howker\rquote s appeal fr
+om the decision on 6 June 1997 of a social security appeal tribunal sitting in Sutton, confirming that Mr Howker\rquote 
+s previous entitlement to incapacity benefit had been correctly reviewed and terminated from 5 February 1997. The tribunal rejected Mr Howker\rquote s
+ argument that he should continue to be entitled to benefit by reason of a provision in regulation 27(b) of the Social Security (Incapacity for Work) (General) Regulations 1995 (\'93the 1995 Regulations\'94
+). That provision was repealed and not re-enacted by the Social Security (Incapacity for Work and Miscellaneous Amendments) Regulations 1996 (\'93the 1996 Regulations\'94
+), but Mr Howker challenged the validity of the new regulation 27. This appeal is brought with the permission of the Commissioner, who made trenchant criticisms of the conduct of officials in the Department of Social Security (\'93the Department\'94
+) in the course of the making of the 1996 Regulations. The issue raised on this appeal is whether by reason of that conduct the new regulation 27 was not validly
+ made by the Secretary of State with the result that the exemption in regulation 27(b) of the 1995 Regulations continues in force.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 2.\tab}I must now set out the background facts which I take largely from the unchallenged findings made by the Commissioner in his full and lucid decision.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 3.\tab}}\pard \s1\qj \li0\ri0\sa120\widctlpar\jclisttab\tx720\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 {
+Mr Howker, who is in his late 50s, has for some years been suffering from heart trouble and other health problems. He received invalidity benefit from 1994. That benefit was replaced by incapacity benefit on 13 April 1995. The princ
+ipal test for that benefit is what is known as the \'93all work test\'94
+, a points-based test designed to determine whether someone is incapable of taking paid employment of some kind. Mr Howker was found not to satisfy that test. However, the 1995 Regulations c
+ontained in regulation 27 a provision for entitlement to benefit in certain exceptional cases where the all work test was not satisfied. By regulation 27:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93A person who does not satisfy the all work test shall be treated as incapable of work if in the opin
+ion of a doctor approved by the Secretary of State \endash 
+\par  ... 
+\par (b) he suffers from some specific disease or bodily or mental disablement and, by reasons [sic] of such disease or disablement, there would be a substantial risk to the mental or physical health of any person if he was found capable of work ... \'94
+
+\par }\pard\plain \s25\qj \li0\ri0\sb240\sa240\widctlpar\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {
+Paragraph (b) applied to Mr Howker, as was accepted by the Department. However, in an unreported judgment of Collins J. on 12 September 1996 in }{\i R v. Secretary of State for Social Security ex parte Moule}{ reg
+ulation 27 was held to be invalid as outside the enabling legislation, in that it provided for the question of deemed incapacity to be determined by a doctor approved by the Secretary of State rather than by an adjudication officer as required by the legi
+slation.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 4.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {
+Consequent on that decision the Department proposed alterations to regulation 27. The proposals were to make the question whether the conditions for exemption were satisfied one for the determination of the adjudication officer and to recast those 
+conditions by, amongst other things, deleting paragraph (b) without replacement. None of the remaining exempting conditions applies to Mr Howker, as he accepts.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 5.\tab}The power to make regulations in this field is vested in the Secretary of State. By section 171D Social Security Contributions and Benefits Act 1992 as amended:
+
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93
+ ... Regulations may provide that a person shall be treated as capable of work, or as incapable of work, in such cases or circumstances as may be prescribed.\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 6.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {Under section 6 Social Security (Incapacity for Work) Act 1994 the statutory instrument by which the Secretary of State exercises the power to make regulations \'93
+shall not be made unless a draft of the instrument has been laid before Parliament and approved by a resolution of each House\'94; in other words the making of the regulations is subject to the affirmative resolution procedure.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 7.\tab}Sections 170 \endash  174 Social Security Administration Act 1992 (\'93the 1992 Act\'94
+) contained further provisions governing the procedure for making and amending regulations. By section 9 Social Security Act 1980 the Social Security Advisory Committee (\'93the Committee\'94
+) was constituted. This is an independent advisory committee, described by the Commissioner (in paragraph 13 of his decision) as \'93a body of people of great distinction and experience in public life generally, and in particular on social issues\'94.
+
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 8.\tab}Section 170(1) of the 1992 Act provided for the continuation in being of the Committee:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93(a)  to give (whether in pursuance of a reference under this Act or otherw
+ise) advice and assistance to the Secretary of State in connection with the discharge of his functions under the relevant enactments ... \'94
+\par }\pard\plain \s25\qj \li0\ri0\sb240\sa240\widctlpar\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {
+The relevant enactments include the Social Security Contributions and Benefits Act 1992 and the 1992 Act. By section 170 (4):
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93
+The Secretary of State shall furnish the Committee with such information as the Committee may reasonably require for the proper discharge of its functions.\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 9.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {Section 172 (1) of the 1992 Act provides, so far as material:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93Subject \endash 
+\par  ... 
+\par (b) to section 173 below,
+\par where the Secretary of State proposes to make regulations under any of the relevant enactments, he shall refer the proposals, in the form of draft regulations or otherwise, to the Committee.\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 10.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {By section 173 of the 1992 Act, so far as material:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93
+(1) Nothing in any enactment shall require any proposals in respect of regulations to be referred to the Committee ... if \endash 
+\par }\pard \s24\qj \li1440\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin1440\itap0 {(a) it appears to the Secretary of State that by reason of the urgency of the matter it is inexpedient so to refer them; or
+\par (b)  the [Committee has] agreed that they shall not be referred.
+\par }\pard \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 {
+(2) Where by virtue only of subsection (1)(a) above the Secretary of State makes regulations without proposals in respect of them having been referred, then, unless the [Committee] agrees that t
+his subsection shall not apply, he shall refer the regulations to [it] as soon as practicable after making them.
+\par (3) Where the Secretary of State has referred proposals to the Committee ... , he may make the proposed regulations before the Committee have m
+ade their report ... only if after the reference it appears to him that by reason of the urgency of the matter it is expedient to do so.
+\par (4) Where by virtue of this section regulations are made before a report of the Committee has been made, the Committee 
+shall consider them and make a report to the Secretary of State continuing such recommendations with regard to the regulations as the Committee thinks appropriate; and a copy of any report made to the Secretary of State on the regulations shall be laid by
+ him before each House of Parliament together, if the report contains recommendations, with a statement \endash 
+\par }\pard \s24\qj \li1440\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin1440\itap0 {(a) of the extent (if any) to which the Secretary of State proposes to give effect to the recommendations; and
+\par (b) in so far as he does not propose to give effect to them, of his reasons why not.\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 11.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {Section 174 provides, so far as material:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93
+(1)  The Committee shall consider any proposals referred to it by the Secretary of State under section 172 above and shall make to the Secretary of State a report cont
+aining such recommendations with regard to the subject-matter of the proposals as the Committee thinks appropriate.
+\par  (2)  If after receiving a report of the Committee the Secretary of State lays before Parliament any regulations or draft regulations which 
+comprise the whole or any part of the subject-matter of the proposals referred to the Committee, he shall lay with the regulations or draft regulations a copy of the Committee\rquote s report and a statement showing \endash 
+\par }\pard \s24\qj \li1440\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin1440\itap0 {(a)  the extent (if any) to which he has, in framing the regulations, given effect to the Committee\rquote s recommendations; and
+\par (b) in so far as effect has not been given to them, his reasons why not.\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 12.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {The Committee\rquote s staff consists only of a small permanent secretariat. The Committee members in practice 
+are accustomed, and expect, to rely on the information and assistance provided by officials of the Department in relation to the detail and intended effects of any proposal the Department puts before them.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 13.\tab}The procedure adopted by the Committee and the Dep
+artment is that the Department refers proposed amendments to regulations to the Committee on an informal basis so that the Committee has the opportunity to decide whether it wishes the proposed amendments to be referred formally to it under section 172 or
+ whether it agrees under section 173 that they should not be referred. The practice of the Department, when presenting packages of regulations to the Committee, is to describe each item proposed and, at the Committee\rquote 
+s request, to add an indicator to show whether the item is technical, neutral, adverse or beneficial. Of those indicators, \'93neutral\'94 means:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93
+The amendment has an effect in changing the wording but only to clarify its meaning to what it was always believed to have meant.  This may arise because l
+awyers have realised it could mean something different.  However, no one will lose or gain, the amendment simply secures what has always been the interpretation of the present wording.\'94
+\par }\pard\plain \s25\qj \li0\ri0\sb240\sa240\widctlpar\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {In contrast \'93adverse\'94 means:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93This is used when existing claimants wil
+l lose money in future.  It may only involve a few people and the loss may be of money they clearly should not have had \endash  but there is a loss.\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 14.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {By letter dated 28 October 1996 an official of the Department, Mr Axton, presented to the Committee the Department\rquote 
+s proposed amendments to the 1995 Regulations. In the letter it was said that the new regulations were \'93to restore the policy intention\'94 following the decision in }{\i ex parte Moule}{
+ and that the 1995 Regulations were redrafted to allow adjudication officers to consider medical evidence other than that of the Department\rquote 
+s examining doctor. In an Annex to a paper prepared for a meeting of the Committee on 6 November 1996 the Department said that the new provision was \'93more precisely defined to reflect the fact
+ that it must be interpreted and applied by lay adjudicating authorities\'94. The indicator given to the proposed amendment to regulation 27 was \'93neutral\'94.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 15.\tab}The meeting on 6 November 1996 was attended in force by officials of the Department. The Committee was 
+not supplied with regulation 27 of the 1995 Regulations and so was not in a position to make a comparison with the proposed regulation 27. Nevertheless, paragraph 3.4 of the minutes records that members of the Committee queried whether the Department
+\rquote s des
+cription of some of the amendments as neutral in effect was correct. In paragraph 3.5 it was recorded that Dr Sawney of the Department explained that those who fell into the category covered by regulation 27(b) of the 1995 Regulations would be covered by 
+other provisions within the all work test.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 16.\tab}The Committee decided to require a formal reference of one proposal concerning severe disablement allowance, which had the indicator \'93adverse\'94
+. That decision caused the Department not to proceed with that proposal.
+ On 8 November 1996 the Committee was asked by the Department to confirm that it was content with the final draft of the proposals, and shortly after that the Committee did so confirm. The draft instrument was laid before Parliament and considered by the 
+J
+oint Scrutiny Committee on Statutory Instruments which determined that the special attention of both Houses did not have to be drawn to the regulations. Both Houses then approved the regulations. In the House of Lords the responsible Government Minister, 
+Lord Mackay of Ardbrecknish, said:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93The amendment defines this \'93exceptional circumstance\'94
+ provision more precisely in the light of the High Court judgment.  But we are satisfied that it will not exclude anyone whom we originally intended to be covered.  We are redefining the provision more precisely in the light of the court\rquote 
+s decision.  But, as I said, it is not our intention that anyone who would have been covered originally should now be excluded.\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 17.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {The 1996 Regulations were then made by the Secretary of State on 19 December 1996 and came into force on 6 January 1997. The new regulation 27 was in this form:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93
+(1)  A person who does not satisfy the all work test shall be treated as incapable of work if any of the circumstances set out in paragraph (2) apply to him.
+\par (2)  The circumstances are that \endash 
+\par (a) he is suffering from a severe life threatening disease in relation to which \endash 
+\par }\pard \s24\qj \li1440\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin1440\itap0 {(i) there is medical evidence that the disease is uncontrollable, or uncontrolled, by a recognised therapeutic procedure, and
+\par (ii) in the case of a disease which is uncontrolled, there is a reasonable cause for it not to be controlled by a recognised therapeutic procedure;
+\par }\pard \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 {(b) he suffers from a previously undiagnosed potentially life threatening condition which has been discovered durin
+g the course of a medical examination carried out for the purposes of the all work test by a doctor approved by the Secretary of State;
+\par (c) there exists medical evidence that he requires a major surgical operation or other major therapeutic procedure and i
+t is likely that that operation or procedure will be carried out within three months of the date of a medical examination carried out for the purposes of the all work test.\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 18.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {On 20 December 1996 the Child Poverty Action Group wrote to the Committee to enqui
+re about the basis on which the Committee had agreed to dispense with a formal reference and report on the removal of regulation 27(b). Mr Smith, the Secretary of the Committee, replied on 3 January 1997 that it had questioned officials closely on the cha
+n
+ges to regulation 27, that the explanation they gave was consistent with the reply which the Minister gave to the House of Lords and that on this assurance about the reasons for, and intentions of, the proposed amendment the Committee decided not to seek 
+a formal reference.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 19.\tab}
+On 28 January 1997 Mr Howker was examined for the purposes of the all work test and failed to attain the required points to qualify for benefit by that route. Under the new regulation 27 he did not qualify for exemption from satisfying t
+hat test. His entitlement to benefit was terminated from 5 February 1997. It is accepted by him that the making of the 1996 Regulations was a change of circumstances justifying the review of his benefit.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 20.\tab}The Commissioner made the following findings in paragraph 34 of his decision:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93
+(1) The Committee members were materially misled by what they were told by the departmental officials about the proposed amendment of regulation 27.  In particular they were misled by the statements made in Mr Axton\rquote s letter of 2
+8 October 1996 and the explanatory memorandum on \'93Proposal 11: [neutral amendment]\'94
+, telling them that the purpose and effect of the amendment was only to cope with the procedural consequences of transferring the decision on exemption from the all work test to an adjudication officer instead of a doctor in the wake of the decision in }{
+\i ex parte Moule,}{ and that the changes were \'93neutral\'94 in their effect on claimants in that no existing entitlement under the regulation would be taken away.
+\par (2) Those statements 
+were untrue, and obviously so to anyone who looked at the old exempting conditions in conjunction with the new ones.  The decision to remove the old regulation 27(b) as a separate head of exemption cannot have been other than deliberate, to take away an e
+xisting basis of entitlement actually being awarded on the opinion of the department\rquote s own doctors.
+\par (3) Those statements were made by the departmental officials responsible for them with the intention that the Committee should act on them in deciding whethe
+r or not to give their agreement that a reference and report on the proposed amendment was not necessary; and were made with a view to securing such agreement.
+\par (4) The misleading impression given by the written statements was not corrected by any adequate explanation of the substance of the change to regulation 27 in the course of the meeting itself:  the reference to the removal of the \'93substantial risk\'94
+ exempting condition recorded in the minute at paragraph 3.5 leaving the continuing, and misleading, imp
+ression that any person whose entitlement currently arose by reason of that provision would instead continue to be entitled under some other provision of the redrafted regulations, and that all was related to the procedural changes necessary following the
+ High Court decision.
+\par (5) The Committee members with entire propriety and good faith accepted and acted on the misleading statements and assurances made to them, and gave their agreement on that basis.
+\par (6) Finally, I consider it the proper inference to draw from the Committee\rquote s obvious concern as shown by minutes 3.4 and 3.5, the factual explanation given by Mr Smith\rquote 
+s letter shortly after the event which I accept as accurate, and what in fact happened over proposal 26 (severe disablement allowance, the one amendment described to them as \'93adverse\'94
+), that they would not have acted as they did if the amendment to regulation 27 removing the exempting condition of which most advantage had been taken by claimants had been correctly presented to them as the adverse
+ amendment it was, but would then have required it to be the subject of a reference and report along with proposal 26; and I so find.\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 21.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {As the Commissioner recorded in paragraph 35 of his decision, Mr Drabble QC, who appeared for Mr Howker before the Commis
+sioner as he does before us, made clear that it was not alleged that the Committee had been misled deliberately by the Department. The Commissioner commented that, on the material before him, he left that as an open question, no documentary or other expla
+nation having been supplied. The Commissioner said in paragraph 35:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93
+the net impression, I regret to have to say, is of a piece of extremely sharp practice in the dealings of departmental policy officials with the Committee, for which no satisfactory explan
+ation (indeed no real explanation of any kind) has been put forward.\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 22.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {The Commissioner then proceeded to deal with the legal issues. He referred to the fact that the agreement by the Committee to there being no reference in respect of regulation 27 had bee
+n induced by material misrepresentation on the part of officials acting on behalf of the Secretary of State. He posed the question whether this meant that the amendment must be held invalid on the basis that the agreement had been based on a material misu
+n
+derstanding, as was contended by Mr Drabble, or whether it was not for the Commissioner to look behind the apparent agreement of the Committee, as argued by the Secretary of State and the Committee. The Commissioner rejected a submission by counsel then a
+p
+pearing for the Secretary of State that a challenge to the validity of the new regulation 27 could not be entertained by the Commissioner after that regulation had received the express approval of both Houses of Parliament. That argument is not repeated b
+efore this court. The Commissioner said that the courts\rquote 
+ function consisted only of saying whether the limited legislative power Parliament had conferred by primary legislation had been exceeded in the particular case or not, and that was solely a question 
+of ascertaining the proper scope of the power. He said that compliance with the requirements of sections 172 \endash  174 of the 1992 Act was a necessary precondition to any proper exercise of the power in any case where those requirements apply.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 23.\tab}The Commissioner in paragraph 43 said this:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93
+The issue on which this case depends therefore resolves itself, in my judgment, to one simple question of statutory construction of what, if any, }{\lang1033\langfe1033\cgrid0\langnp1033 
+limitations are to be placed on the single word "agreed" in section 173 (1)(b).}{\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 24.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {The Commissioner noted that it was not disputed that if the agreement had been procured by fraud, there would have been no effective agreement. But he continued in paragraph 45:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93But once the concession was made that this was not such a case, and I was not
+ being asked to make any finding that the Committee\rquote s agreement had been procured by deception, the possibility of challenge to the validity of these regulations was in my judgment for practical purposes at an end.\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 25.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {The Commissioner rejected an argument by
+ Mr Drabble that the validity of the 1996 Regulations should be determined by reference to public law principles applied in judicial review cases. He said in paragraph 47:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93In my judgment however that is placing far too heavy and broad a set of implied lim
+itations on the single word \'93agreed\'94
+ in this context.  Parliament cannot possibly be taken to have intended that I or any other court concerned with the validity of a piece of secondary legislation affecting individual private rights should embark on a pro
+cess of enquiry akin to judicial review into the past processes of the Social Security Advisory Committee, before determining whether what would undoubtedly be accepted in any ordinary litigation as the objective fact of their agreement should be allowed 
+to \'93count\'94 for this purpose or not.  That special jurisdiction is not of course one I have or can exercise, and though the Queen\rquote 
+s Bench Divisional Court no doubt might grant prerogative remedies in relation to the functions of the Social Security Advisory Committee in a proper case, it has not done so here.  I decline to think that Parliament by using the word \'93agreed\'94
+ intended me to embark on what would be bound to be an entirely speculative exercise on whether that Court would have ever thought right to allow such proceedings to be brought before it in relation to the Committee\rquote 
+s decision on these regulations (now in any event completely impossible because of the lapse of time), or what, if anything, it would or might have thought fit to do or say about it if it had.\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 26.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {
+The Commissioner therefore rejected the submission that there should be implied into section 173(1)(b) a requirement of anything other than the objective fact of an agreement on the part of the Committee of which account would be taken in a co
+urt of law on ordinary legal principles, whatever the reasons the Committee had chosen to give it. He therefore dismissed the appeal.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 27.\tab}The Commissioner directed that copies of his decision be sent to the Parliamentary Joint Scrutiny Committee on Statutory I
+nstruments and to the House of Commons Social Security Select Committee. We are told that neither Committee has considered it necessary to take further steps.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 28.\tab}On this appeal we have had the benefit of skilful arguments from Mr Drabble for Mr Howker, Mr Sal
+es for the Secretary of State and Mr John Howell QC for the Committee.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 29.\tab}I summarise Mr Drabble\rquote s arguments as follows:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {
+(1)  the Commissioner has the same jurisdiction to rule on the validity of the new regulation 27 as the Administrative Court on an applica
+tion for judicial review, and can exercise that jurisdiction notwithstanding that the three-month period normally applicable for judicial review proceedings in the Administrative Court has expired;
+\par (2)  the statutory procedure for making regulations in the
+ social security field requires that Parliament should have the assistance of the Committee in the form of a report on regulations proposed by the Secretary of State unless (so far as material in the present case) the Committee has agreed to no reference 
+of the proposals;
+\par (3)  the Secretary of State in breach of his duty under section 170(4), through his officials provided the Committee with information which was erroneous, as was obvious to anyone comparing the old regulation 27 with the proposed regulation 27;
+\par (4)  thereby the Committee was misled into giving its agreement to no reference;
+\par (5)  the Committee would have required the proposed regulation 27 to be referred to it if the proposal had been correctly presented as \'93adverse\'94;
+\par (6)  Parliament was thereby deprived of the report which it should have received from the Committee;
+\par (7)  the Secretary of State through his officials being responsible for the flaw in observing the prescribed procedure for making the new regulation 27, the new regulation 27 made by him is invalid.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 30.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {
+Mr Sales submitted that, although the Committee had been misled, the Commissioner was right to conclude that there was no breach of statutory procedure in the promulgation of the new regulation 27 and that consequently the validity of 
+the amendment was not open to challenge. He submitted:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {(1)  the appeal turned on whether as a matter of construction of section 173(1)(b) the Committee \'93agreed\'94
+ that the proposed new regulation 27 should not be referred to it;
+\par (2)  agreement in fact suffices, and that is supported by the following policy considerations:
+\par }\pard \s24\qj \li1440\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin1440\itap0 {
+(a)  regulations should provide clear and certain rules as to entitlement to benefit, and a construction should be adopted which promotes equal treatment of claimants over time and proper go
+vernmental and Parliamentary control over the allocation of public monies for benefit payments;
+\par (b)  in the absence of fraud, the Department and Parliament should be able to take the agreement of the Committee at face value;
+\par (c)  procedural challenges to d
+elegated legislation should be confined to failures to comply with explicit statutory requirements, as it would otherwise be possible to unravel regulations put before Parliament years after the event on grounds of invalidity when there has been no timely
+ challenge by way of judicial review;
+\par (d)  decision-makers in social security benefit offices and appeal tribunals are not well suited to undertake judicial review investigations;
+\par (e)  the fact that the Committee has a purely advisory role indicates that Pa
+rliament cannot have intended that some error of procedure or understanding on the part of the Committee would vitiate subsequent regulations made by the Secretary of State with the approval of Parliament;
+\par }\pard \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 {(3)  only if a statutory instrument is patently defective by reference to the requirements of the enabling statute will the subordinate legislation be held }{\i ultra vires}{
+ (}{\i City of Edinburgh District Council v. Secretary of State for Scotland }{[1985] SLT 551 and 557);
+\par (4)  section170 (4) is inapplicable becaus
+e the Committee did not explicitly require the Department to furnish it with information, and there was no patent non-compliance by the Secretary of State with his obligations, and the inadequacy of the information given by the Department to the Committee
+ 
+could only be regarded as at most infringing a directory rather than a mandatory obligation; alternatively the distinction between mandatory and directory obligations is too simple and the legal consequences of a failure to comply with an obligation shoul
+d depend on factors such as the state of mind of the person on whom the obligation is placed;
+\par (5)  if wrong on these submissions, having regard to the fact that the new regulation 27 has been in operation for many years and that no unhappiness over what occ
+urred has been expressed by the Committee or Parliament, the court should not hold it to be invalid.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 31.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {Mr Howell told us that the Committee was not happy that it had been misled by the Department. However the Committee was also concerned at the potential significance for it if Mr Howker\rquote 
+s case succeeded. Mr Howell therefore made submissions supporting the Commissioner\rquote s conclusion. They included the following:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {(1)  there is no rational basis for distinguishing between a misunderstanding by the Committee in ag
+reeing to no reference where that was caused by the Secretary of State, through his officials, misleading the Committee and any other misunderstanding by the Committee arising from some other cause;
+\par (2)  on the true construction of section 173(1)(b) the apparent agreement by the Committee suffices; there is no difference between the meaning of \'93agreed\'94 in section 173 and that of \'93agreed\'94
+ in section 176(2) of the 1992 Act where an obligation of the Secretary of State, before making regulations in respect of 
+certain other benefits such as housing benefit, to consult with representative organisations is subject to an exception if the organisations have \'93agreed\'94 that such consultations should not be undertaken;
+\par (3)  the agreement of the Committee to no reference can only be impugned if not given in good faith (compare }{\i R v. Barnet and Camden Rent Tribunal, ex parte Frey Investments Ltd.}{ [1972] 2 QB 342, }{\i Asher v. Secretary of State for the Environment}
+{ [1974] Ch. 208 and }{\i Norwest Holst Ltd. v. Secretary of State for Trade}{ [1978] Ch. 201);
+\par (4)  the consequence of a procedural failure to obtain a report from the Committee does not necessarily deprive the Secretary of State of the power to make regulations nor does it necessarily deprive the regulations so made of legal 
+effect; it is not contended that the Secretary of State misdirected himself in making the new regulation 27 nor that it was such that no reasonable Secretary of State could have made it; nor did Parliament refuse to deny effect to the new regulation 27 un
+less a report was received from the Committee; Parliament did not intend that regulations of this character should be treated as invalid merely in order to ensure that it receives a report which it has chosen not to require.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 32.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {It is not, I think, in dispute t
+hat the question whether regulation 27 is invalid turns on the true construction of the 1992 Act. It is to the enabling Act that one must look to see if any challenge to subordinate legislation is available (}{\i Boddington v. British Transport Police}{
+ [1999] 2 
+AC 143 at p. 160 per Lord Irvine of Lairg LC). The Lord Chancellor there recognised that there are situations in which Parliament may legislate to preclude a challenge, in the interest, for example, of providing certainty about the legitimacy of administr
+ative acts on which the public may have to rely. He referred to two cases in which such challenges were held to be precluded:  }{\i R. v. Wicks}{ [1998] AC 92 and }{\i Quietlynn Ltd. v. Plymouth City Council}{
+ [1988] 1 QB 114. But he said (at p. 161) that it was an impor
+tant feature of both cases that they were concerned with administrative acts specifically directed at the defendants, where there had been clear and ample opportunity provided by the scheme of the relevant legislation for those defendants to challenge the
+ 
+legality of those acts before being charged with an offence. He contrasted that with the case of subordinate legislation of a general character (in the sense that it is directed to the world at large) and where the first time an individual may be affected
+ 
+by that legislation is when he was charged with an offence. In the present case Mr Drabble points to the fact that the new regulation 27 is of a general nature affecting all potential claimants and that Mr Howker in effect had no opportunity to challenge 
+b
+y way of judicial review the making of the regulations. When Mr Howker found that his benefit was terminated from a date only one month from the coming into force of the 1996 Regulations, he promptly challenged that decision in the manner permitted by the
+ social security legislation.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 33.\tab}
+It is not now in doubt that the question of whether the new regulation 27 was invalid was one which a Commissioner has jurisdiction to determine. That was made plain by the decision of the House of Lords in }{\i Chief Adjudication Officer v. Foster}{
+ [1993] AC 754 [also reported as R(IS) 22/93], which held that a Commissioner could determine, whenever it was necessary to do so, whether a provision in regulations was beyond the scope of the enabling statute, and that it was not necessar
+y to leave that to judicial review proceedings.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 34.\tab}The question then arises whether the relevant invalidity is limited in some way. As I have noted, Mr Sales relied on the }{\i City of Edinburgh}{
+ case in both the Outer House and the Inner House of the Court of Session as supporting a test of invalidity only if the statutory instrument was patently defective. In my judgment that test cannot stand in the light of }{\i Foster}{ and }{\i Boddington}{
+, however convenient administratively it would be to confine the permissible challenges to the validity of subordinate legislation. In }{\i Foster}{ Lord Bridge said that a commissioner\rquote 
+s jurisdiction to determine whether a decision was erroneous in point of law encompassed deciding whether the decision of a social security appeal tribunal gave effect to secondary legislation which is }{\i ultra vires}{ in the sense of there being \'93
+any errors of law referable to a misuse by the Secretary of State of his regulation-making power\'94 (see p. 762). Lord Bridge said (at p. 765) that if a Commissioner has jurisdi
+ction to question the vires of secondary legislation the scope of that jurisdiction must, at least theoretically, embrace a challenge on the ground of irrationality as well as illegality. In }{\i Boddington}{
+ it was held that distinctions between substantive and procedural invalidities were not justified. In }{\i Hoffmann-La Roche v. Secretary of State for Trade and Industry}{
+ [1975] AC 295 at p. 365 Lord Diplock said that the court had jurisdiction to declare invalid subordinate legislation approved pursuant to the affi
+rmative resolution procedure if the Minister acted outwith the legislative powers conferred on him by the enabling statute and that was so whether the order was }{\i ultra vires}{
+ by reason of its contents or by reason of the procedure followed prior to its being
+ made. Thus despite the practical difficulties for a Commissioner in determining whether a regulation is invalid on any ground which might have allowed a challenge to its validity by way of judicial review, in my judgment he has the jurisdiction to make t
+hat determination.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 35.\tab}
+I come next to the question whether in the context of the statutory scheme what occurred in the present case rendered the making of regulation 27 by the Secretary of State invalid. Mr Drabble has concentrated attention on the role of the 
+Committee in the statutory scheme and the part played by the Secretary of State through his officials in procuring the Committee\rquote 
+s agreement, thereby enabling the regulation to be made. In my judgment it is clear that notwithstanding the fact that the Committee\rquote s role was, as its name implies, advisory, it was intended by the statutory scheme that the Committee\rquote 
+s advice on the proposed regulations would be received by the Secretary of State and laid before Parliament unless the Committee agreed to no reference to it. This is emphasised by the mandatory requirement in section 172(1) that the Secretary of State 
+\'93shall\'94 refer the proposals to the Committee and by the requirement, even in a case of urgency when the Secretary of State is empowered to dispense wit
+h a reference, to refer the regulations so made to the Committee as soon as practicable after they are made, and the obligation on the Secretary of State to explain to Parliament, if he proposes not to give effect to the Committee\rquote 
+s recommendations, his reasons why not. Plainly in the absence of the Committee\rquote s agreement Parliament was intended to have the benefit of the Committee\rquote s advice so as to be able to assess the new regulations.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 36.\tab}In that context the agreement of the Committee not to have a reference 
+to it of proposed regulations assumes importance. Further, Parliament plainly intended that the agreement of the Committee should be an informed agreement, and the obligation under section 170(4) on the Secretary of State to provide such information as th
+e
+ Committee reasonably requires is equally plainly relevant, provided that the Committee has so required. In my judgment in the agreed practice to which I have referred in paragraph 13 above the Committee can be taken to have made a requirement for the pur
+poses of section 170(4). As the Commissioner said in paragraph 15 of his decision of the officials of the Department providing information and assistance in relation to the detail and intended effect of a proposal:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93The Committee\rquote s assumption that it can re
+ly on these officials to provide full, balanced and objective information without relevant points being withheld or obscured is in my judgment an entirely proper one, wholly consistent with the intention of section 170(4).  The Committee members should be
+ able to rely implicitly and without question on the completeness of what they are told [by] those whose duty it is to assist them.  It is quite inconsistent with the scheme of Part XIII of the Act for it to be thought otherwise.\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 37.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {Where, as in the present c
+ase, the Secretary of State through his officials has misled the Committee by information which is obviously incorrect if comparison is made between the old regulation 27 and the new regulation 27, and thereby procured the Committee\rquote 
+s agreement to no refer
+ence, and where, as the Commissioner has found, the provision of the correct information would have led to a reference (or the withdrawal of the new regulation 27), and the Secretary of State proceeds to make the new regulation 27, it is manifest, to my m
+i
+nd, that the procedure intended by Parliament for the making of regulations has not been observed. That is so whether or not the officials acted innocently. There is nothing in the statutory provisions to suggest that Parliament would have intended so def
+ective a procedure adopted by the Secretary of State, when matters were entirely under his control, to result in a valid regulation.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 38.\tab}I am not persuaded that the policy considerations advanced by Mr Sales require some other conclusion. I acknowledge the impo
+rtance of clear and certain rules in this field, but it is no less important that statutory procedures should be duly observed if regulations are to be changed to deprive members of the public of benefits to which otherwise they were entitled. I accept th
+a
+t it is fundamental that there should be proper governmental and parliamentary control over the allocation of public monies. However, every member of the public adversely affected by a new regulation is entitled to challenge the lawfulness of that regulat
+i
+on on proper grounds. The courts have never shrunk from declaring the invalidity of a defective measure affecting the allocation of public monies. Parliament has already provided by section 27 of the Social Security Act 1998 that the effect of a determina
+t
+ion by a Commissioner or court that the decision of an adjudicating authority was erroneous in law should in specified circumstances be limited. Whether that section applies to the present circumstances was not the subject of argument before us, but it sh
+o
+ws that Parliament can make provision to limit the effect of a decision it considers adverse. I see the administrative inconvenience if delegated legislation can be challenged outside judicial review proceedings with their narrow time limits; but the rece
+nt decisions of the House of Lords have made clear that such challenges are possible.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 39.\tab}As for the decisions in }{\i Frey}{, }{\i Asher }{and }{\i Norwest Holst}{
+ on which Mr Howell relied, I cannot accept that they show that in the absence of bad faith in relation to the Committee\rquote 
+s agreement there was due compliance with the statutory procedure. They were very different cases and do not go to that point. In }{\i Frey}{ what was sought to be impugned was the local authority\rquote 
+s decision to refer certain tenancy agreements to the rent tribunal, and there was nothing to show that the decision, which did not affect the objectors\rquote  rights, was taken improperly. In }{\i Asher}{
+, the decision of the Secretary of State to direct an extraordinary audit was sought to be challenged, and again this court held that the decision, which merely set machinery in motion, could not be impugned as bad faith was not alleged. In }{\i 
+Norwest Holst}{ a decision by the Secretary of State to appoint inspectors of a company was held by this court not to be capable of challenge wh
+ere the Secretary of State acted in good faith within his powers. In the present case it is not the agreement but the new regulation 27 which is challenged as invalid in circumstances where it is alleged that there has been a failure to comply with the re
+quired statutory procedure.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 40.\tab}Nor can I accept Mr Howell\rquote 
+s assertion that there is no rational basis for distinguishing between a misunderstanding by the Committee in agreeing to no reference as a result of incorrect information provided by the Secretary of S
+tate and any other misunderstanding. In my judgment it is plain that the Secretary of State has a crucial role in the statutory scheme; when, in breach of his duty under section 170(4), incorrect information is provided to the Committee with the result th
+at the Secretary of State and Parliament do not receive the Committee\rquote 
+s advice which they would have received if correct information had been provided, that may well have consequences quite different from those where there has been a misunderstanding by the
+ Committee for some other reason. I should make clear that I am not saying that the provision by the Secretary of State of any incorrect information will necessarily result in the invalidity of the consequent regulations. In each case an assessment has to
+ be made of the significance of the failure. In the present case the Commissioner has made clear findings as to the consequences of what the Secretary of State, through his officials, did.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 41.\tab}As for the attempted comparison between the word \'93agreed\'94 in section
+ 172(1) and the same word in section 176(2), each must be construed in its own context. There is nothing comparable to section 170(4) in relation to the representative organisations to be consulted under section 176(2).
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 42.\tab}In the light of these conclusions, I
+ cannot see that the factors relied on by Mr Sales (the fact that the new regulation 27 has operated since January 1997 and the Committee\rquote s and Parliament\rquote 
+s acquiescence in what has occurred) should lead this court not to hold that the new regulation 27 is invalid. It is unfortunate that this case has taken so long to reach this court, but that is not the fault of Mr Howker.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 43.\tab}For these reasons I conclude that Mr Drabble is correct in his submissions that the new regulation 27 is invalid, and I respectfully disagree with the Commissioner
+\rquote s conclusion. I suspect that the arguments before us have differed in emphasis from those presented to the Commissioner.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 44.\tab}In }{\i Ex parte Moule}{ Collins J. held that the old regulation 27 took effect with the deletion of the offending words \'93
+in the opinion of a doctor approved by the Secretary of State.\'94  Mr Sales in his skeleton argument challenged whether a \'93blue pencil\'94 test could be performed. But before us he conceded that it could. It was not submitted that Mr Drabble was wrong
+ in his submission that if the new regulation 27 was invalid, the old regulation 27(b) in the form modified by }{\i ex parte Moule}{ continued in operation, so that Mr Howker continues to be assessed under the old regime.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 45.\tab}It follows that in my judgment this appeal should be allowed.
+\par }\pard\plain \s23\ql \li0\ri0\sb240\sa240\keepn\widctlpar\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\b LORD JUSTICE MANCE:
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 46.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls19\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {I agree with the judgments and conclusions of Peter Gibson and Hale LJJ which I have had the advantage of reading in draft.
+\par }\pard\plain \ql \li0\ri0\widctlpar\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\b LADY JUSTICE HALE:
+\par }{
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 47.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls1\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {I agree that this appeal should be allowed for the reasons given by Pet
+er Gibson LJ. Mr.Sales has rightly emphasised the important constitutional principle that it is for Parliament to determine how public money should be spent. Parliament has determined that we should have a system of social security benefits for those who 
+a
+re unable to provide for themselves. The broad outlines are laid down in legislation but the scheme is necessarily extremely complicated and requires frequent amendment to take account of social, economic and (as in this case) legal change. The details ha
+v
+e to be contained in delegated legislation. But Parliament has also recognised the need for both the Secretary of State and for Parliament to have independent and expert social policy advice before making changes to the scheme. There are complex questions
+ 
+involved, about the definition of need, about equity between different groups, about the right kind of incentives, all in the context of very large numbers of people and very large sums of public money. In the context of a scheme whose fundamental purpose
+ is to relieve \'93want\'94, the need for independent and expert advice is particularly clear when a change to the regulations might deprive a large number of existing claimants of their benefit.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 48.\tab}While the Secretary of State may refer such questions relating to t
+he operation of any of the relevant enactments as he thinks fit to the Committee for their consideration and advice (section 170(3)), he has a positive duty to refer proposals to make regulations under any of the relevant enactments (section 172(1)), and 
+t
+o furnish the Committee with such information as the Committee may reasonably require for the proper discharge of their functions (section 170(4)). The volume of regulation is such that the Committee cannot possibly give detailed scrutiny to it all. Hence
+ 
+proposals for new regulations do not have to be referred if the Committee have agreed that they shall not be referred' (section 173(1)(b)). Once referred, however, the Committee have a positive duty to consider them and make a report to the Secretary of S
+t
+ate (section 174(1)) and the Secretary of State has a positive duty to lay that report before Parliament with a copy of the regulations or draft regulations which he proposes to make. In doing so he must explain the extent to which he has given effect to 
+t
+he Committee's recommendations and, if he has not done so, why not (section 174(2)). This is a particularly precise set of obligations. It may be contrasted with the obligation in section 176, principally in relation to increases in housing benefit and co
+u
+ncil tax benefit, to consult with the relevant local government organisations unless they have agreed that this should not be done. The nature and purpose of consultation under section 176 is obviously rather different from the nature and purpose of consu
+l
+tation with the Social Security Advisory Committee. This is not surprising, as the Committee is a statutory body with a particular function under the Act. The difference is reflected in the lack of any duty on the Secretary of State to provide the local g
+overnment organisations consulted with information, or upon them to report back to him, or upon him to inform Parliament of their views.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 49.\tab}The fundamental question in this case is whether it is open to the Secretary of State to lay draft regulations before Pa
+rliament when his Department has misrepresented their effect to the Committee with the consequence that there is no report from the Committee to accompany them. There can be little doubt, as the Commissioner found, that had the proposal been properly pres
+e
+nted to the Committee they would have required it to be referred to them. There is no need to speculate on what would have happened next, but events would certainly have been different: either the Secretary of State would have withdrawn the proposal to th
+i
+nk again, as happened with another proposal submitted to the Committee at the same time; or he would have persisted and the Committee would have considered the matter and made a report; the report might have been favourable but it might well not have been
+;
+ the Secretary of State would then have thought about it and decided whether to withdraw the proposal or make changes to meet any concerns expressed by the Committee; and any eventual regulation laid before Parliament would have been accompanied by a repo
+rt and explanation which made the position plain.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 50.\tab}
+I understand the concern of the Committee when the argument was focussed so narrowly upon whether their agreement that the proposal should not be referred to them was valid. This raised the spectre of judici
+al review of the Committee's decisions and actions, which the Committee was anxious to lay to rest. But the Court is not now being asked to declare that the Committee's agreement was a nullity: for one thing, that would take the appellant only part of the
+ way. The Court is being asked to hold that the Secretary of State acted outside his powers in making the regulations when, for reasons within the control of his own department, the statutory procedure for doing so had not been properly followed.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 51.\tab}Most of th
+e authorities which have been cited to us have been concerned with the issue of collateral challenge: in what circumstances can an individual affected by administrative action challenge its validity other than by any statutory processes laid down for doin
+g so or by judicial review? The answer does of course lie in the proper construction, in the light of its purpose and context, of the statutory scheme in question. It is easy to see why the appellant in }{\i R v. Wicks}{
+  [1998] AC 92 was not permitted to challeng
+e the validity of an enforcement notice under the Town and Country Planning Act 1990 in the course of criminal proceedings for failure to comply, given that there was not only a statutory procedure for appealing against such notices but also the possibili
+ty of judicial review on any residuary ground which was not available in the statutory appeal. Equally it is easy to see why the appellant in }{\i Boddington v. British Transport Police}{
+ [1999] 2 AC 143 had to be afforded the opportunity to challenge the validity of a bye-law banning smoking when he was prosecuted for breaking it. As the Lord Chancellor, Lord Irvine of Lairg, observed at p 161:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {"But in my judgment it was an important feature of both cases [}{\i R v. Wicks}{ and }{\i 
+Quietlynn Ltd v. Plymouth City Council}{ [198
+8] 1 QB 114] that they were concerned with administrative acts specifically directed at the defendants, where there had been clear and ample opportunity provided by the scheme of the relevant legislation for those defendants to challenge the legality of t
+hose acts before being charged with an offence.
+\par By contrast, where subordinate legislation (eg statutory instrument or byelaws) is promulgated which is of general character in the sense that it is directed to the world at large, the first time an individual
+ may be affected by that legislation is when he is charged with an offence under it: ... "
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 52.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls1\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {That this case falls into the second category is not really in doubt. It has been clear since }{\i Chief Adjudication Officer v. Foster}{ [1993] AC 754 that there is jurisd
+iction to entertain challenges to the validity of social security regulations in the course of the social security appeal procedures. The question is not, as it was in }{\i Wicks}{ and }{\i Boddington,}{
+ whether the Commissioner could entertain the challenge. The question is whether he was right to reject it. }{\i Wicks}{ and }{\i Boddington}{
+ do assist to the extent that they disapproved of the distinction between challenges based on substantive rather than procedural grounds. The position is thus as stated by Lord Diplock in }{\i Hoffmann-La Roche v. Secretary of State for Trade and Industry
+}{ [1975] AC 295, at 365:
+\par }\pard\plain \s24\qj \li720\ri0\sa240\widctlpar\faauto\adjustright\rin0\lin720\itap0 \fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {\'93
+My Lords, in constitutional law a clear distinction can be drawn between an Act of Parliament and subordinate legislation, even though the latter is contained in an order made 
+by statutory instrument approved by resolutions of both Houses of Parliament. Despite this indication that the majority of members of both Houses of the contemporary Parliament regard the order as being for the common weal, I entertain no doubt that the c
+o
+urts have jurisdiction to declare it to be invalid if they are satisfied that in making it the Minister who did so acted outwith the legislative powers conferred upon him by the previous Act of Parliament under which the order purported to be made, and th
+is is so whether the order is ultra vires by reason of its contents (patent defects) or by reason of defects in the procedure followed prior to its being made (latent defects).\'94
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 53.\tab}}\pard\plain \s1\qj \li0\ri0\sb240\sa240\widctlpar\jclisttab\tx0\hyphpar0\faauto\ls1\outlinelevel0\adjustright\rin0\lin0\itap0 
+\fs24\lang2057\langfe1033\cgrid\langnp2057\langfenp1033 {The procedural irregularity in the making of this regulation was in my view suc
+h as to render it invalid. Parliament laid down a very specific consultation process in sections 170 to 174 of the 1992 Act, the nature and purpose of which is obvious in the context of the social security scheme as a whole. Parliament must have intended 
+that the Secretary of State comply with it, and comply with it properly, before making regulations: see the observations of Glidewell LJ and Sir John Donaldson MR in }{\i 
+R v. Secretary of State for Social Services ex parte Cotton; R v. Secretary of State for Social Services ex parte Waite}{
+, Court of Appeal, 14 December 1985. In that case, the Secretary of State had consulted the Committee but had not put draft regulations before them. Sir John Donaldson considered that the proposals were not sufficiently precise 
+for this to be a proper consultation and would have held the resulting regulations invalid on that ground. Glidewell and May LJJ held that the Secretary of State had done enough to inform the Committee of what was proposed, although Glidewell LJ was conce
+r
+ned that although he had complied with the letter he had not complied with the spirit of the legislation. All three members of the court approached the case on the basis that a failure to comply with the consultation process could invalidate the regulatio
+n.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 54.\tab}
+In this case, there was clearly a failure to comply. The Committee had agreed a particular formula with the Department for classifying proposals so that they could decide whether or not to require a reference: this was information which they reasonably r
+equired and the Department had agreed to supply to them. The information supplied in writing was seriously inaccurate, as was the explanation given at the meeting where the Committee considered this. The Commissioner left open the question of whether this
+ 
+was deliberate. It was not necessary for him to find that it was. The officials had it within their power to give the Committee the correct information. They and through them the Secretary of State were responsible for the misinformation. The Secretary of
+ State should not have made the regulation without putting it right. This was a material irregularity in the procedure laid down by Parliament and invalidates the regulation which resulted.
+\par {\listtext\pard\plain\s1 \lang2057\langfe1033\langnp2057 \hich\af0\dbch\af0\loch\f0 55.\tab}Far from flying in the face of Parliamentary democracy, this conclu
+sion reinforces it. The procedures laid down by Parliament for exercising the power to make delegated legislation which it has conferred upon ministers must be properly observed, and particularly where it is the purpose of those procedures to enhance the 
+effectiveness of Parliament's scrutiny of that delegated legislation. 
+\par }\pard \s1\qj \li0\ri0\sb240\sa240\widctlpar\hyphpar0\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 {\b Order}{
+: Appeal allowed; the decision of the Commissioner, Mr Patrick Howell QC, dated 4 May 2001 be set aside; the decision of the Sutton social security appeal tribunal dated 6 June 1997 be set aside; the adjudication officer\rquote 
+s decision dated 6 June 1997 be set aside; regulation 29 of the Social Security (Incapacity for Work and Miscellaneous Amendments) Regulations 1996 is }{\i ultra vires}{ and of no effect in so far as it is purported to dele
+te sub-paragraph (b) of regulation 27 of the Social Security (Incapacity for work) (General) Regulations 1995; the first respondent do pay the costs of the appellant, to be assessed if not agreed; there will be no order as to the costs of the second respo
+ndent; the appellant\rquote s costs be assessed in accordance with the Community Legal Service Costs Regulations 2000; permission to appeal to the House of Lords refused.
+\par }\pard \s1\qc \li0\ri0\sb240\sa240\widctlpar\hyphpar0\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 {(Order does not form part of the approved judgment)
+\par }}
