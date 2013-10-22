@@ -27,5 +27,12 @@ namespace :import do
     task :decisions_judges_mapping => :environment do
       CSVImporter.new('data/aac').import_decisions_judges_mapping
     end
+
+    task :process_docs => [:environment] do
+      AacDecision.find_each do |d|
+        d.add_doc_file
+        d.process_doc
+      end
+    end
   end
 end

@@ -41,9 +41,13 @@ In the import rake namespace are the scripts to scrape the exisiting sites. They
 Run the following sequence of rake tasks:
 
 > rake import:aac:decisions
+
 > rake import:aac:decision_categories
+
 > rake import:aac:decision_subcategories
+
 > rake import:aac:judges
+
 > rake import:aac:decisions_judges_mapping
 
 Tips
