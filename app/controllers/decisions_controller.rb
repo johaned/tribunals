@@ -20,4 +20,3 @@ class DecisionsController < ApplicationController
     Decision.viewable
   end
 end
-

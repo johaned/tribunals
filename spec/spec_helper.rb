@@ -79,3 +79,15 @@ def decision_hash(h={})
     judges: ['Judge Dredd']
   }.merge(h)
 end
+
+def aac_decision_hash(h={})
+  {
+    ncn: '2013 UKUT 500 AAC',
+    doc_file: sample_doc_file,
+    decision_date: Date.today,
+    claimant: 'John Smith',
+    respondent: 'Partnerships in Care and Secrerary of State for Justice',
+    is_published: true,
+    aac_decision_subcategory_id: 172
+  }.merge(h)
+end
