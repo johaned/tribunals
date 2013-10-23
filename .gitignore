@@ -68,10 +68,14 @@ tramp
 db/password.hash
 db/structure.sql
 
-# rubymine
+#Rubymine
 .idea/
 
 # publics
 public/decision/
 public/aac_decision/
+
+# Uploaders files 
+app/uploaders/doc_file_uploader.rb
+app/uploaders/pdf_file_uploader.rb
 
