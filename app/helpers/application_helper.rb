@@ -59,4 +59,10 @@ module ApplicationHelper
       text.gsub(re = /(#{match})(?![^<]*?>)/i, highlighter)
     end.html_safe
   end
+
+  def time_element(date)
+    if date
+      ("<time timedate='#{date.to_formatted_s(:rfc3339)}'>#{date.to_formatted_s(:rfc822)}</time>").html_safe
+    end
+  end
 end
