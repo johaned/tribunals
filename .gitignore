@@ -68,7 +68,7 @@ tramp
 db/password.hash
 db/structure.sql
 
-# rubymine
+#Rubymine
 .idea/
 
 # publics
@@ -77,4 +77,5 @@ public/aac_decision/
 
 # app_config
 config/app_config.yml
+
 
