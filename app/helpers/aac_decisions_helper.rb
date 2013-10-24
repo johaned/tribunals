@@ -1,13 +1,5 @@
 module AacDecisionsHelper
-  def page_title
-    default_title = 'Upper Tribunal (Administrative Appeals Chamber) Judgements Database'
-    if @aac_decision
-      link_label(@aac_decision) || default_title
-    else
-      default_title
-    end
-  end
-
+  #TODO: Add page_title helper which does not conflict with other helpers
   def category_name(aac_decision)
     if aac_decision.aac_decision_subcategory && aac_decision.aac_decision_subcategory.aac_decision_category
         aac_decision.aac_decision_subcategory.aac_decision_category.name
