@@ -5,69 +5,51 @@
         %a{:href => "/"} Home
 %div{:vocab => "http://schema.org", :typeof => "CreativeWork"}
   %header.page-header.group
-    %h1= @decision.link_label
+    %h1= "Neutral Citation Number #{display_ncn(@aac_decision)}"
     %ul.decision-details
       %li
-        %span.label Case title:
-        %span{:property => "name"}= case_title(@decision)
+        %span.label File No.:
+        %span= @aac_decision.file_number
       %li
-        %span.label Appellant name:
-        %span= @decision.claimant
-      %li
-        %span.label Status of case:
-        %span
-          - if @decision.reported
-            Reported
-          - else
-            Unreported
-      %li
-        %span.label Hearing date:
-        %span= schema_time_element(@decision.hearing_on)
-      %li
-        %span.label Promulgation date:
-        %span= schema_time_element(@decision.promulgated_on)
-      %li
-        %span.label Publication date:
-        %span= schema_time_element(@decision.published_on)
-      %li
-        %span.label Last updated on:
-        %span= schema_time_element(@decision.updated_at.to_date)
-      %li
-        %span.label Country:
-        %span= @decision.country
-      - if @decision.country_guideline.present?
-        %li
-          %span.label Country guidance:
-          %span
-            - if @decision.country_guideline
-              Yes
-            - else
-              No
+        %span.label Reported number:
+        %span= @aac_decision.reported_number
       %li
         %span.label Judges:
-        %span= judge_list(@decision.judges)
-      - if @decision.categories.present?
-        %li
-          %span.label Categories:
-          %span= @decision.categories.join(', ')
-      - if @decision.case_notes.present?
-        %li
-          %span.label Case Notes:
-          %span= @decision.case_notes
-      - if @decision.keywords.present?
-        %li
-          %span.label Keywords
-          %span{:property => "keywords"}= @decision.keywords.join(', ')
+        %span= judge_names(@aac_decision)
+      %li
+        %span.label Appellant name:
+        %span= @aac_decision.claimant
+      %li
+        %span.label Respondent name:
+        %span= @aac_decision.respondent
+      %li
+        %span.label Date of decision:
+        %span= schema_time_element(@aac_decision.decision_date)
+      %li
+        %span.label Date added:
+        %span= schema_time_element(@aac_decision.created_datetime)
+      %li
+        %span.label Date updated:
+        %span= schema_time_element(@aac_decision.last_updatedtime)
+      %li
+        %span.label Category:
+        %span= category_name(@aac_decision)
+      %li
+        %span.label Sub-category:
+        %span= subcategory_name(@aac_decision)
+      %li
+        %span.label Notes:
+        %span{:class => "notes"}= @aac_decision.notes
   
   .download-links
     %ul
-      %li= link_to "Download a PDF version of the decision", @decision.pdf_file.url, class: 'pdf-file'
-      %li= link_to "Download a Word document (.doc) version of the decision", @decision.doc_file.url, class: 'doc-file'
+      %li= link_to "Download a PDF version of the decision", @aac_decision.pdf_file.url, class: 'pdf-file'
+      %li= link_to "Download a Word document (.doc) version of the decision", @aac_decision.doc_file.url, class: 'doc-file'
   
-  - if @decision.html.blank?
+  - if @aac_decision.html.blank?
     %h2 An HTML version of this decision is not currently available.
   - else
     .decision
       %h2 The decision
       .decision-inner
-        = @decision.html.html_safe
+        = @aac_decision.html.html_safe

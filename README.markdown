@@ -67,7 +67,6 @@ the change to take effect:
 
     source ~/.bash_profile
 
-
 Installing libreoffice on CentOS
 --------------------------------
 

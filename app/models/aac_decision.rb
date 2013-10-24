@@ -20,23 +20,15 @@ class AacDecision < ActiveRecord::Base
   end
 
   def process_doc
-    require 'thwait'
     if doc_file.present?
       Dir.mktmpdir do |tmp_html_dir|
         Dir.chdir(tmp_html_dir) do
           doc_rel_filename = File.basename(self.doc_file.file.path)
           doc_abs_filename = File.join(tmp_html_dir, doc_rel_filename)
-          File.open(doc_abs_filename, 'wb') do |f|
-            f.write(doc_file.sanitized_file.read)
+          File.open(doc_abs_filename, 'wb') { |f| f.write(doc_file.sanitized_file.read) }
+          [:pdf, "txt:text"].map do |type|
+            system("soffice --headless --convert-to #{type} --outdir . '#{doc_rel_filename}'")
           end
-          threads = [:pdf, "txt:text"].map do |type|
-            Thread.new do
-              command = "soffice --headless --convert-to #{type} --outdir . '#{doc_rel_filename}'"
-              puts command
-              method(:`).call(command)
-            end
-          end
-          ThreadsWait.all_waits(*threads)
           txt_filename = doc_abs_filename.gsub(/\.doc$/i, '.txt')
           pdf_filename = doc_abs_filename.gsub(/\.doc$/i, '.pdf')
           self.text = File.open(txt_filename, 'r:bom|utf-8').read
@@ -57,5 +49,4 @@ class AacDecision < ActiveRecord::Base
       #TODO: check if citation pattern for AAC has same formatting requirement as IAT
     end
   end
-
 end
