@@ -92,15 +92,16 @@ Run the following sequence of rake tasks:
     rake import:aac:judges
     rake import:aac:decisions_judges_mapping
 
-### Importing AAC decisions data
+### Importing EAT data export
 
-Run the following sequence of rake tasks:
+Run the following task:
 
-> rake import:aac:decisions
-> rake import:aac:decision_categories
-> rake import:aac:decision_subcategories
-> rake import:aac:judges
-> rake import:aac:decisions_judges_mapping
+    rake import:eat:all
+
+If you need to find out the individual tasks, run the following
+command to get the listing:
+
+    rake -T import:eat
 
 Tips
 ----

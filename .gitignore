@@ -15,9 +15,9 @@
 /tmp
 
 /public/uploads
-data/ait.csv
-.DS_Store
 data
+.DS_Store
+
 
 # YARD artifacts
 **.orig
@@ -54,6 +54,7 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
+
 
 # Emacs
 *~
