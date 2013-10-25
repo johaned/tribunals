@@ -19,4 +19,14 @@ namespace :maintenance do
       end
     end
   end
+
+  namespace :aac do
+    task :remove_judges_whitespace => :environment do
+      Judge.find_each do |j|
+        j.name = j.name.strip.squish
+        #Turn off validation while saving because some records have data missing for required fields
+        j.save(validate: false)
+      end
+    end
+  end
 end
