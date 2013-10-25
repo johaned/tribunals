@@ -32,10 +32,6 @@ describe Decision do
       Decision.filtered(:query => 'Edgar').should == [@decision8, @decision9]
     end
 
-    it 'should filter on search and text metadata (related to Claimant)' do
-      Decision.filtered(:query => 'Edgar').should == [@decision8, @decision9]
-    end
-
     it 'should filter on search and text metadata (related to Case Notes)' do
       Decision.filtered(:query => 'ministry').should == [@decision9, @decision7]
     end
