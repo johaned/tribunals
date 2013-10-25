@@ -3,13 +3,49 @@ require 'spec_helper'
 describe Decision do
 
   describe "search" do
-    before(:each) do
-      @decision1 = Decision.create!(decision_hash(text: "Some searchable text is here"))
-      @decision2 = Decision.create!(decision_hash(text: "Some other searchable text is here gerald", country: 'Afghanitsan'))
-      @decision3 = Decision.create!(decision_hash(text: "gerald", country_guideline: true, country: 'Iraq', judges: ["Blake", "Smith"]))
+    before do
+      @decision1 = Decision.create!(decision_hash(text: 'Some searchable text is here'))
+      @decision2 = Decision.create!(decision_hash(text: 'Some other searchable text is here gerald', country: 'Afghanitsan'))
+      @decision3 = Decision.create!(decision_hash(text: 'gerald', country_guideline: true, country: 'Iraq', judges: ['Blake', 'Smith']))
       @decision4 = Decision.create!(decision_hash(claimant: 'Green'))
       @decision5 = Decision.create!(decision_hash(ncn: '[2013] UKUT 456'))
       @decision6 = Decision.create!(decision_hash(appeal_number: 'AA/11055/2012', reported: false))
+      @decision7 = Decision.create!(decision_hash(ncn: '[2013] ACAC 789', text: 'ministry justice england allambra persons'))
+      @decision8 = Decision.create!(decision_hash(text: '[2013] ACAC 789', country: 'England', keywords: %w(person people), claimant: 'Edgar'))
+      @decision9 = Decision.create!(decision_hash(text: 'AA/11055/2010 london edgar allam person', case_notes: 'ministry'))
+      @decision10 = Decision.create!(decision_hash(appeal_number: 'AA/11055/2010', categories: %w(justice family), judges: %w(Allam Johan), reported: false))
+    end
+
+    it 'should filter on search text and metadata (related to NCN)' do
+      Decision.filtered(:query => '[2013] ACAC 789').should == [@decision7, @decision8]
+    end
+
+    it 'should filter on search text and metadata (related to Country)' do
+      Decision.filtered(:query => 'England').should == [@decision8, @decision7]
+    end
+
+    it 'should filter on search and text metadata (related to Judge)' do
+      Decision.filtered(:query => 'Allam').should == [@decision10, @decision9, @decision7]
+    end
+
+    it 'should filter on search and text metadata (related to Claimant)' do
+      Decision.filtered(:query => 'Edgar').should == [@decision8, @decision9]
+    end
+
+    it 'should filter on search and text metadata (related to Claimant)' do
+      Decision.filtered(:query => 'Edgar').should == [@decision8, @decision9]
+    end
+
+    it 'should filter on search and text metadata (related to Case Notes)' do
+      Decision.filtered(:query => 'ministry').should == [@decision9, @decision7]
+    end
+
+    it 'should filter on search and text metadata (related to Keywords)' do
+      Decision.filtered(:query => 'person').should == [@decision8, @decision9, @decision7]
+    end
+
+    it 'should filter on search and text metadata (related to Categories)' do
+      Decision.filtered(:query => 'justice').should == [@decision10, @decision7]
     end
 
     it "should filter on search text" do
