@@ -8,6 +8,22 @@ class AacDecision < ActiveRecord::Base
   mount_uploader :doc_file, DocFileUploader
   mount_uploader :pdf_file, PdfFileUploader
 
+  def self.ordered
+    order("created_datetime DESC")
+  end
+
+  def self.filtered(filter_hash)
+    search(filter_hash[:query])
+  end
+
+  def self.search(query)
+    if query.present?
+      quoted_query = self.connection.quote(query)
+      where("to_tsvector('english', text::text) @@ plainto_tsquery('english', ?::text)", query).order("text ~* #{quoted_query} DESC")
+    else
+      where("")
+    end
+  end
 
   def add_doc_file
     if doc = File.open(Dir.glob(File.join("#{Rails.root}/data/aac/docs/j#{id}", "*")).first)
