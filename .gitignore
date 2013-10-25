@@ -68,10 +68,10 @@ tramp
 db/password.hash
 db/structure.sql
 
-#Rubymine
+# Rubymine
 .idea/
 
-# publics
+# Public decision folders
 public/decision/
 public/aac_decision/
 
