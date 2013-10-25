@@ -5,7 +5,8 @@ class AacDecisionsController < ApplicationController
     set_cache_control(AacDecision.maximum(:updated_at))
     
     params[:search] ||= {}
-    @aac_decisions = AacDecision.all.paginate(:page => params[:page], :per_page => 30)
+    @aac_decisions = AacDecision.all.ordered.paginate(:page => params[:page], :per_page => 30)
+    @aac_decisions = @aac_decisions.filtered(params[:search]) if params[:search].present?    
   end
 
   def show
