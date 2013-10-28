@@ -152,6 +152,10 @@ GEM
     paint (0.8.6)
     pg (0.14.1)
     pg_array_parser (0.0.9)
+    pg_search (0.7.0)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
     polyglot (0.3.3)
     posix-spawn (0.3.6)
     pry (0.9.12.2)
@@ -282,6 +286,7 @@ DEPENDENCIES
   nokogiri
   pg
   pg_array_parser
+  pg_search
   rails
   rails_warden
   rspec-rails

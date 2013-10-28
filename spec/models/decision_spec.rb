@@ -12,7 +12,7 @@ describe Decision do
       @decision6 = Decision.create!(decision_hash(appeal_number: 'AA/11055/2012', reported: false))
       @decision7 = Decision.create!(decision_hash(ncn: '[2013] ACAC 789', text: 'ministry justice england allambra persons'))
       @decision8 = Decision.create!(decision_hash(text: '[2013] ACAC 789', country: 'England', keywords: %w(person people), claimant: 'Edgar'))
-      @decision9 = Decision.create!(decision_hash(text: 'AA/11055/2010 london edgar allam person', case_notes: 'ministry'))
+      @decision9 = Decision.create!(decision_hash(text: 'AA/11055/2010 london edgar', case_notes: 'ministry person', claimant: 'allam'))
       @decision10 = Decision.create!(decision_hash(appeal_number: 'AA/11055/2010', categories: %w(justice family), judges: %w(Allam Johan), reported: false))
     end
 
