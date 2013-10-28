@@ -17,3 +17,4 @@
 //= require main
 //= require jquery_ujs
 //= require feedbacks
+//= require_tree  ./libs
