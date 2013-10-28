@@ -10,6 +10,8 @@ gem 'bootstrap-will_paginate'
 
 # For speeding up Postgres array parsing
 gem 'pg_array_parser'
+# For full text searching
+gem 'pg_search'
 
 #For importing
 gem 'capybara'

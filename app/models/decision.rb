@@ -1,6 +1,7 @@
 require 'ukit_utils'
 
 class Decision < ActiveRecord::Base
+  include PgSearch
   mount_uploader :doc_file, DocFileUploader
   mount_uploader :pdf_file, PdfFileUploader
 
@@ -29,18 +30,38 @@ class Decision < ActiveRecord::Base
   scope :reported, ->{ where(reported: true) }
   scope :unreported, ->{ where(reported: false) }
 
+  pg_search_scope :search_full_text, :against => [
+                      [:ncn, 'A'],
+                      [:appeal_number, 'A'],
+                      [:categories, 'B'],
+                      [:judges, 'B'],
+                      [:keywords, 'B'],
+                      [:case_notes, 'C'],
+                      [:claimant, 'C'],
+                      [:country, 'C'],
+                      [:case_name, 'C'],
+                      [:text, 'D']
+                  ],
+                  :using => {
+                      :tsearch => {:prefix => true,
+                                   dictionary: 'english'}
+
+                  }
+
   def self.ordered
     order("promulgated_on DESC")
   end
 
   def self.filtered(filter_hash)
+    #search_full_text(filter_hash[:query])
     if ncn = UkitUtils.contains_ncn?(filter_hash[:query])
       by_ncn(ncn)
     elsif appeal_number = UkitUtils.contains_appeal_number?(filter_hash[:query])
       by_appeal_number(appeal_number)
     #TODO: Check if other meta data search can also be done in this way using UkitUtils
     else
-      search(filter_hash[:query]).by_reported(filter_hash[:reported]).by_country_guideline(filter_hash[:country_guideline]).by_country(filter_hash[:country]).by_judge(filter_hash[:judge]).by_claimant(filter_hash[:claimant]).by_ncn(filter_hash[:ncn])
+      #search(filter_hash[:query]).by_reported(filter_hash[:reported]).by_country_guideline(filter_hash[:country_guideline]).by_country(filter_hash[:country]).by_judge(filter_hash[:judge]).by_claimant(filter_hash[:claimant]).by_ncn(filter_hash[:ncn])
+      search_full_text(filter_hash[:query]).by_reported(filter_hash[:reported]).by_country_guideline(filter_hash[:country_guideline]).by_country(filter_hash[:country]).by_judge(filter_hash[:judge]).by_claimant(filter_hash[:claimant]).by_ncn(filter_hash[:ncn])
     end
   end
 
