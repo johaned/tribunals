@@ -54,6 +54,14 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
+
+  # Add custom selectors Capybara-Based
+  Capybara.add_selector(:row) do
+    xpath { |num| "./tr[#{num}]" }
+  end
+  Capybara.add_selector(:column) do
+    xpath { |num| "./td[#{num}]" }
+  end
 end
 
 def sample_pdf_file
