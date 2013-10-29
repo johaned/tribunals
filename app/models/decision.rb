@@ -53,7 +53,6 @@ class Decision < ActiveRecord::Base
   end
 
   def self.filtered(filter_hash)
-    #search_full_text(filter_hash[:query])
     if ncn = UkitUtils.contains_ncn?(filter_hash[:query])
       by_ncn(ncn)
     elsif appeal_number = UkitUtils.contains_appeal_number?(filter_hash[:query])
@@ -61,7 +60,11 @@ class Decision < ActiveRecord::Base
     #TODO: Check if other meta data search can also be done in this way using UkitUtils
     else
       #search(filter_hash[:query]).by_reported(filter_hash[:reported]).by_country_guideline(filter_hash[:country_guideline]).by_country(filter_hash[:country]).by_judge(filter_hash[:judge]).by_claimant(filter_hash[:claimant]).by_ncn(filter_hash[:ncn])
-      search_full_text(filter_hash[:query]).by_reported(filter_hash[:reported]).by_country_guideline(filter_hash[:country_guideline]).by_country(filter_hash[:country]).by_judge(filter_hash[:judge]).by_claimant(filter_hash[:claimant]).by_ncn(filter_hash[:ncn])
+      if filter_hash[:query].present?
+        search_full_text(filter_hash[:query]).by_reported(filter_hash[:reported]).by_country_guideline(filter_hash[:country_guideline]).by_country(filter_hash[:country]).by_judge(filter_hash[:judge]).by_claimant(filter_hash[:claimant]).by_ncn(filter_hash[:ncn])
+      else
+        by_reported(filter_hash[:reported]).by_country_guideline(filter_hash[:country_guideline]).by_country(filter_hash[:country]).by_judge(filter_hash[:judge]).by_claimant(filter_hash[:claimant]).by_ncn(filter_hash[:ncn])
+      end
     end
   end
 
@@ -70,7 +73,7 @@ class Decision < ActiveRecord::Base
       quoted_query = self.connection.quote(query)
       combined_metadata_fields = "ncn::text || ' ' || char_array_to_text(judges) || ' ' || char_array_to_text(categories) || ' ' || char_array_to_text(keywords) || ' ' || appeal_number::text || ' ' || case_notes::text || ' ' || claimant::text || ' ' || country::text || ' ' || case_name::text"
       rank = "ts_rank(array[0.1,0.1,0.2,0.1], setweight(to_tsvector(#{combined_metadata_fields}), 'B') || setweight(to_tsvector(text),'A'), plainto_tsquery(#{quoted_query}))"
-      where("to_tsvector('english', #{combined_metadata_fields}) @@ plainto_tsquery('english', :q::text) or to_tsvector('english', text::text) @@ plainto_tsquery('english', :q::text)", q:query)
+      where("to_tsvector('encglish', #{combined_metadata_fields}) @@ plainto_tsquery('english', :q::text) or to_tsvector('english', text::text) @@ plainto_tsquery('english', :q::text)", q:query)
       .order("#{rank} desc")
     else
       where("")
