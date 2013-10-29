@@ -16,31 +16,31 @@ describe Decision do
       @decision10 = Decision.create!(decision_hash(appeal_number: 'AA/11055/2010', categories: %w(justice family), judges: %w(Allam Johan), reported: false))
     end
 
-    it 'should filter on search text and metadata (related to NCN)' do
+    it 'filters by NCN in metadata and text and retrieves the one that matches the metadata first' do
       Decision.filtered(:query => '[2013] ACAC 789').should == [@decision7, @decision8]
     end
 
-    it 'should filter on search text and metadata (related to Country)' do
+    it 'filters by Country in metadata and text and retrieves the one that matches the metadata first' do
       Decision.filtered(:query => 'England').should == [@decision8, @decision7]
     end
 
-    it 'should filter on search and text metadata (related to Judge)' do
+    it 'filters by Judge in metadata and text and retrieves the one that matches the metadata first' do
       Decision.filtered(:query => 'Allam').should == [@decision10, @decision9, @decision7]
     end
 
-    it 'should filter on search and text metadata (related to Claimant)' do
+    it 'filters by Claimant in metadata and text and retrieves the one that matches the metadata first' do
       Decision.filtered(:query => 'Edgar').should == [@decision8, @decision9]
     end
 
-    it 'should filter on search and text metadata (related to Case Notes)' do
+    it 'filters by Case notes in metadata and text and retrieves the one that matches the metadata first' do
       Decision.filtered(:query => 'ministry').should == [@decision9, @decision7]
     end
 
-    it 'should filter on search and text metadata (related to Keywords)' do
+    it 'filters by Keywords in metadata and text and retrieves the one that matches the metadata first' do
       Decision.filtered(:query => 'person').should == [@decision8, @decision9, @decision7]
     end
 
-    it 'should filter on search and text metadata (related to Categories)' do
+    it 'filters by Categories in metadata and text and retrieves the one that matches the metadata first' do
       Decision.filtered(:query => 'justice').should == [@decision10, @decision7]
     end
 
