@@ -82,7 +82,8 @@
             %tr.last{:class => group}
               %td{:colspan => 4}
                 %strong Search result:
-                = hilighted_search_result(params[:search][:query], decision.text)
+                = decision.text
+                -#= hilighted_search_result(params[:search][:query], decision.text)
 
   .pagination-row.bottom
     .page-entries
