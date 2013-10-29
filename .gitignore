@@ -67,3 +67,10 @@ tramp
 .\#*
 db/password.hash
 db/structure.sql
+
+# rubymine
+.idea/
+
+# publics
+public/decision/
+public/aac_decision/
