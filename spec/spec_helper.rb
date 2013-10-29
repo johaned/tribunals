@@ -1,12 +1,17 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
+
+# Require the spec integration
 require 'rspec/rails'
 #require 'rspec/autorun'
 
+require 'capybara/rails'
+require 'capybara/rspec'
+
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
-Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| load f}
 
 RSpec.configure do |config|
   # ## Mock Framework
@@ -16,6 +21,15 @@ RSpec.configure do |config|
   # config.mock_with :mocha
   # config.mock_with :flexmock
   # config.mock_with :rr
+
+  Capybara.default_host = "http://127.0.0.1"
+  Capybara.javascript_driver = :webkit
+
+  # This allows you to tag an exaple with :focus to make it run with Guard
+  config.treat_symbols_as_metadata_keys_with_true_values = true
+  config.filter_run :focus => true
+  config.run_all_when_everything_filtered = true
+
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
@@ -55,13 +69,6 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
-  # Add custom selectors Capybara-Based
-  Capybara.add_selector(:row) do
-    xpath { |num| "./tr[#{num}]" }
-  end
-  Capybara.add_selector(:column) do
-    xpath { |num| "./td[#{num}]" }
-  end
 end
 
 def sample_pdf_file
