@@ -75,7 +75,6 @@ db/structure.sql
 public/decision/
 public/aac_decision/
 
-# Uploaders files 
-app/uploaders/doc_file_uploader.rb
-app/uploaders/pdf_file_uploader.rb
+# APP Config
+config/app_config.yml
 
