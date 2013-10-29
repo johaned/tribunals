@@ -53,7 +53,6 @@ class Decision < ActiveRecord::Base
   end
 
   def self.filtered(filter_hash)
-    #search_full_text(filter_hash[:query])
     if ncn = UkitUtils.contains_ncn?(filter_hash[:query])
       by_ncn(ncn)
     #elsif appeal_number = UkitUtils.contains_appeal_number?(filter_hash[:query])
