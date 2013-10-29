@@ -1,0 +1,16 @@
+defaults: &defaults
+  carrierwave_storage_mechanism: file
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+staging:
+  <<: *defaults
+  carrierwave_storage_mechanism: fog
+
+production:
+  <<: *defaults
+  carrierwave_storage_mechanism: fog

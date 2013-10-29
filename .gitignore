@@ -75,7 +75,7 @@ db/structure.sql
 public/decision/
 public/aac_decision/
 
-# app_config
+# APP Config
 config/app_config.yml
 
 
