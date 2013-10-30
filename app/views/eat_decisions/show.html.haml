@@ -1,0 +1,53 @@
+#global-breadcrumb.header-context
+  %nav{:role => "navigation"}
+    %ol.group
+      %li
+        %a{:href => "/"} Home
+%div{:vocab => "http://schema.org", :typeof => "CreativeWork"}
+  %header.page-header.group
+    %h1= @eat_decision.file_number
+    %ul.decision-details
+      %li
+        %span.label Tribunal
+        %span Employment Appeal Tribunal
+      %li
+        %span.label Appellant name:
+        %span= @eat_decision.claimant
+      %li
+        %span.label Respondent name:
+        %span= @eat_decision.respondent
+      %li
+        %span.label Judges:
+        %span
+      %li
+        %span.label Starred judgment:
+        %span= display_starred(@eat_decision)
+      %li
+        %span.label Date of hearing:
+        %span= schema_time_element(@eat_decision.hearing_date)
+      %li
+        %span.label Date of update:
+        %span= schema_time_element(@eat_decision.last_updatedtime)
+      %li
+        %span.label Date of upload:
+        %span= schema_time_element(@eat_decision.upload_date)
+      - @eat_decision.eat_subcategories.each do |sc|
+        %li
+          %span.label Category:
+          %span= sc.eat_category.name
+        %li
+          %span.label Sub-category:
+          %span= sc.name
+  
+  .download-links
+    %ul
+      %li= link_to "Download a PDF version of the decision", @eat_decision.pdf_file.url, class: 'pdf-file' if @eat_decision.pdf_file
+      %li= link_to "Download a Word document (.doc) version of the decision", @eat_decision.doc_file.url, class: 'doc-file' if @eat_decision.doc_file
+  
+  - if @eat_decision.html.blank?
+    %h2 An HTML version of this decision is not currently available.
+  - else
+    .decision
+      %h2 The decision
+      .decision-inner
+        = @eat_decision.html.html_safe
