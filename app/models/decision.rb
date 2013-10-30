@@ -55,9 +55,9 @@ class Decision < ActiveRecord::Base
   def self.filtered(filter_hash)
     if ncn = UkitUtils.contains_ncn?(filter_hash[:query])
       by_ncn(ncn)
-    elsif appeal_number = UkitUtils.contains_appeal_number?(filter_hash[:query])
-      by_appeal_number(appeal_number)
-    #TODO: Check if other meta data search can also be done in this way using UkitUtils
+    #elsif appeal_number = UkitUtils.contains_appeal_number?(filter_hash[:query])
+    #  by_appeal_number(appeal_number)
+    ##TODO: Check if other meta data search can also be done in this way using UkitUtils
     else
       #search(filter_hash[:query]).by_reported(filter_hash[:reported]).by_country_guideline(filter_hash[:country_guideline]).by_country(filter_hash[:country]).by_judge(filter_hash[:judge]).by_claimant(filter_hash[:claimant]).by_ncn(filter_hash[:ncn])
       if filter_hash[:query].present?
