@@ -27,8 +27,7 @@ describe FttDecision do
 
       after(:all) do
         @ftt_decision.destroy
-        File.unlink(File.join(Rails.root, 'tmp', 'test.html'))
-        File.unlink(File.join(Rails.root, 'tmp', 'test.pdf'))
+        delete_test_files
       end
 
       it "should save a tmp html file" do
