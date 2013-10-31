@@ -13,6 +13,19 @@ class FttDecision < ActiveRecord::Base
     order("decision_date DESC")
   end
 
+  def self.filtered(filter_hash)
+    search(filter_hash[:query])
+  end
+
+  def self.search(query)
+    if query.present?
+      quoted_query = self.connection.quote(query)
+      where("to_tsvector('english', text::text) @@ plainto_tsquery('english', ?::text)", query).order("text ~* #{quoted_query} DESC")
+    else
+      where("")
+    end
+  end
+
   def add_doc
     if doc = Dir.glob(File.join("#{Rails.root}/data/ftt/docs/j#{id}", "*.doc")).first
       DocProcessor.add_doc_file(self, File.open(doc))
