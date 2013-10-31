@@ -1,0 +1,53 @@
+#global-breadcrumb.header-context
+  %nav{:role => "navigation"}
+    %ol.group
+      %li
+        %a{:href => "/"} Home
+%div{:vocab => "http://schema.org", :typeof => "CreativeWork"}
+  %header.page-header.group
+    %h1= "Decision Number: #{display_file_number(@ftt_decision)}"
+    %ul.decision-details
+      %li
+        %span.label Tribunal
+        %span Upper Tribunal (Tax and Chancery Chamber)
+      %li
+        %span.label Judges:
+        %span
+      %li
+        %span.label Appellant name:
+        %span= @ftt_decision.claimant
+      %li
+        %span.label Respondent name:
+        %span= @ftt_decision.respondent
+      %li
+        %span.label Date of decision:
+        %span= schema_time_element(@ftt_decision.decision_date)
+      %li
+        %span.label Date added:
+        %span= schema_time_element(@ftt_decision.created_datetime)
+      %li
+        %span.label Date updated:
+        %span= schema_time_element(@ftt_decision.last_updatedtime)
+      - @ftt_decision.ftt_subcategories.each do |sc|
+        %li
+          %span.label Category:
+          %span= sc.ftt_category.name
+        %li
+          %span.label Sub-category:
+          %span= sc.name
+      %li
+        %span.label Notes
+        %span= @ftt_decision.notes
+  
+  .download-links
+    %ul
+      %li= link_to "Download a PDF version of the decision", @ftt_decision.pdf_file.url, class: 'pdf-file' if @ftt_decision.pdf_file
+      %li= link_to "Download a Word document (.doc) version of the decision", @ftt_decision.doc_file.url, class: 'doc-file' if @ftt_decision.doc_file
+  
+  - if @ftt_decision.html.blank?
+    %h2 An HTML version of this decision is not currently available.
+  - else
+    .decision
+      %h2 The decision
+      .decision-inner
+        = @ftt_decision.html.html_safe
