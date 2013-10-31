@@ -91,3 +91,14 @@ def aac_decision_hash(h={})
     aac_decision_subcategory_id: 172
   }.merge(h)
 end
+
+def ftt_decision_hash(h={})
+  {
+    file_number: 'v18158',
+    doc_file: sample_doc_file,
+    decision_date: Date.today,
+    claimant: 'Will Smith',
+    respondent: 'Men in Black',
+    is_published: true
+  }.merge(h)
+end
