@@ -10,7 +10,7 @@ class FttDecision < ActiveRecord::Base
   mount_uploader :pdf_file, PdfFileUploader
 
   def self.ordered
-    order("hearing_date DESC")
+    order("decision_date DESC")
   end
 
   def add_doc
