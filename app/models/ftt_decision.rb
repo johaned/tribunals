@@ -14,8 +14,8 @@ class FttDecision < ActiveRecord::Base
   end
 
   def add_doc
-    if doc = File.open(Dir.glob(File.join("#{Rails.root}/data/ftt/docs/j#{id}", "*")).first)
-      DocProcessor.add_doc_file(self, doc) 
+    if doc = Dir.glob(File.join("#{Rails.root}/data/ftt/docs/j#{id}", "*.doc")).first
+      DocProcessor.add_doc_file(self, File.open(doc))
     end
   end
 

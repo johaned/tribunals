@@ -77,6 +77,7 @@ namespace :import do
 
     task :process_docs => [:environment] do
       FttDecision.find_each do |d|
+        puts "Processing docs for FttDecision id #{d.id}"
         d.add_doc
         d.process_doc
       end
