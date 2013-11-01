@@ -1,6 +1,21 @@
 require 'spec_helper'
 
 describe FttDecision do
+
+  describe "search" do
+    before(:each) do
+      @ftt_decision1 = FttDecision.create!(ftt_decision_hash(text: "Some searchable text is here"))
+      @ftt_decision2 = FttDecision.create!(ftt_decision_hash(text: "Some other searchable text is here gerald"))
+      @ftt_decision3 = FttDecision.create!(ftt_decision_hash(text: "gerald"))
+      @ftt_decision4 = FttDecision.create!(ftt_decision_hash(claimant: 'Green'))
+      @ftt_decision5 = FttDecision.create!(ftt_decision_hash(file_number: '[2013] UKUT 456'))
+    end
+
+    it "should filter on search text" do
+      FttDecision.filtered(:query => "gerald").should == [@ftt_decision2, @ftt_decision3]
+    end
+  end
+
   describe "with a .doc" do
     describe "process_doc" do
       before(:all) do

@@ -6,6 +6,7 @@ class FttDecisionsController < ApplicationController
     
     params[:search] ||= {}
     @ftt_decisions = FttDecision.all.ordered.paginate(:page => params[:page], :per_page => 30)
+    @ftt_decisions = @ftt_decisions.filtered(params[:search]) if params[:search].present?    
   end
 
   def show
