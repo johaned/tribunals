@@ -29,4 +29,12 @@ namespace :maintenance do
       end
     end
   end
+
+  namespace :ftt do
+    task :assign_file_numbers => :environment do
+      FttDecision.find_each do |d|
+        d.update_attributes(file_number: [d.file_no_1,d.file_no_2].join(''))
+      end
+    end
+  end
 end
