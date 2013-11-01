@@ -6,14 +6,18 @@ describe Decision do
     before(:each) do
       @decision1 = Decision.create!(decision_hash(text: "Some searchable text is here"))
       @decision2 = Decision.create!(decision_hash(text: "Some other searchable text is here gerald", country: 'Afghanitsan'))
-      @decision3 = Decision.create!(decision_hash(text: "gerald", country_guideline: true, country: 'Iraq', judges: ["Blake", "Smith"]))
-      @decision4 = Decision.create!(decision_hash(claimant: 'Green'))
+      @decision3 = Decision.create!(decision_hash(text: "gerald", country_guideline: true, country: 'Iraq', judges: ["Blake", "Smith", "Judge McCarthy"]))
+      @decision4 = Decision.create!(decision_hash(claimant: 'Green', text: "Respected Honrable Judge McCarthy presides over this case."))
       @decision5 = Decision.create!(decision_hash(ncn: '[2013] UKUT 456'))
       @decision6 = Decision.create!(decision_hash(appeal_number: 'AA/11055/2012', reported: false))
     end
 
     it "should filter on search text" do
       Decision.filtered(:query => "gerald").should == [@decision2, @decision3]
+    end
+
+    it "should rank metadata matches above text matches" do
+      Decision.filtered(:query => "Judge McCarthy").should == [@decision3, @decision4]
     end
 
     it "should filter on search text and country guidline" do
