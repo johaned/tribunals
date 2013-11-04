@@ -28,7 +28,7 @@ class Decision < ActiveRecord::Base
   scope :viewable, ->{ t = self.arel_table; where(t[:reported].eq(true).or(t[:promulgated_on].gteq(Date.new(2013, 6, 1)))) }
   scope :reported, ->{ where(reported: true) }
   scope :unreported, ->{ where(reported: false) }
-  
+
   def self.ordered
     order("promulgated_on DESC")
   end
@@ -57,7 +57,7 @@ class Decision < ActiveRecord::Base
   end
 
   [:country_guideline, :country].each do |field|
-    class_eval <<-FILTERS 
+    class_eval <<-FILTERS
       def self.by_#{field}(field)
         if field.present?
           where("#{field} = ?", field)
@@ -141,7 +141,6 @@ class Decision < ActiveRecord::Base
   end
 
   def process_doc
-    require 'thwait'
     if doc_file.present?
       Dir.mktmpdir do |tmp_html_dir|
         Dir.chdir(tmp_html_dir) do
@@ -150,14 +149,9 @@ class Decision < ActiveRecord::Base
           File.open(doc_abs_filename, 'wb') do |f|
             f.write(doc_file.sanitized_file.read)
           end
-          threads = [:pdf, "txt:text"].map do |type|
-            Thread.new do
-              command = "soffice --headless --convert-to #{type} --outdir . '#{doc_rel_filename}'"
-              puts command
-              method(:`).call(command)
-            end
+          [:pdf, "txt:text"].map do |type|
+            system("soffice --headless --convert-to #{type} --outdir . '#{doc_rel_filename}'")
           end
-          ThreadsWait.all_waits(*threads)
           txt_filename = doc_abs_filename.gsub(/\.doc$/i, '.txt')
           pdf_filename = doc_abs_filename.gsub(/\.doc$/i, '.pdf')
           self.text = File.open(txt_filename, 'r:bom|utf-8').read
@@ -176,10 +170,10 @@ class Decision < ActiveRecord::Base
     if self.text
       # line breaks
       self.html = self.text.gsub(/\n/, '<br/>')
-  
+
       # references to other decisions
       citation_pattern = /\[[0-9]{4}\]\s*[0-9]*\s+[A-Z]+\s*[A-Za-z\.]*\s*[0-9]*/ # (see http://ox.libguides.com/content.php?pid=141334&sid=1205598)
-  
+
       self.html = self.html.gsub(citation_pattern) do |citation|
         normalised_citation = citation.gsub(/\s+0+([1-9])/, ' \1')
         decision = cache[normalised_citation] || Decision.find_by(appeal_number: normalised_citation) || (next citation)
