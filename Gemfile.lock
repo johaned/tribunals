@@ -239,6 +239,7 @@ DEPENDENCIES
   pg_array_parser
   rails
   rails_warden
+  rake
   rspec-rails
   sass-rails
   unicorn

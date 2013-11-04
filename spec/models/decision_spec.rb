@@ -67,8 +67,7 @@ describe Decision do
 
       after(:all) do
         @decision.destroy
-        File.unlink(File.join(Rails.root, 'tmp', 'test.html'))
-        File.unlink(File.join(Rails.root, 'tmp', 'test.pdf'))
+        delete_test_files
       end
 
       it "should save a tmp html file" do
@@ -160,7 +159,7 @@ describe Decision do
     it "should display the appropriate label" do
       decision = Decision.new(:appeal_number => 'XYZ 123', :case_name => 'Smith vs Brown', :reported => true)
       decision.label.should == 'XYZ 123 - Smith vs Brown'
-      
+
       decision = Decision.new
       decision.label.should be_nil
     end

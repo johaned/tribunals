@@ -1,6 +1,10 @@
 MoJ Tribunals
 =============
 
+[![Build Status](https://travis-ci.org/ministryofjustice/tribunals.png?branch=master)](https://travis-ci.org/ministryofjustice/tribunals)
+
+About
+-----
 A Ruby on Rails application for giving public access to UK Tribunal decisions.
 
 Live at https://tribunalsdecisions.service.gov.uk/

@@ -27,8 +27,7 @@ describe AacDecision do
 
       after(:all) do
         @aac_decision.destroy
-        File.unlink(File.join(Rails.root, 'tmp', 'test.html'))
-        File.unlink(File.join(Rails.root, 'tmp', 'test.pdf'))
+        delete_test_files
       end
 
       it "should save a tmp html file" do

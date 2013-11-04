@@ -28,6 +28,10 @@ group :test, :development do
   gem 'wirb'
 end
 
+group :test do
+  gem 'rake'
+end
+
 group :assets do
   gem 'sass-rails'
 end
