@@ -47,10 +47,9 @@ class Decision < ActiveRecord::Base
   def self.search(query)
     if query.present?
       quoted_query = self.connection.quote(query)
-      combined_metadata_fields = "ncn::text || ' ' || char_array_to_text(judges) || ' ' || char_array_to_text(categories) || ' ' || char_array_to_text(keywords) || ' ' || appeal_number::text || ' ' || case_notes::text || ' ' || claimant::text || ' ' || country::text || ' ' || case_name::text"
-      rank = "ts_rank(array[0.1,0.1,0.2,0.1], setweight(to_tsvector(#{combined_metadata_fields}), 'B') || setweight(to_tsvector(text),'A'), plainto_tsquery(#{quoted_query}))"
-      where("to_tsvector('english', #{combined_metadata_fields}) @@ plainto_tsquery('english', :q::text) or to_tsvector('english', text::text) @@ plainto_tsquery('english', :q::text)", q:query)
-      .order("#{rank} desc")
+      all_combined_fields = "coalesce(ncn::text, '') || ' ' || char_array_to_text(judges) || ' ' || char_array_to_text(categories) || ' ' || char_array_to_text(keywords) || ' ' || coalesce(appeal_number::text, '') || ' ' || coalesce(case_notes::text, '') || ' ' || coalesce(claimant::text, '') || ' ' || coalesce(country::text, '') || ' ' || coalesce(case_name::text, '') || ' ' || coalesce(text::text, '')"
+      where("to_tsvector('english', #{all_combined_fields}) @@ plainto_tsquery('english', :q::text)", q:query)
+      .order("#{all_combined_fields} ~* #{quoted_query} DESC")
     else
       where("")
     end
