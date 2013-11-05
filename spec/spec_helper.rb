@@ -102,3 +102,11 @@ def ftt_decision_hash(h={})
     is_published: true
   }.merge(h)
 end
+
+def eat_decision_hash(h={})
+  {
+    file_number: 'v18158',
+    doc_file: sample_doc_file,
+    decision_date: Date.today,
+  }.merge(h)
+end
