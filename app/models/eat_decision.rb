@@ -5,7 +5,7 @@ class EatDecision < ActiveRecord::Base
   has_many :eat_subcategories, through: :eat_category_decisions
 
   mount_uploader :doc_file, DocFileUploader
-  mount_uploader :doc_file, PdfFileUploader
+  mount_uploader :pdf_file, PdfFileUploader
 
   def self.ordered
     order("hearing_date DESC")
@@ -19,6 +19,13 @@ class EatDecision < ActiveRecord::Base
 
   def process_doc
     DocProcessor.process_doc_file(self, doc_file) if doc_file.present?
+  end
+
+  def set_html_from_text(cache={})
+    if self.text
+      self.html = self.text.gsub(/\n/, '<br/>')
+      #TODO: check the citation pattern for EAT
+    end
   end
 
 end
