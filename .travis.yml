@@ -10,3 +10,10 @@ services: postgres
 script:
   - bundle exec rake db:migrate
   - bundle exec rake spec
+notifications:
+  hipchat:
+    rooms:
+      secure: HxNbVehJdrap+dZ3vn1WJ5n1YoSezdLOjMKkBBOw9h4Zs6uCq+X8phEYYPIiGhalcu/V8FNTOAWAFLTwHN6YgTUn2Qh3Put5ZgEz0zGTJfmtpp7vI/bcHWPkoNEgaLHCH12YJ5N/DOuPIeDDdN90tAOjZqob/mfDCNUAQbgbAgY=
+    format: html
+    template:
+      - '%{message} (<a href="%{build_url}">details</a>/<a href="%{compare_url}">changes</a>) - build #%{build_number}, branch <a href="https://github.com/%{repository}/tree/%{branch}">%{branch}</a>; of %{repository}'
