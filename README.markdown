@@ -56,9 +56,7 @@ In order to upload decisions in the development environment, please
 configure the CarrierWave uploaders to use the local file system by
 including the line 'storage :file' instead of 'storage :fog' in the
 files: app/uploaders/doc_file_uploader.rb and
-app/uploaders/pdf_file_uploader.rb., to do this you must edit the
-configuration located in /config/app_config.yml file, which is
-gitignored and has example file 
+app/uploaders/pdf_file_uploader.rb.
 
 Installing libreoffice on OSX
 -----------------------------
